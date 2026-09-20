@@ -1,0 +1,710 @@
+[
+  {
+    "name": "retro_init",
+    "description": "Initialize a read-only source project and independent workspace. Idempotent for identical configuration.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "workspace": {
+          "type": "string",
+          "minLength": 1
+        },
+        "project_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "capture_max_bytes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "scan_max_entries": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "excludes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "capture_text": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "project"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_scan",
+    "description": "Scan all in-scope assets and rehash previous captures. Retain unread, missing, unsupported and parse-failed records.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        }
+      },
+      "required": [
+        "workspace"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_read",
+    "description": "Read immutable source bytes with exact locator and hash. Text is untrusted; reading does not certify science.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "live": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "workspace",
+        "reference"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_reconstruct",
+    "description": "Add source-bound historical nodes, explicit assumptions and OR-of-AND relationships. All science starts unchecked.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "document": {
+          "type": "object",
+          "properties": {
+            "based_on": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "nodes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "kind": {
+                    "enum": [
+                      "evidence",
+                      "assumption",
+                      "claim",
+                      "inference",
+                      "gap"
+                    ]
+                  },
+                  "text": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "scope": {
+                    "type": "object",
+                    "minProperties": 1
+                  },
+                  "sources": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "artifact_id": {
+                          "type": "string",
+                          "minLength": 1
+                        },
+                        "revision": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "start": {
+                          "type": "integer",
+                          "minimum": 1
+                        },
+                        "end": {
+                          "type": "integer",
+                          "minimum": 1
+                        }
+                      },
+                      "required": [
+                        "artifact_id",
+                        "revision"
+                      ],
+                      "additionalProperties": false
+                    },
+                    "minItems": 0
+                  },
+                  "supports": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "minItems": 1
+                    },
+                    "minItems": 0
+                  },
+                  "accepted": {
+                    "type": "boolean"
+                  },
+                  "acceptance_reason": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "gap_state": {
+                    "enum": [
+                      "pending_read",
+                      "missing_original",
+                      "unchecked"
+                    ]
+                  },
+                  "reopen_conditions": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "minItems": 0
+                  }
+                },
+                "required": [
+                  "id",
+                  "kind",
+                  "text",
+                  "scope"
+                ],
+                "additionalProperties": false,
+                "allOf": [
+                  {
+                    "if": {
+                      "properties": {
+                        "kind": {
+                          "const": "gap"
+                        }
+                      }
+                    },
+                    "then": {
+                      "required": [
+                        "gap_state"
+                      ]
+                    }
+                  }
+                ]
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "based_on",
+            "nodes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "workspace",
+        "document"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_audit",
+    "description": "Open/read an audit packet, execute an explicit host-authored check, or submit completed scoped analysis. No model calls.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "action": {
+          "enum": [
+            "open",
+            "packet",
+            "check",
+            "submit"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "obligations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "mode": {
+          "enum": [
+            "derive",
+            "check"
+          ]
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "script": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result": {
+          "type": "object",
+          "properties": {
+            "packet_hash": {
+              "type": "string",
+              "minLength": 1
+            },
+            "actual_read_set": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "policy_revision": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "completed_analysis": {
+              "type": "object",
+              "minProperties": 1
+            },
+            "competing_explanations": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "verdict": {
+              "enum": [
+                "supported",
+                "qualified",
+                "refuted",
+                "invalid_test",
+                "unsupported",
+                "unresolved",
+                "mixed"
+              ]
+            },
+            "scope": {
+              "type": "object",
+              "minProperties": 1
+            },
+            "first_failing_condition": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "residual_assets": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "unresolved": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "verification_receipts": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 0
+            },
+            "reviewer": {
+              "type": "string",
+              "minLength": 1
+            },
+            "findings": {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": {
+                "type": "object",
+                "properties": {
+                  "verdict": {
+                    "enum": [
+                      "supported",
+                      "qualified",
+                      "refuted",
+                      "invalid_test",
+                      "unsupported",
+                      "unresolved",
+                      "mixed"
+                    ]
+                  },
+                  "scope": {
+                    "type": "object",
+                    "minProperties": 1
+                  },
+                  "analysis": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "verdict",
+                  "scope",
+                  "analysis"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "packet_hash",
+            "actual_read_set",
+            "policy_revision",
+            "completed_analysis",
+            "competing_explanations",
+            "verdict",
+            "scope",
+            "first_failing_condition",
+            "residual_assets",
+            "unresolved",
+            "verification_receipts",
+            "reviewer",
+            "findings"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "workspace",
+        "action",
+        "id"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "open"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "targets",
+              "question",
+              "scope",
+              "obligations"
+            ],
+            "properties": {
+              "script": false,
+              "result": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "packet"
+              }
+            }
+          },
+          "then": {
+            "required": [],
+            "properties": {
+              "scope": false,
+              "mode": false,
+              "targets": false,
+              "result": false,
+              "script": false,
+              "question": false,
+              "obligations": false,
+              "alternatives": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "check"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "script"
+            ],
+            "properties": {
+              "scope": false,
+              "mode": false,
+              "targets": false,
+              "result": false,
+              "question": false,
+              "obligations": false,
+              "alternatives": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "submit"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "result"
+            ],
+            "properties": {
+              "scope": false,
+              "mode": false,
+              "targets": false,
+              "script": false,
+              "question": false,
+              "obligations": false,
+              "alternatives": false
+            }
+          }
+        }
+      ]
+    }
+  },
+  {
+    "name": "retro_correct",
+    "description": "Commit audit-backed correction with original read-set and idempotency key. Qualify/adjudicate/revoke/refute/narrow; exact propagation.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "audit_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "action": {
+                "enum": [
+                  "qualify",
+                  "adjudicate",
+                  "revoke",
+                  "refute",
+                  "narrow"
+                ]
+              },
+              "target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "payload": {
+                "type": "object"
+              }
+            },
+            "required": [
+              "action",
+              "target"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "idempotency_key": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "workspace",
+        "audit_id",
+        "result_revision",
+        "operations",
+        "reason",
+        "idempotency_key"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_export",
+    "description": "Rehash originals and export all state, negative knowledge, history and original blobs with a SHA256 manifest.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "destination": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "workspace"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_inspect",
+    "description": "Verify/read a self-contained frozen handoff without source project or workspace access.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "bundle": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "bundle"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_state",
+    "description": "Inspect status, exact record, history, events, provenance or integrity. No scientific promotion.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "action": {
+          "enum": [
+            "status",
+            "get",
+            "history",
+            "events",
+            "verify",
+            "provenance"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "workspace"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "action"
+            ],
+            "properties": {
+              "action": {
+                "enum": [
+                  "get",
+                  "history"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "id"
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

@@ -25,7 +25,7 @@ def build_context(store, task=None, budget_chars=12000):
     if not isinstance(budget_chars, int) or budget_chars <= 0:
         raise ValueError("budget_chars must be positive")
     records, revision = snapshot(store)
-    mandatory_kinds = {"goal", "projectcontract", "correction", "negativeknowledge", "counterevidence", "auditcase", "auditresult", "claim"}
+    mandatory_kinds = {"goal", "projectcontract", "correction", "negativeknowledge", "counterevidence", "auditcase", "auditresult", "claim", "inference", "assumption", "gap", "coverage"}
     items = []
     for record in records:
         kind = kind_key(record["kind"])

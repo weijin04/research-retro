@@ -1,12 +1,13 @@
 """Exchange schema and source-specific permissions, independent of semantics."""
 import json
 from pathlib import Path
+from importlib.resources import files
 from jsonschema import Draft202012Validator
 from research_harness.common import HarnessError
 
 
 def validate_exchange(value, schema_path=None):
-    path = Path(schema_path) if schema_path else Path(__file__).resolve().parents[3] / "contracts/contract.schema.json"
+    path = Path(schema_path) if schema_path else files("research_harness.resources").joinpath("contract.schema.json")
     errors = sorted(Draft202012Validator(json.loads(path.read_text())).iter_errors(value), key=lambda e: str(e.path))
     if errors:
         raise HarnessError("invalid_contract", "; ".join(e.message for e in errors))

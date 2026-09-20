@@ -53,8 +53,8 @@ wheels = [
 ]
 
 [[package]]
-name = "research-harness"
-version = "0.2.0"
+name = "research-retro"
+version = "1.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "jsonschema" },

@@ -204,7 +204,7 @@ class Store:
         nonaffirmative = {"refuted", "refuted_in_scope", "invalid_test", "unsupported",
                           "unresolved", "mixed", "unchecked", "imported_assertion"}
         def can_affirm(record):
-            if record["kind"].lower() != "claim":
+            if record["kind"].lower() not in {"claim", "inference"}:
                 return True
             return not any(record["data"].get(field) in nonaffirmative
                            for field in ("evidence_status", "evidence_verdict", "verdict")

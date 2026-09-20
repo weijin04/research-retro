@@ -1,23 +1,44 @@
-"""Thin in-process adapter: same services as CLI, no additional authority."""
-from research_harness.context import build_context
-from research_harness.views import query
-from research_harness.views.report import brief
-from research_harness.reconstruction.workbench import AuditWorkbench
+"""Stable function definitions and JSON adapter shared by every host and the CLI."""
+import json
+from importlib.resources import files
+from jsonschema import Draft202012Validator
+from research_harness.common import HarnessError
+from research_harness.storage import ConflictError, AuthorityError
+from research_harness.unit import Unit, init, inspect_bundle
+
+CONTRACT_VERSION = "1.0"
 
 
-class AgentTools:
-    def __init__(self, store, ingestor):
-        self.store, self.ingestor = store, ingestor
-        self.audit = AuditWorkbench(store, ingestor)
+def definitions():
+    return json.loads(files("research_harness.resources").joinpath("tools.json").read_text())
 
-    def context(self, task=None, budget_chars=16000):
-        return build_context(self.store, task=task, budget_chars=budget_chars)
 
-    def find(self, text, kind=None, limit=20):
-        return [brief(r) for r in query(self.store, text, kind=kind, limit=limit)]
+def dispatch(name, arguments):
+    definition = next((tool for tool in definitions() if tool["name"] == name), None)
+    if definition is None:
+        raise HarnessError("unknown_tool", "Unknown tool; use retro tools")
+    errors = sorted(Draft202012Validator(definition["parameters"]).iter_errors(arguments), key=lambda error: str(error.path))
+    if errors:
+        raise HarnessError("invalid_arguments", "; ".join(f"{list(e.path)}: {e.message}" for e in errors))
+    args = dict(arguments)
+    if name == "retro_init":
+        return init(**args)
+    if name == "retro_inspect":
+        return inspect_bundle(args["bundle"])
+    unit = Unit(args.pop("workspace"))
+    if name == "retro_audit":
+        return getattr(unit, "audit_" + args.pop("action"))(**args)
+    return getattr(unit, name.removeprefix("retro_"))(**args)
 
-    def read(self, locator):
-        return self.ingestor.read(locator)
 
-    def audit_packet(self, case_id):
-        return self.audit.packet(case_id)
+def invoke(request):
+    """One request, one result, no provider state, keys or network access."""
+    try:
+        if not isinstance(request, dict) or set(request) != {"name", "arguments"}:
+            raise HarnessError("invalid_arguments", "Expected exactly name and arguments")
+        result = dispatch(request["name"], request["arguments"])
+        return {"contract_version": CONTRACT_VERSION, "ok": True, "result": result}
+    except (HarnessError, ValueError, KeyError, OSError, TypeError) as error:
+        code = "version_conflict" if isinstance(error, ConflictError) else "permission_denied" if isinstance(error, AuthorityError) else getattr(error, "code", "invalid_state")
+        return {"contract_version": CONTRACT_VERSION, "ok": False,
+                "error": {"code": code, "message": str(error), "details": getattr(error, "details", {})}}

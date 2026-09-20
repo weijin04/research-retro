@@ -11,11 +11,11 @@ from unittest.mock import patch
 from research_harness.storage import Store
 from research_harness.common import HarnessError, digest, upsert
 from research_harness.ingest import Ingestor
-from research_harness.reconstruction import audit
-from research_harness.reconstruction.audit import integrate_case, revoke
+from research_cases.legacy import audit
+from research_cases.legacy.audit import integrate_case, revoke
 from research_harness.reconstruction.workbench import AuditWorkbench
 from research_harness.context import build_context
-from research_harness import cli
+from research_cases.legacy import cli
 
 
 class ReconstructionTests(unittest.TestCase):

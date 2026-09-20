@@ -1,0 +1,133 @@
+{
+  "release": "standalone",
+  "version": "1.0.0",
+  "freeze_tag": "retro-v1.0.0",
+  "created_at": "2026-09-20T11:07:21.502668+00:00",
+  "scope": "host-neutral retrospective capability under a controlling Harness; no model routing or worker runtime",
+  "tested_environment": {
+    "OS": "Linux x86_64",
+    "python": "3.14.4",
+    "sqlite": "3.46.1",
+    "isolation": "bwrap unshared mount/network with blank HOME and readonly installed package"
+  },
+  "verification": {
+    "unit_regressions": 76,
+    "isolated_install_assertions": 4,
+    "cold_start_assertions": 37,
+    "actual_commands": 62,
+    "frozen_state_revision": 61,
+    "blank_first_review": "acceptance-03",
+    "targeted_reviews": [
+      "acceptance-04",
+      "acceptance-05"
+    ],
+    "native_host": "Codex shell tool",
+    "generic_host": "versioned JSON function invocation"
+  },
+  "scientific_sources_modified": false,
+  "real_scientific_jobs_submitted": false,
+  "model_calls": 0,
+  "source_inputs": {
+    "README.md": "29066d9734e182cf20f523c0af73aba0b0a6d51b7933c2881f17e2f1ebd819ae",
+    "checks/render_tools.py": "29803c58f8d2762be000954d17e34ea2ad5cc6f66c819b5db24e14401eb39ae7",
+    "checks/standalone_acceptance.py": "1c6953ac2b16ef921b59dfeaf357bc0c3d15324767ad29e515bd5f73e7940948",
+    "pyproject.toml": "f926415521294bff19a440bf4a77f1495b2d4af94676b053de5faa3726e5b6a2",
+    "src/research_harness/__init__.py": "dd4681e1307cb3ec5ce4f25ecf5ce39c1446dea1d2e61f78458be2fe6e88f25b",
+    "src/research_harness/agent_tools.py": "a9cf7241c67e49a52729bf816ebd58120c0fe5e48fcb0536003d17f363e25156",
+    "src/research_harness/cli.py": "ea764d2ee6b35cbea522c948a1342920c9de76f96516361a446d00a2068afc42",
+    "src/research_harness/common.py": "e64d9144101c29984975fcea2f5ccb466af423bf8a87155cec13037ead11befb",
+    "src/research_harness/config.py": "09ea920a810959e8819358adba8340411625c5352e803b867be5cd7517fe9128",
+    "src/research_harness/context/__init__.py": "13085a83f51b309c40ed404033b92e2ab8c492994367a662e090314c4ed324aa",
+    "src/research_harness/contracts/__init__.py": "6c07d31e038e2f2acff6e9bee63bb73ed6666ade212c371a10a395ad130969d9",
+    "src/research_harness/governance/__init__.py": "9c9da208314d267c5a8c1c490a3c7c215607301d41e486d461115d678f04f435",
+    "src/research_harness/governance/patches.py": "9cb47d61261d268ad3c9fb24975589866c121df6ec60f2e541bac8e55c0ff133",
+    "src/research_harness/ingest/__init__.py": "185e8b936aa5c487f8057fe831851d24a0411bff7ba930763419367ffd65ce69",
+    "src/research_harness/ingest/service.py": "16cd3fd7cb6b18119a54c03b8dd5d788ddb8d3adfcde9cfc70ebe0f7a0ddbce9",
+    "src/research_harness/parsers/__init__.py": "bb0971d2e8eba5079e11331a5c24c27251ba488d7de22a67c85210e2c0cb6e5f",
+    "src/research_harness/parsers/basic.py": "0831483d6630e34bdb3d9043f191716d2f9c0139a07c74ce08c3867d9425cd76",
+    "src/research_harness/reconstruction/__init__.py": "127a02211775df77d6de57a0fa5c59b96b1c93ce1b9690e56e015f2859cdbc28",
+    "src/research_harness/reconstruction/bundle.py": "344bbfdb99d90e6b29d91d7069582d487951ab7c3158b403937bbcdf080adbb4",
+    "src/research_harness/reconstruction/identity.py": "ab07dcc69d437e62c16730d27aed66e4229753a11c45d61a22b055eeaabb2818",
+    "src/research_harness/reconstruction/provenance.py": "bd8096663b50756ab5edbc3bad50c6a493b519419a49fdea909f85d5258167e9",
+    "src/research_harness/reconstruction/workbench.py": "281de5a29cf4356cdf53345bd10d69c8927140dad29424eee663ab5fab5cf616",
+    "src/research_harness/resources/AGENT.md": "87966bf5ba36d550b67988fc8fc3d58592ed6f55c09278acb1bbc8ec84681455",
+    "src/research_harness/resources/__init__.py": "079ff5f02af6ff69c0cfa6595f61268de2ea89ead41712280870f08a99804eed",
+    "src/research_harness/resources/contract.schema.json": "72596a56dcf516f96fee6fdf5a1c4b03ffd45f3c9c71d71ab422987883dfde0a",
+    "src/research_harness/resources/tools.json": "153a9e9e4dde3a955b79035fcd33d2a94cc272bdd12daef99c9abeba35284210",
+    "src/research_harness/storage/__init__.py": "f608da5492deb65e30e21af157c6c1399b1a4d38301caf5aa2b2c370a1d0a636",
+    "src/research_harness/storage/store.py": "69288d252b3a80cccdc9116bed92d9f29d5d0bf08d0546c0f428ab81cafd611b",
+    "src/research_harness/unit.py": "fab9b26bd543b88b4ccc74de138e4a7812177355403ded6a3a1ee114652759a6",
+    "src/research_harness/views/__init__.py": "f9c3036726c5b1f6ac2b5b5136d5a74ed431f3b3f9b4496a48df607921786382",
+    "src/research_harness/views/report.py": "0c0fe2c75379d73b8fdd56ca4f6f0bec9b8d85230767a8597521cc639cc14416",
+    "tests/test_ingest.py": "b8f0dc107a6544f16e175a9ba5db1188ae302c2423b2591abe9569d5a7c9cda9",
+    "tests/test_jev.py": "a7d8a3fc2fa06487f8203873cfb39aace09b8f653ed34986a9ef5d9e537c28e6",
+    "tests/test_jev_workflow.py": "b4d20417bdd1763ba5fad81de5fb0dbacd6a60af359aac52a77a975a5817f28b",
+    "tests/test_patches.py": "b8a0bdf6f24ed86403e2d7cc46639b93bb69e8cc78a57ec20672f7d97dd99f98",
+    "tests/test_provenance.py": "08981f93e19e175f4a443fa5d842a21df81cb66ebf345a5528f45eceed37dd35",
+    "tests/test_reconstruction.py": "6f06b6b0356a88ace433f6bed9008a64e36a55607b9e414a0fcc837b688cf281",
+    "tests/test_runs.py": "1970cd9ee93a3819bbaba4c3a8cf557c6a6d56e57cdf16a1bcf3f0814ca40b6b",
+    "tests/test_standalone.py": "0806ca2db1a4b0f1bbf2a8f0b3035831b334c225f36dd0c87f6847650b86182f",
+    "tests/test_storage.py": "7dc70940ca63f47f58ca248f04afd31dea3208305a1b827389d803a48bb548ac",
+    "tests/test_views.py": "34041e74eee89ca711d913d275ba3fd81b27019f5bd1bc771401570edb954d5e",
+    "uv.lock": "2b464140b45a0511ee58705e88303bd7a06cb5a4883437c797cf842b6a423a00"
+  },
+  "dependency_wheels": {
+    "attrs-26.1.0-py3-none-any.whl": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+    "jsonschema-4.26.0-py3-none-any.whl": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce",
+    "jsonschema_specifications-2025.9.1-py3-none-any.whl": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe",
+    "pip-26.2.1-py3-none-any.whl": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e",
+    "referencing-0.37.0-py3-none-any.whl": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231",
+    "research_retro-1.0.0-py3-none-any.whl": "bbbdb94275b41a3be5c4b09e90b20ca9b7ab35da50935b1883bd6720b4cf3a4b",
+    "rpds_py-2026.6.3-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl": "dc319e5a1de4b6913aac94bf6a2f9e847371e0a140a43dd4991db1a09bc2d504"
+  },
+  "artifacts": {
+    "REPORT.md": {
+      "sha256": "5e5d94df4fa00c342037d9420a0332d1957bc756492b97eedccb60161c1f6247",
+      "bytes": 5258
+    },
+    "blank-agent-review.md": {
+      "sha256": "4122deabf0e0b07dc1a78d037365cefd6b91fc133f17fca89f39125138d5bf02",
+      "bytes": 3883
+    },
+    "codex-tool-parity.json": {
+      "sha256": "2f6198b25b3973919a8637e72267241d2bb992b7af3e8577a0a6092fa5424930",
+      "bytes": 515
+    },
+    "execution.jsonl.gz": {
+      "sha256": "911a7a89a4438056d3bba2b60b6093bfb1e268fa85faa12c2896a3e840336eae",
+      "bytes": 103345
+    },
+    "handoff.tar.gz": {
+      "sha256": "70b6c0abd4e06f92fb5602165ddf53ec840b3666dbd8394baa7a06d30cd085b7",
+      "bytes": 64516
+    },
+    "install-result.json": {
+      "sha256": "c701a0486421db1214e5a1c51b0619647186027533986fbda881412a8a31e0a6",
+      "bytes": 1317
+    },
+    "isolation.json": {
+      "sha256": "39fe3f80ae71ff61bdb3d5512c8de79f4dea7ab882166ee6ea19ddc1d1283e4f",
+      "bytes": 2530
+    },
+    "prior-attempts.json.gz": {
+      "sha256": "49b82d4b7f0d81f5ecce1e22f56913e541f4b8ec9e0c438439bf75f032f27f85",
+      "bytes": 330233
+    },
+    "research_retro-1.0.0-py3-none-any.whl": {
+      "sha256": "bbbdb94275b41a3be5c4b09e90b20ca9b7ab35da50935b1883bd6720b4cf3a4b",
+      "bytes": 62486
+    },
+    "unit-tests.log": {
+      "sha256": "a614d94dfe90785f6957e012f9565ea6569fbdcce2d571e597d40f4cf560ff2b",
+      "bytes": 10468
+    },
+    "workflow-result.json": {
+      "sha256": "a3299de211938c88c66ef3b05472d03fec1f32f0232fe6c57ca720e6e0b63160",
+      "bytes": 4254
+    }
+  },
+  "offline_bundle": {
+    "path": "var/standalone/research-retro-1.0.0-linux-cp314-offline.tar.gz",
+    "sha256": "e3bb74255940a77559dfc24c67a3006d5ffef75bb33bec7b557037fb891556df"
+  }
+}

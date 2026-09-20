@@ -1,6 +1,6 @@
 # 6. 详细执行清单
 
-共 47 项任务。此文件由 backlog.json 生成；任务变更先更新 JSON，再重新生成。
+共 51 项任务。此文件由 backlog.json 生成；任务变更先更新 JSON，再重新生成。
 
 版本完成要求该版本所有任务及其依赖都有真实产物；单个退出任务不能豁免其他必要工作。
 
@@ -36,7 +36,7 @@ Jev：先读取本地 skill，不重装。
 交付：ProjectContract；SourceManifest；数据外发/权限策略。
 验收：未授权源不进入扫描。；新增科研计算与复盘后处理分开。；策略不存在无限预算或任意工具默认放行。
 Jev：按需，不承担最终裁决。
-完成证据：config/grephene.json；config/diffusion.json；var/receipts/development_tests.log。
+完成证据：research_cases/legacy/config/grephene.json；research_cases/legacy/config/diffusion.json；var/receipts/development_tests.log。
 
 ### [x] R0-03 最小契约与项目骨架
 
@@ -69,7 +69,7 @@ Jev：按需，不承担最终裁决。
 交付：JevAdapter；真实 smoke 回执；故障/去敏检查。
 验收：live 与 synthetic/replay 明确区分。；Noul 不制造独立 confidence。；鉴权或服务故障不会写成语义否定。
 Jev：实际调用；仅合成/公开数据。
-完成证据：src/research_harness/decisions/jev.py；var/receipts/jev/f9fbf3ec9ac1468ca92b904f39ec1e4a.json；tests/test_jev.py；var/receipts/development_tests.log。
+完成证据：research_cases/legacy/decisions/jev.py；var/receipts/jev/f9fbf3ec9ac1468ca92b904f39ec1e4a.json；tests/test_jev.py；var/receipts/development_tests.log。
 
 ### [x] R0-05 复用旧资产并选择首个真实深审关系
 
@@ -458,6 +458,69 @@ Jev：按需，不承担最终裁决。
 验收：具备科学审计、分支/负知识、增量和接手能力。；所有完成声明有实际证据。；未将未解科研问题混同未完成复盘。
 Jev：按需，不承担最终裁决。
 完成证据：research_cases/R2_ACCEPTANCE.md；var/receipts/r2_case_snapshot_repair.json；var/receipts/r2_entry_isolation.json；var/receipts/fresh_handoff_r2_extension.json；var/projects/grephene/reconstruction_receipt.json。
+
+## SCU：领域通用独立复盘能力单元
+
+### [x] SCU-01 分离核心、开发回归、目标状态与配置
+
+状态：done。
+目标：独立发行不依赖开发目录、个人 wrapper 或科研案例。
+依赖：R2-14。负责角色：独立能力单元维护者。
+
+具体工作：
+1. 迁移案例分派、领域解析及模型实验至非发行回归目录。
+2. 打包 Schema 与 Agent 文档；以显式 workspace 统一配置和输出。
+
+交付：独立 wheel；核心与回归物理边界。
+验收：源码与安装环境无隐含本机路径依赖。；目标状态不得进入核心仓库。
+Jev：不使用；无模型调用。
+完成证据：src/research_harness/config.py；pyproject.toml；research_cases/README.md。
+
+### [x] SCU-02 公开生命周期与 Agent 契约
+
+状态：done。
+目标：主控 Agent 通过一致接口完成复盘。
+依赖：SCU-01。负责角色：独立能力单元维护者。
+
+具体工作：
+1. 实现 init、scan/read、reconstruct、audit、correct、export 与 inspect。
+2. 保留原件版本、作用域、负知识及 OR/AND 传播。
+
+交付：CLI；九个标准工具定义；Agent 手册。
+验收：不需要读取底层 Schema 才能驱动。；错误与版本冲突有稳定契约。
+Jev：不使用；无模型调用。
+完成证据：AGENT.md；tools.json；src/research_harness/unit.py。
+
+### [x] SCU-03 隔离安装、陌生产物与宿主切换实测
+
+状态：done。
+目标：按用户指定顺序验证可移植性、科学状态及交接可读性。
+依赖：SCU-02。负责角色：独立能力单元维护者。
+
+具体工作：
+1. 离线空环境安装并在只读安装目录中运行。
+2. 异构假想项目完成实际计数复算、纠偏、负知识和来源扰动。
+3. 核验直接调用与通用 Tool 契约；空白 Agent 只读导出包接手。
+
+交付：真实命令日志；冷启动交接包；空白 Agent 发现与复验。
+验收：首次验收不利结果保留，修复有复验。；合成能力验收不称为独立科学盲测。
+Jev：不使用；无模型调用。
+完成证据：checks/standalone_acceptance.py；releases/standalone-1.0.0/REPORT.md；releases/standalone-1.0.0/blank-agent-review.md。
+
+### [x] SCU-04 冻结 standalone 1.0.0
+
+状态：done。
+目标：交付可安装且证据可核查的冻结版本。
+依赖：SCU-03。负责角色：独立能力单元维护者。
+
+具体工作：
+1. 归档 wheel、源文件哈希、回执与复现说明。
+2. 创建 retro-v1.0.0 标签；F1/E1 不扩展。
+
+交付：Freeze Release；安装使用说明。
+验收：最终构件与实测构件哈希一致。；范围与未验证宿主明确。
+Jev：不使用；无模型调用。
+完成证据：releases/standalone-1.0.0/release.json；README.md；CURRENT_STATE.md。
 
 ## F1：整体框架 MVP
 

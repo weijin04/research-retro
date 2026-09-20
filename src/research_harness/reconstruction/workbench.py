@@ -59,6 +59,8 @@ class AuditWorkbench:
         required_reads = packet["read_set"]
         if not isinstance(read_set, dict) or not required_reads.keys() <= read_set.keys():
             raise HarnessError("invalid_contract", "Read-set omits mandatory source/contract objects")
+        if any(read_set.get(key) != version for key, version in required_reads.items()):
+            raise HarnessError("version_conflict", "Supplied read-set differs from the original audit packet")
         if result["policy_revision"] != self.store.active_policy_revision():
             raise HarnessError("version_conflict", "Policy changed after audit packet")
         if read_set.get(case_id) != case["revision"]:

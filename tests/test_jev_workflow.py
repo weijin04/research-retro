@@ -3,8 +3,8 @@ import tempfile
 from pathlib import Path
 import unittest
 from research_harness.storage import Store
-from research_harness.decisions import JevAdapter
-from research_harness.decisions.workflow import attach_advice,LOCAL_CASE_ID
+from research_cases.legacy.decisions import JevAdapter
+from research_cases.legacy.decisions.workflow import attach_advice,LOCAL_CASE_ID
 
 class JevWorkflowTests(unittest.TestCase):
     def setUp(self):

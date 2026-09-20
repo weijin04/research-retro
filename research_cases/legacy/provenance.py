@@ -1,7 +1,7 @@
 """Explicit provenance and revocable identity relations; never destructive merges."""
 from collections import defaultdict
 from research_harness.common import HarnessError, stable_id, now
-from research_harness.reconstruction.identity import compare
+from research_cases.legacy.identity import compare
 
 RELATIONS = {'same_object','same_run','numerical_comparison','same_proposition'}
 
@@ -81,13 +81,13 @@ def source_families(store):
 
 
 def propose_alias(store,left_id,right_id,relation,scope,reason,reviewer):
-    if relation not in RELATIONS or not isinstance(scope,dict) or not scope.get('domain'):
+    if relation not in RELATIONS or not isinstance(scope,dict) or scope.get('domain') not in ('chemistry','diffusion'):
         raise HarnessError('invalid_contract','Explicit supported relation and scope.domain are required')
     if not reason or not reviewer or left_id==right_id:
         raise HarnessError('invalid_contract','Distinct objects, reason and reviewer are required')
     left,right=store.get(left_id),store.get(right_id)
     ldata=left['data'].get('identity',left['data']); rdata=right['data'].get('identity',right['data'])
-    check=compare(ldata,rdata,relation,scope['domain'],scope.get('required_fields'))
+    check=compare(ldata,rdata,relation,scope['domain'])
     if check['status']=='incompatible':
         raise HarnessError('identity_incompatible','Conflicting scientific identity conditions',check)
     identifier=stable_id('identity_relation',[sorted([left_id,right_id]),relation,scope])

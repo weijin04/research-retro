@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 from research_harness.storage import Store
 from research_harness.ingest.service import Ingestor
-from research_harness.reconstruction.runs import reconstruct_captured_runs
+from research_cases.legacy.runs import reconstruct_captured_runs
 
 class RunTests(unittest.TestCase):
     def setUp(self):

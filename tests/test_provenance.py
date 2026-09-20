@@ -3,7 +3,7 @@ from pathlib import Path
 import unittest
 from research_harness.common import HarnessError,upsert
 from research_harness.storage import Store
-from research_harness.reconstruction.provenance import source_families,propose_alias,revoke_alias
+from research_cases.legacy.provenance import source_families,propose_alias,revoke_alias
 
 class ProvenanceTests(unittest.TestCase):
     def setUp(self):

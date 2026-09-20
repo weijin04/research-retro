@@ -8,7 +8,7 @@ from unittest.mock import patch
 import zipfile
 from research_harness.common import HarnessError, upsert
 from research_harness.ingest.service import Ingestor
-from research_harness.parsers.basic import parse
+from research_cases.legacy.parsers import parse
 from research_harness.storage import Store
 
 class IngestTests(unittest.TestCase):

@@ -1,11 +1,13 @@
 [project]
-name = "research-harness"
-version = "0.2.0"
-description = "Evidence bounded scientific reconstruction and controlled research"
+name = "research-retro"
+version = "1.0.0"
+description = "Standalone evidence-bounded research retrospective capability"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = ["jsonschema>=4.23,<5"]
 
 [project.scripts]
+retro = "research_harness.cli:main"
 rh = "research_harness.cli:main"
 
 [build-system]
@@ -14,3 +16,6 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/research_harness"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/research_harness", "pyproject.toml", "README.md", "AGENT.md"]

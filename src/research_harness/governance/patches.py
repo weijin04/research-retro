@@ -96,24 +96,30 @@ class PatchService:
                 record=read(identifier)
             expected={'revoke_assumption':{'assumption','evidence'},'change_claim_scope':{'claim'},
                       'adjudicate_inference':{'inference'},'revise_branch':{'branch'},'record_refutation':{'claim'}}
+            expected.update(qualify_evidence={'evidence'}, adjudicate_claim={'claim'})
             if op in expected and kind(record) not in expected[op]:
                 raise HarnessError('permission_denied','Operation not permitted on target kind')
-            if op!='add_evidence' and 'intrinsic_valid' in payload:
+            if op not in ('add_evidence','qualify_evidence') and 'intrinsic_valid' in payload:
                 raise HarnessError('permission_denied','Operation cannot invent intrinsic validity')
             data={**record['data'],**payload}
-            locators(data,required=op=='add_evidence')
+            locators(data,required=op in ('add_evidence','qualify_evidence'))
             if op=='revoke_assumption': data.update(revoked=True,work_qualification='withdrawn')
             elif op=='change_claim_scope':
                 if not payload.get('scope'): raise HarnessError('invalid_contract','Explicit corrected scope required')
-            elif op=='adjudicate_inference':
+            elif op in ('adjudicate_inference','adjudicate_claim'):
                 if payload.get('verdict') not in ('supported','qualified','refuted','invalid_test','unsupported','unresolved','mixed'):
                     raise HarnessError('invalid_contract','Explicit scoped inference verdict required')
-            elif op=='add_evidence':
+                data['qualification']='scoped_audited_judgment'
+            elif op in ('add_evidence','qualify_evidence'):
                 affirmative=payload.get('intrinsic_valid',False)
                 if affirmative and not (payload.get('qualification')=='audited_observation' and any(
                     kind(r)=='auditresult' and r['data'].get('verdict') in ('supported','qualified') and r['data'].get('scope')==payload.get('scope') for r in verified)):
                     raise HarnessError('scientific_test_invalid','Raw source presence does not qualify scientific evidence')
                 data['intrinsic_valid']=bool(affirmative)
+                if affirmative:
+                    data['evidence_status']='qualified'
+                if op=='qualify_evidence':
+                    data.update(revoked=False,reassessment_required=False)
                 data['independent_physical_evidence_count']='not increased by duplicate sources or reviews'
                 data['source_content_identities']=sorted({l['content_identity']['digest'] for l in data['source_locators']})
             elif op in ('add_branch','revise_branch'):
@@ -122,7 +128,7 @@ class PatchService:
             elif op=='record_refutation':
                 if not payload.get('scope') or 'residual_assets' not in payload:
                     raise HarnessError('invalid_contract','Refutation needs scope and residual_assets')
-                data.update(evidence_status='refuted')
+                data.update(evidence_status='refuted',verdict='refuted',qualification='scoped_audited_judgment')
                 negative_id=stable_id('negative_knowledge',[patch['id'],identifier])
                 try: self.store.get(negative_id)
                 except KeyError: pass
@@ -131,7 +137,8 @@ class PatchService:
                     'target_claim_id':identifier,'original_proposition':record['data'],
                     'scope':payload['scope'],'residual_assets':payload['residual_assets'],
                     'reopen_conditions':payload.get('reopen_conditions',[]),'verdict':'refuted',
-                    'verification_refs':patch['verification_refs'],'source_locators':data.get('source_locators',[])}}
+                    'verification_refs':patch['verification_refs'],'source_locators':data.get('source_locators',[]),
+                    'support_sets':data.get('support_sets',[])}}
             data['scientific_patch_id']=patch['id'];data['verification_refs']=patch['verification_refs']
             records[identifier]={'id':identifier,'kind':record['kind'],'data':data}
         for record in records.values():

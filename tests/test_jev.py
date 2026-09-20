@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 from urllib.error import HTTPError
-from research_harness.decisions import JevAdapter
+from research_cases.legacy.decisions import JevAdapter
 
 Q={'q':{'type':'noul','instructions':'Does the synthetic example report completion?'}}
 

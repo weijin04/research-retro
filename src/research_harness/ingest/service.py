@@ -20,6 +20,9 @@ class Ingestor:
 
     def allowed(self, path):
         path = Path(path).absolute()
+        if any(path.resolve().is_relative_to(Path(p).resolve())
+               for source in self.manifest["sources"] for p in source.get("excluded_paths", [])):
+            raise HarnessError("permission_denied", "Workspace/output is excluded from source intake")
         # Reject historical references outside lexical scope before touching their
         # filesystem (including slow or unavailable mounts).
         candidates = []
@@ -60,7 +63,7 @@ class Ingestor:
     def _invalidations(self, identifier, reason):
         changes = []
         for record in self.store.list():
-            if record["kind"].lower() == "evidence" and any(
+            if record["kind"].lower() in {"evidence", "assumption"} and any(
                     loc.get("artifact_id") == identifier for loc in record["data"].get("source_locators", [])):
                 changes.append({"id": record["id"], "kind": record["kind"], "data": {
                     **record["data"], "revoked": True, "reassessment_required": True, "revision_reason": reason}})
@@ -219,11 +222,13 @@ class Ingestor:
         truncated = False
         def onerror(error):
             errors.append({"path": error.filename, "error": type(error).__name__})
+        if not root.is_dir():
+            errors.append({"path": str(root), "error": "source_root_unavailable"})
         for folder, dirs, files in os.walk(root, followlinks=False, onerror=onerror):
             kept = []
             for directory in sorted(dirs):
                 p = Path(folder) / directory
-                if directory in source.get("excludes", []):
+                if directory in source.get("excludes", []) or any(p.resolve().is_relative_to(Path(x).resolve()) for x in source.get("excluded_paths", [])):
                     rows.append({"path": str(p), "state": "not_in_scope", "reason": "manifest directory exclusion; descendants not enumerated"})
                 elif p.is_symlink():
                     rows.append({"path": str(p), "state": "not_in_scope", "reason": "directory symlink not traversed"})
@@ -275,7 +280,7 @@ class Ingestor:
                 "denominator": len(rows), "counts": dict(counts), "enumeration_complete": not truncated and not errors,
                 "scope": "files plus explicitly excluded directory roots; excluded descendants not part of denominator",
                 "content_identity": "metadata scan does not prove unchanged bytes", "errors": errors,
-                "scan_started_or_finished_at": now(), "is_development": True}
+                "scan_started_or_finished_at": now(), "dataset_role": self.manifest.get("dataset_role", "unspecified")}
         upsert(self.store, [{"id": identity, "kind": "coverage", "data": data}], "source metadata delta and complete processing ledger")
         return {"id": identity, **{k: v for k, v in data.items() if k != "blob_refs"}}
 

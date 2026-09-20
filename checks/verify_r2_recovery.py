@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from research_harness.storage import Store
 from research_harness.common import atomic_json, digest
-from research_harness.reconstruction.audit import revoke
+from research_cases.legacy.audit import revoke
 from research_harness.context import build_context
 from research_harness.views import export_report
 from research_harness.ingest import Ingestor

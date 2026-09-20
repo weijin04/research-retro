@@ -1,0 +1,14 @@
+{
+  "caller": "Codex controlling Agent shell tool",
+  "direct_command": "retro inspect BUNDLE",
+  "generic_command": "retro call --input REQUEST",
+  "same_envelope": true,
+  "contract_version": "1.0",
+  "bundle_verification": {
+    "ok": true,
+    "files": 21,
+    "authenticity": "integrity only; no digital signature"
+  },
+  "direct_result_sha256": "d54f7b21d14a286bda7b2be519aab5957090422fb9b18ee1a01843a96cc30f65",
+  "generic_result_sha256": "d54f7b21d14a286bda7b2be519aab5957090422fb9b18ee1a01843a96cc30f65"
+}

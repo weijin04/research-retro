@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 from research_harness.common import HarnessError, now, digest, canonical, atomic_json, upsert
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[2]
 INTEGRATION_VERSION = "audit-integration-4"
 
 CHECKS = {
