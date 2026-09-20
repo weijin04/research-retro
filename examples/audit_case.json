@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "synthetic_project",
+  "is_example": true,
+  "kind": "audit_case",
+  "id": "audit_endpoint",
+  "status": "draft",
+  "historical_assertion": "合成旧报告把端点电子能差写成反应势垒。",
+  "research_question": "这些材料是否足以支持低势垒和室温主通量占优？",
+  "scientific_scope": {
+    "composition": "same in the stated illustrative model",
+    "potential_surface": "same surface assumed",
+    "temperature_K": null,
+    "evidence_type": "synthetic software fixture"
+  },
+  "evidence_locator_ids": [
+    "loc_endpoint"
+  ],
+  "competing_explanations": [
+    "端点差仅描述终态相对能量。",
+    "路径最大能量或不同物理过程需要另外的依据。"
+  ],
+  "analysis_obligations": [
+    "明确目标量。",
+    "推导端点差与路径势垒的条件性关系。",
+    "区分失去依据与反向证明机制不可能。"
+  ],
+  "allowed_actions": [
+    "read",
+    "derive",
+    "deterministic_postprocess",
+    "propose_revision"
+  ],
+  "read_set": [
+    {
+      "object_id": "art_endpoint",
+      "revision": 1
+    }
+  ],
+  "result_ref": null,
+  "extensions": {}
+}

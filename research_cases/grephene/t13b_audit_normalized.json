@@ -1,0 +1,701 @@
+{
+  "id": "grephene-t13b-contact-migration-002",
+  "schema_version": "audit-case-local-1",
+  "project_id": "grephene-development",
+  "revision": 1,
+  "status": "completed_scoped_real_postprocessing",
+  "evidence_verdict": "mixed",
+  "source_files": [
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.inp",
+      "sha256": "746df46cd075e748d904f8a4c89193cdaa166498d07c59b4e6f7a94bf3e2b99e",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/746df46cd075e748d904f8a4c89193cdaa166498d07c59b4e6f7a94bf3e2b99e",
+      "size": 627,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 46
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_input"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.relaxscanact.dat",
+      "sha256": "9bb5da5ff284018bbe713daade9a0b30559c94043a9815cca6462171ec54ba24",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/9bb5da5ff284018bbe713daade9a0b30559c94043a9815cca6462171ec54ba24",
+      "size": 210,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 7
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_output"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/OBJECTS/8b/8b9d1315e6afe5b170e3c0d466f90c8a910596d9e9a3378cc2cff4acc05d2366",
+      "sha256": "8b9d1315e6afe5b170e3c0d466f90c8a910596d9e9a3378cc2cff4acc05d2366",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/8b9d1315e6afe5b170e3c0d466f90c8a910596d9e9a3378cc2cff4acc05d2366",
+      "size": 12573153,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 222349
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_output"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.001.xyz",
+      "sha256": "9c59616584ac151ac68eb6c980154d3a0fb2e2cc835382bc0a43a70f26b9cd6e",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/9c59616584ac151ac68eb6c980154d3a0fb2e2cc835382bc0a43a70f26b9cd6e",
+      "size": 6655,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_geometry"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.002.xyz",
+      "sha256": "e65e7f0a6098950597756499ece4c3eb152d7b2833e3f65c4a04f6445c3833e0",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/e65e7f0a6098950597756499ece4c3eb152d7b2833e3f65c4a04f6445c3833e0",
+      "size": 6655,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_geometry"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.003.xyz",
+      "sha256": "db446025f510223f122af8f53651058a4ca397460e938b9a786f7dcac27a412d",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/db446025f510223f122af8f53651058a4ca397460e938b9a786f7dcac27a412d",
+      "size": 6655,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_geometry"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.004.xyz",
+      "sha256": "d6796ce921e2f92f1c8bbee512723ba7d92ffa8a9dac81bc59b462f9c44e5715",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/d6796ce921e2f92f1c8bbee512723ba7d92ffa8a9dac81bc59b462f9c44e5715",
+      "size": 6655,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_geometry"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.005.xyz",
+      "sha256": "9454ca297f54a8a866a542f1ba6b2094a3748f807b51d2678e502555fe1b7f8d",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/9454ca297f54a8a866a542f1ba6b2094a3748f807b51d2678e502555fe1b7f8d",
+      "size": 6655,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_geometry"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.006.xyz",
+      "sha256": "8363c5420e2a4e40ddb06a8e9a4deedf500359f50d59ed5fecfe9e8617dc6892",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/8363c5420e2a4e40ddb06a8e9a4deedf500359f50d59ed5fecfe9e8617dc6892",
+      "size": 6655,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_geometry"
+    },
+    {
+      "path": "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.007.xyz",
+      "sha256": "624b2c80109b49c338811756d53a2dd6f1105e319384c5de66a30684287991e1",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/624b2c80109b49c338811756d53a2dd6f1105e319384c5de66a30684287991e1",
+      "size": 6655,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 90
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "primary_scan_geometry"
+    },
+    {
+      "path": "/home/sun07ao/grephene/RESEARCH_CONTROL.md",
+      "sha256": "8375c6a9148d1b065f3c9670cf945013e1a778f472ad9fcdd3352053bd77fbe5",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/8375c6a9148d1b065f3c9670cf945013e1a778f472ad9fcdd3352053bd77fbe5",
+      "size": 31030,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 101
+        }
+      ],
+      "read_mode": "full_bytes",
+      "role": "historical_assertion"
+    }
+  ],
+  "conditions": {
+    "composition": {
+      "C": 56,
+      "H": 21,
+      "N": 4,
+      "Fe": 1,
+      "O": 6
+    },
+    "charge": 0,
+    "multiplicity": 6,
+    "method": "r2SCAN-3c LooseOpt TightSCF ground-state relaxed scan",
+    "frozen_atoms": 36,
+    "coordinate": "C31-N72 distance, 1.45..2.65 Angstrom, seven samples",
+    "reference": "first constrained scan sample; not assumed a fully optimized unconstrained minimum"
+  },
+  "original_claims": [
+    {
+      "text_verbatim": "1. **T13b/T15 回收**（xj，~2–3 h）：C–N 断裂剖面（六重态）+ 二重态封端产物 → 200 °C 回迁垒区间；≤35 → F2 由 Fe 介导回迁解释；否则算相邻双 N 偶联（C54 双 N + Fe 封端 Opt）。",
+      "locator": {
+        "path": "/home/sun07ao/grephene/RESEARCH_CONTROL.md",
+        "sha256": "8375c6a9148d1b065f3c9670cf945013e1a778f472ad9fcdd3352053bd77fbe5",
+        "line_start": 83,
+        "line_end": 83
+      },
+      "role": "historical plan/anticipated interpretation; source line1 already supersedes it"
+    }
+  ],
+  "actual_question": "Does stretching C31-N72 detach N72 from the carbon surface, or does the same indexed atom retain/change short carbon contacts? Is maximum sampled electronic energy an annealing free-energy barrier?",
+  "analysis": {
+    "actual_results": {
+      "scan_rows": [
+        {
+          "point": 1,
+          "scanned_c31_n72_angstrom": 1.4499999789939142,
+          "energy_eh": -4080.30257347,
+          "delta_from_first_sample_kcal_mol": 0.0,
+          "nearest_carbons": [
+            {
+              "index": 31,
+              "distance_angstrom": 1.4499999789939142
+            },
+            {
+              "index": 32,
+              "distance_angstrom": 1.4683006482681735
+            },
+            {
+              "index": 20,
+              "distance_angstrom": 2.4561966228610554
+            },
+            {
+              "index": 33,
+              "distance_angstrom": 2.4578630158471593
+            },
+            {
+              "index": 30,
+              "distance_angstrom": 2.4614009886326724
+            }
+          ],
+          "distance_contacts_by_cutoff": {
+            "1.6": [
+              31,
+              32
+            ],
+            "1.8": [
+              31,
+              32
+            ],
+            "2.0": [
+              31,
+              32
+            ]
+          },
+          "geometry_vs_output_max_abs_angstrom": 4.993367097583246e-07
+        },
+        {
+          "point": 2,
+          "scanned_c31_n72_angstrom": 1.6499999848204083,
+          "energy_eh": -4080.29314766,
+          "delta_from_first_sample_kcal_mol": 5.9147850756004,
+          "nearest_carbons": [
+            {
+              "index": 32,
+              "distance_angstrom": 1.4705581198424162
+            },
+            {
+              "index": 31,
+              "distance_angstrom": 1.6499999848204083
+            },
+            {
+              "index": 33,
+              "distance_angstrom": 2.4568380264761704
+            },
+            {
+              "index": 42,
+              "distance_angstrom": 2.461470913289256
+            },
+            {
+              "index": 20,
+              "distance_angstrom": 2.5669426108701474
+            }
+          ],
+          "distance_contacts_by_cutoff": {
+            "1.6": [
+              32
+            ],
+            "1.8": [
+              32,
+              31
+            ],
+            "2.0": [
+              32,
+              31
+            ]
+          },
+          "geometry_vs_output_max_abs_angstrom": 4.988836499464355e-07
+        },
+        {
+          "point": 3,
+          "scanned_c31_n72_angstrom": 1.8499999915692853,
+          "energy_eh": -4080.28216717,
+          "delta_from_first_sample_kcal_mol": 12.805146580639247,
+          "nearest_carbons": [
+            {
+              "index": 32,
+              "distance_angstrom": 1.464980622385388
+            },
+            {
+              "index": 31,
+              "distance_angstrom": 1.8499999915692853
+            },
+            {
+              "index": 33,
+              "distance_angstrom": 2.4396169808392765
+            },
+            {
+              "index": 42,
+              "distance_angstrom": 2.4456756871083525
+            },
+            {
+              "index": 20,
+              "distance_angstrom": 2.6869868610419845
+            }
+          ],
+          "distance_contacts_by_cutoff": {
+            "1.6": [
+              32
+            ],
+            "1.8": [
+              32
+            ],
+            "2.0": [
+              32,
+              31
+            ]
+          },
+          "geometry_vs_output_max_abs_angstrom": 4.996141900193152e-07
+        },
+        {
+          "point": 4,
+          "scanned_c31_n72_angstrom": 2.0500000067208157,
+          "energy_eh": -4080.2790186,
+          "delta_from_first_sample_kcal_mol": 14.780904085180833,
+          "nearest_carbons": [
+            {
+              "index": 32,
+              "distance_angstrom": 1.4597574039455947
+            },
+            {
+              "index": 31,
+              "distance_angstrom": 2.0500000067208157
+            },
+            {
+              "index": 33,
+              "distance_angstrom": 2.415002404082896
+            },
+            {
+              "index": 42,
+              "distance_angstrom": 2.423837351457088
+            },
+            {
+              "index": 20,
+              "distance_angstrom": 2.8271602630118884
+            }
+          ],
+          "distance_contacts_by_cutoff": {
+            "1.6": [
+              32
+            ],
+            "1.8": [
+              32
+            ],
+            "2.0": [
+              32
+            ]
+          },
+          "geometry_vs_output_max_abs_angstrom": 4.987698698499798e-07
+        },
+        {
+          "point": 5,
+          "scanned_c31_n72_angstrom": 2.249999981374321,
+          "energy_eh": -4080.27699805,
+          "delta_from_first_sample_kcal_mol": 16.048818352997433,
+          "nearest_carbons": [
+            {
+              "index": 32,
+              "distance_angstrom": 1.4752762090684575
+            },
+            {
+              "index": 31,
+              "distance_angstrom": 2.249999981374321
+            },
+            {
+              "index": 33,
+              "distance_angstrom": 2.396923099293222
+            },
+            {
+              "index": 42,
+              "distance_angstrom": 2.4024661630156805
+            },
+            {
+              "index": 20,
+              "distance_angstrom": 3.0077846872380345
+            }
+          ],
+          "distance_contacts_by_cutoff": {
+            "1.6": [
+              32
+            ],
+            "1.8": [
+              32
+            ],
+            "2.0": [
+              32
+            ]
+          },
+          "geometry_vs_output_max_abs_angstrom": 4.992525699520911e-07
+        },
+        {
+          "point": 6,
+          "scanned_c31_n72_angstrom": 2.4500000003923943,
+          "energy_eh": -4080.3021665,
+          "delta_from_first_sample_kcal_mol": 0.2553775305704288,
+          "nearest_carbons": [
+            {
+              "index": 32,
+              "distance_angstrom": 1.455153157493509
+            },
+            {
+              "index": 33,
+              "distance_angstrom": 1.4551697277694122
+            },
+            {
+              "index": 31,
+              "distance_angstrom": 2.4500000003923943
+            },
+            {
+              "index": 42,
+              "distance_angstrom": 2.4582799912135003
+            },
+            {
+              "index": 22,
+              "distance_angstrom": 2.462559129220211
+            }
+          ],
+          "distance_contacts_by_cutoff": {
+            "1.6": [
+              32,
+              33
+            ],
+            "1.8": [
+              32,
+              33
+            ],
+            "2.0": [
+              32,
+              33
+            ]
+          },
+          "geometry_vs_output_max_abs_angstrom": 4.9987878e-07
+        },
+        {
+          "point": 7,
+          "scanned_c31_n72_angstrom": 2.6499999945410333,
+          "energy_eh": -4080.29533544,
+          "delta_from_first_sample_kcal_mol": 4.5419323984436355,
+          "nearest_carbons": [
+            {
+              "index": 33,
+              "distance_angstrom": 1.4602219595482056
+            },
+            {
+              "index": 32,
+              "distance_angstrom": 1.5273365665900263
+            },
+            {
+              "index": 34,
+              "distance_angstrom": 2.4334446762020563
+            },
+            {
+              "index": 42,
+              "distance_angstrom": 2.488321809321984
+            },
+            {
+              "index": 22,
+              "distance_angstrom": 2.4964436595933974
+            }
+          ],
+          "distance_contacts_by_cutoff": {
+            "1.6": [
+              33,
+              32
+            ],
+            "1.8": [
+              33,
+              32
+            ],
+            "2.0": [
+              33,
+              32
+            ]
+          },
+          "geometry_vs_output_max_abs_angstrom": 4.994747802022914e-07
+        }
+      ],
+      "peak_point": 5,
+      "peak_relative_kcal_mol": 16.048818352997433,
+      "all_samples_retain_short_carbon_contact": true,
+      "first_to_sixth_contacts": "C31/C32 to C32/C33 at <1.6 Angstrom"
+    },
+    "script": "research_cases/grephene/audit_t13b.py",
+    "execution_receipt": "var/audit_work/grephene/entry_t13b_execution_receipt.json",
+    "execution_receipt_sha256": "9a78b4cd3d56aff909a8314642fe266196bda82aca3fb519e28100e0e8bf3003",
+    "script_sha256": "eb5be47fb2da9f2e926d18e69b27329226a8a7915ce97a6260be300bbceeac7f",
+    "derivation": "A scanned bond coordinate is not equivalent to total surface detachment. Reconstruct N72-to-all-carbon distances with conserved atom labels; new short contacts survive cutoff changes 1.6/1.8/2.0. A sampled constrained electronic-energy maximum relative to the first sample is not DeltaG activation or a certified transition state.",
+    "checks": [
+      "input/output protocol",
+      "7 point energy table identity",
+      "atom identity across all frames",
+      "actual output vs saved geometry",
+      "scanned distance consistency",
+      "all-carbon distance reconstruction",
+      "cutoff robustness"
+    ]
+  },
+  "support_scope": [
+    "Matched seven-frame energy and distance reconstruction of the existing constrained scan.",
+    "Limited invalidation of full-detachment/annealing-barrier inference."
+  ],
+  "first_failing_conditions": [
+    {
+      "claim": "single C31-N72 extension means complete surface detachment",
+      "failure": "Single C31-N72 stretch ceases to represent total detachment; N72-C32 remains <1.6 Angstrom throughout and C33 becomes another short neighbor at point6."
+    },
+    {
+      "claim": "sampled electronic maximum is a certified 200 Celsius recovery free-energy barrier",
+      "failure": "Different target: constrained electronic sample relative to sample1; no stationarity/path/entropy or experimental reaction assignment."
+    }
+  ],
+  "retained_assets": [
+    "Seven matched geometries and energies",
+    "Distance-defined contact migration within this model",
+    "Peak electronic energy under explicit reference"
+  ],
+  "negative_knowledge": [
+    {
+      "proposition": "N72 loses all short carbon contacts when C31-N72 is 2.45 Angstrom",
+      "verdict": "refuted",
+      "scope": "point6 geometry only",
+      "failure_type": "representation_loses_other_contacts",
+      "retained": "C32/C33 short contacts remain.",
+      "applicable_conditions": "point6 geometry only",
+      "reopen_condition": "Reopen if atom identity or matched point6 coordinates change, or a different contact definition is justified; a later detached geometry is a separate branch rather than a correction to point6."
+    },
+    {
+      "proposition": "This scan certifies the annealing activation free energy",
+      "verdict": "unsupported",
+      "scope": "Inference, not actual existence of another annealing pathway",
+      "failure_type": "target_and_path_obligation",
+      "retained": "Real constrained electronic profile.",
+      "applicable_conditions": "Inference, not actual existence of another annealing pathway",
+      "reopen_condition": "Reopen if a reaction-assigned stationary pathway, applicable thermodynamic reference and thermal corrections establish an annealing activation free energy; the constrained electronic maximum alone is insufficient."
+    }
+  ],
+  "residual_unknowns": [
+    "Formal electronic bond order not computed by distance check",
+    "Stationary saddle and continuous reaction path between samples",
+    "Entropy/free-energy effects and actual 200 Celsius experimental recovery channel"
+  ],
+  "competitive_explanations": [
+    {
+      "hypothesis": "N72 is fully detached after C31-N72 reaches 2.45 Angstrom",
+      "result": "refuted_in_scope",
+      "reason": "Two other carbon contacts remain 1.45515/1.45517 Angstrom."
+    },
+    {
+      "hypothesis": "Rebonding inference arises from atom renumbering or mismatched cached geometry",
+      "result": "refuted_in_scope",
+      "reason": "Atom-label arrays identical and each saved geometry matches its actual scan-output block within 1e-5 Angstrom."
+    },
+    {
+      "hypothesis": "The sample peak is still a useful energetic observation",
+      "result": "supported_with_scope",
+      "reason": "Peak is reproducible from primary output and dat; retain as sampled constrained electronic energy relative to first sample."
+    },
+    {
+      "hypothesis": "These data exclude a different annealing or recovery pathway",
+      "result": "unsupported",
+      "reason": "Single coordinate and fixed multiplicity do not cover competing pathways or the experimental recovery observable."
+    }
+  ],
+  "suggested_state_records": [
+    {
+      "id": "t13b-c-contact-migration",
+      "kind": "claim",
+      "evidence_status": "supported",
+      "text": "N72 short neighbors change from C31/C32 at point1 to C32/C33 at point6; point6 distances are 1.455153/1.455170 Angstrom."
+    },
+    {
+      "id": "t13b-c-retained-carbon-contact",
+      "kind": "claim",
+      "evidence_status": "supported",
+      "text": "All seven checked scan geometries retain at least one N72-C contact below 1.6 Angstrom."
+    },
+    {
+      "id": "t13b-c-sampled-peak",
+      "kind": "claim",
+      "evidence_status": "supported",
+      "text": "Seven-point sampled electronic peak is +16.048818352997433 kcal/mol relative to first constrained point."
+    },
+    {
+      "id": "t13b-c-complete-detachment",
+      "kind": "claim",
+      "evidence_status": "refuted",
+      "text": "Point6 is complete N72 detachment from all carbon contacts."
+    },
+    {
+      "id": "t13b-c-annealing-barrier",
+      "kind": "claim",
+      "evidence_status": "unsupported",
+      "text": "The T13b sampled peak certifies an annealing activation free energy."
+    },
+    {
+      "id": "t13b-b-recovery-mechanism",
+      "kind": "branch",
+      "evidence_status": "unresolved",
+      "text": "The actual chemical recovery/annealing pathway remains unresolved."
+    }
+  ],
+  "source_groups": {
+    "point1_to_6_contact_migration": {
+      "sources": [
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.inp",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/OBJECTS/8b/8b9d1315e6afe5b170e3c0d466f90c8a910596d9e9a3378cc2cff4acc05d2366",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.001.xyz",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.006.xyz"
+      ],
+      "scope": "Same indexed N72 changes short carbon neighbors from C31/C32 to C32/C33 between these two actual scan geometries.",
+      "rationale": "Only initial and point6 matched geometries are needed for this contact-change witness; full output provides identity and actual frame association.",
+      "limitations": [
+        "Distance-based contacts do not independently establish formal bond order or an intervening continuous path."
+      ]
+    },
+    "all_seven_retain_carbon_contact": {
+      "sources": [
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.inp",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/OBJECTS/8b/8b9d1315e6afe5b170e3c0d466f90c8a910596d9e9a3378cc2cff4acc05d2366",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.001.xyz",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.002.xyz",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.003.xyz",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.004.xyz",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.005.xyz",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.006.xyz",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.007.xyz"
+      ],
+      "scope": "Each of the seven actual scan geometries retains at least one N72-C distance below 1.6 Angstrom.",
+      "rationale": "The universal seven-sample claim requires all seven geometries, not just endpoint6."
+    },
+    "sampled_energy_peak": {
+      "sources": [
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.inp",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/OBJECTS/8b/8b9d1315e6afe5b170e3c0d466f90c8a910596d9e9a3378cc2cff4acc05d2366",
+        "/home/sun07ao/grephene/MECHANISM_FIELD_AUDIT_20260907/01_INVENTORY/RAW_CACHE/xj/s5_followups/T13b_cn_scan/orca.relaxscanact.dat"
+      ],
+      "scope": "Maximum seven-point actual electronic energy relative to first constrained sample is +16.048818352997433 kcal/mol at point5.",
+      "rationale": "Raw scan table, its independent dat copy and coordinate protocol establish the sampled target and reference; no geometry-derived bond inference needed."
+    }
+  },
+  "inference_dependencies": {
+    "t13b-c-contact-migration": [
+      [
+        "point1_to_6_contact_migration"
+      ]
+    ],
+    "t13b-c-retained-carbon-contact": [
+      [
+        "all_seven_retain_carbon_contact"
+      ]
+    ],
+    "t13b-c-sampled-peak": [
+      [
+        "sampled_energy_peak"
+      ]
+    ],
+    "t13b-c-complete-detachment": [
+      [
+        "point1_to_6_contact_migration"
+      ]
+    ],
+    "t13b-c-annealing-barrier": [
+      [
+        "point1_to_6_contact_migration",
+        "sampled_energy_peak"
+      ]
+    ],
+    "t13b-b-recovery-mechanism": [],
+    "grephene-t13b-contact-migration-002:negative:0": [
+      [
+        "point1_to_6_contact_migration"
+      ]
+    ],
+    "grephene-t13b-contact-migration-002:negative:1": [
+      [
+        "sampled_energy_peak"
+      ]
+    ]
+  },
+  "integration_notes": [
+    "Unsupported/refuted propositions are not affirmative support for productive downstream mechanisms.",
+    "An unresolved branch has no affirmative support-set certification here.",
+    "Source groups may share files; this represents common provenance, not independent physical trials."
+  ],
+  "normalization": {
+    "source_case": "research_cases/grephene/t13b_audit_case.json",
+    "source_case_sha256": "73e573498b16525b95463c707f7e0bba8a0d4c64dcf05f4caaa3a0bdca9727df",
+    "normalized_at": "2026-09-20T09:41:40.012341+00:00",
+    "new_execution": false
+  }
+}

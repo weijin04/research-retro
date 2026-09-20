@@ -1,0 +1,1548 @@
+{
+  "schema_version": "audit-case-local-1",
+  "id": "grephene-lmct-coordinate-and-energy-001",
+  "project_id": "grephene-development",
+  "revision": 1,
+  "status": "completed_scoped_real_postprocessing",
+  "evidence_verdict": "mixed",
+  "work_disposition": "active",
+  "development_material": true,
+  "created_at": "2026-09-20T08:59:45.201611+00:00",
+  "original_claims": [
+    {
+      "id": "gph-h-gradient",
+      "text_verbatim": "**光致 Fe–Nα 伸长 ≈ −9.2 eV/Å，光致 Nα–Nβ 缩短 ≈ +8.0 eV/Å**，三根一致。",
+      "source_locator": {
+        "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/RESULTS.md",
+        "sha256": "3e0b938898ae42af9aa748e35e2dfc84faf21f574df81c7ac6e223d999cce60b",
+        "line_start": 180,
+        "line_end": 180
+      },
+      "status": "imported_assertion",
+      "historical_event_time": {
+        "status": "unknown",
+        "value": null
+      },
+      "recorded_time": {
+        "status": "unknown",
+        "value": null
+      }
+    },
+    {
+      "id": "gph-h-gap",
+      "text_verbatim": "GS 与追踪激发态曲线在 r=3.20 Å 处仍有 ≈1.16 eV 的垂直间隙未完全闭合",
+      "source_locator": {
+        "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/RESULTS.md",
+        "sha256": "3e0b938898ae42af9aa748e35e2dfc84faf21f574df81c7ac6e223d999cce60b",
+        "line_start": 124,
+        "line_end": 124
+      },
+      "status": "imported_assertion",
+      "historical_event_time": {
+        "status": "unknown",
+        "value": null
+      },
+      "recorded_time": {
+        "status": "unknown",
+        "value": null
+      }
+    },
+    {
+      "id": "gph-h-monotonic",
+      "text_verbatim": "Fe–Nα 方向的追踪激发态绝对能量单调下降 0.70 eV",
+      "source_locator": {
+        "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/RESULTS.md",
+        "sha256": "3e0b938898ae42af9aa748e35e2dfc84faf21f574df81c7ac6e223d999cce60b",
+        "line_start": 126,
+        "line_end": 126
+      },
+      "status": "imported_assertion",
+      "historical_event_time": {
+        "status": "unknown",
+        "value": null
+      },
+      "recorded_time": {
+        "status": "unknown",
+        "value": null
+      }
+    }
+  ],
+  "actual_question": "对已固定原子序/几何的孤立18原子模型，原件实际给的是哪一种坐标方向导数、总能/能隙目标量？规范与参考纠正后哪些方向和路径断言仍成立？",
+  "distinction_from_original": "不把局部梯度或采样能量走势升级为实际机制、通量或排除竞争通道。分别审查坐标映射、ES总量、ES-GS差量、同几何垂直隙、不同几何能高和单调性。",
+  "conditions": {
+    "composition": "C2H3FeN6O6",
+    "atom_count": 18,
+    "charge": 0,
+    "multiplicity": 6,
+    "environment": "isolated molecular fragment; no graphene",
+    "fc_method": "LibXC(WB97X-D4)/def2-TZVP def2/J RIJCOSX UKS TightSCF; excited TDA NRoots12 IRoot1..3",
+    "scan_method": "wB97X-D4 ground relaxed scan, per-point LibXC(WB97X-D4) TDA",
+    "atom_indices_zero_based": {
+      "Fe": 0,
+      "Na": 15,
+      "Nb": 16,
+      "Ng": 17
+    },
+    "geometry_equality": "exact atom-number and coordinate equality in four .engrad files",
+    "coordinate": "symmetric Cartesian unit bond-length displacement, other Cartesian coordinates fixed",
+    "energy_reference": "same-geometry E1-E0 for vertical gap; E1(Q)-E0(FC) separately",
+    "historical_executable_identity": {
+      "status": "unknown",
+      "value": null
+    }
+  },
+  "authorization": {
+    "source_root": "/home/sun07ao/grephene",
+    "read_only_sources": true,
+    "external_calls": false,
+    "new_scientific_computation": false,
+    "source_scripts_executed": false,
+    "activity": "stdlib parsing, algebraic reconstruction and coordinate finite-difference check"
+  },
+  "source_files": [
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.engrad",
+      "sha256": "ee193d681dcb83d93fece90da98f02e25c529081b0be10086d67d0cc9beb537a",
+      "size": 2195,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 86
+        }
+      ],
+      "role": "primary_gradient",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/ee193d681dcb83d93fece90da98f02e25c529081b0be10086d67d0cc9beb537a",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1789265872454449436
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.inp",
+      "sha256": "b2286b0928b60bbfcdbf68636d7a503ed56e0dc33d02d4ae53afcd95500aeb21",
+      "size": 150,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 5
+        }
+      ],
+      "role": "primary_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/b2286b0928b60bbfcdbf68636d7a503ed56e0dc33d02d4ae53afcd95500aeb21",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1789265840863339877
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.out",
+      "sha256": "4f1426501cf17278f0efb543c23f31ca1839ef8d5d6623c70b1ec5d004cb3de9",
+      "size": 105831,
+      "line_ranges": [
+        {
+          "start": 220,
+          "end": 222
+        },
+        {
+          "start": 758,
+          "end": 760
+        },
+        {
+          "start": 2203,
+          "end": 2205
+        },
+        {
+          "start": 2517,
+          "end": 2519
+        }
+      ],
+      "role": "primary_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/4f1426501cf17278f0efb543c23f31ca1839ef8d5d6623c70b1ec5d004cb3de9",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1789265875650469312
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.engrad",
+      "sha256": "920005e785f3ecb372d1b2fcd1262934da28d9b0d0a2b68f43c3ddfa5470ffef",
+      "size": 2195,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 86
+        }
+      ],
+      "role": "primary_gradient",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/920005e785f3ecb372d1b2fcd1262934da28d9b0d0a2b68f43c3ddfa5470ffef",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788591065050311403
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.inp",
+      "sha256": "4775e22ffda9f9a34afb673d3e8416a0400a5c815cf027393b4cf572c1b8402a",
+      "size": 168,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/4775e22ffda9f9a34afb673d3e8416a0400a5c815cf027393b4cf572c1b8402a",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788590797865530936
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.out",
+      "sha256": "402ec3eedfd3f7563f986a4e1d8c5b06f8d819e10ab7681fde867a069dcd166e",
+      "size": 179016,
+      "line_ranges": [
+        {
+          "start": 225,
+          "end": 227
+        },
+        {
+          "start": 234,
+          "end": 236
+        },
+        {
+          "start": 806,
+          "end": 808
+        },
+        {
+          "start": 2299,
+          "end": 2301
+        },
+        {
+          "start": 4046,
+          "end": 4048
+        },
+        {
+          "start": 4309,
+          "end": 4311
+        }
+      ],
+      "role": "primary_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/402ec3eedfd3f7563f986a4e1d8c5b06f8d819e10ab7681fde867a069dcd166e",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861764143614
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.engrad",
+      "sha256": "6e29ce3f16d9b3b93c5b356e6c7c0e3a2d495d359a22f2aa6df632a5cf43c499",
+      "size": 2195,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 86
+        }
+      ],
+      "role": "primary_gradient",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/6e29ce3f16d9b3b93c5b356e6c7c0e3a2d495d359a22f2aa6df632a5cf43c499",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788591245026105543
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.inp",
+      "sha256": "4699e61f0997350b4b6aa9a5fe2eb4c99aa02c723689d6dfab7d12d1cd74510b",
+      "size": 168,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/4699e61f0997350b4b6aa9a5fe2eb4c99aa02c723689d6dfab7d12d1cd74510b",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788590797869152574
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.out",
+      "sha256": "7f2721635a4946ae6f27f52d984731836efcdc1034d8c4eab63648152ba59595",
+      "size": 179015,
+      "line_ranges": [
+        {
+          "start": 225,
+          "end": 227
+        },
+        {
+          "start": 234,
+          "end": 236
+        },
+        {
+          "start": 806,
+          "end": 808
+        },
+        {
+          "start": 2299,
+          "end": 2301
+        },
+        {
+          "start": 4046,
+          "end": 4048
+        },
+        {
+          "start": 4309,
+          "end": 4311
+        }
+      ],
+      "role": "primary_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/7f2721635a4946ae6f27f52d984731836efcdc1034d8c4eab63648152ba59595",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861769881030
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.engrad",
+      "sha256": "3afe66d100269b7357d489b4ba5de944c75ac3b58ee14d98fff3fb9e61ed418f",
+      "size": 2195,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 86
+        }
+      ],
+      "role": "primary_gradient",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/3afe66d100269b7357d489b4ba5de944c75ac3b58ee14d98fff3fb9e61ed418f",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788591392112776204
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.inp",
+      "sha256": "483b669b2c5ed27fe632f90767cbeb678904a9d3596b3ae543e906328d2c8419",
+      "size": 168,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/483b669b2c5ed27fe632f90767cbeb678904a9d3596b3ae543e906328d2c8419",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788590797870944095
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.out",
+      "sha256": "b62fb73831afcb5774685036db4beed28506d48196c433e7eedec4545c07ac6e",
+      "size": 179075,
+      "line_ranges": [
+        {
+          "start": 225,
+          "end": 227
+        },
+        {
+          "start": 234,
+          "end": 236
+        },
+        {
+          "start": 806,
+          "end": 808
+        },
+        {
+          "start": 2299,
+          "end": 2301
+        },
+        {
+          "start": 4047,
+          "end": 4049
+        },
+        {
+          "start": 4310,
+          "end": 4312
+        }
+      ],
+      "role": "primary_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/b62fb73831afcb5774685036db4beed28506d48196c433e7eedec4545c07ac6e",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861775209909
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/project_gradient.py",
+      "sha256": "3894a4a219aca6d811470de6c0b136d7297cb53ca5a9137a0ad3879a6e641690",
+      "size": 4920,
+      "line_ranges": [
+        {
+          "start": 65,
+          "end": 67
+        },
+        {
+          "start": 68,
+          "end": 70
+        },
+        {
+          "start": 75,
+          "end": 77
+        },
+        {
+          "start": 78,
+          "end": 80
+        }
+      ],
+      "role": "historical_implementation_not_executed",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/3894a4a219aca6d811470de6c0b136d7297cb53ca5a9137a0ad3879a6e641690",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788591088448497891
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/RESULTS.md",
+      "sha256": "3e0b938898ae42af9aa748e35e2dfc84faf21f574df81c7ac6e223d999cce60b",
+      "size": 19969,
+      "line_ranges": [
+        {
+          "start": 121,
+          "end": 123
+        },
+        {
+          "start": 123,
+          "end": 125
+        },
+        {
+          "start": 125,
+          "end": 127
+        },
+        {
+          "start": 142,
+          "end": 144
+        },
+        {
+          "start": 152,
+          "end": 154
+        },
+        {
+          "start": 165,
+          "end": 167
+        },
+        {
+          "start": 168,
+          "end": 170
+        },
+        {
+          "start": 171,
+          "end": 173
+        }
+      ],
+      "role": "historical_claims",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/3e0b938898ae42af9aa748e35e2dfc84faf21f574df81c7ac6e223d999cce60b",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1789265969787807260
+    },
+    {
+      "path": "/home/sun07ao/grephene/research/scientific_evidence_map_20260915/CONTRADICTIONS_AND_ANOMALIES.md",
+      "sha256": "345d358d9ae0e4a54559b307b2f8911ff9ada0f4467e141a437e65ab41dc3ea2",
+      "size": 12950,
+      "line_ranges": [
+        {
+          "start": 34,
+          "end": 36
+        },
+        {
+          "start": 37,
+          "end": 39
+        },
+        {
+          "start": 48,
+          "end": 50
+        },
+        {
+          "start": 49,
+          "end": 51
+        },
+        {
+          "start": 50,
+          "end": 52
+        },
+        {
+          "start": 59,
+          "end": 61
+        },
+        {
+          "start": 85,
+          "end": 87
+        }
+      ],
+      "role": "imported_assertion_selection_only",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/345d358d9ae0e4a54559b307b2f8911ff9ada0f4467e141a437e65ab41dc3ea2",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1789553095685692770
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/compute_pes_fena.py",
+      "sha256": "da99854a255d63279e7fcedfac484a6b4d05134ab0aa449caea70acd1f64190c",
+      "size": 1071,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 21
+        }
+      ],
+      "role": "historical_implementation_not_executed",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/da99854a255d63279e7fcedfac484a6b4d05134ab0aa449caea70acd1f64190c",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788613975956184519
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.relaxscanact.dat",
+      "sha256": "859ccac7ff551b55868e2ca7a86c1df2ee9bf4ebf03b34ac1c94e3b5588f2cdd",
+      "size": 210,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 7
+        }
+      ],
+      "role": "primary_scan_energy",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/859ccac7ff551b55868e2ca7a86c1df2ee9bf4ebf03b34ac1c94e3b5588f2cdd",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612332491815488
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.inp",
+      "sha256": "d7d2f10a89d21a269252e532a4a5fe688deebe585301b7bdd1068cb307c5a3a1",
+      "size": 158,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 7
+        }
+      ],
+      "role": "primary_scan_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/d7d2f10a89d21a269252e532a4a5fe688deebe585301b7bdd1068cb307c5a3a1",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788590846898926682
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.out",
+      "sha256": "020d3976461404eebd7959c6e2cba837d10bee7e7a25a9146e173170c347768a",
+      "size": 13365067,
+      "line_ranges": [
+        {
+          "start": 243285,
+          "end": 243287
+        },
+        {
+          "start": 243416,
+          "end": 243418
+        },
+        {
+          "start": 243286,
+          "end": 243293
+        }
+      ],
+      "role": "primary_scan_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/020d3976461404eebd7959c6e2cba837d10bee7e7a25a9146e173170c347768a",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612336927536234
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point001/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "size": 159,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_tda_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612386119297273
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point001/orca.out",
+      "sha256": "c6eb30d47e08d0f815d038e18637c0db290836de4214b3bc74c05713198850f7",
+      "size": 157666,
+      "line_ranges": [
+        {
+          "start": 803,
+          "end": 805
+        },
+        {
+          "start": 2559,
+          "end": 2561
+        },
+        {
+          "start": 3355,
+          "end": 3357
+        },
+        {
+          "start": 3360,
+          "end": 3362
+        },
+        {
+          "start": 3583,
+          "end": 3585
+        }
+      ],
+      "role": "primary_tda_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/c6eb30d47e08d0f815d038e18637c0db290836de4214b3bc74c05713198850f7",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861842870254
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point002/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "size": 159,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_tda_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612386122597193
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point002/orca.out",
+      "sha256": "a54dc2972886b5d4869095d61a161a12b5f5038e9866cf3f958f057b5f8b59e5",
+      "size": 158339,
+      "line_ranges": [
+        {
+          "start": 803,
+          "end": 805
+        },
+        {
+          "start": 2566,
+          "end": 2568
+        },
+        {
+          "start": 3368,
+          "end": 3370
+        },
+        {
+          "start": 3373,
+          "end": 3375
+        },
+        {
+          "start": 3596,
+          "end": 3598
+        }
+      ],
+      "role": "primary_tda_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/a54dc2972886b5d4869095d61a161a12b5f5038e9866cf3f958f057b5f8b59e5",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861850416011
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point003/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "size": 159,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_tda_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612386125930609
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point003/orca.out",
+      "sha256": "daed6e08f62b955eba0fe47bb5a1e20a238e1133f79eba214e18b07df9e62c91",
+      "size": 157796,
+      "line_ranges": [
+        {
+          "start": 811,
+          "end": 813
+        },
+        {
+          "start": 2574,
+          "end": 2576
+        },
+        {
+          "start": 3348,
+          "end": 3350
+        },
+        {
+          "start": 3353,
+          "end": 3355
+        },
+        {
+          "start": 3576,
+          "end": 3578
+        }
+      ],
+      "role": "primary_tda_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/daed6e08f62b955eba0fe47bb5a1e20a238e1133f79eba214e18b07df9e62c91",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861857710069
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point004/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "size": 159,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_tda_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612386127518858
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point004/orca.out",
+      "sha256": "b3b1221c395e2ffd6d3453314149d1eafc08f724d32cb0b7b6cd7503eecfc9a8",
+      "size": 163163,
+      "line_ranges": [
+        {
+          "start": 830,
+          "end": 832
+        },
+        {
+          "start": 2614,
+          "end": 2616
+        },
+        {
+          "start": 3448,
+          "end": 3450
+        },
+        {
+          "start": 3453,
+          "end": 3455
+        },
+        {
+          "start": 3676,
+          "end": 3678
+        }
+      ],
+      "role": "primary_tda_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/b3b1221c395e2ffd6d3453314149d1eafc08f724d32cb0b7b6cd7503eecfc9a8",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861864663601
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "size": 159,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_tda_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612386132241572
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.out",
+      "sha256": "1afd3ae08dff092dc49f0a5d31321d2ccf6e5d5940f5ee1029b192a23c275382",
+      "size": 171406,
+      "line_ranges": [
+        {
+          "start": 920,
+          "end": 922
+        },
+        {
+          "start": 2697,
+          "end": 2699
+        },
+        {
+          "start": 3540,
+          "end": 3542
+        },
+        {
+          "start": 3545,
+          "end": 3547
+        },
+        {
+          "start": 3772,
+          "end": 3774
+        }
+      ],
+      "role": "primary_tda_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/1afd3ae08dff092dc49f0a5d31321d2ccf6e5d5940f5ee1029b192a23c275382",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861871643274
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "size": 159,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_tda_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612386135399179
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.out",
+      "sha256": "84f8f73310c58bd580a557649a8d67c17a62534cecb94e5b89cd5afdfd1a0e86",
+      "size": 171983,
+      "line_ranges": [
+        {
+          "start": 908,
+          "end": 910
+        },
+        {
+          "start": 2685,
+          "end": 2687
+        },
+        {
+          "start": 3559,
+          "end": 3561
+        },
+        {
+          "start": 3564,
+          "end": 3566
+        },
+        {
+          "start": 3791,
+          "end": 3793
+        }
+      ],
+      "role": "primary_tda_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/84f8f73310c58bd580a557649a8d67c17a62534cecb94e5b89cd5afdfd1a0e86",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861878869162
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "size": 159,
+      "line_ranges": [
+        {
+          "start": 1,
+          "end": 9
+        }
+      ],
+      "role": "primary_tda_input",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788612386138492865
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.out",
+      "sha256": "b9fb2696ac2ac82c726e5894d0b9c24ad0c17ef1e0c9c08276dc48ea6321d74a",
+      "size": 168275,
+      "line_ranges": [
+        {
+          "start": 896,
+          "end": 898
+        },
+        {
+          "start": 2644,
+          "end": 2646
+        },
+        {
+          "start": 3489,
+          "end": 3491
+        },
+        {
+          "start": 3494,
+          "end": 3496
+        },
+        {
+          "start": 3721,
+          "end": 3723
+        }
+      ],
+      "role": "primary_tda_output",
+      "snapshot": "/home/sun07ao/框架/var/audit_work/grephene/snapshots/b9fb2696ac2ac82c726e5894d0b9c24ad0c17ef1e0c9c08276dc48ea6321d74a",
+      "read_mode": "full_bytes",
+      "mtime_ns": 1788765861886183890
+    }
+  ],
+  "read_set": [
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.engrad",
+      "sha256": "ee193d681dcb83d93fece90da98f02e25c529081b0be10086d67d0cc9beb537a"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.inp",
+      "sha256": "b2286b0928b60bbfcdbf68636d7a503ed56e0dc33d02d4ae53afcd95500aeb21"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.out",
+      "sha256": "4f1426501cf17278f0efb543c23f31ca1839ef8d5d6623c70b1ec5d004cb3de9"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.engrad",
+      "sha256": "920005e785f3ecb372d1b2fcd1262934da28d9b0d0a2b68f43c3ddfa5470ffef"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.inp",
+      "sha256": "4775e22ffda9f9a34afb673d3e8416a0400a5c815cf027393b4cf572c1b8402a"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.out",
+      "sha256": "402ec3eedfd3f7563f986a4e1d8c5b06f8d819e10ab7681fde867a069dcd166e"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.engrad",
+      "sha256": "6e29ce3f16d9b3b93c5b356e6c7c0e3a2d495d359a22f2aa6df632a5cf43c499"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.inp",
+      "sha256": "4699e61f0997350b4b6aa9a5fe2eb4c99aa02c723689d6dfab7d12d1cd74510b"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.out",
+      "sha256": "7f2721635a4946ae6f27f52d984731836efcdc1034d8c4eab63648152ba59595"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.engrad",
+      "sha256": "3afe66d100269b7357d489b4ba5de944c75ac3b58ee14d98fff3fb9e61ed418f"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.inp",
+      "sha256": "483b669b2c5ed27fe632f90767cbeb678904a9d3596b3ae543e906328d2c8419"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.out",
+      "sha256": "b62fb73831afcb5774685036db4beed28506d48196c433e7eedec4545c07ac6e"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/project_gradient.py",
+      "sha256": "3894a4a219aca6d811470de6c0b136d7297cb53ca5a9137a0ad3879a6e641690"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/RESULTS.md",
+      "sha256": "3e0b938898ae42af9aa748e35e2dfc84faf21f574df81c7ac6e223d999cce60b"
+    },
+    {
+      "path": "/home/sun07ao/grephene/research/scientific_evidence_map_20260915/CONTRADICTIONS_AND_ANOMALIES.md",
+      "sha256": "345d358d9ae0e4a54559b307b2f8911ff9ada0f4467e141a437e65ab41dc3ea2"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/compute_pes_fena.py",
+      "sha256": "da99854a255d63279e7fcedfac484a6b4d05134ab0aa449caea70acd1f64190c"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.relaxscanact.dat",
+      "sha256": "859ccac7ff551b55868e2ca7a86c1df2ee9bf4ebf03b34ac1c94e3b5588f2cdd"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.inp",
+      "sha256": "d7d2f10a89d21a269252e532a4a5fe688deebe585301b7bdd1068cb307c5a3a1"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.out",
+      "sha256": "020d3976461404eebd7959c6e2cba837d10bee7e7a25a9146e173170c347768a"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point001/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point001/orca.out",
+      "sha256": "c6eb30d47e08d0f815d038e18637c0db290836de4214b3bc74c05713198850f7"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point002/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point002/orca.out",
+      "sha256": "a54dc2972886b5d4869095d61a161a12b5f5038e9866cf3f958f057b5f8b59e5"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point003/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point003/orca.out",
+      "sha256": "daed6e08f62b955eba0fe47bb5a1e20a238e1133f79eba214e18b07df9e62c91"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point004/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point004/orca.out",
+      "sha256": "b3b1221c395e2ffd6d3453314149d1eafc08f724d32cb0b7b6cd7503eecfc9a8"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.out",
+      "sha256": "1afd3ae08dff092dc49f0a5d31321d2ccf6e5d5940f5ee1029b192a23c275382"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.out",
+      "sha256": "84f8f73310c58bd580a557649a8d67c17a62534cecb94e5b89cd5afdfd1a0e86"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.inp",
+      "sha256": "177b31c82f10c4628312e3b239c298b1e96aedb923c34374a84f2ebd3bfbf592"
+    },
+    {
+      "path": "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.out",
+      "sha256": "b9fb2696ac2ac82c726e5894d0b9c24ad0c17ef1e0c9c08276dc48ea6321d74a"
+    }
+  ],
+  "analysis": {
+    "derivation": "r=|Rj-Ri|, B=(-u,+u), B.B=2; symmetric unit path v=B/2 gives dr/dt=B.v=1 and dE/dr=g.v=g.B/2; gap derivative=(g_ES-g_GS).B/2. Not a unique internal derivative absent path definition.",
+    "executed_checks": [
+      "primary_input_charge_multiplicity_method",
+      "normal_termination_all_read_jobs",
+      "engrad_vs_output_energy",
+      "exact_geometry_and_atom_identity",
+      "unit_stretch_coordinate_finite_difference",
+      "energy_reference_identity",
+      "scan_monotonicity"
+    ],
+    "actual_results": {
+      "projections": [
+        {
+          "coordinate": "Fe-Na",
+          "r_angstrom": 1.8930750667389404,
+          "raw_B_dot_g_ev_per_angstrom": {
+            "gs": 1.2943813959122383,
+            "root1": -7.8381722813057335,
+            "root2": -7.89482155149834,
+            "root3": -7.911208106986613
+          },
+          "symmetric_unit_stretch_total_ev_per_angstrom": {
+            "gs": 0.6471906979561192,
+            "root1": -3.9190861406528668,
+            "root2": -3.94741077574917,
+            "root3": -3.9556040534933063
+          },
+          "symmetric_unit_stretch_gap_ev_per_angstrom": {
+            "root1": -4.566276838608986,
+            "root2": -4.594601473705289,
+            "root3": -4.602794751449426
+          },
+          "coordinate_finite_difference_dr_dt": 1.0000000000065512
+        },
+        {
+          "coordinate": "Na-Nb",
+          "r_angstrom": 1.1983968166158314,
+          "raw_B_dot_g_ev_per_angstrom": {
+            "gs": -2.91602158282564,
+            "root1": 4.961725090840193,
+            "root2": 5.322784355828766,
+            "root3": 5.122403833906928
+          },
+          "symmetric_unit_stretch_total_ev_per_angstrom": {
+            "gs": -1.45801079141282,
+            "root1": 2.4808625454200963,
+            "root2": 2.661392177914383,
+            "root3": 2.561201916953464
+          },
+          "symmetric_unit_stretch_gap_ev_per_angstrom": {
+            "root1": 3.9388733368329163,
+            "root2": 4.1194029693272025,
+            "root3": 4.019212708366284
+          },
+          "coordinate_finite_difference_dr_dt": 0.9999999999843466
+        },
+        {
+          "coordinate": "Nb-Ng",
+          "r_angstrom": 1.1474317971723704,
+          "raw_B_dot_g_ev_per_angstrom": {
+            "gs": 3.8896891786774805,
+            "root1": -1.086057274223477,
+            "root2": -1.3381581519611603,
+            "root3": -1.1681616891836752
+          },
+          "symmetric_unit_stretch_total_ev_per_angstrom": {
+            "gs": 1.9448445893387403,
+            "root1": -0.5430286371117385,
+            "root2": -0.6690790759805801,
+            "root3": -0.5840808445918376
+          },
+          "symmetric_unit_stretch_gap_ev_per_angstrom": {
+            "root1": -2.487873226450479,
+            "root2": -2.6139236653193203,
+            "root3": -2.528925433930578
+          },
+          "coordinate_finite_difference_dr_dt": 0.9999999999843466
+        }
+      ],
+      "fc_gaps_ev": {
+        "root1": 1.8564258644554037,
+        "root2": 1.8816034442665586,
+        "root3": 1.9439210089525498
+      },
+      "scan": [
+        {
+          "point": 1,
+          "r_angstrom": 1.89,
+          "tda_e0_eh": -2121.865835920737,
+          "tda_e1_eh": -2121.792754459322,
+          "vertical_gap_ev": 1.9886478739809832,
+          "printed_state1_ev": 1.989,
+          "ground_deformation_ev": -0.101617383121038,
+          "excited_height_above_fc_ground_ev": 1.8870304908599451,
+          "scan_vs_tda_ground_ev": 0.001519775982783606
+        },
+        {
+          "point": 2,
+          "r_angstrom": 2.10833333,
+          "tda_e0_eh": -2121.8576943027865,
+          "tda_e1_eh": -2121.796774774628,
+          "vertical_gap_ev": 1.6577048106468049,
+          "printed_state1_ev": 1.658,
+          "ground_deformation_ev": 0.11992732759766891,
+          "excited_height_above_fc_ground_ev": 1.7776321382444737,
+          "scan_vs_tda_ground_ev": 0.0015513969497424633
+        },
+        {
+          "point": 3,
+          "r_angstrom": 2.32666667,
+          "tda_e0_eh": -2121.8416545310647,
+          "tda_e1_eh": -2121.797296247795,
+          "vertical_gap_ev": 1.2070503792553897,
+          "printed_state1_ev": 1.207,
+          "ground_deformation_ev": 0.5563917512172483,
+          "excited_height_above_fc_ground_ev": 1.763442130472638,
+          "scan_vs_tda_ground_ev": 0.0015154310670306172
+        },
+        {
+          "point": 4,
+          "r_angstrom": 2.545,
+          "tda_e0_eh": -2121.831654887033,
+          "tda_e1_eh": -2121.815786057022,
+          "vertical_gap_ev": 0.43181286270631425,
+          "printed_state1_ev": 0.432,
+          "ground_deformation_ev": 0.8284959272868436,
+          "excited_height_above_fc_ground_ev": 1.260308789993158,
+          "scan_vs_tda_ground_ev": 0.0015232126616131084
+        },
+        {
+          "point": 5,
+          "r_angstrom": 2.76333333,
+          "tda_e0_eh": -2121.829438724262,
+          "tda_e1_eh": -2121.820894697397,
+          "vertical_gap_ev": 0.2324948151295613,
+          "printed_state1_ev": 0.232,
+          "ground_deformation_ev": 0.8888007884260992,
+          "excited_height_above_fc_ground_ev": 1.1212956035556605,
+          "scan_vs_tda_ground_ev": 0.0015713014166145267
+        },
+        {
+          "point": 6,
+          "r_angstrom": 2.98166667,
+          "tda_e0_eh": -2121.829527424331,
+          "tda_e1_eh": -2121.819694985373,
+          "vertical_gap_ev": 0.26755429422082433,
+          "printed_state1_ev": 0.268,
+          "ground_deformation_ev": 0.8863871365946824,
+          "excited_height_above_fc_ground_ev": 1.1539414308155067,
+          "scan_vs_tda_ground_ev": 0.0015204179988919104
+        },
+        {
+          "point": 7,
+          "r_angstrom": 3.2,
+          "tda_e0_eh": -2121.829208633929,
+          "tda_e1_eh": -2121.819607461662,
+          "vertical_gap_ev": 0.26126120696301847,
+          "printed_state1_ev": 0.261,
+          "ground_deformation_ev": 0.8950618653594139,
+          "excited_height_above_fc_ground_ev": 1.1563230723224325,
+          "scan_vs_tda_ground_ev": 0.0014812226574756444
+        }
+      ],
+      "upward_scan_steps": [
+        {
+          "from": 5,
+          "to": 6,
+          "increase_ev": 0.032645827259846216
+        },
+        {
+          "from": 6,
+          "to": 7,
+          "increase_ev": 0.002381641506925769
+        }
+      ]
+    },
+    "script": "research_cases/grephene/audit_check.py",
+    "execution_receipt": "var/audit_work/grephene/check_receipt.json",
+    "execution_receipt_sha256": "f0b0d14d8bdd61edf68d8676c392ae283bdae488efacdebbfe2218a742d975d2",
+    "script_sha256": "21590d665d630ea2551d9956cb86071fedbaca5adb2ea04685f7f5d3f724fa59",
+    "finite_difference_scope": "coordinate geometry only; no ab initio energy finite differences"
+  },
+  "competitive_explanations": [
+    {
+      "hypothesis": "Only factor-of-two normalization explains all discrepancy",
+      "outcome": "refuted_in_scope",
+      "reason": "-3.919 corresponds normalized total ES gradient, whereas normalized ES-GS is -4.566."
+    },
+    {
+      "hypothesis": "Different geometries invalidate subtraction",
+      "outcome": "refuted_in_scope",
+      "reason": "Four .engrad atomic numbers and coordinate arrays match exactly."
+    },
+    {
+      "hypothesis": "1.16 eV is a vertical gap under another harmless reference convention",
+      "outcome": "refuted_in_scope",
+      "reason": "Includes 0.895061865 eV ground deformation; same-geometry gap is 0.261261207 eV."
+    },
+    {
+      "hypothesis": "Normalization error reverses local Fe-N directional tendency",
+      "outcome": "refuted_in_scope",
+      "reason": "Both normalized total ES and gap derivatives retain negative sign."
+    },
+    {
+      "hypothesis": "Fixed-root sampled profile proves diabatic homolysis mechanism",
+      "outcome": "unsupported",
+      "reason": "No diabatic continuity, excited-state path, dynamics or branch yield established by these checks."
+    }
+  ],
+  "support_scope": [
+    "Same-model/same-geometry local symmetric stretch slopes and their signs.",
+    "Seven-point state1 energy-reference decomposition and sampled overall decrease."
+  ],
+  "first_failing_conditions": [
+    {
+      "claim": "gph-h-gradient",
+      "failure": "Calling B displacement unit bond stretch although dr/dt=2; then comparing total and gap derivatives."
+    },
+    {
+      "claim": "gph-h-gap",
+      "failure": "Subtracting E0 at FC instead of E0 at the same endpoint geometry."
+    },
+    {
+      "claim": "gph-h-monotonic",
+      "failure": "Actual p5-to-p6 increase 0.032645827 eV violates strict descent."
+    }
+  ],
+  "retained_assets": [
+    "All primary inputs, gradients and outputs; independent copies in source_files snapshots.",
+    "Local sign of Fe-Na stretch and Na-Nb resistance under defined Cartesian path.",
+    "FC vertical excitation gaps and sampled total energy decrease about 0.700103 eV."
+  ],
+  "negative_knowledge": [
+    {
+      "proposition": "Legacy raw Wilson-B dot Cartesian gradient is a unit symmetric bond derivative",
+      "verdict": "refuted",
+      "failure_type": "implementation_and_target_quantity",
+      "reopen_condition": "Re-express target as displacement amplitude per atom or normalize explicit path."
+    },
+    {
+      "proposition": "Endpoint 1.16 eV is same-geometry vertical excitation gap",
+      "verdict": "refuted",
+      "failure_type": "energy_reference",
+      "reopen_condition": "Use same-geometry E0; retain 1.156 as a different target."
+    },
+    {
+      "proposition": "Recorded seven-point state1 absolute energies descend strictly",
+      "verdict": "refuted",
+      "failure_type": "overstated_sampled_relation",
+      "reopen_condition": "New numerical evidence may change profile; existing samples are not strictly descending."
+    }
+  ],
+  "residual_unknowns": [
+    "Historical invocation byte-version of the old postprocessor.",
+    "Internal agent beliefs and unprovided historical conversations.",
+    "Diabatic state continuity, nonadiabatic/cross-spin branching, full excited-state path and experimental flux.",
+    "Availability of already-computed overlap data has not been inventoried."
+  ],
+  "needs_new_authorization": [
+    "Only if new excited-state quantum calculations, dynamics, remote/cluster submission or private data external transmission become necessary; none performed here."
+  ],
+  "suggested_state_records": [
+    {
+      "id": "gph-c-gradient-normalized",
+      "kind": "claim",
+      "evidence_status": "qualified",
+      "text": "For the explicit symmetric FC stretch, Fe-Na ES-GS derivatives are -4.566277/-4.594601/-4.602795 eV/Angstrom, not -9.2; ES total derivatives are separately -3.919086/-3.947411/-3.955604.",
+      "supersedes": [
+        "gph-h-gradient"
+      ]
+    },
+    {
+      "id": "gph-c-gap-corrected",
+      "kind": "claim",
+      "evidence_status": "supported",
+      "text": "At 3.20 Angstrom vertical gap is 0.261261207 eV; excitation height above FC ground is 1.156323072 eV.",
+      "supersedes": [
+        "gph-h-gap"
+      ]
+    },
+    {
+      "id": "gph-c-monotonic-refuted",
+      "kind": "claim",
+      "evidence_status": "refuted",
+      "text": "Strictly descending sampled state1 energy profile.",
+      "supersedes": [
+        "gph-h-monotonic"
+      ]
+    },
+    {
+      "id": "gph-b-local-photostretch",
+      "kind": "branch",
+      "evidence_status": "qualified",
+      "work_disposition": "active",
+      "text": "Retain local directional evidence under isolated-fragment model; no mechanism exclusion."
+    },
+    {
+      "id": "gph-b-homolysis-flux",
+      "kind": "branch",
+      "evidence_status": "unresolved",
+      "work_disposition": "waiting_input",
+      "text": "Diabatic homolysis continuity and dominant flux are not established by the local gradients or fixed-root sample."
+    }
+  ],
+  "historical_object_distinctions": {
+    "work_performed": "primary input/output and gradients available",
+    "then_believed": "unknown; no internal-agent record imported",
+    "then_reported": "verbatim RESULTS claims retained",
+    "later_recorded": "evidence map contested normalization retained as historical lead",
+    "currently_supported": "only scoped corrected relations stated above"
+  },
+  "report": "research_cases/grephene/REPORT.md",
+  "source_groups": {
+    "fc_gradient": {
+      "sources": [
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.engrad",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.engrad",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root1/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.engrad",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root2/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.engrad",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/root3/orca.out"
+      ],
+      "scope": "FC symmetric Cartesian local total and ES-GS derivatives, three roots, and FC vertical excitation energies",
+      "rationale": "Gradients require all four coordinate/atomic-number arrays and output/input method, charge, spin, root and energy identities. Changing a root gradient must not revoke endpoint TDA arithmetic.",
+      "checked_relations": [
+        "exact common atomic numbers and Cartesian coordinates",
+        "engrad energy versus output energy",
+        "input and echoed output method, charge/spin and selected root",
+        "normal termination",
+        "explicit bond coordinate normalization"
+      ],
+      "limitations": [
+        "Coordinate finite differences test the coordinate map, not ab initio energy derivatives."
+      ]
+    },
+    "p7_vertical_gap": {
+      "sources": [
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.relaxscanact.dat",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.out"
+      ],
+      "scope": "Point 7: E1(Q7)-E0(Q7)=0.26126120696301847 eV, associated scan label 3.20 Angstrom",
+      "rationale": "Both energies come from the same point007 TDA output; E0 includes dispersion. FC ground energy and all FC gradients cancel out and are not prerequisites. Scan table/input/output supply coordinate ordering/label only.",
+      "checked_relations": [
+        "same-output total SCF plus dispersion versus final excited energy",
+        "printed STATE 1 excitation cross-check",
+        "normal termination and point input charge/spin",
+        "scan table equals echoed actual-energy surface"
+      ],
+      "limitations": [
+        "Source membership encodes reviewed explicit prerequisites, not physical independence merely because files differ.",
+        "Point number is associated with scan distance by table order in the present check; independently proving scan-point coordinate identity requires a stronger geometry comparison.",
+        "No diabatic continuity, excited-state reaction path, physical barrier or dominant flux is established."
+      ]
+    },
+    "p7_height_above_fc": {
+      "sources": [
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.relaxscanact.dat",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.engrad",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/fc_engrad_rootK/gs/orca.out"
+      ],
+      "scope": "Point 7 E1(Q7)-E0(FC)=1.1563230723224325 eV and ground deformation 0.8950618653594139 eV",
+      "rationale": "Unlike vertical gap this quantity genuinely uses FC ground reference; retain gs engrad plus inp/out identity. Root1/2/3 FC gradient changes are irrelevant. The shared gs engrad file is conservatively file-version dependent, even though only its energy and identity are used here.",
+      "checked_relations": [
+        "point007 final excited energy",
+        "FC gs energy and echoed output agreement",
+        "shared-method/reference conditions",
+        "vertical gap plus ground deformation equals height"
+      ],
+      "limitations": [
+        "Source membership encodes reviewed explicit prerequisites, not physical independence merely because files differ.",
+        "Point number is associated with scan distance by table order in the present check; independently proving scan-point coordinate identity requires a stronger geometry comparison.",
+        "No diabatic continuity, excited-state reaction path, physical barrier or dominant flux is established."
+      ]
+    },
+    "monotonic_witness_5_6": {
+      "sources": [
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.relaxscanact.dat",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.out"
+      ],
+      "scope": "p5-to-p6 excited energy rises by 0.032645827259846216 eV; sufficient counterexample to strict descending seven-point profile",
+      "rationale": "One adjacent increase disproves universal strict descent. The common FC offset cancels algebraically: [E1(Q6)-E0(FC)]-[E1(Q5)-E0(FC)]=E1(Q6)-E1(Q5). Neither FC sources nor points1-4,7 are needed for this witness.",
+      "checked_relations": [
+        "ordered scan point labels",
+        "two final state1 energies and normal termination",
+        "positive adjacent excited-energy difference"
+      ],
+      "limitations": [
+        "Source membership encodes reviewed explicit prerequisites, not physical independence merely because files differ.",
+        "Point number is associated with scan distance by table order in the present check; independently proving scan-point coordinate identity requires a stronger geometry comparison.",
+        "No diabatic continuity, excited-state reaction path, physical barrier or dominant flux is established."
+      ]
+    },
+    "monotonic_witness_6_7": {
+      "sources": [
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.relaxscanact.dat",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.out"
+      ],
+      "scope": "p6-to-p7 excited energy rises by 0.002381641506925769 eV; independently sufficient counterexample",
+      "rationale": "Second adjacent-increase witness; alternative support to p5-to-p6, not another independent physical experiment. Shared point6 and scan sources remain explicit common ancestors. FC offset cancels.",
+      "checked_relations": [
+        "ordered scan point labels",
+        "two final state1 energies and normal termination",
+        "positive adjacent excited-energy difference"
+      ],
+      "limitations": [
+        "Source membership encodes reviewed explicit prerequisites, not physical independence merely because files differ.",
+        "Point number is associated with scan distance by table order in the present check; independently proving scan-point coordinate identity requires a stronger geometry comparison.",
+        "No diabatic continuity, excited-state reaction path, physical barrier or dominant flux is established."
+      ]
+    },
+    "seven_point_profile": {
+      "sources": [
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.relaxscanact.dat",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point001/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point001/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point002/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point002/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point003/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point003/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point004/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point004/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point005/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point006/orca.out",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.inp",
+        "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/scan_fena/tda_points/point007/orca.out"
+      ],
+      "scope": "Complete seven-point same-output vertical gaps and state1 energy differences/overall decline",
+      "rationale": "All points are needed when preserving the complete sampled profile. This composite is not a prerequisite for each independent local counterexample, nor proof of continuous or diabatic path.",
+      "checked_relations": [
+        "scan table versus echoed actual-energy table",
+        "all seven TDA ground/dispersion/final/state1 values",
+        "normal termination and charge/spin inputs"
+      ],
+      "limitations": [
+        "Source membership encodes reviewed explicit prerequisites, not physical independence merely because files differ.",
+        "Point number is associated with scan distance by table order in the present check; independently proving scan-point coordinate identity requires a stronger geometry comparison.",
+        "No diabatic continuity, excited-state reaction path, physical barrier or dominant flux is established."
+      ]
+    }
+  },
+  "inference_dependencies": {
+    "gph-c-gradient-normalized": [
+      [
+        "fc_gradient"
+      ]
+    ],
+    "gph-c-gap-corrected": [
+      [
+        "p7_vertical_gap",
+        "p7_height_above_fc"
+      ]
+    ],
+    "gph-c-monotonic-refuted": [
+      [
+        "monotonic_witness_5_6"
+      ],
+      [
+        "monotonic_witness_6_7"
+      ]
+    ],
+    "gph-b-local-photostretch": [
+      [
+        "fc_gradient"
+      ]
+    ],
+    "gph-b-homolysis-flux": [
+      [
+        "fc_gradient",
+        "seven_point_profile"
+      ]
+    ],
+    "grephene-lmct-coordinate-and-energy-001:negative:0": [
+      [
+        "fc_gradient"
+      ]
+    ],
+    "grephene-lmct-coordinate-and-energy-001:negative:1": [
+      [
+        "p7_vertical_gap",
+        "p7_height_above_fc"
+      ]
+    ],
+    "grephene-lmct-coordinate-and-energy-001:negative:2": [
+      [
+        "monotonic_witness_5_6"
+      ],
+      [
+        "monotonic_witness_6_7"
+      ]
+    ],
+    "grephene-lmct-coordinate-and-energy-001:inference": [
+      [
+        "fc_gradient",
+        "p7_vertical_gap",
+        "p7_height_above_fc",
+        "seven_point_profile"
+      ]
+    ],
+    "grephene-lmct-coordinate-and-energy-001": [
+      [
+        "fc_gradient",
+        "p7_vertical_gap",
+        "p7_height_above_fc",
+        "seven_point_profile"
+      ]
+    ],
+    "grephene-lmct-coordinate-and-energy-001:correction": [
+      [
+        "fc_gradient",
+        "p7_vertical_gap",
+        "p7_height_above_fc",
+        "seven_point_profile"
+      ]
+    ]
+  },
+  "provenance_sources": [
+    "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/project_gradient.py",
+    "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/RESULTS.md",
+    "/home/sun07ao/grephene/research/scientific_evidence_map_20260915/CONTRADICTIONS_AND_ANOMALIES.md",
+    "/home/sun07ao/grephene/mech_loop/iso_complex_lmct/compute_pes_fena.py"
+  ],
+  "dependency_mapping_semantics": {
+    "version": 1,
+    "support_sets": "Outer lists are alternative sufficient supports (OR); every group in an inner list is required (AND); every source in a source_group is required (AND).",
+    "group_result_scope": "Group recomputation records must carry only this group sources/locators and scoped result quantities. A whole-case receipt may be linked as execution provenance but must not inject all source dependencies into every group.",
+    "provenance_boundary": "Historical report/script snapshots remain read and cited evidence of what was reported/implemented. Changes may require historical-attribution review; they do not withdraw independently recomputed physical numbers.",
+    "negative_knowledge_boundary": "The normalization algebra refutes the stated Wilson-B convention without the old script. Exact attribution that the old program used this formula requires the historical script, separately from corrected numeric derivative.",
+    "unknown_boundary": "Unresolved branch records express the bounded absence of a connecting inference, not a positive physical impossibility claim.",
+    "granularity": "Current manifests are file-version scoped. Changing FC gs engrad legitimately dirties the FC-reference group; changing a root1 engrad does not. Segment-field dependency refinement is deferred."
+  }
+}

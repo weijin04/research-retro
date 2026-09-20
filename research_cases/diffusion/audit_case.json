@@ -1,0 +1,254 @@
+{
+  "id": "diffusion-flex-r9-kinetic-temperature-v1",
+  "title": "Single-guest kinetic fluctuations versus equilibrium-sampling claims",
+  "historical_assertion": {
+    "source": "Earlier review README is a locator, not primary authority",
+    "reconstructed_claim": "Large c_TG fluctuations imply abnormal dynamics or trapping; early 300 K-labelled output can be treated as equilibrium sampling.",
+    "provenance_boundary": "The external original critical comment is absent. This formulation reconstructs the disputed claim from the archived review, not a verbatim original assertion."
+  },
+  "research_question": "Do independently reconstructed guest kinetic temperatures establish anomaly, equilibrium, or neither?",
+  "development_material": true,
+  "blind_evaluation": false,
+  "read_at": "2026-09-20T08:59:45.330460+00:00",
+  "scientific_scope": {
+    "run": "FLEX_sg_r9",
+    "replica_seed": 21233,
+    "engine": "LAMMPS 28 Mar 2023",
+    "framework": "288 type-1 Si + 576 type-2 O; silica framework. CHA topology is reported historically but not independently identified in this kinetic audit.",
+    "guest": "one neutral type-3 united-atom CH4, atom id 865",
+    "mass_g_per_mol": 16.04246,
+    "atom_counts": {
+      "1": 288,
+      "2": 576,
+      "3": 1
+    },
+    "loading": "1 UA CH4 per simulated periodic cell; adsorption-equilibrium loading not established",
+    "ensemble": "all-group Nose-Hoover NVT, target 300 K, damping 100 fs, tchain 3; fixed triclinic periodic cell; flexible framework",
+    "dt_fs": 1.0,
+    "early_window_ps": [
+      0,
+      20
+    ],
+    "early_stride_fs": 1,
+    "early_complete_frames": 20001,
+    "planned_steps": 200000000,
+    "planned_duration_ns": 200,
+    "observed_last_thermo_step": 1600000,
+    "observed_last_thermo_ns": 1.6,
+    "observational_definition": "c_TG uses guest temp with extra/dof 0: three translational DOF; no guest mean velocity subtraction. UA model has no resolved internal CH4 vibrations or rotations."
+  },
+  "source_files": [
+    {
+      "path": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot/in.production_flex_r",
+      "sha256": "80ce427c0a6d53da795ca89e026323a335afaefce86ce482b850e0375e9cf3c0",
+      "start_line": 1,
+      "end_line": 42,
+      "role": "input",
+      "read_at": "2026-09-20T08:59:45.330460+00:00"
+    },
+    {
+      "path": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot/flexsg.sh",
+      "sha256": "491c2247052a1a2800b945b2d3ccdaddb167edf193903a8d43aba9ae66635b9b",
+      "start_line": 1,
+      "end_line": 23,
+      "role": "script",
+      "read_at": "2026-09-20T08:59:45.330460+00:00"
+    },
+    {
+      "path": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot/validation/minimized_with_guest.data",
+      "sha256": "b6d71204b69c10cf990929ca74bfea54618248e2ce6a74ab395d8c9bf4d91da9",
+      "start_line": 1,
+      "end_line": 9835,
+      "role": "data",
+      "read_at": "2026-09-20T08:59:45.330460+00:00"
+    },
+    {
+      "path": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot/production/FLEX_sg_r9/FLEX_sg_r9.log",
+      "sha256": "b77acfe720ddceac5d34b155db1c0907ce86c532b124754d661e4101f18c1fa1",
+      "start_line": 1,
+      "end_line": 238,
+      "role": "log",
+      "read_at": "2026-09-20T08:59:45.330460+00:00"
+    },
+    {
+      "path": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot/production/FLEX_sg_r9/FLEX_sg_r9_early.lammpstrj",
+      "sha256": "7d4f1b737454cf188a2c8bcfd1fdd92edab347c5a4aecffc25304602d50766fe",
+      "start_line": 1,
+      "end_line": 200010,
+      "role": "early",
+      "read_at": "2026-09-20T08:59:45.330460+00:00"
+    }
+  ],
+  "analyses": {
+    "endpoint_reconstruction": [
+      {
+        "step": 0,
+        "recomputed_K": 421.1445151818712,
+        "log_K": 421.14362,
+        "delta_K": 0.0008951818712148452,
+        "trajectory_line": 10,
+        "log_line": 172
+      },
+      {
+        "step": 20000,
+        "recomputed_K": 27.59834636669727,
+        "log_K": 27.598399,
+        "delta_K": -5.263330272953226e-05,
+        "trajectory_line": 200010,
+        "log_line": 230
+      }
+    ],
+    "temperature_mean_K": 425.22406584440944,
+    "temperature_sd_K": 357.4951243540591,
+    "half_open_5ps_blocks": [
+      {
+        "start_fs": 0,
+        "end_fs_exclusive": 5000,
+        "n": 5000,
+        "mean_K": 664.3750285034721
+      },
+      {
+        "start_fs": 5000,
+        "end_fs_exclusive": 10000,
+        "n": 5000,
+        "mean_K": 196.73787622863367
+      },
+      {
+        "start_fs": 10000,
+        "end_fs_exclusive": 15000,
+        "n": 5000,
+        "mean_K": 480.2147263066567
+      },
+      {
+        "start_fs": 15000,
+        "end_fs_exclusive": 20000,
+        "n": 5000,
+        "mean_K": 359.6481574827708
+      }
+    ],
+    "inclusive_discard_sensitivity": [
+      {
+        "discard_fs": 0,
+        "n": 20001,
+        "mean_K": 425.22406584440944
+      },
+      {
+        "discard_fs": 1000,
+        "n": 19001,
+        "mean_K": 399.8915993489943
+      },
+      {
+        "discard_fs": 5000,
+        "n": 15001,
+        "mean_K": 345.5123924029513
+      },
+      {
+        "discard_fs": 10000,
+        "n": 10001,
+        "mean_K": 419.89221250809965
+      },
+      {
+        "discard_fs": 15000,
+        "n": 5001,
+        "mean_K": 359.58176079988414
+      }
+    ],
+    "temperature_autocorrelation": {
+      "1": 0.9999333873106788,
+      "10": 0.9918241512194341,
+      "100": 0.7877398075604609,
+      "1000": 0.35776771388403655
+    },
+    "autocorrelation_caveat": "Descriptive finite-window correlation only; early transient may be nonstationary. No effective sample count or IID confidence interval inferred.",
+    "canonical_reference": {
+      "assumption": "Three independent Gaussian velocity components at canonical T; no separate guest COM subtraction",
+      "T_K": 300,
+      "degrees_of_freedom": 3,
+      "mean_K": 300,
+      "sd_K": 244.94897427831782,
+      "relative_sd": 0.816496580927726,
+      "derivation": "K=sum(m*v_i^2/2); 2K/(kB*T) ~ chi-square(3). T_inst=2K/(3*kB), E[T_inst]=T, Var[T_inst]=2*T^2/3. For N independent guests relative sd=sqrt(2/(3N)); N=1 is broad, N->infinity tends to zero."
+    },
+    "early_energy_change_kcal_per_mol": {
+      "potential": 740.6269999999986,
+      "bond": 376.54083
+    },
+    "later_sparse_r9": {
+      "start_ps": 200,
+      "end_ps": 1600.0,
+      "n": 8,
+      "mean_K": 406.452914875,
+      "boundary": "Only eight sparsely spaced samples from one replica. Not a stationarity or transport test."
+    },
+    "code_path": {
+      "path": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot/flexsg.sh",
+      "mpirun_line": 22,
+      "last_command_line": 23,
+      "finding": "The next echo expands the preceding mpirun status into text but its own success becomes script exit status. No explicit exit of captured status exists. A failed MD command can therefore have a successful batch shell status.",
+      "scope": "Static shell control-flow audit, no scheduler or MD execution; not evidence this run failed."
+    }
+  },
+  "competing_explanations": [
+    {
+      "explanation": "Wrong guest degrees of freedom caused c_TG excursions",
+      "status": "disfavored_for_endpoints",
+      "test": "3-DOF velocity reconstruction matches both logged endpoints within 0.002 K; explicit extra/dof 0 in input."
+    },
+    {
+      "explanation": "Normal finite-DOF kinetic fluctuations",
+      "status": "compatible",
+      "test": "Canonical reference predicts 244.949 K standard deviation at 300 K. An isolated low or high TG cannot identify trapping or barrier crossing."
+    },
+    {
+      "explanation": "Initial structural/energy redistribution and correlated short sampling",
+      "status": "supported_as_sampling_caution",
+      "test": "Input initializes velocities on minimized data and immediately saves early output; block/cutoff means vary, energy components change."
+    },
+    {
+      "explanation": "Thermostat or integration pathology",
+      "status": "not_identified_and_not_excluded",
+      "test": "These observations do not discriminate it from a transient and correlated sampling. Need already-authorized longer stationary velocity/energy windows and timestep/conservation evidence; no new MD authorized."
+    }
+  ],
+  "verdict": "corrected_scope: large instantaneous single-guest kinetic fluctuations alone do not establish dynamic anomaly; early output cannot be accepted as verified equilibrium sampling.",
+  "supported_scope": [
+    "Independent units/DOF reconstruction of actual archived velocities",
+    "Early kinetic sampling sensitivity is established",
+    "Failure reporting flaw in shell control flow exists"
+  ],
+  "failure_boundary": [
+    "No equilibrium or diffusion coefficient convergence certificate",
+    "No proof of trapping, hopping, thermostat correctness or invalidity",
+    "All outputs are archived running prefixes; no final completion receipt"
+  ],
+  "residual_assets": [
+    {
+      "path": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot/production",
+      "reason": "Other 23 replica logs/low-frequency trajectories remain available; not consumed in this bounded independent slice."
+    }
+  ],
+  "unresolved": [
+    {
+      "question": "Stationary equilibrium velocity distribution and VACF/kernel eligibility",
+      "needed": "Existing equilibrated high-frequency velocity records across replicas plus equilibration and block sensitivity analysis; absent from this slice. If none exist, obtaining them requires new authorization for MD."
+    },
+    {
+      "question": "Long-time diffusion convergence",
+      "needed": "Explicit position unwrapping/image evidence, linear MSD regime, fitting-window and replica uncertainty. Temperature alone cannot answer."
+    },
+    {
+      "question": "Historical original criticism identity",
+      "needed": "Original comment/source, if provenance precision is required; historical README is only an indirect source."
+    }
+  ],
+  "locators": {
+    "mass_line": 23,
+    "atoms_header_line": 25,
+    "guest_atom_line": 654,
+    "dt_line": 106,
+    "dof_line": 116,
+    "thermostat_line": 120,
+    "early_dump_line": 30,
+    "position_dump_line": 37
+  }
+}

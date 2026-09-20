@@ -1,0 +1,32 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "text": "Synthetic software check. The calculation process exited normally. No scientific-validity check was performed. A separate note proposes a future calculation; it has not been run.",
+    "purpose": "Public synthetic integration smoke; not real research data."
+  },
+  "questions": {
+    "reports_process_completion": {
+      "type": "noul",
+      "instructions": "Does state.text explicitly report that a calculation process exited normally? This asks only about the statement in the text, not whether the science is valid."
+    },
+    "scientific_verification_role": {
+      "type": "choice",
+      "instructions": "According to state.text, what is reported about the scientific-validity check?",
+      "criteria": {
+        "performed": "The text explicitly says the scientific-validity check was performed.",
+        "not_performed": "The text explicitly says it was not performed.",
+        "not_stated": "The text does not state whether it was performed.",
+        "other": "The reported situation does not fit these categories."
+      }
+    },
+    "planning_content_presence": {
+      "type": "score",
+      "instructions": "How much of state.text concerns a future, unexecuted task? Rate only the role of that content in this synthetic passage.",
+      "criteria": [
+        "No future unexecuted task is discussed.",
+        "A future unexecuted task is one distinct part of the passage.",
+        "The passage is primarily about future unexecuted tasks."
+      ]
+    }
+  }
+}

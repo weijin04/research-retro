@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "diffusion-dev",
+  "policy_revision": 1,
+  "dataset_role": "development",
+  "goal": "以 diffusion 独立切片检验跨领域对象/运行/科学推断契约；复算单客体温度与平衡性推断，非盲测。",
+  "authorization_source": "2026-09-20 user instruction",
+  "output_root": "var/projects/diffusion",
+  "sources": [{
+    "id": "diffusion-snapshot",
+    "root": "/home/sun07ao/diffusion/reports/shuguang-log-audit-20260906/snapshot",
+    "egress": "denied",
+    "excludes": [".git", ".claude", ".codex", ".agents", "__pycache__"],
+    "snapshot_max_bytes": 33554432,
+    "scan_max_entries": 5000
+  }],
+  "index_imports": [],
+  "allowed_actions": ["read", "derive", "deterministic_postprocess", "sandbox_check", "propose_revision"],
+  "forbidden_actions": ["source_write", "original_job_control", "scientific_job_submission", "global_configuration_change", "scientific_data_egress"],
+  "budget": {"cpu_cores_max": 2, "memory_mib_max": 2048, "wall_seconds_max": 300, "gpu_count_max": 0, "external_job_submissions_max": 0},
+  "scope_notes": ["仅 r9 高频速度/原输入/日志作深审，其余快照保留明确未读状态；不推出扩散系数或平衡完成。"]
+}

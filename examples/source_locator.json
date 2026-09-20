@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "synthetic_project",
+  "is_example": true,
+  "kind": "source_locator",
+  "id": "loc_endpoint",
+  "artifact_id": "art_endpoint",
+  "artifact_revision": 1,
+  "uri": "examples/fixtures/endpoint_energy.txt",
+  "content_identity": {
+    "algorithm": "sha256",
+    "digest": "1842c079a7626624d8f28ffddfb7986dde951c174dcc8babdd51d06b9eb00e33",
+    "scope": "whole_file"
+  },
+  "locator": {
+    "type": "lines",
+    "start": 1,
+    "end": 6,
+    "index_base": 1,
+    "context_note": "合成端点差样例，保留未提供路径计算的限定。"
+  },
+  "availability": "captured",
+  "extensions": {}
+}

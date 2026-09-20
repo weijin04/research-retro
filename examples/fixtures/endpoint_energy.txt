@@ -1,0 +1,6 @@
+SIMULATED FIXTURE; NOT USER PROJECT DATA.
+Object: illustrative same-composition endpoints A and B.
+Reported quantity: electronic endpoint energy difference.
+Delta_E_B_minus_A = 0.10 eV
+No transition-state or path calculation is supplied.
+A separate product-geometry observation has an independent source.

@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "grephene-dev",
+  "policy_revision": 1,
+  "dataset_role": "development",
+  "goal": "恢复 grephene 实际工作、对象条件、历史解释和负知识；对承重科学关系完成原件审计并支持纠偏与可靠接手。",
+  "authorization_source": "2026-09-20 user instruction",
+  "output_root": "var/projects/grephene",
+  "sources": [{
+    "id": "grephene-local",
+    "root": "/home/sun07ao/grephene",
+    "egress": "denied",
+    "excludes": [".git", ".claude", ".codex", ".agents", ".remember", ".superpowers", ".gemini", ".dsh", "__pycache__", ".venv", "node_modules"],
+    "snapshot_max_bytes": 33554432,
+    "scan_max_entries": 250000
+  }],
+  "index_imports": [
+    "research/raw_asset_census_20260915/JOBS.csv",
+    "research/raw_asset_census_20260915/JOBS_DEDUP.csv",
+    "research/raw_asset_census_20260915/JOB_FILES.csv",
+    "research/raw_asset_census_20260915/SETTING_MISMATCHES.csv",
+    "research/raw_asset_census_20260915/RESTART_CHAINS.csv",
+    "research/raw_asset_census_20260915/PARSE_FAILURES.csv",
+    "research/raw_asset_census_20260915/DUPLICATE_JOBS.csv",
+    "research/scientific_evidence_map_20260915/JOB_TO_SCIENTIFIC_FAMILY.tsv"
+  ],
+  "allowed_actions": ["read", "derive", "deterministic_postprocess", "sandbox_check", "propose_revision"],
+  "forbidden_actions": ["source_write", "original_job_control", "scientific_job_submission", "global_configuration_change", "scientific_data_egress"],
+  "budget": {"cpu_cores_max": 2, "memory_mib_max": 2048, "wall_seconds_max": 300, "gpu_count_max": 0, "external_job_submissions_max": 0},
+  "scope_notes": [
+    "旧索引中的外部磁盘/远端路径仅保留历史引用；不自动访问。",
+    "私有 agent 历史未授权；项目内已公开于项目文件的历史记录作为来源导入。",
+    "全目录仅增量元数据发现；大文件先登记待读区间；承重原件单独固定。",
+    "未完成深审的历史结论不取得当前科学资格。"
+  ]
+}

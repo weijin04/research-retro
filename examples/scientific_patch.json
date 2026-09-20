@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "synthetic_project",
+  "is_example": true,
+  "kind": "scientific_patch",
+  "id": "patch_example",
+  "status": "proposed",
+  "read_set": [
+    {
+      "object_id": "assumption_A",
+      "revision": 1
+    },
+    {
+      "object_id": "claim_C",
+      "revision": 2
+    }
+  ],
+  "policy_revision": 1,
+  "idempotency_key": "synthetic-retract-A-001",
+  "reason": {
+    "original_statement": "在此合成状态中撤销前提 A，并检查替代支持。",
+    "reason_type": "assumption_retraction",
+    "evidence_refs": [
+      "audit_example_result"
+    ]
+  },
+  "operations": [
+    {
+      "operation": "revoke_assumption",
+      "target_id": "assumption_A",
+      "payload": {
+        "scope": "synthetic model",
+        "usage_status": "withdrawn"
+      }
+    }
+  ],
+  "support_recompute_required": true,
+  "proposed_impact": {
+    "potentially_affected_ids": [
+      "inference_E1_A_C",
+      "claim_C"
+    ],
+    "expected_preserved_ids": [
+      "inference_E2_B_C",
+      "evidence_E2"
+    ],
+    "note": "这是建议影响集，实际范围必须由服务器重算；不在此声称事务已执行。"
+  },
+  "verification_refs": [],
+  "extensions": {
+    "support_sets_for_fixture": [
+      [
+        "E1",
+        "A"
+      ],
+      [
+        "E2",
+        "B"
+      ]
+    ]
+  }
+}

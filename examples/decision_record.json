@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "synthetic_project",
+  "is_example": true,
+  "kind": "decision_record",
+  "id": "decision_example",
+  "execution_mode": "synthetic_example",
+  "task_family": "document_role",
+  "state_ref": "public_synthetic_preflight",
+  "question_spec_version": "0.1.0",
+  "policy_version": "advisory-only-0.1.0",
+  "requested_model": "resolve_from_existing_config",
+  "returned_model": null,
+  "answers": {
+    "role": {
+      "type": "choice",
+      "choice": "reported_result",
+      "probabilities": {
+        "reported_result": 0.7,
+        "interpretation": 0.2,
+        "other": 0.1
+      },
+      "confidence": 0.5
+    }
+  },
+  "usage": {
+    "input_tokens": null,
+    "output_tokens": null
+  },
+  "outcome": "answered",
+  "action_taken": "none; illustrative record only",
+  "followup_verification_refs": [],
+  "extensions": {
+    "notice": "数值人工构造，不代表 Jev 实际输出或校准定义。"
+  }
+}

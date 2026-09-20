@@ -1,0 +1,148 @@
+{
+  "package": "research_harness_implementation_v1",
+  "date": "2026-09-20",
+  "status": "design_only",
+  "implementation_completed": false,
+  "files": [
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 4161,
+      "sha256": "d3e1664652381c2f6b3e035f9fece1ae39cc57710f39a1cec2e6ab36530b77f4"
+    },
+    {
+      "path": "01_ARCHITECTURE_AND_MAP.md",
+      "bytes": 11294,
+      "sha256": "052e613de4efd20f8626084f72521825c1bdbfa5e7206f0d1e173004d69cff78"
+    },
+    {
+      "path": "02_RECONSTRUCTION_PRODUCT.md",
+      "bytes": 10686,
+      "sha256": "30343996289bad9edc2001c57d601b95e03c868298df023ccd85c03d8bd8f855"
+    },
+    {
+      "path": "03_JEV_INTEGRATION.md",
+      "bytes": 6807,
+      "sha256": "dc6f01e336973fc9b338af874550196b5fa1676a02f9a6f99c31f545d562616e"
+    },
+    {
+      "path": "04_IMPLEMENTATION_ROUTE.md",
+      "bytes": 7735,
+      "sha256": "5d82cf4de4a671a6b84b6d8827081e216935fcd3206272e0d4fa505ee5afac26"
+    },
+    {
+      "path": "05_FRAMEWORK_MVP.md",
+      "bytes": 8243,
+      "sha256": "84ac11e42f03a42d016def7de23e20ec16939e69ce0e5126d3b6d826159f200b"
+    },
+    {
+      "path": "06_EXECUTION_CHECKLIST.md",
+      "bytes": 32233,
+      "sha256": "87549adcf2a5e6bd4e2843e50ead1362dd4f0dad19df6666d728baa89489968d"
+    },
+    {
+      "path": "07_CONTRACTS.md",
+      "bytes": 7494,
+      "sha256": "336520ab7e54feea905340e3cf3209a0accf80dd824bd840a5f2bf2a1791aa77"
+    },
+    {
+      "path": "08_ACCEPTANCE_AND_EVALUATION.md",
+      "bytes": 7025,
+      "sha256": "193d51653ecbbe55d9858ec962e9bbc58179d2189d93be11f4f86861e4a6a63a"
+    },
+    {
+      "path": "09_LOCAL_AGENT_HANDOFF.md",
+      "bytes": 4924,
+      "sha256": "192c264d356714c26da5e526707e2baaa5a172b81e3cd7c2121707120dab1754"
+    },
+    {
+      "path": "10_SOURCES_AND_OBSERVATIONS.md",
+      "bytes": 4647,
+      "sha256": "a4b3bb95415fe78d961ee78f9cf90a23d55bf0b1d9b0853ef0cbbb5d82391022"
+    },
+    {
+      "path": "backlog.json",
+      "bytes": 50161,
+      "sha256": "191a2021aea0246219472683ed381902a4c46b280899469def84e569a35eb9ac"
+    },
+    {
+      "path": "checks/README.md",
+      "bytes": 606,
+      "sha256": "498f5dba8e2ee3e893672407a1aa8e80642ef2423bcc43572e07bf82761520ab"
+    },
+    {
+      "path": "checks/plan_validation.json",
+      "bytes": 1300,
+      "sha256": "e08e611d55dd1b5ddfef7a79a3cd1f432f529e34a422e15aea5b9d96f48b373c"
+    },
+    {
+      "path": "checks/render_checklist.py",
+      "bytes": 1745,
+      "sha256": "da0373a6a734263879826f3241069267744d336547b3731454da9912da4b2db2"
+    },
+    {
+      "path": "checks/validate_plan.py",
+      "bytes": 6858,
+      "sha256": "12d7ff2de521ee3fd93dec93eafc1e83fa9ffa65690c7354b516e6e71c43b5b6"
+    },
+    {
+      "path": "contracts/contract.schema.json",
+      "bytes": 20264,
+      "sha256": "ba72bce3847bf44e811ac379e11e0557786dfec3bf249d0661982a28c9ee4311"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 711,
+      "sha256": "1b3be127bb8525ae6f9c83d94d031609ca09e433c255fc042322041588f2fd97"
+    },
+    {
+      "path": "examples/audit_case.json",
+      "bytes": 1177,
+      "sha256": "f1efecda1a089a1248e6a14c2a0e312dcaee9770167129cb889407900f8a5856"
+    },
+    {
+      "path": "examples/decision_record.json",
+      "bytes": 955,
+      "sha256": "8b93096876434c24d48582ceb03ebb370f430fcb50ad1c31650f7b4a2e50f2e8"
+    },
+    {
+      "path": "examples/fixtures/endpoint_energy.txt",
+      "bytes": 305,
+      "sha256": "1842c079a7626624d8f28ffddfb7986dde951c174dcc8babdd51d06b9eb00e33"
+    },
+    {
+      "path": "examples/jev_preflight_request.json",
+      "bytes": 1534,
+      "sha256": "6fcf4b49d03bc24d226c423ebec37249c71b93a72fca7225cb66129ab908ed84"
+    },
+    {
+      "path": "examples/jev_preflight_zh_request.json",
+      "bytes": 1546,
+      "sha256": "12b8438b3152b241f30985bae0cf349b7a9316ee9f3eecdefba3258f355f5983"
+    },
+    {
+      "path": "examples/jev_questions.json",
+      "bytes": 8040,
+      "sha256": "691f3e2ad9ea2ab80dccb828c5cc7c1b76818933f3ce3a9f05311349dc314130"
+    },
+    {
+      "path": "examples/scientific_patch.json",
+      "bytes": 1335,
+      "sha256": "dfd70031ccd44e63e14d844411f1f95451b7239026e873a1f53fc0ac11ad74cb"
+    },
+    {
+      "path": "examples/source_locator.json",
+      "bytes": 644,
+      "sha256": "0f375efcd4fd2ca18916838d20abdf1e6baf822e7598be477627d44d7b7cc978"
+    },
+    {
+      "path": "examples/source_manifest.example.json",
+      "bytes": 1649,
+      "sha256": "f7f19d28e3229cadc88ec9a440b12cb0a8d21208c24206a7e1e8c7354985fe4e"
+    },
+    {
+      "path": "examples/task_proposal.json",
+      "bytes": 1100,
+      "sha256": "d702ab864c56172090f183e7c557f6717aec5a710bbf9668856ee63d05ba902c"
+    }
+  ]
+}

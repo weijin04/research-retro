@@ -1,0 +1,49 @@
+{
+  "status": "configuration_example_not_executed",
+  "project_id": "grephene_reconstruction_dev",
+  "goal": "恢复声明范围内的实际工作、证据、推断、分支及可信交接。",
+  "source_roots": [
+    {
+      "path": "/home/sun07ao/grephene",
+      "mode": "read_only",
+      "phase": "R1_R2",
+      "egress": "requires_source_policy"
+    }
+  ],
+  "reuse_indexes": [
+    "research/raw_asset_census_20260915",
+    "research/scientific_evidence_map_20260915"
+  ],
+  "output_root": "/home/sun07ao/框架/var/projects/grephene_reconstruction_dev",
+  "exclude_secret_patterns": [
+    ".env",
+    ".env.*",
+    "**/.ssh/**",
+    "**/*private_key*",
+    "**/credentials*"
+  ],
+  "source_authority": "historical artifacts; review before current scientific reliance",
+  "allowed_operations": [
+    "metadata_scan",
+    "read",
+    "copy_to_audit_store",
+    "parse",
+    "isolated_deterministic_postprocess"
+  ],
+  "forbidden_operations": [
+    "write_scientific_sources",
+    "run_repository_install_hooks",
+    "submit_new_scientific_jobs",
+    "cancel_existing_jobs",
+    "change_global_agent_config"
+  ],
+  "external_model_policy": {
+    "public_and_synthetic": "allowed",
+    "private_source_content": "use_existing_explicit_policy_or_hold_egress",
+    "secrets": "never_send"
+  },
+  "snapshot_policy": "stable copy for load-bearing artifacts; chunk captures explicitly scoped for large mutable data",
+  "follow_symlinks": "only_if_resolved_target_is_authorized",
+  "data_split": "development",
+  "note": "该配置只描述设计默认值；实施时读取用户已有授权并明确记录，不将未知外发范围视为允许。"
+}

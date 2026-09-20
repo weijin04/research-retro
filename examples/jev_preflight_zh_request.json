@@ -1,0 +1,32 @@
+{
+  "model": "jev-latest",
+  "state": {
+    "text": "软件接入合成样例。计算进程正常退出，但没有进行科学有效性检查。另一个记录提出以后补做计算，该计算尚未运行。",
+    "purpose": "公开合成数据；用于中文表述的接入边界检查，不是真实科研结果。"
+  },
+  "questions": {
+    "reports_process_completion": {
+      "type": "noul",
+      "instructions": "Does state.text explicitly report that a calculation process exited normally? This asks only about the statement in the text, not whether the science is valid."
+    },
+    "scientific_verification_role": {
+      "type": "choice",
+      "instructions": "According to state.text, what is reported about the scientific-validity check?",
+      "criteria": {
+        "performed": "The text explicitly says the scientific-validity check was performed.",
+        "not_performed": "The text explicitly says it was not performed.",
+        "not_stated": "The text does not state whether it was performed.",
+        "other": "The reported situation does not fit these categories."
+      }
+    },
+    "planning_content_presence": {
+      "type": "score",
+      "instructions": "How much of state.text concerns a future, unexecuted task? Rate only the role of that content in this synthetic passage.",
+      "criteria": [
+        "No future unexecuted task is discussed.",
+        "A future unexecuted task is one distinct part of the passage.",
+        "The passage is primarily about future unexecuted tasks."
+      ]
+    }
+  }
+}

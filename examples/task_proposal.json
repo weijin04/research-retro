@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "project_id": "synthetic_project",
+  "is_example": true,
+  "kind": "task_proposal",
+  "id": "task_example",
+  "goal_ref": "goal_example",
+  "task_type": "derive",
+  "objective": "在合成案例中完成端点能差与路径势垒的关系判断。",
+  "read_set": [
+    {
+      "object_id": "art_endpoint",
+      "revision": 1
+    }
+  ],
+  "policy_revision": 1,
+  "expected_artifacts": [
+    "带条件的推导",
+    "科学修订提案"
+  ],
+  "input_refs": [
+    "loc_endpoint"
+  ],
+  "allowed_action_requests": [
+    "read",
+    "derive",
+    "sandbox_check"
+  ],
+  "budget_request": {
+    "cpu_cores_max": 1,
+    "gpu_count_max": 0,
+    "memory_mib_max": 512,
+    "wall_seconds_max": 120,
+    "model_calls_max": 2,
+    "external_job_submissions_max": 0
+  },
+  "parent_task_id": null,
+  "idempotency_key": "synthetic-derive-001",
+  "renewal_condition": "实际产物揭示了尚未完成但仍在原目标内的关系，并提交剩余工作和预算。",
+  "extensions": {
+    "budget_note": "仅为合成契约样例，非生产预算或工期估计。"
+  }
+}
