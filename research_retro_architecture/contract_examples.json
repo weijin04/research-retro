@@ -1,0 +1,282 @@
+[
+  {
+    "schema_version": "2.0-proposal",
+    "record_type": "parameter_binding",
+    "id": "binding:steps",
+    "revision": 1,
+    "snapshot_id": "case-snapshot",
+    "extensions": {
+      "example_only": true
+    },
+    "run_ref": {
+      "id": "archive-a",
+      "revision": 1
+    },
+    "symbol": "driver.steps",
+    "requested": {
+      "state": "known",
+      "value": 200000,
+      "unit": "step",
+      "alternatives": [],
+      "unknown_reason": null
+    },
+    "effective": {
+      "state": "known",
+      "value": 500,
+      "unit": "step",
+      "alternatives": [],
+      "unknown_reason": null
+    },
+    "stages": [
+      {
+        "operator_rule": "builtin-min-int-v1",
+        "input_refs": [
+          "cfg.requested_steps",
+          "env.RR_MAX_STEPS"
+        ],
+        "output": {
+          "state": "known",
+          "value": 500,
+          "unit": "step",
+          "alternatives": [],
+          "unknown_reason": null
+        },
+        "path_conditions": [],
+        "locators": [
+          {
+            "artifact_id": "driver.py",
+            "artifact_revision": 1,
+            "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+            "start_byte": 223,
+            "end_byte_exclusive": 252
+          }
+        ]
+      }
+    ],
+    "basis": {
+      "mode": "static_conditional",
+      "origin_assurance": "project_asserted",
+      "witness_refs": [
+        {
+          "id": "launcher-slice",
+          "revision": 1
+        }
+      ],
+      "assumption_refs": [
+        {
+          "id": "run-binds-to-launcher",
+          "revision": 1
+        }
+      ],
+      "qualification": "Static evaluation conditioned on archived execution binding; not a claim of independently monitored history."
+    },
+    "unresolved_dependencies": [
+      "Independent authenticity of legacy collector"
+    ]
+  },
+  {
+    "schema_version": "2.0-proposal",
+    "record_type": "realization_contract",
+    "id": "contract:duration",
+    "revision": 1,
+    "snapshot_id": "case-snapshot",
+    "extensions": {
+      "example_only": true
+    },
+    "scope": {
+      "model_id": "two-state-population",
+      "object_ids": [
+        "population-system"
+      ],
+      "domain": {
+        "t_s": [
+          0,
+          200
+        ]
+      },
+      "quantifier": "this_execution",
+      "conditions": []
+    },
+    "representation_refs": [
+      {
+        "id": "euler-state",
+        "revision": 1
+      }
+    ],
+    "observable": {
+      "name": "p_B",
+      "definition": "Deterministic ensemble population at requested duration",
+      "unit": "1",
+      "population": "two-state ensemble"
+    },
+    "required_predicates": [
+      {
+        "op": "eq",
+        "args": [
+          {
+            "binding": "effective_duration_s"
+          },
+          200
+        ],
+        "rule_id": "scalar-equality-v1"
+      }
+    ],
+    "basis": {
+      "mode": "static_conditional",
+      "origin_assurance": "project_asserted",
+      "witness_refs": [
+        {
+          "id": "launcher-slice",
+          "revision": 1
+        }
+      ],
+      "assumption_refs": [
+        {
+          "id": "run-binds-to-launcher",
+          "revision": 1
+        }
+      ],
+      "qualification": "Static evaluation conditioned on archived execution binding; not a claim of independently monitored history."
+    },
+    "approved_rule_versions": {
+      "scalar-equality": "v1"
+    }
+  },
+  {
+    "schema_version": "2.0-proposal",
+    "record_type": "obligation",
+    "id": "obligation:duration",
+    "revision": 1,
+    "snapshot_id": "case-snapshot",
+    "extensions": {
+      "example_only": true
+    },
+    "target_question": "Did archive-a implement the requested 200 seconds?",
+    "kind": "numerical",
+    "scope": {
+      "model_id": "two-state-population",
+      "object_ids": [
+        "population-system"
+      ],
+      "domain": {
+        "t_s": [
+          0,
+          200
+        ]
+      },
+      "quantifier": "this_execution",
+      "conditions": []
+    },
+    "required_capabilities": [
+      "read_snapshot",
+      "static_evaluate"
+    ],
+    "acceptance_predicates": [
+      {
+        "op": "eq",
+        "args": [
+          {
+            "binding": "effective_duration_s"
+          },
+          200
+        ],
+        "rule_id": "scalar-equality-v1"
+      }
+    ],
+    "state": "open",
+    "outcome": null,
+    "adjudication": "none",
+    "evidence_refs": [],
+    "blockers": []
+  },
+  {
+    "schema_version": "2.0-proposal",
+    "record_type": "probe_spec",
+    "id": "probe:cap",
+    "revision": 1,
+    "snapshot_id": "case-snapshot",
+    "extensions": {
+      "example_only": true
+    },
+    "packet_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "obligation_refs": [
+      {
+        "id": "obligation:duration",
+        "revision": 1
+      }
+    ],
+    "probe_kind": "intervention",
+    "interventions": [
+      {
+        "target": "RR_MAX_STEPS",
+        "before": 500,
+        "after": 200000
+      }
+    ],
+    "held_fixed_refs": [
+      {
+        "id": "gate-kernel",
+        "revision": 1
+      },
+      {
+        "id": "protocol-config",
+        "revision": 1
+      }
+    ],
+    "expected_predicates": [
+      {
+        "op": "eq",
+        "args": [
+          {
+            "binding": "effective_duration_s"
+          },
+          200
+        ],
+        "rule_id": "scalar-equality-v1"
+      }
+    ],
+    "minimum_isolation": [
+      "read_only_inputs",
+      "no_network",
+      "no_host_home"
+    ],
+    "resource_limits": {
+      "wall_seconds": 30,
+      "memory_bytes": 268435456,
+      "max_output_bytes": 1048576
+    }
+  },
+  {
+    "schema_version": "2.0-proposal",
+    "record_type": "execution_receipt",
+    "id": "receipt:example-only",
+    "revision": 1,
+    "snapshot_id": "case-snapshot",
+    "extensions": {
+      "example_only": true
+    },
+    "probe_ref": {
+      "id": "probe:cap",
+      "revision": 1
+    },
+    "packet_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "read_set": [
+      {
+        "id": "gate-kernel",
+        "revision": 1
+      },
+      {
+        "id": "protocol-config",
+        "revision": 1
+      }
+    ],
+    "runner_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "script_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "returncode": 0,
+    "termination": "exited",
+    "isolation_observed": [],
+    "outputs": [],
+    "execution_completed": true,
+    "scientific_adequacy": "unchecked"
+  }
+]

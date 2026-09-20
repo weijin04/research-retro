@@ -67,11 +67,11 @@ def install(root):
     run = Run(root)
     run.command(["/usr/bin/python3", "-m", "venv", "--without-pip", "/sandbox/venv"])
     pip = str(next((root / "wheels").glob("pip-*.whl")))
-    bootstrap = f"import sys,runpy; sys.path.insert(0,{pip!r}); sys.argv=['pip','--isolated','install','--no-index','--find-links','/sandbox/wheels','research-retro==1.0.0']; runpy.run_module('pip',run_name='__main__')"
+    bootstrap = f"import sys,runpy; sys.path.insert(0,{pip!r}); sys.argv=['pip','--isolated','install','--no-index','--find-links','/sandbox/wheels','research-retro']; runpy.run_module('pip',run_name='__main__')"
     run.command(["/sandbox/venv/bin/python", "-I", "-c", bootstrap])
     run.command([run.retro, "--version"])
     tools = json.loads(run.command([run.retro, "tools"]))
-    run.check("installed_package_contains_all_tool_definitions", len(tools["result"]) == 9)
+    run.check("installed_package_contains_all_tool_definitions", {t["name"] for t in tools["result"]} >= {"retro_init", "retro_scan", "retro_recover", "retro_probe", "retro_verify_handoff"})
     run.check("installed_package_contains_agent_manual", "Research Retro" in run.command([run.retro, "agent"]))
     run.check("developer_home_and_repo_absent", not Path("/home/sun07ao").exists())
     run.check("personal_wrappers_absent", shutil.which("rtk") is None and shutil.which("codex") is None)

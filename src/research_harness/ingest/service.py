@@ -92,16 +92,15 @@ class Ingestor:
                 raise HarnessError("invalid_locator", "Invalid or over-budget byte range")
             os.lseek(fd, start, os.SEEK_SET)
             with os.fdopen(fd, "rb", closefd=False) as f:
-                content = f.read(end - start)
+                fingerprint = self.store.put_stream(f, end - start)
             after = os.fstat(fd)
             # Repeat root validation to reject changed ancestors and pathname replacements.
             _, actual_after = self.allowed(path)
             named = actual_after.stat()
-            if self._stat(before) != self._stat(after) or self._stat(after) != self._stat(named) or len(content) != end - start:
+            if self._stat(before) != self._stat(after) or self._stat(after) != self._stat(named):
                 raise HarnessError("source_changed", str(path))
         finally:
             os.close(fd)
-        fingerprint = self.store.put_blob(content)
         try:
             old = self.store.get(identifier)
         except KeyError:

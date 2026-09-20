@@ -1,4 +1,27 @@
-# Development checks
+# Product acceptance
+
+Research Retro 2.0 adds the installed workflow in `retro2_acceptance.py`:
+
+```sh
+uv run python -m unittest discover -s tests -v
+uv build --wheel
+uv run python checks/standalone_acceptance.py --wheelhouse PATH --output NEW_PATH
+uv run python checks/retro2_acceptance.py --wheelhouse PATH --output NEW_PATH
+```
+
+The first acceptance preserves the 1.0 lifecycle. The second runs the typed 2.0
+recovery/investigation/probe/closure/handoff lifecycle in an offline installed
+namespace, including all four actual interventions, an independent discrete formula,
+scoped signed support, historical withdrawal and isolated replay without original
+paths. The inner process receives only the synthetic case, never evaluator-only
+reference files. This deterministic product check is not a blinded LLM evaluation.
+
+Final receipts, the original cold-context review and the separate post-reveal repair
+recheck are in `releases/standalone-2.0.0/`. Release reports retain both failed and
+successful evidence. New product schemas are packaged in `resources/retro2.schema.json`;
+`render_tools.py` regenerates all function definitions.
+
+# Earlier checks
 
 Current standalone acceptance:
 

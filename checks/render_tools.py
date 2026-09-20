@@ -63,11 +63,41 @@ tool("correct", "Commit audit-backed correction with original read-set and idemp
      {"audit_id": S, "result_revision": I, "operations": array(obj({"action": {"enum": ["qualify", "adjudicate", "revoke", "refute", "narrow"]},
          "target": S, "payload": {"type": "object"}}, ["action", "target"]), 1), "reason": S, "idempotency_key": S})
 tool("export", "Rehash originals and export all state, negative knowledge, history and original blobs with a SHA256 manifest.",
-     {"destination": S}, [])
+     {"destination": S, "closure": S}, [])
 tool("inspect", "Verify/read a self-contained frozen handoff without source project or workspace access.", {"bundle": S}, workspace=False)
 state = tool("state", "Inspect status, exact record, history, events, provenance or integrity. No scientific promotion.",
              {"action": {"enum": ["status", "get", "history", "events", "verify", "provenance"]}, "id": S}, [])
 state["parameters"]["allOf"] = [{"if": {"required": ["action"], "properties": {"action": {"enum": ["get", "history"]}}}, "then": {"required": ["id"]}}]
+
+tool("snapshot", "Freeze captured bytes, census gaps and bounded Git DAG without executing source code.", {})
+tool("recover", "Deterministically recover conditional parameter chains, producer alternatives and investigation obligations.", {"snapshot": S})
+tool("records", "Import typed 2.0 records with pinned revisions and verified locators; no qualification by string.", {"document": SCOPE})
+tool("capabilities", "Probe optional Linux containment; required execution never falls back.", {})
+tool("explain", "Return a finding, exact original byte slices, rules and dependency impact.", {"id": S, "revision": I}, ["id"])
+tool("impact", "Trace current dependencies while retaining all historical revisions.", {"id": S})
+tool("contrast", "Check observable, unit, reference, object, boundary and sampling compatibility before comparison.",
+     {"left": S, "right": S, "observable": S})
+tool("support", "Compute scoped positive/negative/conflict/neither support. Conflict premises cannot affirm unconditionally.", {"scope": SCOPE})
+task = tool("task", "Freeze scope, issue/read/seal/reveal/submit investigation packets, or run a contained evidence projection.",
+     {"action": {"enum": ["scope", "next", "packet", "seal", "reveal", "submit", "run"]}, "id": S,
+      "scope": S, "view": {"const": "evidence-first"}, "obligation": S, "document": SCOPE, "result": SCOPE, "script": S}, ["action"])
+task["parameters"]["allOf"] = [{"if": {"properties": {"action": {"const": action}}}, "then": {"required": required,
+    "properties": {key: False for key in {"id", "scope", "view", "obligation", "document", "result", "script"} - set(allowed)}}}
+    for action, required, allowed in [("scope", ["document"], ["document"]), ("next", ["scope"], ["scope", "view", "obligation"]),
+        ("packet", ["id"], ["id"]), ("seal", ["id", "document"], ["id", "document"]), ("reveal", ["id"], ["id"]),
+        ("submit", ["id", "result"], ["id", "result"]), ("run", ["id", "script"], ["id", "script"])]]
+probe = tool("probe", "Plan a frozen intervention, run with required isolation, or independently evaluate its preregistered predicates.",
+     {"action": {"enum": ["plan", "run", "evaluate"]}, "obligation": S, "document": SCOPE, "id": S,
+      "isolation": {"const": "required"}}, ["action"])
+probe["parameters"]["allOf"] = [{"if": {"properties": {"action": {"const": action}}}, "then": {"required": required,
+    "properties": {key: False for key in {"obligation", "document", "id", "isolation"} - set(allowed)}}}
+    for action, required, allowed in [("plan", ["obligation"], ["obligation", "document"]),
+        ("run", ["id"], ["id", "isolation"]), ("evaluate", ["id"], ["id"])]]
+tool("close", "Produce closed-resolved, closed-qualified or open-blocked for the frozen scope/goal/rules/obligations.", {"scope": S})
+tool("verify_handoff", "Verify portable queries, counterfactual withdrawal and explicitly requested contained replays without originals.",
+     {"bundle": S, "query_set": SCOPE}, workspace=False)
+tool("migrate", "Dry-run legacy workspace migration; apply copies into an empty separate workspace, retaining assertions as unchecked.",
+     {"source": S, "destination": S, "apply": {"type": "boolean"}}, ["source"], workspace=False)
 
 if __name__ == "__main__":
     (ROOT / "src/research_harness/resources/tools.json").write_text(json.dumps(tools, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

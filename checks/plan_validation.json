@@ -8,13 +8,15 @@
     "resource enforcement",
     "scientific conclusions"
   ],
-  "task_count": 47,
+  "task_count": 56,
   "tasks_by_phase": {
     "R0": 5,
     "R1": 9,
     "R2": 14,
     "F1": 12,
-    "E1": 7
+    "E1": 7,
+    "SCU": 4,
+    "RETRO2": 5
   },
   "task_graph_acyclic": true,
   "phase_exit_coverage": true,
@@ -22,8 +24,8 @@
   "negative_contract_examples_rejected": 5,
   "fixture_hash_and_locator_valid": true,
   "question_families_checked": 6,
-  "main_documents_checked": 14,
-  "implementation_tasks_done": 28,
+  "main_documents_checked": 16,
+  "implementation_tasks_done": 37,
   "topological_order": [
     "R0-01",
     "R0-02",
@@ -71,6 +73,15 @@
     "E1-04",
     "E1-05",
     "E1-06",
-    "E1-07"
+    "E1-07",
+    "SCU-01",
+    "SCU-02",
+    "SCU-03",
+    "SCU-04",
+    "RETRO2-01",
+    "RETRO2-02",
+    "RETRO2-03",
+    "RETRO2-04",
+    "RETRO2-05"
   ]
 }

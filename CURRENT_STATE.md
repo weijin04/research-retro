@@ -1,3 +1,18 @@
+# 当前交付：Research Retro 2.0.0
+
+依据 `research_retro_architecture/IMPLEMENTATION_CONTRACT.md` 实现的独立产品已完成，发布版本 **2.0.0**，标签 `retro-v2.0.0`。F1/E1 主控框架阶段仍未启动。
+
+- 新入口：snapshot / recover / records / explain / contrast / impact / support / task / probe / close / verify-handoff / migrate；1.0 生命周期继续兼容。
+- 核心无模型调用或联网；静态恢复不执行项目代码。历史收据保持 project_asserted，新受控执行单独出具 broker 收据。
+- 明确区分捕获、参数条件推导、历史执行关联、模型适用性和科学资格。Python 首版的受支持范围和未知边界见 README。
+- 交付对象是带来源、版本、调查义务、探针与限定结论的 ReconstructionPackage。收口状态是 closed-resolved / closed-qualified / open-blocked。
+- 干净安装后的 2.0 生命周期已通过 48 个实际断言，包含四格隔离干预、独立离散公式、隐藏原项目后的查询与四次关键重放。记录：`var/retro2/acceptance-04/`。
+- 107 项回归、41 项旧版安装与生命周期兼容检查通过。空白 Agent 首轮发现撤回传播缺口，修复后针对性复验通过；原失败与已揭示后的复验均保留。最终产物与证据见 [2.0 发布报告](releases/standalone-2.0.0/REPORT.md)。
+
+以下保留旧版本的历史交付记录，不将其验收数量冒充 2.0 的新增验收。
+
+---
+
 # 当前状态
 
 独立复盘能力单元 **Research Retro 1.0.0** 已完成，冻结标签 `retro-v1.0.0`。这是 R2 内核的产品解耦发布；F1/E1 仍暂停，没有引入主控 Harness、模型路由或跨模型编排。

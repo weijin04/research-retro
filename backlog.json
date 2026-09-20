@@ -1,12 +1,13 @@
 {
   "plan_version": "1.0",
-  "status": "standalone_release_complete_F1_E1_remain_paused",
+  "status": "retro_2_release_complete_F1_E1_remain_paused",
   "implementation_root_suggested": ".",
   "phase_order": [
     "R0",
     "R1",
     "R2",
     "SCU",
+    "RETRO2",
     "F1",
     "E1"
   ],
@@ -38,6 +39,12 @@
       "name": "领域通用独立复盘能力单元",
       "release": true,
       "exit_task": "SCU-04"
+    },
+    {
+      "id": "RETRO2",
+      "name": "Research Retro 2.0 确定性恢复与调查产品",
+      "release": true,
+      "exit_task": "RETRO2-05"
     },
     {
       "id": "F1",
@@ -1700,6 +1707,153 @@
         "CURRENT_STATE.md"
       ],
       "notes": "用户授权的独立复盘产品化；不恢复 F1/E1 扩展。实际验收及边界见发布报告。"
+    },
+    {
+      "id": "RETRO2-01",
+      "phase": "RETRO2",
+      "title": "统一语义与兼容导入",
+      "status": "done",
+      "depends_on": [
+        "SCU-04"
+      ],
+      "objective": "扩展版本存储、字节定位和五类交换实体，保持 1.0 接口。",
+      "actions": [
+        "扩展版本存储、字节定位和五类交换实体，保持 1.0 接口。"
+      ],
+      "deliverables": [
+        "src/research_harness/realization/",
+        "src/research_harness/handoff/portable.py"
+      ],
+      "acceptance": [
+        "结构与语义验证",
+        "无静默资格提升",
+        "迁移 dry-run 与独立目标工作区"
+      ],
+      "owner_role": "产品实现与验收",
+      "jev_use": "不调用模型",
+      "completion_evidence": [
+        "releases/standalone-2.0.0/REPORT.md",
+        "releases/standalone-2.0.0/acceptance.json",
+        "tests/test_retro2.py"
+      ]
+    },
+    {
+      "id": "RETRO2-02",
+      "phase": "RETRO2",
+      "title": "确定性恢复",
+      "status": "done",
+      "depends_on": [
+        "RETRO2-01"
+      ],
+      "objective": "冻结来源和 Git DAG，恢复参数链、候选执行与未知边界。",
+      "actions": [
+        "冻结来源和 Git DAG，恢复参数链、候选执行与未知边界。"
+      ],
+      "deliverables": [
+        "src/research_harness/recovery/"
+      ],
+      "acceptance": [
+        "有效步数与算子恢复",
+        "两次历史尝试和未绑定替代",
+        "复制、缓存和撤回前提诊断"
+      ],
+      "owner_role": "产品实现与验收",
+      "jev_use": "不调用模型",
+      "completion_evidence": [
+        "releases/standalone-2.0.0/REPORT.md",
+        "releases/standalone-2.0.0/acceptance.json",
+        "tests/test_retro2.py"
+      ]
+    },
+    {
+      "id": "RETRO2-03",
+      "phase": "RETRO2",
+      "title": "实现契约与判别探针",
+      "status": "done",
+      "depends_on": [
+        "RETRO2-02"
+      ],
+      "objective": "从调查问题发放可复算探针，区分实际执行与科学判据。",
+      "actions": [
+        "从调查问题发放可复算探针，区分实际执行与科学判据。"
+      ],
+      "deliverables": [
+        "src/research_harness/investigation.py",
+        "src/research_harness/runner/"
+      ],
+      "acceptance": [
+        "四格真实干预",
+        "离散公式独立比较",
+        "可达性与完整时域分开"
+      ],
+      "owner_role": "产品实现与验收",
+      "jev_use": "不调用模型",
+      "completion_evidence": [
+        "releases/standalone-2.0.0/REPORT.md",
+        "releases/standalone-2.0.0/acceptance.json",
+        "tests/test_retro2.py"
+      ]
+    },
+    {
+      "id": "RETRO2-04",
+      "phase": "RETRO2",
+      "title": "调查协议与权限",
+      "status": "done",
+      "depends_on": [
+        "RETRO2-03"
+      ],
+      "objective": "实现证据首读、封存揭示、版本提交、限定收口及依赖影响。",
+      "actions": [
+        "实现证据首读、封存揭示、版本提交、限定收口及依赖影响。"
+      ],
+      "deliverables": [
+        "src/research_harness/retro2.py",
+        "src/research_harness/diagnosis/"
+      ],
+      "acceptance": [
+        "过期相关提交拒绝",
+        "无关更新带回执 rebase",
+        "contained 和 cooperative 明确区分"
+      ],
+      "owner_role": "产品实现与验收",
+      "jev_use": "不调用模型",
+      "completion_evidence": [
+        "releases/standalone-2.0.0/REPORT.md",
+        "releases/standalone-2.0.0/acceptance.json",
+        "tests/test_retro2.py"
+      ]
+    },
+    {
+      "id": "RETRO2-05",
+      "phase": "RETRO2",
+      "title": "交接和发布",
+      "status": "done",
+      "depends_on": [
+        "RETRO2-04"
+      ],
+      "objective": "安装产品、运行公开生命周期、完成冷交接并发布 GitHub。",
+      "actions": [
+        "安装产品、运行公开生命周期、完成冷交接并发布 GitHub。"
+      ],
+      "deliverables": [
+        "checks/retro2_acceptance.py",
+        "releases/standalone-2.0.0/"
+      ],
+      "acceptance": [
+        "离线隔离安装",
+        "便携查询与关键重放",
+        "空白上下文交接",
+        "wheel、回执、文档、标签同步"
+      ],
+      "owner_role": "产品实现与验收",
+      "jev_use": "不调用模型",
+      "completion_evidence": [
+        "releases/standalone-2.0.0/REPORT.md",
+        "releases/standalone-2.0.0/acceptance.json",
+        "tests/test_retro2.py",
+        "releases/standalone-2.0.0/cold-agent-review.md",
+        "releases/standalone-2.0.0/cold-agent-recheck.md"
+      ]
     }
   ],
   "change_log": [

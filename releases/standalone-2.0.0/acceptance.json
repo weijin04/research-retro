@@ -1,0 +1,2962 @@
+{
+  "passed": true,
+  "assertions": [
+    {
+      "name": "historical_effective_steps",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "requested_effective_separated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "two_historical_attempts_with_unbound_alternatives",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "untrusted_receipts_not_self_authenticated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "all_structural_diagnostics",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:0f4bf687697e62af310f98bb",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:3257556b0d79570a3b6a9ab1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:370acb8a40a1adcee34cb869",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:6ab8b713ccb33c05c0adec2d",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:807eb7182ea25e490eaf8e4f",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:93730f35ae804369f7f75415",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:a037833549dd004dacd7c084",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:a7a8eea7e9d15bc82d7419b6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:aa082251cc269983b13ae218",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:ed00985d7e8d5034ccf66baf",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:efa2aced0b9655dbe99d72b7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "explain_finding:f8fb38e626e4b26ec3dc0d85",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "containment_available_in_clean_install",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "neither_ran_with_no_implicit_scientific_promotion",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "neither_independent_discrete_formula",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "cap_only_ran_with_no_implicit_scientific_promotion",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "cap_only_independent_discrete_formula",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "gate_only_ran_with_no_implicit_scientific_promotion",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "gate_only_independent_discrete_formula",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "both_ran_with_no_implicit_scientific_promotion",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "both_independent_discrete_formula",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "minimal_repair_depends_on_question",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "closure_blocks_before_investigation",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_0",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_1",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_2",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_3",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_5",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_6",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_7",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_8",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_9",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_10",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_11",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_12",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "historical_argument_has_explicit_conditional_support",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "evidence_view_hides_narrative_13",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "withdrawal_propagates_and_independent_conclusion_survives",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "qualified_complete_retains_historical_uncertainty",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "source_and_git_byte_identical",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "portable_queries_and_four_replays_without_sources",
+      "passed": true,
+      "details": null
+    },
+    {
+      "name": "portable_historical_withdrawal_is_nonempty_and_discriminating",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "intervention_matrix": [
+    {
+      "intervention": "neither",
+      "steps": 500,
+      "population": 0.0,
+      "discrete": 0.0,
+      "duration_s": 0.5,
+      "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53"
+    },
+    {
+      "intervention": "cap_only",
+      "steps": 200000,
+      "population": 0.0,
+      "discrete": 0.0,
+      "duration_s": 200.0,
+      "receipt": "execution:23856e26d8da429fae9ff99800fad4ca"
+    },
+    {
+      "intervention": "gate_only",
+      "steps": 500,
+      "population": 0.01975255804839324,
+      "discrete": 0.01975255804839325,
+      "duration_s": 0.5,
+      "receipt": "execution:f853169141a44dcba9026d8248e09f31"
+    },
+    {
+      "intervention": "both",
+      "steps": 200000,
+      "population": 0.7999636891353396,
+      "discrete": 0.7999636891353437,
+      "duration_s": 200.0,
+      "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf"
+    }
+  ],
+  "closure": {
+    "id": "closure:364c5ce7b22797cfa6d65219",
+    "snapshot_id": "snapshot:b3ba78011e81ec6541c9b042",
+    "scope_ref": {
+      "id": "scope:4554aa7698f37248979978c5",
+      "revision": 1
+    },
+    "goal": "Recover the declared finite two-state study, distinguish historical claims from controlled interventions, and retain non-identifiable historical execution provenance",
+    "rule_version": "python-abstract-1",
+    "obligation_refs": [
+      {
+        "id": "obligation:0f4bf687697e62af310f98bb",
+        "revision": 2
+      },
+      {
+        "id": "obligation:3257556b0d79570a3b6a9ab1",
+        "revision": 2
+      },
+      {
+        "id": "obligation:370acb8a40a1adcee34cb869",
+        "revision": 2
+      },
+      {
+        "id": "obligation:6ab8b713ccb33c05c0adec2d",
+        "revision": 2
+      },
+      {
+        "id": "obligation:807eb7182ea25e490eaf8e4f",
+        "revision": 2
+      },
+      {
+        "id": "obligation:93730f35ae804369f7f75415",
+        "revision": 2
+      },
+      {
+        "id": "obligation:a037833549dd004dacd7c084",
+        "revision": 2
+      },
+      {
+        "id": "obligation:a7a8eea7e9d15bc82d7419b6",
+        "revision": 2
+      },
+      {
+        "id": "obligation:aa082251cc269983b13ae218",
+        "revision": 2
+      },
+      {
+        "id": "obligation:ed00985d7e8d5034ccf66baf",
+        "revision": 2
+      },
+      {
+        "id": "obligation:efa2aced0b9655dbe99d72b7",
+        "revision": 2
+      },
+      {
+        "id": "obligation:f8fb38e626e4b26ec3dc0d85",
+        "revision": 2
+      },
+      {
+        "id": "obligation:controlled-gate",
+        "revision": 2
+      },
+      {
+        "id": "obligation:declared-rate",
+        "revision": 2
+      }
+    ],
+    "status": "closed-qualified",
+    "unresolved_obligations": [],
+    "gaps": [],
+    "coverage": [
+      {
+        "assets": [
+          {
+            "path": "/sandbox/case/.git",
+            "reason": "manifest directory exclusion; descendants not enumerated",
+            "state": "not_in_scope"
+          },
+          {
+            "artifact_id": "artifact:3347e3658afdef759667a111",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                135
+              ]
+            ],
+            "ctime_ns": 1789908148895990877,
+            "delta": "added",
+            "device": 77,
+            "inode": 311895,
+            "mtime_ns": 1789908148620038762,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/AGENTS.md",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/AGENTS.md",
+            "scientific_validity": "unchecked",
+            "sha256": "1c675a63d8aa40d0f8bb66835acba0373b02ac838eb2d82fae5ed8b8e6c4d901",
+            "size": 135,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:544cfabf980a9f15416c14c3",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                243
+              ]
+            ],
+            "ctime_ns": 1789908148896047768,
+            "delta": "added",
+            "device": 77,
+            "inode": 311897,
+            "mtime_ns": 1789908148620013001,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/MODEL.md",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/MODEL.md",
+            "scientific_validity": "unchecked",
+            "sha256": "6daffb746e6666ab6f1e1bf785df8644aa523cf3ffdf55a1b7108894062a836f",
+            "size": 243,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:5afcbf50e06ca80a475df700",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                135
+              ]
+            ],
+            "ctime_ns": 1789908148896019747,
+            "delta": "added",
+            "device": 77,
+            "inode": 311896,
+            "mtime_ns": 1789908148620026441,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/README.md",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/README.md",
+            "scientific_validity": "unchecked",
+            "sha256": "6452166768a75c6d071b4866d8957e823f38b7c7f97fbc972b979d6c01d88928",
+            "size": 135,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:6eca0ade2d7b5883f96601a6",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                529
+              ]
+            ],
+            "ctime_ns": 1789908148891724556,
+            "delta": "added",
+            "device": 77,
+            "inode": 311756,
+            "mtime_ns": 1789908148735354962,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/argument.json",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/argument.json",
+            "scientific_validity": "unchecked",
+            "sha256": "ba209b808053117e0d2a8b0a1b634dc40f0289a3ea91f866656249950176b2df",
+            "size": 529,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:d3a88595c80dc1ac89d6c5a5",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                908
+              ]
+            ],
+            "ctime_ns": 1789908148896104438,
+            "delta": "added",
+            "device": 77,
+            "inode": 311899,
+            "mtime_ns": 1789908148619911040,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/driver.py",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/driver.py",
+            "scientific_validity": "unchecked",
+            "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+            "size": 908,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:14e23f34e141d509818afef1",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                171
+              ]
+            ],
+            "ctime_ns": 1789908148896076688,
+            "delta": "added",
+            "device": 77,
+            "inode": 311898,
+            "mtime_ns": 1789908148619994751,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/protocol.json",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/protocol.json",
+            "scientific_validity": "unchecked",
+            "sha256": "e94d613286f0707c80fae4943a24c69800bfeb3700fb3f7d1998891a985bc36d",
+            "size": 171,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:b46add3c18c28e8e85488e9a",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                169
+              ]
+            ],
+            "ctime_ns": 1789908148891610824,
+            "delta": "added",
+            "device": 77,
+            "inode": 311755,
+            "mtime_ns": 1789908148735378833,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/render.py",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/render.py",
+            "scientific_validity": "unchecked",
+            "sha256": "3a3ee4249db324679b1dc271d74ac12a3eefaa53a88c6b94da34518b4afaa9a6",
+            "size": 169,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:36601f8b9a4da37597f194d3",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                101
+              ]
+            ],
+            "ctime_ns": 1789908148891768486,
+            "delta": "added",
+            "device": 77,
+            "inode": 311757,
+            "mtime_ns": 1789908148730883511,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/submit.sh",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/submit.sh",
+            "scientific_validity": "unchecked",
+            "sha256": "ae8b6d730dc5295747b359b1610fc034f702d2d062e85382e928bd512523c1d0",
+            "size": 101,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:bce87ecf451207037b4a9e90",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                274
+              ]
+            ],
+            "ctime_ns": 1789908148891878538,
+            "delta": "added",
+            "device": 77,
+            "inode": 311761,
+            "mtime_ns": 1789908148650909310,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/cache/population.json",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/cache/population.json",
+            "scientific_validity": "unchecked",
+            "sha256": "eb941d740d81efc0e43ad73a8b061d27fcd93b05d69cdd27fafcb3b0a841ef50",
+            "size": 274,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:672cb84bb654c16481ea6eee",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                0
+              ]
+            ],
+            "ctime_ns": 1789908148896209100,
+            "delta": "added",
+            "device": 77,
+            "inode": 311903,
+            "mtime_ns": 1789908148619193928,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/kernels/__init__.py",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/kernels/__init__.py",
+            "scientific_validity": "unchecked",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:a23f9338aca629bf708038f7",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                162
+              ]
+            ],
+            "ctime_ns": 1789908148896172150,
+            "delta": "added",
+            "device": 77,
+            "inode": 311902,
+            "mtime_ns": 1789908148619927730,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/kernels/gate.py",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/kernels/gate.py",
+            "scientific_validity": "unchecked",
+            "sha256": "2dcfb893ba36d42e30c96dcd30d250d55f1e65762b3d63a1460bc4d3f9182fe1",
+            "size": 162,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:d466f06d3e02af18c05377ae",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                111
+              ]
+            ],
+            "ctime_ns": 1789908148896143909,
+            "delta": "added",
+            "device": 77,
+            "inode": 311901,
+            "mtime_ns": 1789908148619940290,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/kernels/plain.py",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/kernels/plain.py",
+            "scientific_validity": "unchecked",
+            "sha256": "c16386f1213a8870618eeacd07b3248f95c37834edb90d22baf92dc175761128",
+            "size": 111,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:2b30b6d2cc04b8783fe957bd",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                224
+              ]
+            ],
+            "ctime_ns": 1789908148891824117,
+            "delta": "added",
+            "device": 77,
+            "inode": 311759,
+            "mtime_ns": 1789908148730883511,
+            "parse_state": "decoded_text",
+            "path": "/sandbox/case/notes/retraction.txt",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/notes/retraction.txt",
+            "scientific_validity": "unchecked",
+            "sha256": "ac92a48b1d6bbbb5d548e7f28e54afb49f9a2f96946cd255ca4cbdee440e209c",
+            "size": 224,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:e6370481e7a438fc3fb87a9d",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                1231
+              ]
+            ],
+            "ctime_ns": 1789908148891958530,
+            "delta": "added",
+            "device": 77,
+            "inode": 311764,
+            "mtime_ns": 1789908148650681456,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/receipts/archive-a.json",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/receipts/archive-a.json",
+            "scientific_validity": "unchecked",
+            "sha256": "2d37403afb8d89752349dddebc874aecf9b1a4b7df90ba82057b6f9e35bbb4da",
+            "size": 1231,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:e21149a9578510e0f2e4b5e4",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                1261
+              ]
+            ],
+            "ctime_ns": 1789908148891928329,
+            "delta": "added",
+            "device": 77,
+            "inode": 311763,
+            "mtime_ns": 1789908148730883511,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/receipts/diagnostic-b.json",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/receipts/diagnostic-b.json",
+            "scientific_validity": "unchecked",
+            "sha256": "ab97e9b8305d2b1a5c91ebd48d397d24223f57244d8790cd3a05aa392c68f17c",
+            "size": 1261,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:4aab29020e2a54951522652a",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                251
+              ]
+            ],
+            "ctime_ns": 1789908148892228764,
+            "delta": "added",
+            "device": 77,
+            "inode": 311775,
+            "mtime_ns": 1789908148647122398,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/results/archive-a/trajectory.csv",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/results/archive-a/trajectory.csv",
+            "scientific_validity": "unchecked",
+            "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+            "size": 251,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:b332cccc069ec269c9ded95e",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                324
+              ]
+            ],
+            "ctime_ns": 1789908148892018911,
+            "delta": "added",
+            "device": 77,
+            "inode": 311767,
+            "mtime_ns": 1789908148730883511,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/results/diagnostic-b/trajectory.csv",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/results/diagnostic-b/trajectory.csv",
+            "scientific_validity": "unchecked",
+            "sha256": "5373b2f42e0bc01b0cd7c53b074d6f2a675a931ffdd66ab8aba3a0c95df50a33",
+            "size": 324,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:8eacdef54232fbbe6a388ee3",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                131
+              ]
+            ],
+            "ctime_ns": 1789908148892147513,
+            "delta": "added",
+            "device": 77,
+            "inode": 311772,
+            "mtime_ns": 1789908148650808759,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/results/repeat-1/copy_receipt.json",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/results/repeat-1/copy_receipt.json",
+            "scientific_validity": "unchecked",
+            "sha256": "aaf7dcb6e932425de9ce8dcc204d79c36772cc8514bc76856350d0f08b9a0089",
+            "size": 131,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:b5ef8aef3034657bfaee6adc",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                251
+              ]
+            ],
+            "ctime_ns": 1789908148892177793,
+            "delta": "added",
+            "device": 77,
+            "inode": 311773,
+            "mtime_ns": 1789908148650769068,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/results/repeat-1/trajectory.csv",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/results/repeat-1/trajectory.csv",
+            "scientific_validity": "unchecked",
+            "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+            "size": 251,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:52862f5a518f645327b9f560",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                131
+              ]
+            ],
+            "ctime_ns": 1789908148892066601,
+            "delta": "added",
+            "device": 77,
+            "inode": 311769,
+            "mtime_ns": 1789908148650873770,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/results/repeat-2/copy_receipt.json",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/results/repeat-2/copy_receipt.json",
+            "scientific_validity": "unchecked",
+            "sha256": "aaf7dcb6e932425de9ce8dcc204d79c36772cc8514bc76856350d0f08b9a0089",
+            "size": 131,
+            "state": "captured"
+          },
+          {
+            "artifact_id": "artifact:04195c999d85de3f252523da",
+            "artifact_revision": 1,
+            "byte_ranges_not_read": [
+              [
+                0,
+                251
+              ]
+            ],
+            "ctime_ns": 1789908148892099612,
+            "delta": "added",
+            "device": 77,
+            "inode": 311770,
+            "mtime_ns": 1789908148650849379,
+            "parse_state": "parsed_structure",
+            "path": "/sandbox/case/results/repeat-2/trajectory.csv",
+            "reason": "metadata only; retained for audit selection",
+            "resolved_path": "/sandbox/case/results/repeat-2/trajectory.csv",
+            "scientific_validity": "unchecked",
+            "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+            "size": 251,
+            "state": "captured"
+          }
+        ],
+        "counts": {
+          "captured": 21,
+          "not_in_scope": 1
+        },
+        "enumeration_complete": true,
+        "errors": [],
+        "source_id": "project"
+      }
+    ],
+    "conclusions": [
+      {
+        "id": "obligation:0f4bf687697e62af310f98bb",
+        "question": "Does the transformed operator still realize the declared model?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "operator_value_changed",
+              "detail": {
+                "after": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 0.0
+                },
+                "before": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 0.04
+                },
+                "binding": "binding:4095699a76a63644cda2a51c",
+                "scenario": "786a89b7f9776bd4594a5d19e27801348cbf43f3",
+                "symbol": "k"
+              },
+              "locators": [
+                {
+                  "artifact_id": "git-blob:2c466948b8617c1f9340ff63",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 50,
+                  "sha256": "2dcfb893ba36d42e30c96dcd30d250d55f1e65762b3d63a1460bc4d3f9182fe1",
+                  "start_byte": 29
+                },
+                {
+                  "artifact_id": "git-blob:2c466948b8617c1f9340ff63",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 101,
+                  "sha256": "2dcfb893ba36d42e30c96dcd30d250d55f1e65762b3d63a1460bc4d3f9182fe1",
+                  "start_byte": 55
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the transformed operator still realize the declared model?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the transformed operator still realize the declared model?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "2ec8ae8357c3fd21f5d9c36bcbc7ae76d327cf8d8fd46254c8188ae23c1c2c7a",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:0f4bf687697e62af310f98bb": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:0f4bf687697e62af310f98bb"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:3257556b0d79570a3b6a9ab1",
+        "question": "Does the transformed operator still realize the declared model?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "operator_value_changed",
+              "detail": {
+                "after": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 0.0
+                },
+                "before": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 0.04
+                },
+                "binding": "binding:d0e7616f8bbf118426ac57a3",
+                "scenario": "a66993dff8bd8716b14218a01b30bb4dfa865edd",
+                "symbol": "k"
+              },
+              "locators": [
+                {
+                  "artifact_id": "git-blob:2c466948b8617c1f9340ff63",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 50,
+                  "sha256": "2dcfb893ba36d42e30c96dcd30d250d55f1e65762b3d63a1460bc4d3f9182fe1",
+                  "start_byte": 29
+                },
+                {
+                  "artifact_id": "git-blob:2c466948b8617c1f9340ff63",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 101,
+                  "sha256": "2dcfb893ba36d42e30c96dcd30d250d55f1e65762b3d63a1460bc4d3f9182fe1",
+                  "start_byte": 55
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the transformed operator still realize the declared model?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the transformed operator still realize the declared model?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "50cb0a6f229f1c4703e02a5d59b4a98fa58ddff5e8180244939a4aeb22f31750",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:3257556b0d79570a3b6a9ab1": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:3257556b0d79570a3b6a9ab1"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:370acb8a40a1adcee34cb869",
+        "question": "Does the current argument depend on a scoped withdrawn premise?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "live_withdrawn_premise",
+              "detail": {
+                "affected_claims": [
+                  "C1"
+                ],
+                "notes": [
+                  "notes/retraction.txt"
+                ],
+                "premise": "H0",
+                "qualification": "conflicting project assertions; scope and adjudication still required"
+              },
+              "locators": [],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the current argument depend on a scoped withdrawn premise?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the current argument depend on a scoped withdrawn premise?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "d2964853f556944cc06825954612cf6085001913651ca4b2fda543f7e9df2517",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:370acb8a40a1adcee34cb869": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:370acb8a40a1adcee34cb869"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:6ab8b713ccb33c05c0adec2d",
+        "question": "Does the effective bound cover the intended domain?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "effective_parameter_bound",
+              "detail": {
+                "binding": "binding:85c40760b7b7207e414f16b6",
+                "effective": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 500
+                },
+                "environment": {
+                  "RR_KERNEL": "gate",
+                  "RR_MAX_STEPS": "500"
+                },
+                "expression": "min(requested, limit)",
+                "scenario": "786a89b7f9776bd4594a5d19e27801348cbf43f3",
+                "symbol": "steps"
+              },
+              "locators": [
+                {
+                  "artifact_id": "git-blob:43c8bd683bcbedd005479248",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 252,
+                  "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+                  "start_byte": 223
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the effective bound cover the intended domain?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the effective bound cover the intended domain?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "ef4d8fbb85bc40b71154b6c20d63e45ce2167fba573d8b15929772ccf1dea6e7",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:6ab8b713ccb33c05c0adec2d": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:6ab8b713ccb33c05c0adec2d"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:807eb7182ea25e490eaf8e4f",
+        "question": "Does the effective bound cover the intended domain?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "effective_parameter_bound",
+              "detail": {
+                "binding": "binding:88af51332a4587475a32b395",
+                "effective": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 500
+                },
+                "environment": {
+                  "RR_KERNEL": "gate",
+                  "RR_MAX_STEPS": "500"
+                },
+                "expression": "min(requested, limit)",
+                "scenario": "a66993dff8bd8716b14218a01b30bb4dfa865edd",
+                "symbol": "steps"
+              },
+              "locators": [
+                {
+                  "artifact_id": "git-blob:43c8bd683bcbedd005479248",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 252,
+                  "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+                  "start_byte": 223
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the effective bound cover the intended domain?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the effective bound cover the intended domain?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "a0067dac7d844c64c1732131cccfd21e9f4fe431a953b50f5edd2ee2def390e6",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:807eb7182ea25e490eaf8e4f": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:807eb7182ea25e490eaf8e4f"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:93730f35ae804369f7f75415",
+        "question": "Does the effective bound cover the intended domain?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "effective_parameter_bound",
+              "detail": {
+                "binding": "binding:934ee0b0e1b1fbcdb5328829",
+                "effective": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 200000
+                },
+                "environment": {
+                  "RR_KERNEL": "plain",
+                  "RR_MAX_STEPS": "200000"
+                },
+                "expression": "min(requested, limit)",
+                "scenario": "working-tree",
+                "symbol": "steps"
+              },
+              "locators": [
+                {
+                  "artifact_id": "artifact:d3a88595c80dc1ac89d6c5a5",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 252,
+                  "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+                  "start_byte": 223
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the effective bound cover the intended domain?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the effective bound cover the intended domain?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "35fd6f31ad986282d86675fdc23e81ab7a6213e02b3007580862bd68116509ba",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:93730f35ae804369f7f75415": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:93730f35ae804369f7f75415"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:a037833549dd004dacd7c084",
+        "question": "Does the effective bound cover the intended domain?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "effective_parameter_bound",
+              "detail": {
+                "binding": "binding:579045b613f11c2c5a277745",
+                "effective": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 200000
+                },
+                "environment": {
+                  "RR_KERNEL": "plain",
+                  "RR_MAX_STEPS": "200000"
+                },
+                "expression": "min(requested, limit)",
+                "scenario": "15db7d2db40561c54365bf5fa825318d7f3e5c1f",
+                "symbol": "steps"
+              },
+              "locators": [
+                {
+                  "artifact_id": "git-blob:43c8bd683bcbedd005479248",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 252,
+                  "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+                  "start_byte": 223
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the effective bound cover the intended domain?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the effective bound cover the intended domain?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "bec4f351730afa4a00330eb9e1feb88a7a2dad1d4e063b1827ef342bf84516bf",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:a037833549dd004dacd7c084": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:a037833549dd004dacd7c084"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:a7a8eea7e9d15bc82d7419b6",
+        "question": "Is the cache valid under the actual operator and launch conditions?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "cache_dependency_omission",
+              "detail": {
+                "declared_key_fields": [
+                  "protocol.json"
+                ],
+                "omitted_dependencies": [
+                  "driver.py",
+                  "kernels/__init__.py",
+                  "kernels/gate.py",
+                  "kernels/plain.py",
+                  "submit.sh"
+                ],
+                "path": "cache/population.json",
+                "qualification": "candidate dependency set from project receipts; value influence needs review"
+              },
+              "locators": [],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Is the cache valid under the actual operator and launch conditions?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Is the cache valid under the actual operator and launch conditions?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "7817e494f71c0d403a1b37957363f621032a0fb753fb0e59d69496d056ecc459",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:a7a8eea7e9d15bc82d7419b6": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:a7a8eea7e9d15bc82d7419b6"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:aa082251cc269983b13ae218",
+        "question": "Are these separate executions and statistically independent observations?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "shared_bytes",
+              "detail": {
+                "execution_independence": "unknown",
+                "paths": [
+                  "results/archive-a/trajectory.csv",
+                  "results/repeat-1/trajectory.csv",
+                  "results/repeat-2/trajectory.csv"
+                ],
+                "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+                "statistical_independence": "unknown"
+              },
+              "locators": [],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Are these separate executions and statistically independent observations?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Are these separate executions and statistically independent observations?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "59ebdb4dfc4db6706d063e0a2eecb9641a31d6f1f2cf9a0b77ded463c0a17ddc",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:aa082251cc269983b13ae218": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:aa082251cc269983b13ae218"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:ed00985d7e8d5034ccf66baf",
+        "question": "Does the effective bound cover the intended domain?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "effective_parameter_bound",
+              "detail": {
+                "binding": "binding:f809748dc8f8ce1fe629c6af",
+                "effective": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 200000
+                },
+                "environment": {
+                  "RR_KERNEL": "plain",
+                  "RR_MAX_STEPS": "200000"
+                },
+                "expression": "min(requested, limit)",
+                "scenario": "8f182fa3fc45c7e1111f00f492ccef717a5187a8",
+                "symbol": "steps"
+              },
+              "locators": [
+                {
+                  "artifact_id": "git-blob:43c8bd683bcbedd005479248",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 252,
+                  "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+                  "start_byte": 223
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the effective bound cover the intended domain?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the effective bound cover the intended domain?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "ab83b13e59a09438bcc4fcc31561b9d4431875ebc2033aa431c60ecd530cecd6",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:ed00985d7e8d5034ccf66baf": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:ed00985d7e8d5034ccf66baf"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:efa2aced0b9655dbe99d72b7",
+        "question": "Which launch/operator differences explain the observable difference?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "execution_dependency_difference",
+              "detail": {
+                "changed": [
+                  "submit.sh"
+                ],
+                "left": "attempt:014ca142946b7b403d40004b",
+                "reported_observations": [
+                  {
+                    "kernel_module": "kernels.gate",
+                    "last_step": 500,
+                    "last_time_s": 0.5,
+                    "p_B": 0.0,
+                    "requested_steps": 200000,
+                    "status": "completed"
+                  },
+                  {
+                    "kernel_module": "kernels.plain",
+                    "last_step": 200000,
+                    "last_time_s": 200.0,
+                    "p_B": 0.7999636891353396,
+                    "requested_steps": 200000,
+                    "status": "completed"
+                  }
+                ],
+                "right": "attempt:d3fa1401f849ddec3dc1b00b",
+                "unchanged": [
+                  "driver.py",
+                  "kernels/__init__.py",
+                  "kernels/gate.py",
+                  "kernels/plain.py",
+                  "protocol.json"
+                ]
+              },
+              "locators": [],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Which launch/operator differences explain the observable difference?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Which launch/operator differences explain the observable difference?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "ba32c62ce3f52ad2d2bc1fb76c4ec5e2bb408217d82baa2b1192a960b6aea7a7",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:efa2aced0b9655dbe99d72b7": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:efa2aced0b9655dbe99d72b7"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:f8fb38e626e4b26ec3dc0d85",
+        "question": "Does the effective bound cover the intended domain?",
+        "outcome": "qualified",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "code": "effective_parameter_bound",
+              "detail": {
+                "binding": "binding:43520d2a2429c8572857a8ce",
+                "effective": {
+                  "alternatives": [],
+                  "state": "known",
+                  "unit": null,
+                  "unknown_reason": null,
+                  "value": 200000
+                },
+                "environment": {
+                  "RR_KERNEL": "plain",
+                  "RR_MAX_STEPS": "200000"
+                },
+                "expression": "min(requested, limit)",
+                "scenario": "bd4ae69586041df105478c4c8cba8c6306d37f1d",
+                "symbol": "steps"
+              },
+              "locators": [
+                {
+                  "artifact_id": "git-blob:43c8bd683bcbedd005479248",
+                  "artifact_revision": 1,
+                  "end_byte_exclusive": 252,
+                  "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+                  "start_byte": 223
+                }
+              ],
+              "qualification": "diagnostic candidate; not a scientific verdict",
+              "question": "Does the effective bound cover the intended domain?",
+              "rule_version": "python-abstract-1",
+              "severity": "review"
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the effective bound cover the intended domain?"
+          },
+          "outcome": "qualified",
+          "packet_sha256": "10ba1aaa73147b332cbc99bc97e6ba56f906e0d91d2681267638e5f964fd08df",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:f8fb38e626e4b26ec3dc0d85": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [
+            "Project-created historical receipts are not authenticated external execution observations"
+          ],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "snapshot": "snapshot:b3ba78011e81ec6541c9b042"
+            },
+            "model_id": "unreviewed",
+            "object_ids": [
+              "finding:f8fb38e626e4b26ec3dc0d85"
+            ],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:controlled-gate",
+        "question": "Does the controlled gated implementation emit zero in the tested conditions?",
+        "outcome": "confirmed",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "question": "Does the controlled gated implementation emit zero in the tested conditions?",
+              "scope": {
+                "conditions": [],
+                "domain": {
+                  "dt_s": 0.001,
+                  "initial_population": 0,
+                  "k_AB_per_s": 0.04,
+                  "k_BA_per_s": 0.01,
+                  "requested_duration_s": 200
+                },
+                "model_id": "declared-two-state-population",
+                "object_ids": [],
+                "quantifier": "this_execution"
+              }
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Does the controlled gated implementation emit zero in the tested conditions?"
+          },
+          "judgments": [
+            {
+              "analysis": "Two independently executed contained gated probes returned p_B=0, matching the exact discrete formula.",
+              "polarity": "positive",
+              "target": {
+                "id": "evidence:controlled-gate",
+                "revision": 1
+              }
+            }
+          ],
+          "outcome": "confirmed",
+          "packet_sha256": "1ad8d5cdce2881ecfe22e5d8856e81a138da5cd75d7fed88c70804cd7d1c5b03",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:controlled-gate": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "dt_s": 0.001,
+              "initial_population": 0,
+              "k_AB_per_s": 0.04,
+              "k_BA_per_s": 0.01,
+              "requested_duration_s": 200
+            },
+            "model_id": "declared-two-state-population",
+            "object_ids": [],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      },
+      {
+        "id": "obligation:declared-rate",
+        "question": "Is H0 compatible with the declared positive forward rate and controlled plain implementation?",
+        "outcome": "refuted",
+        "review": {
+          "analysis": {
+            "derivation": "For the declared deterministic model, p_N=k/(k+r)*(1-(1-(k+r)*dt)^N). The gated k=.04<.05 becomes zero, so p_N=0 regardless of cap. Plain k=.04 gives p_500 about .019753; N=200000 gives about .799964. The 0.5-second run cannot test the 200-second population. Equal output hashes do not prove execution or statistical independence; project receipts remain assertions. The withdrawn H0 is a premise of C1, but C2 only asserts the gated output was zero.",
+            "inspected_finding": {
+              "question": "Is H0 compatible with the declared positive forward rate and controlled plain implementation?",
+              "scope": {
+                "conditions": [],
+                "domain": {
+                  "dt_s": 0.001,
+                  "initial_population": 0,
+                  "k_AB_per_s": 0.04,
+                  "k_BA_per_s": 0.01,
+                  "requested_duration_s": 200
+                },
+                "model_id": "declared-two-state-population",
+                "object_ids": [],
+                "quantifier": "this_execution"
+              }
+            },
+            "matrix": [
+              {
+                "discrete": 0.0,
+                "duration_s": 0.5,
+                "intervention": "neither",
+                "population": 0.0,
+                "receipt": "execution:2c979d1072b149c896c79a09cb4d6f53",
+                "steps": 500
+              },
+              {
+                "discrete": 0.0,
+                "duration_s": 200.0,
+                "intervention": "cap_only",
+                "population": 0.0,
+                "receipt": "execution:23856e26d8da429fae9ff99800fad4ca",
+                "steps": 200000
+              },
+              {
+                "discrete": 0.01975255804839325,
+                "duration_s": 0.5,
+                "intervention": "gate_only",
+                "population": 0.01975255804839324,
+                "receipt": "execution:f853169141a44dcba9026d8248e09f31",
+                "steps": 500
+              },
+              {
+                "discrete": 0.7999636891353437,
+                "duration_s": 200.0,
+                "intervention": "both",
+                "population": 0.7999636891353396,
+                "receipt": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+                "steps": 200000
+              }
+            ],
+            "qualification": "Numerical/scientific statements restricted to this declared synthetic model; historical association is conditional",
+            "question": "Is H0 compatible with the declared positive forward rate and controlled plain implementation?"
+          },
+          "judgments": [
+            {
+              "analysis": "The declared k_AB is positive and the controlled ungated recurrence gives a positive population, contradicting H0 within this explicit model.",
+              "polarity": "negative",
+              "target": {
+                "id": "hypothesis:b5113317d54e2e56cfc004c6",
+                "revision": 2
+              }
+            }
+          ],
+          "outcome": "refuted",
+          "packet_sha256": "164751ea0a7ada51d77fc37e9d058259b9933aa6363a7d8d2ed357caa92a7551",
+          "read_set": {
+            "artifact:04195c999d85de3f252523da": 1,
+            "artifact:14e23f34e141d509818afef1": 1,
+            "artifact:2b30b6d2cc04b8783fe957bd": 1,
+            "artifact:3347e3658afdef759667a111": 1,
+            "artifact:36601f8b9a4da37597f194d3": 1,
+            "artifact:4aab29020e2a54951522652a": 1,
+            "artifact:52862f5a518f645327b9f560": 1,
+            "artifact:544cfabf980a9f15416c14c3": 1,
+            "artifact:5afcbf50e06ca80a475df700": 1,
+            "artifact:672cb84bb654c16481ea6eee": 1,
+            "artifact:6eca0ade2d7b5883f96601a6": 1,
+            "artifact:8eacdef54232fbbe6a388ee3": 1,
+            "artifact:a23f9338aca629bf708038f7": 1,
+            "artifact:b332cccc069ec269c9ded95e": 1,
+            "artifact:b46add3c18c28e8e85488e9a": 1,
+            "artifact:b5ef8aef3034657bfaee6adc": 1,
+            "artifact:bce87ecf451207037b4a9e90": 1,
+            "artifact:d3a88595c80dc1ac89d6c5a5": 1,
+            "artifact:d466f06d3e02af18c05377ae": 1,
+            "artifact:e21149a9578510e0f2e4b5e4": 1,
+            "artifact:e6370481e7a438fc3fb87a9d": 1,
+            "evidence:controlled-gate": 1,
+            "hypothesis:26340416f736ddb1f0c4726b": 2,
+            "hypothesis:7aa276b99acd7796edca2d78": 2,
+            "hypothesis:b5113317d54e2e56cfc004c6": 2,
+            "obligation:declared-rate": 1,
+            "project:contract": 1,
+            "scope:4554aa7698f37248979978c5": 1,
+            "snapshot:b3ba78011e81ec6541c9b042": 1
+          },
+          "remaining": [],
+          "reopen_conditions": [
+            "New authenticated historical records",
+            "Different declared model, observable, initial state or sampling domain"
+          ],
+          "reviewer": "deterministic acceptance host; explicit synthetic model analysis",
+          "scope": {
+            "conditions": [],
+            "domain": {
+              "dt_s": 0.001,
+              "initial_population": 0,
+              "k_AB_per_s": 0.04,
+              "k_BA_per_s": 0.01,
+              "requested_duration_s": 200
+            },
+            "model_id": "declared-two-state-population",
+            "object_ids": [],
+            "quantifier": "this_execution"
+          },
+          "witness_refs": [
+            {
+              "id": "execution:2c979d1072b149c896c79a09cb4d6f53",
+              "revision": 2
+            },
+            {
+              "id": "execution:23856e26d8da429fae9ff99800fad4ca",
+              "revision": 2
+            },
+            {
+              "id": "execution:f853169141a44dcba9026d8248e09f31",
+              "revision": 2
+            },
+            {
+              "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf",
+              "revision": 2
+            }
+          ]
+        }
+      }
+    ],
+    "completion_boundary": "Only frozen scope, goal, rules and required obligations; no universal scientific truth certificate"
+  },
+  "bundle": "/sandbox/retro2-state/exports/reconstruction",
+  "queries": {
+    "queries": [
+      {
+        "op": "get",
+        "id": "closure:364c5ce7b22797cfa6d65219",
+        "field": [
+          "data",
+          "payload",
+          "status"
+        ],
+        "expected": "closed-qualified"
+      },
+      {
+        "op": "replay",
+        "id": "execution:2c979d1072b149c896c79a09cb4d6f53"
+      },
+      {
+        "op": "replay",
+        "id": "execution:23856e26d8da429fae9ff99800fad4ca"
+      },
+      {
+        "op": "replay",
+        "id": "execution:f853169141a44dcba9026d8248e09f31"
+      },
+      {
+        "op": "replay",
+        "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf"
+      },
+      {
+        "op": "withdraw",
+        "ids": [
+          "premise:historical-H0"
+        ],
+        "scope": {
+          "model_id": "declared-two-state-population",
+          "object_ids": [],
+          "domain": {
+            "initial_population": 0,
+            "dt_s": 0.001,
+            "k_AB_per_s": 0.04,
+            "k_BA_per_s": 0.01,
+            "requested_duration_s": 200
+          },
+          "quantifier": "this_execution",
+          "conditions": []
+        },
+        "at_state_revision": 326
+      }
+    ]
+  },
+  "evaluation_boundary": "Installed deterministic synthetic acceptance; no LLM or real-project blind scientific accuracy claim"
+}

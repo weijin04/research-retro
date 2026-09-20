@@ -1,99 +1,127 @@
-# Research Retro 1.0.0
+# Research Retro 2.0
 
-A standalone research retrospective unit for a controlling Agent or researcher.
-It indexes assets, retains original byte snapshots and provenance, represents
-conditional evidence graphs, applies version-bound corrections, and exports complete
-handoffs. It makes no model calls and needs no provider, credentials, personal wrapper,
-scientific project layout or preinstalled research runtime.
+A local research reconstruction product for a controlling researcher or Agent.
+Retro freezes source bytes and Git history, recovers conditional parameters and
+execution candidates, manages investigations, runs isolated probes, and delivers
+a portable `ReconstructionPackage`. The core makes no model calls or network calls.
 
-## Install and start
+## Install
 
-Python **3.11+ on POSIX** is required. Install the release wheel in your own environment:
+Python **3.11+ on POSIX**. Install into your own environment:
 
 ```sh
 python3 -m venv .venv
-.venv/bin/python -m pip install /path/to/research_retro-1.0.0-py3-none-any.whl
+.venv/bin/python -m pip install /path/to/research_retro-2.0.0-py3-none-any.whl
 .venv/bin/retro init /path/to/research-project
-.venv/bin/retro --workspace /path/to/research-project/.retro scan
-.venv/bin/retro agent
+.venv/bin/retro -w /path/to/research-project/.retro snapshot
+.venv/bin/retro -w /path/to/research-project/.retro recover --snapshot latest
 ```
 
-Or from this source checkout: `uv sync`, then `uv run retro ...`. `rh` is an alias
-for the same interface. It no longer defaults to a developer's scientific project.
-Nothing is installed globally. The only runtime dependency is public `jsonschema`
-and its transitive dependencies; a wheelhouse can support offline installation.
+From source: `uv sync`, then `uv run retro ...`. `rh` is the same CLI. No global
+installation or provider credentials are needed. The release includes an offline
+Linux CPython 3.14 wheelhouse; ordinary pip resolves dependencies for other supported
+Python environments. Linux `bwrap` and `/usr/bin/python3` are required only for the
+optional contained runner. `retro -w WORKSPACE capabilities` checks availability.
 
-The full workflow is **init → scan/read → reconstruct → audit → correct → export**.
-The host performs the scientific reasoning using the returned original text and
-versioned packets. See [AGENT.md](AGENT.md) for exact commands, compact input examples,
-result templates and failure recovery. `retro tools` exports the nine standard
-[function definitions](tools.json). `retro call` and direct commands use the same
-validation and service code; no host-specific integration code is required.
+## Use the product
 
-## Asset boundaries
+The 2.0 workflow is **snapshot → recover → investigate → probe → close → export**.
+All state lives in the selected workspace, defaulting to `PROJECT/.retro`.
+Scientific source files are read-only. Recovery executes no project code.
 
-| Asset | Location and rule |
+| Task | Command |
 |---|---|
-| Installed engine | `src/research_harness/`: portable services and packaged contracts/manual; runtime never writes here |
-| Development regressions | `research_cases/`, `tests/`, `checks/`: excluded from the wheel; historical local paths are fixture provenance only |
-| Target state | `PROJECT/.retro/`, or an explicit `--workspace`; config, SQLite, immutable blobs, check receipts and exports stay here |
-| Configuration | `WORKSPACE/retro.json`; workspace selection: CLI, then `RETRO_WORKSPACE`, then `CWD/.retro`; no home configuration |
+| Freeze bytes, asset gaps and bounded Git DAG | `retro -w W snapshot` |
+| Recover conditional values and historical producer alternatives | `retro -w W recover --snapshot ID` |
+| Inspect a finding's original bytes and rule | `retro -w W explain FINDING` |
+| Define scope, goals, obligations and material roles | `retro -w W task scope --input scope.json` |
+| Start a version-bound evidence-first investigation | `retro -w W task next --scope SCOPE` |
+| Read, seal initial hypotheses, then reveal narratives/methods | `retro -w W task packet ID`, `task seal ID --input initial.json`, `task reveal ID` |
+| Freeze a discriminating probe | `retro -w W probe plan OBLIGATION --input probe.json` |
+| Execute and separately check preregistered predicates | `retro -w W probe run SPEC --isolation required`, `probe evaluate RECEIPT` |
+| Submit completed scoped review | `retro -w W task submit TASK --input result.json` |
+| Check comparability / signed support / dependency impact | `contrast A B --observable ID`, `support --scope JSON`, `impact ID` |
+| Freeze completion and export | `retro -w W close --scope SCOPE`, `export --closure CLOSURE` |
+| Query and replay without originals | `retro verify-handoff PACKAGE --query-set queries.json` |
 
-`init PROJECT` defaults to `PROJECT/.retro`. An explicit independent workspace must
-be empty on first initialization. The source tree is read-only except for that
-explicitly designated state directory, which is excluded from intake. Config uses
-project-relative source paths, a 1 MiB capture limit and a 250,000-entry enumeration
-limit. Over-budget or unsupported originals remain explicit gaps. A partial scan
-reports `enumeration_complete:false`; it never counts as a complete source census.
-Configuration changes on an initialized workspace are rejected rather than silently
-changing its source authority; initialize another workspace for a new scope.
-Set limits at initialization with `--capture-max-bytes N`, `--scan-max-entries N`,
-`--exclude COMPONENT` (repeatable) or `--metadata-only`.
+[Agent manual](AGENT.md) contains exact request formats and the result template.
+[Function definitions](tools.json) use the same dispatcher as shell commands.
+[2.0 record schema](contracts/retro2.schema.json) is packaged in the wheel; `records
+--input FILE` imports typed entities with explicit revisions. The 1.0
+`scan/read/reconstruct/audit/correct/export/inspect/state` workflow remains available.
 
-The internal Python namespace retains `research_harness` for R2 kernel continuity.
-The released distribution is `research-retro`; it contains no research runtime,
-model adapter or development case. Existing R2 state and receipts remain untouched.
-Historical R2 commands and case adapters are in `research_cases/legacy/`; see the
-`r2-0.2.0` tag for that release's original interface. This release does not silently
-migrate or reinterpret old scientific state.
+`closed-resolved` means all required obligations of the frozen scope have supported
+answers. `closed-qualified` retains explicit conditions or demonstrated
+non-identifiability. `open-blocked` retains missing work, material or capability.
+Completion always refers to the frozen scope, question, rules and obligations.
 
-## Scientific contract
+## What recovery establishes
 
-Captured/parsed, unread, missing original, untested and refuted are separate states.
-Reconstruction does not promote historical statements to facts. Qualified evidence
-needs a completed scoped audit; numerical/code audits need actual captured execution
-receipts. A completed check is still not a certificate of scientific adequacy.
+The initial Python analyzer handles literals, dictionaries, basic arithmetic,
+conditionals, bounded loops (up to 64 iterations), captured JSON configuration,
+literal shell environment bindings, local module functions and registered stdlib
+summaries. Larger loops expose one transition and leave final state unknown.
+Unregistered calls and unresolved environments remain explicit unknowns. Static
+results depend on the recorded language/library/launcher assumptions.
 
-`support_sets` implements outer OR and inner AND with a least fixed point. Revoking
-one branch does not destroy another valid branch. Refuted claims **and inferences**
-cannot affirm downstream conclusions; the support for a refutation is retained
-separately. Corrections retain the original statement, scope, residual assets and
-reopening conditions. Original SHA256 changes, relevant read-set changes and policy
-changes force reassessment; duplicate bytes and circular arguments add no evidence.
+Historical receipt support currently covers JSON records with source hashes and
+output hashes. Matching Git blobs provide candidate histories; they do not establish
+that a commit ran. Project receipt contents remain **project asserted**. A broker
+receipt establishes the newly controlled execution. Five separate axes describe
+termination, output integrity, convergence, model applicability and scientific
+qualification. Identical output bytes establish content identity, with execution
+and statistical independence retained as separate questions.
 
-The explicit `audit check` command runs host-authored Python from the workspace for
-at most 60 seconds, with captured inputs/output and a scrubbed environment. It has
-the caller's OS permissions. It is not an execution sandbox; the controlling host
-must review and authorize that code. Scan/reconstruction never execute source scripts.
-Native Windows is not certified; WSL/Linux works. No claim is made of automatic
-installation or authenticated integration into every named Agent application.
+Findings are investigation candidates. In particular, a cap or conditional change
+can be legitimate under an appropriate model. A named review or a preregistered
+predicate provides the relevant scoped judgment. Probe success alone discharges
+no scientific obligation. Comparisons require explicit observable, units, reference,
+object, boundary and sampling definitions; tolerance never merges identities.
 
-## Release and verification
+## Runtime and persistence
 
-Freeze tag: **`retro-v1.0.0`**. [Current state](CURRENT_STATE.md),
-[acceptance report](releases/standalone-1.0.0/REPORT.md) and
-[release manifest](releases/standalone-1.0.0/release.json) retain actual verification.
-The acceptance harness builds a clean environment with no developer home or source
-checkout, installs an offline wheel, runs a foreign synthetic project through the
-public interface and verifies host transport parity plus an independent blank-Agent
-handoff. This is a declared synthetic capability test, not a blinded science benchmark.
+Cooperative investigations use the host's existing permissions; they cannot promise
+blind reading. `task run TASK --script FILE` provides a contained initial evidence
+projection. `probe run` uses read-only inputs, private output, network/PID isolation,
+closed inherited descriptors, dropped capabilities and resource limits. Required
+containment refuses execution when unavailable. The legacy `audit check` retains
+its documented host-permission behavior.
+
+Every correction and record update preserves history. Positive and negative support
+are separate; conflicts block unconditional downstream use while independent OR
+paths remain usable. Withdrawing a witness does not prove its conclusion false.
+Results can rebase across unrelated transactions with a receipt; changed related
+bytes, revisions or policy require reassessment.
+
+Snapshots hash full captured byte ranges with streaming copies. Per-file consistency
+is checked; a whole-tree atomic snapshot requires an external freeze. The default
+capture limit is 1 MiB per text file and Git recovery is bounded to 128 commits.
+Uncaptured assets, unsupported syntax, missing history and candidate limits remain
+visible. Set `--capture-max-bytes`, `--scan-max-entries`, `--exclude` or
+`--metadata-only` at initialization. No silent workspace or runtime migration occurs.
+
+`retro migrate OLD_WORKSPACE` is a read-only dry-run. `--destination NEW --apply`
+copies historical records into a separate workspace as historical assertions;
+missing execution information stays unknown. Existing 1.0 workspaces remain usable.
+
+## Delivery and verification
+
+See [current state](CURRENT_STATE.md) and the [2.0 release report](releases/standalone-2.0.0/REPORT.md).
+The architecture source is retained under [research_retro_architecture](research_retro_architecture/README.md).
+The shipped implementation is `src/research_harness/`; development cases and test
+code are excluded from the wheel. Historical releases remain available by tag.
 
 ```sh
 uv run python -m unittest discover -s tests -v
 uv build --wheel
-uv run python checks/standalone_acceptance.py --wheelhouse PATH --output PATH
+uv run python checks/standalone_acceptance.py --wheelhouse PATH --output NEW_PATH
+uv run python checks/retro2_acceptance.py --wheelhouse PATH --output NEW_PATH
 ```
 
-Only the acceptance harness needs Linux `bwrap` for the installation isolation test;
-the installed unit does not depend on it. The release bundle includes an offline
-wheelhouse and immutable receipts; see the report for exact tested versions and scope.
+The installed acceptance runs without developer home, source checkout or network,
+with the installed package mounted read-only. The synthetic case includes a
+parameter cap, a changed operator, branch histories, copied results, a stale cache
+and a withdrawn premise. Four actual isolated interventions are compared with an
+independent discrete formula, followed by portable queries and replay. This measures
+the declared product behaviors; it is not a benchmark of arbitrary scientific truth
+recovery or a real-project blind evaluation.

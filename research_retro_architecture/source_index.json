@@ -1,0 +1,44 @@
+{
+  "baseline_commit": "0c0a6a258eb069aa829c486233993eaf87692264",
+  "historical_R2_commit": "edf4fb3ed50dc436c8b5cfcf7201cf18b3188f8b",
+  "baseline_read_method": "GitHub connector source inspection; full test suite not run",
+  "repository": "https://github.com/weijin04/research-retro",
+  "references": [
+    {
+      "title": "PROV-DM",
+      "url": "https://www.w3.org/TR/prov-dm/"
+    },
+    {
+      "title": "PROV-CONSTRAINTS",
+      "url": "https://www.w3.org/TR/prov-constraints/"
+    },
+    {
+      "title": "AiiDA provenance concepts",
+      "url": "https://aiida.readthedocs.io/projects/aiida-core/en/stable/topics/provenance/concepts.html"
+    },
+    {
+      "title": "Abstract interpretation (Cousot and Cousot, POPL 1977)",
+      "url": "https://www.di.ens.fr/~cousot/COUSOTpapers/POPL77.shtml"
+    },
+    {
+      "title": "ReproZip",
+      "url": "https://www.reprozip.org/about.html"
+    },
+    {
+      "title": "VisTrails",
+      "url": "https://www.vistrails.org/index.php/Main_Page"
+    },
+    {
+      "title": "Delta debugging (Zeller and Hildebrandt, 2002)",
+      "url": "https://www.st.cs.uni-saarland.de/papers/tse2002/"
+    },
+    {
+      "title": "Landlock documentation",
+      "url": "https://docs.kernel.org/userspace-api/landlock.html"
+    },
+    {
+      "title": "AgentDojo",
+      "url": "https://arxiv.org/abs/2406.13352"
+    }
+  ]
+}

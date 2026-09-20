@@ -1,0 +1,818 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:research-retro:proposal:2:contracts",
+  "title": "Research Retro 2.0 proposed wire contracts",
+  "$comment": "Design proposal only. Schema validation does not prove historical execution, source authenticity, semantic entailment or scientific truth.",
+  "$defs": {
+    "digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "locator": {
+      "type": "object",
+      "properties": {
+        "artifact_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artifact_revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "start_byte": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end_byte_exclusive": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "artifact_id",
+        "artifact_revision",
+        "sha256",
+        "start_byte",
+        "end_byte_exclusive"
+      ],
+      "additionalProperties": false
+    },
+    "version_ref": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "id",
+        "revision"
+      ],
+      "additionalProperties": false
+    },
+    "predicate": {
+      "type": "object",
+      "properties": {
+        "op": {
+          "enum": [
+            "eq",
+            "ne",
+            "lt",
+            "le",
+            "gt",
+            "ge",
+            "in",
+            "subset",
+            "dimension_eq",
+            "approx_eq",
+            "custom_guard"
+          ]
+        },
+        "args": {
+          "type": "array",
+          "minItems": 1
+        },
+        "rule_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "op",
+        "args",
+        "rule_id"
+      ],
+      "additionalProperties": false
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "domain": {
+          "type": "object"
+        },
+        "quantifier": {
+          "enum": [
+            "this_execution",
+            "exists",
+            "forall_in_domain",
+            "population_statement"
+          ]
+        },
+        "conditions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/predicate"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "model_id",
+        "object_ids",
+        "domain",
+        "quantifier",
+        "conditions"
+      ],
+      "additionalProperties": false
+    },
+    "basis": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            "captured_bytes",
+            "project_reported",
+            "static_conditional",
+            "monitored_execution",
+            "accountable_review"
+          ]
+        },
+        "origin_assurance": {
+          "enum": [
+            "bytes_only",
+            "project_asserted",
+            "controlled_collector",
+            "authenticated_collector"
+          ]
+        },
+        "witness_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version_ref"
+          },
+          "minItems": 0
+        },
+        "assumption_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version_ref"
+          },
+          "minItems": 0
+        },
+        "qualification": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "mode",
+        "origin_assurance",
+        "witness_refs",
+        "assumption_refs",
+        "qualification"
+      ],
+      "additionalProperties": false
+    },
+    "value": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "enum": [
+            "known",
+            "unknown",
+            "alternatives"
+          ]
+        },
+        "value": {},
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "alternatives": {
+          "type": "array"
+        },
+        "unknown_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "unit",
+        "alternatives",
+        "unknown_reason"
+      ],
+      "additionalProperties": false
+    },
+    "parameter_binding": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0-proposal"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extensions": {
+          "type": "object"
+        },
+        "record_type": {
+          "const": "parameter_binding"
+        },
+        "run_ref": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/version_ref"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "symbol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "requested": {
+          "$ref": "#/$defs/value"
+        },
+        "effective": {
+          "$ref": "#/$defs/value"
+        },
+        "stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "operator_rule": {
+                "type": "string",
+                "minLength": 1
+              },
+              "input_refs": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 0
+              },
+              "output": {
+                "$ref": "#/$defs/value"
+              },
+              "path_conditions": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/predicate"
+                },
+                "minItems": 0
+              },
+              "locators": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/locator"
+                },
+                "minItems": 0
+              }
+            },
+            "required": [
+              "operator_rule",
+              "input_refs",
+              "output",
+              "path_conditions",
+              "locators"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 1
+        },
+        "basis": {
+          "$ref": "#/$defs/basis"
+        },
+        "unresolved_dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "revision",
+        "snapshot_id",
+        "extensions",
+        "record_type",
+        "run_ref",
+        "symbol",
+        "requested",
+        "effective",
+        "stages",
+        "basis",
+        "unresolved_dependencies"
+      ],
+      "additionalProperties": false
+    },
+    "realization_contract": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0-proposal"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extensions": {
+          "type": "object"
+        },
+        "record_type": {
+          "const": "realization_contract"
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "representation_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version_ref"
+          },
+          "minItems": 0
+        },
+        "observable": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "definition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unit": {
+              "type": "string",
+              "minLength": 1
+            },
+            "population": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "name",
+            "definition",
+            "unit",
+            "population"
+          ],
+          "additionalProperties": false
+        },
+        "required_predicates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/predicate"
+          },
+          "minItems": 1
+        },
+        "basis": {
+          "$ref": "#/$defs/basis"
+        },
+        "approved_rule_versions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "revision",
+        "snapshot_id",
+        "extensions",
+        "record_type",
+        "scope",
+        "representation_refs",
+        "observable",
+        "required_predicates",
+        "basis",
+        "approved_rule_versions"
+      ],
+      "additionalProperties": false
+    },
+    "obligation": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0-proposal"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extensions": {
+          "type": "object"
+        },
+        "record_type": {
+          "const": "obligation"
+        },
+        "target_question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "provenance",
+            "definition",
+            "numerical",
+            "semantic",
+            "security",
+            "identifiability"
+          ]
+        },
+        "scope": {
+          "$ref": "#/$defs/scope"
+        },
+        "required_capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "acceptance_predicates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/predicate"
+          },
+          "minItems": 0
+        },
+        "state": {
+          "enum": [
+            "open",
+            "blocked",
+            "discharged",
+            "invalidated"
+          ]
+        },
+        "outcome": {
+          "enum": [
+            null,
+            "confirmed",
+            "refuted",
+            "qualified",
+            "non_identifiable"
+          ]
+        },
+        "adjudication": {
+          "enum": [
+            "none",
+            "machine_check",
+            "accountable_review"
+          ]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version_ref"
+          },
+          "minItems": 0
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "revision",
+        "snapshot_id",
+        "extensions",
+        "record_type",
+        "target_question",
+        "kind",
+        "scope",
+        "required_capabilities",
+        "acceptance_predicates",
+        "state",
+        "outcome",
+        "adjudication",
+        "evidence_refs",
+        "blockers"
+      ],
+      "additionalProperties": false
+    },
+    "probe_spec": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0-proposal"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extensions": {
+          "type": "object"
+        },
+        "record_type": {
+          "const": "probe_spec"
+        },
+        "packet_sha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "obligation_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version_ref"
+          },
+          "minItems": 1
+        },
+        "probe_kind": {
+          "enum": [
+            "replay",
+            "intervention",
+            "metamorphic",
+            "static_check",
+            "derivation"
+          ]
+        },
+        "interventions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "target": {
+                "type": "string",
+                "minLength": 1
+              },
+              "before": {},
+              "after": {}
+            },
+            "required": [
+              "target",
+              "before",
+              "after"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "held_fixed_refs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version_ref"
+          },
+          "minItems": 0
+        },
+        "expected_predicates": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/predicate"
+          },
+          "minItems": 1
+        },
+        "minimum_isolation": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "resource_limits": {
+          "type": "object",
+          "properties": {
+            "wall_seconds": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "memory_bytes": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "max_output_bytes": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "wall_seconds",
+            "memory_bytes",
+            "max_output_bytes"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "revision",
+        "snapshot_id",
+        "extensions",
+        "record_type",
+        "packet_sha256",
+        "obligation_refs",
+        "probe_kind",
+        "interventions",
+        "held_fixed_refs",
+        "expected_predicates",
+        "minimum_isolation",
+        "resource_limits"
+      ],
+      "additionalProperties": false
+    },
+    "execution_receipt": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "2.0-proposal"
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "snapshot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "extensions": {
+          "type": "object"
+        },
+        "record_type": {
+          "const": "execution_receipt"
+        },
+        "probe_ref": {
+          "$ref": "#/$defs/version_ref"
+        },
+        "packet_sha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "read_set": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/version_ref"
+          },
+          "minItems": 0
+        },
+        "runner_sha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "script_sha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "returncode": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "termination": {
+          "enum": [
+            "exited",
+            "timeout",
+            "resource_limit",
+            "launch_failure"
+          ]
+        },
+        "isolation_observed": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "outputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "artifact_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "$ref": "#/$defs/digest"
+              }
+            },
+            "required": [
+              "artifact_id",
+              "sha256"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "execution_completed": {
+          "type": "boolean"
+        },
+        "scientific_adequacy": {
+          "enum": [
+            "unchecked",
+            "machine_obligation_passed",
+            "review_required",
+            "failed"
+          ]
+        }
+      },
+      "required": [
+        "schema_version",
+        "id",
+        "revision",
+        "snapshot_id",
+        "extensions",
+        "record_type",
+        "probe_ref",
+        "packet_sha256",
+        "read_set",
+        "runner_sha256",
+        "script_sha256",
+        "returncode",
+        "termination",
+        "isolation_observed",
+        "outputs",
+        "execution_completed",
+        "scientific_adequacy"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/parameter_binding"
+    },
+    {
+      "$ref": "#/$defs/realization_contract"
+    },
+    {
+      "$ref": "#/$defs/obligation"
+    },
+    {
+      "$ref": "#/$defs/probe_spec"
+    },
+    {
+      "$ref": "#/$defs/execution_receipt"
+    }
+  ]
+}

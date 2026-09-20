@@ -1,0 +1,194 @@
+{
+  "passed": true,
+  "assertions": [
+    {
+      "name": "complete_foreign_enumeration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unread_large_original_retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unsupported_binary_retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "broken_code_retained_as_parse_failure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original_code_never_executed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "historical_claim_not_promoted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "correction_retry_idempotent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "idempotency_collision_rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "conditional_two_branch_support",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "qualified_evidence_has_consistent_scientific_status",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "audited_claims_no_longer_labeled_unchecked_reconstruction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refuted_proposition_not_affirmative",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "AND_OR_after_retract_A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "downstream_after_retract_A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_observation_preserved_A",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "AND_OR_after_retract_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "downstream_after_retract_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "independent_observation_preserved_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_tool_same_state_contract",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_tool_same_history_contract",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_tool_same_source_read",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "CLI_tool_same_boundary_error",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "package_mount_is_read_only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scientific_sources_unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "database_integrity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "handoff_retains_exact_dependency_formula",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "handoff_retains_all_three_gap_types",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "handoff_negative_knowledge_present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unverified_batch_independence_explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "full_context_has_no_silent_exclusions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_size_mtime_rewrite_detected_by_hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "old_original_bytes_preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refutation_survives_one_counterexample_loss",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "missing_original_invalidates_other_branch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refutation_support_expires_after_both_counterexamples_lost",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fresh_correction_key_cannot_wash_stale_audit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "handoff_reads_without_sources",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "frozen_bundle": "/sandbox/state/exports/handoff",
+  "frozen_revision": 61,
+  "current_sources": "perturbed only after handoff freeze for robustness testing",
+  "fixture_role": "constructed synthetic acceptance, not blind scientific evaluation"
+}

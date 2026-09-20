@@ -1,0 +1,506 @@
+{
+  "evaluation_mode": "cooperative fresh-context; package conclusions seen before independent calculation; not target-blind",
+  "overall": "NOT PASSED: actual premise withdrawal propagation unavailable in this frozen package",
+  "bundle": "acceptance-03/handoff",
+  "snapshot_id": "snapshot:0f0c25bce6fb04a17bccd5f6",
+  "gates": {
+    "original_free_integrity": "pass; 46 files, integrity not authenticity",
+    "reconstruction": "pass qualified synthetic finite scope",
+    "independent_recalculation": "pass",
+    "public_probe_replay": "pass",
+    "premise_withdrawal_propagation": "fail"
+  },
+  "questions": [
+    {
+      "question": "Can the archived zero test the requested model and time?",
+      "answer": "No. MODEL specifies positive k=.04/s, return=.01/s, p(0)=0 and ensemble population at 200 s. Gate replaces .04 with zero because cutoff=.05; archive ends at .5 s. Fixing only cap retains zero; fixing only gate gives .019752558 at .5 s; both gives .799963689 at 200 s.",
+      "raw_byte_sources": [
+        {
+          "path": "MODEL.md",
+          "id": "artifact:544cfabf980a9f15416c14c3",
+          "revision": 1,
+          "sha256": "6daffb746e6666ab6f1e1bf785df8644aa523cf3ffdf55a1b7108894062a836f",
+          "start_byte": 0,
+          "end_byte_exclusive": 243
+        },
+        {
+          "path": "protocol.json",
+          "id": "artifact:14e23f34e141d509818afef1",
+          "revision": 1,
+          "sha256": "e94d613286f0707c80fae4943a24c69800bfeb3700fb3f7d1998891a985bc36d",
+          "start_byte": 0,
+          "end_byte_exclusive": 171
+        },
+        {
+          "path": "kernels/gate.py",
+          "id": "artifact:a23f9338aca629bf708038f7",
+          "revision": 1,
+          "sha256": "2dcfb893ba36d42e30c96dcd30d250d55f1e65762b3d63a1460bc4d3f9182fe1",
+          "start_byte": 0,
+          "end_byte_exclusive": 162
+        },
+        {
+          "path": "driver.py",
+          "id": "artifact:d3a88595c80dc1ac89d6c5a5",
+          "revision": 1,
+          "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+          "start_byte": 0,
+          "end_byte_exclusive": 908
+        },
+        {
+          "path": "results/archive-a/trajectory.csv",
+          "id": "artifact:4aab29020e2a54951522652a",
+          "revision": 1,
+          "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+          "start_byte": 0,
+          "end_byte_exclusive": 251
+        }
+      ]
+    },
+    {
+      "question": "Do repeat files establish independent evidence?",
+      "answer": "No. Their bytes equal archive-a and both copy_receipt files explicitly identify archive-a as their source. This supports a documented copy lineage, not authenticated external process history or statistical independence. A deterministic population trajectory is not a stochastic replicate.",
+      "raw_byte_sources": [
+        {
+          "path": "results/repeat-1/copy_receipt.json",
+          "id": "artifact:8eacdef54232fbbe6a388ee3",
+          "revision": 1,
+          "sha256": "aaf7dcb6e932425de9ce8dcc204d79c36772cc8514bc76856350d0f08b9a0089",
+          "start_byte": 0,
+          "end_byte_exclusive": 131
+        },
+        {
+          "path": "results/repeat-2/copy_receipt.json",
+          "id": "artifact:52862f5a518f645327b9f560",
+          "revision": 1,
+          "sha256": "aaf7dcb6e932425de9ce8dcc204d79c36772cc8514bc76856350d0f08b9a0089",
+          "start_byte": 0,
+          "end_byte_exclusive": 131
+        },
+        {
+          "path": "results/archive-a/trajectory.csv",
+          "id": "artifact:4aab29020e2a54951522652a",
+          "revision": 1,
+          "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+          "start_byte": 0,
+          "end_byte_exclusive": 251
+        },
+        {
+          "path": "MODEL.md",
+          "id": "artifact:544cfabf980a9f15416c14c3",
+          "revision": 1,
+          "sha256": "6daffb746e6666ab6f1e1bf785df8644aa523cf3ffdf55a1b7108894062a836f",
+          "start_byte": 0,
+          "end_byte_exclusive": 243
+        }
+      ]
+    },
+    {
+      "question": "Will a matching protocol cache key make the rendered conclusion valid after kernel/cap changes?",
+      "answer": "No. Cache key includes protocol.json only; cached p_B=0 comes from archive-a. render.py unconditionally renders this value as physical impossibility. Both interventions leave protocol bytes fixed while changing computed p_B, so that key cannot distinguish scientifically different realizations.",
+      "raw_byte_sources": [
+        {
+          "path": "cache/population.json",
+          "id": "artifact:bce87ecf451207037b4a9e90",
+          "revision": 1,
+          "sha256": "eb941d740d81efc0e43ad73a8b061d27fcd93b05d69cdd27fafcb3b0a841ef50",
+          "start_byte": 0,
+          "end_byte_exclusive": 274
+        },
+        {
+          "path": "render.py",
+          "id": "artifact:b46add3c18c28e8e85488e9a",
+          "revision": 1,
+          "sha256": "3a3ee4249db324679b1dc271d74ac12a3eefaa53a88c6b94da34518b4afaa9a6",
+          "start_byte": 0,
+          "end_byte_exclusive": 169
+        },
+        {
+          "path": "protocol.json",
+          "id": "artifact:14e23f34e141d509818afef1",
+          "revision": 1,
+          "sha256": "e94d613286f0707c80fae4943a24c69800bfeb3700fb3f7d1998891a985bc36d",
+          "start_byte": 0,
+          "end_byte_exclusive": 171
+        },
+        {
+          "path": "submit.sh",
+          "id": "artifact:36601f8b9a4da37597f194d3",
+          "revision": 1,
+          "sha256": "ae8b6d730dc5295747b359b1610fc034f702d2d062e85382e928bd512523c1d0",
+          "start_byte": 0,
+          "end_byte_exclusive": 101
+        },
+        {
+          "path": "driver.py",
+          "id": "artifact:d3a88595c80dc1ac89d6c5a5",
+          "revision": 1,
+          "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+          "start_byte": 0,
+          "end_byte_exclusive": 908
+        }
+      ]
+    },
+    {
+      "question": "What survives withdrawal of H0?",
+      "answer": "C1 AND-depends on H0 and archive-a, so that support route must disappear. C2 only depends on archive-a and can retain the scoped historical-output assertion, with process authenticity still conditional. Positive-rate numerical reconstruction independently survives. The current exported product graph does not execute this reasoning: H0 lookup fails and typed withdrawal returns an empty projection.",
+      "raw_byte_sources": [
+        {
+          "path": "argument.json",
+          "id": "artifact:6eca0ade2d7b5883f96601a6",
+          "revision": 1,
+          "sha256": "ba209b808053117e0d2a8b0a1b634dc40f0289a3ea91f866656249950176b2df",
+          "start_byte": 0,
+          "end_byte_exclusive": 529
+        },
+        {
+          "path": "notes/retraction.txt",
+          "id": "artifact:2b30b6d2cc04b8783fe957bd",
+          "revision": 1,
+          "sha256": "ac92a48b1d6bbbb5d548e7f28e54afb49f9a2f96946cd255ca4cbdee440e209c",
+          "start_byte": 0,
+          "end_byte_exclusive": 224
+        },
+        {
+          "path": "results/archive-a/trajectory.csv",
+          "id": "artifact:4aab29020e2a54951522652a",
+          "revision": 1,
+          "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+          "start_byte": 0,
+          "end_byte_exclusive": 251
+        },
+        {
+          "path": "MODEL.md",
+          "id": "artifact:544cfabf980a9f15416c14c3",
+          "revision": 1,
+          "sha256": "6daffb746e6666ab6f1e1bf785df8644aa523cf3ffdf55a1b7108894062a836f",
+          "start_byte": 0,
+          "end_byte_exclusive": 243
+        }
+      ]
+    }
+  ],
+  "independent_calculation": {
+    "matrix": [
+      {
+        "gate": true,
+        "steps": 500,
+        "duration": 0.5,
+        "recurrence": 0.0,
+        "closed": 0.0,
+        "continuous": 0.0,
+        "error": 0.0
+      },
+      {
+        "gate": true,
+        "steps": 200000,
+        "duration": 200.0,
+        "recurrence": 0.0,
+        "closed": 0.0,
+        "continuous": 0.0,
+        "error": 0.0
+      },
+      {
+        "gate": false,
+        "steps": 500,
+        "duration": 0.5,
+        "recurrence": 0.01975255804839324,
+        "closed": 0.01975255804839325,
+        "continuous": 0.019752070377333866,
+        "error": 4.876710593751388e-07
+      },
+      {
+        "gate": false,
+        "steps": 200000,
+        "duration": 200.0,
+        "recurrence": 0.7999636891353396,
+        "closed": 0.7999636891353437,
+        "continuous": 0.7999636800561899,
+        "error": 9.079149654311891e-09
+      }
+    ],
+    "max_archived_sample_discrete_error": 6.994405055138486e-15,
+    "source_locators": [
+      {
+        "path": "results/repeat-2/trajectory.csv",
+        "id": "artifact:04195c999d85de3f252523da",
+        "revision": 1,
+        "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+        "start_byte": 0,
+        "end_byte_exclusive": 251
+      },
+      {
+        "path": "protocol.json",
+        "id": "artifact:14e23f34e141d509818afef1",
+        "revision": 1,
+        "sha256": "e94d613286f0707c80fae4943a24c69800bfeb3700fb3f7d1998891a985bc36d",
+        "start_byte": 0,
+        "end_byte_exclusive": 171
+      },
+      {
+        "path": "notes/retraction.txt",
+        "id": "artifact:2b30b6d2cc04b8783fe957bd",
+        "revision": 1,
+        "sha256": "ac92a48b1d6bbbb5d548e7f28e54afb49f9a2f96946cd255ca4cbdee440e209c",
+        "start_byte": 0,
+        "end_byte_exclusive": 224
+      },
+      {
+        "path": "AGENTS.md",
+        "id": "artifact:3347e3658afdef759667a111",
+        "revision": 1,
+        "sha256": "1c675a63d8aa40d0f8bb66835acba0373b02ac838eb2d82fae5ed8b8e6c4d901",
+        "start_byte": 0,
+        "end_byte_exclusive": 135
+      },
+      {
+        "path": "submit.sh",
+        "id": "artifact:36601f8b9a4da37597f194d3",
+        "revision": 1,
+        "sha256": "ae8b6d730dc5295747b359b1610fc034f702d2d062e85382e928bd512523c1d0",
+        "start_byte": 0,
+        "end_byte_exclusive": 101
+      },
+      {
+        "path": "results/archive-a/trajectory.csv",
+        "id": "artifact:4aab29020e2a54951522652a",
+        "revision": 1,
+        "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+        "start_byte": 0,
+        "end_byte_exclusive": 251
+      },
+      {
+        "path": "results/repeat-2/copy_receipt.json",
+        "id": "artifact:52862f5a518f645327b9f560",
+        "revision": 1,
+        "sha256": "aaf7dcb6e932425de9ce8dcc204d79c36772cc8514bc76856350d0f08b9a0089",
+        "start_byte": 0,
+        "end_byte_exclusive": 131
+      },
+      {
+        "path": "MODEL.md",
+        "id": "artifact:544cfabf980a9f15416c14c3",
+        "revision": 1,
+        "sha256": "6daffb746e6666ab6f1e1bf785df8644aa523cf3ffdf55a1b7108894062a836f",
+        "start_byte": 0,
+        "end_byte_exclusive": 243
+      },
+      {
+        "path": "README.md",
+        "id": "artifact:5afcbf50e06ca80a475df700",
+        "revision": 1,
+        "sha256": "6452166768a75c6d071b4866d8957e823f38b7c7f97fbc972b979d6c01d88928",
+        "start_byte": 0,
+        "end_byte_exclusive": 135
+      },
+      {
+        "path": "kernels/__init__.py",
+        "id": "artifact:672cb84bb654c16481ea6eee",
+        "revision": 1,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "start_byte": 0,
+        "end_byte_exclusive": 0
+      },
+      {
+        "path": "argument.json",
+        "id": "artifact:6eca0ade2d7b5883f96601a6",
+        "revision": 1,
+        "sha256": "ba209b808053117e0d2a8b0a1b634dc40f0289a3ea91f866656249950176b2df",
+        "start_byte": 0,
+        "end_byte_exclusive": 529
+      },
+      {
+        "path": "results/repeat-1/copy_receipt.json",
+        "id": "artifact:8eacdef54232fbbe6a388ee3",
+        "revision": 1,
+        "sha256": "aaf7dcb6e932425de9ce8dcc204d79c36772cc8514bc76856350d0f08b9a0089",
+        "start_byte": 0,
+        "end_byte_exclusive": 131
+      },
+      {
+        "path": "kernels/gate.py",
+        "id": "artifact:a23f9338aca629bf708038f7",
+        "revision": 1,
+        "sha256": "2dcfb893ba36d42e30c96dcd30d250d55f1e65762b3d63a1460bc4d3f9182fe1",
+        "start_byte": 0,
+        "end_byte_exclusive": 162
+      },
+      {
+        "path": "results/diagnostic-b/trajectory.csv",
+        "id": "artifact:b332cccc069ec269c9ded95e",
+        "revision": 1,
+        "sha256": "5373b2f42e0bc01b0cd7c53b074d6f2a675a931ffdd66ab8aba3a0c95df50a33",
+        "start_byte": 0,
+        "end_byte_exclusive": 324
+      },
+      {
+        "path": "render.py",
+        "id": "artifact:b46add3c18c28e8e85488e9a",
+        "revision": 1,
+        "sha256": "3a3ee4249db324679b1dc271d74ac12a3eefaa53a88c6b94da34518b4afaa9a6",
+        "start_byte": 0,
+        "end_byte_exclusive": 169
+      },
+      {
+        "path": "results/repeat-1/trajectory.csv",
+        "id": "artifact:b5ef8aef3034657bfaee6adc",
+        "revision": 1,
+        "sha256": "a2c2105c71acf51b0eac40d26654076c58e173b179bd3690c8991f4b6d5b951d",
+        "start_byte": 0,
+        "end_byte_exclusive": 251
+      },
+      {
+        "path": "cache/population.json",
+        "id": "artifact:bce87ecf451207037b4a9e90",
+        "revision": 1,
+        "sha256": "eb941d740d81efc0e43ad73a8b061d27fcd93b05d69cdd27fafcb3b0a841ef50",
+        "start_byte": 0,
+        "end_byte_exclusive": 274
+      },
+      {
+        "path": "driver.py",
+        "id": "artifact:d3a88595c80dc1ac89d6c5a5",
+        "revision": 1,
+        "sha256": "28e8cf444b14a61fc94a34d48a712bbbf0b69a4529e270d547dcded62ff86f2f",
+        "start_byte": 0,
+        "end_byte_exclusive": 908
+      },
+      {
+        "path": "kernels/plain.py",
+        "id": "artifact:d466f06d3e02af18c05377ae",
+        "revision": 1,
+        "sha256": "c16386f1213a8870618eeacd07b3248f95c37834edb90d22baf92dc175761128",
+        "start_byte": 0,
+        "end_byte_exclusive": 111
+      },
+      {
+        "path": "receipts/diagnostic-b.json",
+        "id": "artifact:e21149a9578510e0f2e4b5e4",
+        "revision": 1,
+        "sha256": "dc2c60caa4980fdfd66870c159c40fc34a164dd901a194ad11a466d9a61bcf1c",
+        "start_byte": 0,
+        "end_byte_exclusive": 1261
+      },
+      {
+        "path": "receipts/archive-a.json",
+        "id": "artifact:e6370481e7a438fc3fb87a9d",
+        "revision": 1,
+        "sha256": "43b2a98bc87c56f01f7ef0d3b0743a0a1fe309a347ba8281c77f4cad943bac90",
+        "start_byte": 0,
+        "end_byte_exclusive": 1228
+      }
+    ],
+    "original_unavailable": true,
+    "developer_home_unavailable": true
+  },
+  "replay": {
+    "contract_version": "1.0",
+    "ok": true,
+    "result": {
+      "schema_version": "2.0",
+      "status": "verified",
+      "snapshot_id": "snapshot:0f0c25bce6fb04a17bccd5f6",
+      "read_set": {},
+      "findings": [],
+      "gaps": [],
+      "receipts": [
+        {
+          "query": {
+            "op": "replay",
+            "id": "execution:ab1d51a684c3435f8c65d7ab2b4766ad"
+          },
+          "answer": {
+            "returncode": 0,
+            "termination": "exited",
+            "predicates": [
+              true,
+              true
+            ],
+            "all_passed": true,
+            "script_sha256": "f319ebfba07b310d6ca16b56d7bb6afc58d2b6c64e7b5730e80877a770efeaa3",
+            "stdout_sha256": "a293aa21453eaca1b6e571c109de02865a57a83fc3e7830cbeadd0324d106f48"
+          },
+          "passed": true
+        }
+      ],
+      "capabilities": {
+        "offline_query": true,
+        "original_project_required": false
+      },
+      "verification": {
+        "ok": true,
+        "files": 46,
+        "authenticity": "integrity only; no digital signature"
+      },
+      "all_passed": true,
+      "boundary": "Query/replay verification is not a blank Agent understanding assessment"
+    }
+  },
+  "withdraw_H0": {
+    "contract_version": "1.0",
+    "ok": false,
+    "error": {
+      "code": "invalid_state",
+      "message": "'H0'",
+      "details": {}
+    }
+  },
+  "withdraw_typed_H0": {
+    "contract_version": "1.0",
+    "ok": true,
+    "result": {
+      "schema_version": "2.0",
+      "status": "verified",
+      "snapshot_id": "snapshot:0f0c25bce6fb04a17bccd5f6",
+      "read_set": {},
+      "findings": [],
+      "gaps": [],
+      "receipts": [
+        {
+          "query": {
+            "op": "withdraw",
+            "ids": [
+              "hypothesis:25a12b28917f551544ee26a1"
+            ]
+          },
+          "answer": {},
+          "passed": true
+        }
+      ],
+      "capabilities": {
+        "offline_query": true,
+        "original_project_required": false
+      },
+      "verification": {
+        "ok": true,
+        "files": 46,
+        "authenticity": "integrity only; no digital signature"
+      },
+      "all_passed": true,
+      "boundary": "Query/replay verification is not a blank Agent understanding assessment"
+    }
+  },
+  "contained_runs": [
+    "inspect /handoff",
+    "independent.py",
+    "verify-handoff replay",
+    "verify-handoff withdraw H0",
+    "verify-handoff withdraw typed hypothesis ID"
+  ],
+  "containment": "bwrap --unshare-all; read-only /venv /handoff /review and system binaries/libs; private /tmp; no developer home, original project or network; host tool access outside these calls cooperative",
+  "own_script": "import json,pathlib,hashlib,math,csv,io\nroot=pathlib.Path('/handoff'); data=json.loads((root/'handoff.json').read_text()); arts={x['data']['path'].removeprefix('/sandbox/case/'):x for x in data['records'] if x['kind']=='artifact'}\ndef raw(name):\n a=arts[name]; b=next((root/'store').rglob(a['data']['sha256'])).read_bytes(); assert hashlib.sha256(b).hexdigest()==a['data']['sha256']; return b\ncfg=json.loads(raw('protocol.json')); dt=cfg['dt_s']; r=cfg['k_BA_per_s']; k=cfg['k_AB_per_s']; result=[]\nfor gate in [True,False]:\n for n in [500,cfg['requested_steps']]:\n  rate=0 if gate and k<cfg['rate_cutoff_per_s'] else k\n  p=0.\n  for i in range(n):p += dt*(rate*(1-p)-r*p)\n  closed=rate/(rate+r)*(-math.expm1(n*math.log1p(-(rate+r)*dt)))\n  continuous=rate/(rate+r)*(-math.expm1(-(rate+r)*n*dt))\n  assert abs(p-closed)<1e-12\n  result.append(dict(gate=gate,steps=n,duration=n*dt,recurrence=p,closed=closed,continuous=continuous,error=p-continuous))\nrows=list(csv.DictReader(io.StringIO(raw('results/diagnostic-b/trajectory.csv').decode())))\nerrors=[abs(float(row['p_B'])-k/(k+r)*(-math.expm1(int(row['step'])*math.log1p(-(k+r)*dt)))) for row in rows]\nprint(json.dumps(dict(matrix=result,max_archived_sample_discrete_error=max(errors),source_locators=[dict(path=n,id=a['id'],revision=a['revision'],sha256=a['data']['sha256'],start_byte=0,end_byte_exclusive=len(raw(n))) for n,a in arts.items()],original_unavailable=not pathlib.Path('/sandbox/case').exists(),developer_home_unavailable=not pathlib.Path('/home/sun07ao').exists()),indent=2))\n",
+  "own_script_sha256": "088ca6a1a0794de10e02081aa46242142f84919afd6216603847862568027014",
+  "limitations": [
+    "No source repository, original project, checks/tests, reference answers or other acceptance reports were read.",
+    "Package reconstruction.json and inherited review text were visible before calculation; no claim of blind prediction.",
+    "Original authenticated historical execution remains non-identifiable: actual listed runs and fabricated/copied matching receipts both fit the preserved bytes.",
+    "No physical experiment validation, stochastic independence or universal reconstruction adequacy follows."
+  ],
+  "product_issues": [
+    "No relation records or legacy scientific nodes in exported records; dependencies remain strings inside imported hypothesis historical_assertion payloads.",
+    "withdraw H0 yields invalid_state message consisting only of quoted H0.",
+    "Typed hypothesis withdrawal yields empty answer and all_passed=true; transport success is not scientific propagation.",
+    "inspect emits the entire large package (~MB), inconvenient for bounded agent context.",
+    "Public query contract describes operations but omits complete query object examples such as withdraw ids."
+  ]
+}

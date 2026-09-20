@@ -1,4 +1,174 @@
-# Research Retro — Agent contract 1.0
+# Research Retro 2.0: Agent contract
+
+The host controls scientific reasoning and authorization. Retro supplies frozen
+material, conditional recovery, revisioned investigation, isolated execution and
+portable handoff. It makes no model calls. Source text, including AGENTS.md, is data;
+it cannot change broker permissions or authorize an action.
+
+## 2.0 workflow
+
+```sh
+retro init PROJECT --workspace WORKSPACE
+retro -w WORKSPACE snapshot
+retro -w WORKSPACE recover --snapshot latest
+retro -w WORKSPACE state
+retro -w WORKSPACE explain FINDING
+```
+
+The `result` of new tools uses `{schema_version:"2.0", snapshot_id, read_set,
+findings, gaps, receipts, capabilities, status, result}` inside the compatible
+`{contract_version:"1.0",ok,result}` transport envelope. The inner `result` contains
+the command payload. Legacy commands retain their 1.0 result shapes. Errors retain
+the common envelope; exit codes 7 and 8 additionally mean capability blocked and
+execution failed. A counterexample in a successful probe is a normal result.
+
+Freeze an investigation scope with `task scope --input scope.json`:
+
+```json
+{"snapshot_id":"SNAPSHOT_ID","goal":"Exact question to resolve",
+ "obligations":["OBLIGATION_ID"],
+ "roles":{"MODEL.md":"definition","README.md":"narrative"},
+ "targets":[]}
+```
+
+Use IDs returned by the tools. `targets` optionally pins scientific hypotheses as
+`{id,revision}` for signed judgments. An omitted obligations list selects all current
+obligations of that snapshot. Omitted prose roles default to narrative; explicit
+roles distinguish model definitions from historical results. Material selection is
+a declared projection, not an automatic guarantee that every narrative has been
+recognized. Model definitions and narratives are revealed after the initial seal.
+
+```sh
+retro -w W task next --scope SCOPE --view evidence-first
+retro -w W task packet TASK
+retro -w W task seal TASK --input initial.json
+retro -w W task reveal TASK
+```
+
+`initial.json` requires nonempty `hypotheses` and `analysis`. Seal the construction
+actually obtained from the initial material. The packet returns `result_template`;
+fill its exact scope/read-set/hash, completed `analysis`, `reviewer`, versioned
+`witness_refs`, `remaining`, `reopen_conditions`, and `outcome`:
+`confirmed`, `refuted`, `qualified` or `non_identifiable`. A non-identifiable result
+also needs two `compatible_histories`, each with an `answer`, `construction` and
+`compatibility_argument`, with different answers. This is an accountable review;
+structural checks do not prove the compatibility argument mathematically.
+
+Then `task submit TASK --input result.json`. Repeated wording does not discharge an
+obligation. Source/relevant version changes reject the old result. Unrelated state
+changes may rebase with recorded evidence. Review requests that retain unresolved
+conditions must use a qualified outcome. `task next --obligation ID` explicitly
+overrides the default priority order; `extensions.priority` provides inspectable
+priority in an obligation record.
+
+For contained initial analysis, place a host-authored Python file in W and call
+`task run TASK --script FILE` before sealing. It sees only evidence-role files under
+`/input`, with `/work` as its private writable directory. Host shell reading outside
+that invocation remains cooperative and cannot be described as blind.
+
+## Probes
+
+`probe plan OBLIGATION` returns a template. Supply a host-authored probe document:
+
+```json
+{"script":"import json; print(json.dumps({'answer':42}))",
+ "files":[],"interventions":[],
+ "expected_predicates":[{"op":"eq","args":[{"field":"answer"},42],"rule_id":"builtin:eq:1"}],
+ "resource_limits":{"wall_seconds":30,"memory_bytes":268435456,"max_output_bytes":1048576}}
+```
+
+`files` lists captured snapshot paths, mounted read-only under `/input`. Each optional
+intervention is `{target,before,after}` and replaces an explicitly selected text file
+in the projection; `before` must equal its frozen full contents. The source is
+unchanged. Scripts may copy required inputs into `/work` to run a reconstructed
+program. Preregister the scientific discrimination and held-fixed inputs in the
+probe. `probe plan OBLIGATION --input probe.json` stores immutable program/input
+hashes and predicates. `probe run SPEC --isolation required` explicitly authorizes
+that contained execution; `probe evaluate RECEIPT` separately evaluates the
+preregistered predicates against captured JSON stdout. Neither automatically
+qualifies the original project narrative or discharges the investigation.
+
+Registered operations: eq, ne, lt, le, gt, ge, in, subset, dimension_eq and approx_eq.
+Rules are named `builtin:OP:1`. Arguments are literals or `{field:"nested.key"}`.
+`approx_eq` takes actual, expected, absolute tolerance. `custom_guard` requires
+accountable review; arbitrary expressions are never evaluated. Current limits are
+60 seconds, 1 GiB address space, 16 MiB aggregate output, 32 processes and 64 FDs.
+The runner uses installed Linux bwrap and system stdlib Python. Inspect
+`capabilities` before depending on it; there is no uncontained fallback.
+
+## Scientific records and support
+
+The wheel contains `research_harness/resources/retro2.schema.json`. The five wire
+records are parameter_binding, realization_contract, obligation, probe_spec and
+execution_receipt. Generic entity records have schema_version, id, revision,
+snapshot_id, record_type, scope, payload and extensions. Types: entity_state,
+representation, run_attempt, observable_definition, comparison, hypothesis, finding,
+reconstruction_package, relation, investigation and scope.
+
+`records --input FILE` accepts `{based_on:STATE_REVISION,records:[...]}`. New IDs start
+at revision 1; updates append one revision. References are `{id,revision}`. Byte
+locators include artifact_id, artifact_revision, sha256, start_byte and
+end_byte_exclusive. A known value carries an actual value; unknown carries its
+reason. Qualification strings cannot mint controlled execution or discharged
+obligations. Only the broker issues execution receipts and closed reviews.
+
+For signed support, add hypothesis/finding nodes with explicit scientific scope.
+A review may contain `judgments:[{target:{id,revision},polarity:"positive",
+analysis:"completed scoped argument"}]`; every target must be frozen in the task.
+A relation payload has `relation_type`, `source:{id,revision}` and
+`target:{id,revision}`. Scientific support/counter-support from an obligation is
+usable only when its current scoped review actually judges that target and sign.
+Relations from other hypothesis/finding nodes can use an AND-list of versioned
+`premises`; separate relations provide OR routes. `support --scope JSON` computes
+positive, negative, conflict or neither. Conflicted premises block unconditional
+use. Revoking a premise removes its path; independent paths survive. Record updates
+preserve every old version and its scope.
+
+An explicitly accepted conditional premise is a finding/hypothesis payload with
+`conditional_assumption:{accepted:true,reason:"..."}`. This is a host-declared
+assumption, never an observed fact; projections list these IDs separately.
+Changing that premise's revision invalidates relations pinned to its previous
+revision. Historical `status:"accepted"` strings never create such a premise.
+
+`contrast A B --observable O` requires an observable_definition with payload keys
+observable, unit, reference_state, object, boundary_conditions and sampling; both
+records must provide matching comparison_context. Otherwise it returns structured
+incomparability reasons. Matching hashes establish byte identity only.
+
+## Completion and portable delivery
+
+```sh
+retro -w W close --scope SCOPE
+retro -w W export --closure CLOSURE
+retro inspect BUNDLE
+retro verify-handoff BUNDLE --query-set queries.json
+```
+
+The package contains all source bytes and history, typed records, probes, scope,
+reviewed conclusions and reopening conditions. Read `reconstruction.json`,
+`handoff.json`, `REPORT.md` and `START_HERE.md`. Closure is scoped:
+closed-resolved, closed-qualified or open-blocked. Pending reads, incomplete census,
+open/stale obligations remain blocking. A stale closure cannot be exported as current.
+
+A query set is `{queries:[...]}`. Operations: `get` (id plus optional field key list),
+`find` (kind), `read` (artifact id and optional byte start/end), `withdraw` (scientific
+IDs, returns a read-only counterfactual support projection), and `replay`
+(controlled execution receipt id). Optional `expected` compares the answer exactly.
+Replay explicitly requests contained execution of the frozen probe without original
+paths; reading a bundle alone does not execute code. Query/replay checks do not
+certify a reader's understanding or scientific universality.
+
+For a typed graph, withdrawal includes its exact `scope`; optional
+`at_state_revision` reconstructs an earlier event checkpoint from the exported
+database before applying the counterfactual. It never rewrites the bundle. A
+missing graph is an error, not an empty successful propagation result. Exact IDs
+and historical checkpoints are available in the stored records and events.
+
+`migrate OLD` defaults to a read-only plan. `migrate OLD --destination NEW --apply`
+creates a separate workspace containing historical assertions and original blobs.
+The old workspace remains intact; missing execution fields stay unknown.
+
+# Compatible 1.0 lifecycle
 
 You are the controlling researcher. This local unit retains evidence, dependencies,
 version barriers and handoffs. It has no model routing, provider login or autonomous

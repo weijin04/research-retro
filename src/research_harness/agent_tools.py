@@ -25,7 +25,17 @@ def dispatch(name, arguments):
         return init(**args)
     if name == "retro_inspect":
         return inspect_bundle(args["bundle"])
+    if name == "retro_verify_handoff":
+        from research_harness.handoff.portable import verify
+        return verify(args["bundle"], args["query_set"])
+    if name == "retro_migrate":
+        from research_harness.handoff.portable import migrate
+        return migrate(**args)
     unit = Unit(args.pop("workspace"))
+    if name in {"retro_snapshot", "retro_recover", "retro_records", "retro_capabilities", "retro_explain", "retro_impact",
+                "retro_contrast", "retro_support", "retro_task", "retro_probe", "retro_close"}:
+        from research_harness.retro2 import Service
+        return getattr(Service(unit), name.removeprefix("retro_"))(**args)
     if name == "retro_audit":
         return getattr(unit, "audit_" + args.pop("action"))(**args)
     return getattr(unit, name.removeprefix("retro_"))(**args)

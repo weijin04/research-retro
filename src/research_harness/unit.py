@@ -338,10 +338,19 @@ class Unit:
                 "project_id": self.manifest["project_id"], "workspace": str(self.workspace), "records": self.store.list(),
                 "source_freshness": "as last scanned/refreshed; audit, correct and export rehash originals"}
 
-    def export(self, destination=None):
+    def export(self, destination=None, closure=None):
         refresh = self.ingest.refresh()
         # Update metadata coverage so deletions and newly unread files cannot be hidden by an old ledger.
         self.scan()
+        package = None
+        if closure:
+            from research_harness.retro2 import Service
+            package = self.store.get(closure)
+            if package["kind"] != "reconstruction_package":
+                raise HarnessError("invalid_contract", "Export closure must be a ReconstructionPackage")
+            fresh = Service(self).close(package["data"]["payload"]["scope_ref"]["id"])["result"]
+            if fresh["id"] != closure:
+                raise ConflictError("Closure is stale; inspect the refreshed closure before exporting")
         destination = config.owned(self.workspace, destination or "exports/" + uuid.uuid4().hex)
         destination.mkdir(parents=True, exist_ok=True)
         if any(destination.iterdir()):
@@ -371,6 +380,15 @@ class Unit:
                                  "unavailable": "original missing; historical captured bytes retained",
                                  "qualified": "named host judgment within stated scope, not an automatic truth certificate"}}
         atomic_json(destination / "handoff.json", handoff)
+        if package:
+            handoff.update(schema_version="2.0", snapshot_id=package["data"]["snapshot_id"], reconstruction_package=package)
+            atomic_json(destination / "handoff.json", handoff)
+            atomic_json(destination / "reconstruction.json", package)
+            (destination / "REPORT.md").write_text(
+                "# Research reconstruction\n\n" + package["data"]["payload"]["status"] + "\n\n" +
+                package["data"]["payload"]["goal"] + "\n\n" +
+                "See reconstruction.json for the frozen scope, obligations, witnesses, limited conclusions and reopening conditions.\n",
+                encoding="utf-8")
         (destination / "AGENT.md").write_text(files("research_harness.resources").joinpath("AGENT.md").read_text(), encoding="utf-8")
         (destination / "START_HERE.md").write_text(
             "# Frozen research handoff\n\nRun `retro inspect BUNDLE_DIRECTORY` to verify every file hash. "

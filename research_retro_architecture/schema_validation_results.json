@@ -1,0 +1,6 @@
+{
+  "schema_valid": true,
+  "examples_structurally_valid": 5,
+  "unexpected_property_rejected": true,
+  "qualification": "Structural checks only. Example receipt hashes are placeholders; no runtime or scientific assurance follows."
+}

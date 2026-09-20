@@ -1,0 +1,653 @@
+{
+  "assessment": "PASS targeted repair recheck",
+  "mode": "post-disclosure repair recheck; not a new blind or fresh-context assessment",
+  "original_report": "cold-agent-review.md/json preserved unchanged",
+  "bundle": "acceptance-04/handoff",
+  "snapshot": "snapshot:b3ba78011e81ec6541c9b042",
+  "contained": "bwrap --unshare-all, read-only product /venv and /handoff, private /tmp, no source checkout or developer home, network isolated; overall agent tools cooperative",
+  "discovery": "Read public AGENT.md; identified typed IDs/scope from records; events 323-326 introduce support paths, 327 updates premise to accepted:false, 331 adjudicates negative H0 and 333 adds counter-support. Checkpoint 326 was selected before premise update.",
+  "statuses": [
+    {
+      "H0": "positive",
+      "C1": "positive",
+      "C2": "positive",
+      "witness": "positive",
+      "premise": "positive"
+    },
+    {
+      "H0": "neither",
+      "C1": "neither",
+      "C2": "positive",
+      "witness": "positive",
+      "premise": "neither"
+    },
+    {
+      "H0": "neither",
+      "C1": "neither",
+      "C2": "positive",
+      "witness": "positive",
+      "premise": "neither"
+    },
+    {
+      "H0": "negative",
+      "C1": "neither",
+      "C2": "positive",
+      "witness": "positive",
+      "premise": "neither"
+    },
+    {
+      "H0": "positive",
+      "C1": "neither",
+      "C2": "neither",
+      "witness": "neither",
+      "premise": "positive"
+    }
+  ],
+  "queries": {
+    "queries": [
+      {
+        "op": "withdraw",
+        "scope": {
+          "conditions": [],
+          "domain": {
+            "dt_s": 0.001,
+            "initial_population": 0,
+            "k_AB_per_s": 0.04,
+            "k_BA_per_s": 0.01,
+            "requested_duration_s": 200
+          },
+          "model_id": "declared-two-state-population",
+          "object_ids": [],
+          "quantifier": "this_execution"
+        },
+        "ids": [],
+        "at_state_revision": 326
+      },
+      {
+        "op": "withdraw",
+        "scope": {
+          "conditions": [],
+          "domain": {
+            "dt_s": 0.001,
+            "initial_population": 0,
+            "k_AB_per_s": 0.04,
+            "k_BA_per_s": 0.01,
+            "requested_duration_s": 200
+          },
+          "model_id": "declared-two-state-population",
+          "object_ids": [],
+          "quantifier": "this_execution"
+        },
+        "ids": [
+          "premise:historical-H0"
+        ],
+        "at_state_revision": 326
+      },
+      {
+        "op": "withdraw",
+        "scope": {
+          "conditions": [],
+          "domain": {
+            "dt_s": 0.001,
+            "initial_population": 0,
+            "k_AB_per_s": 0.04,
+            "k_BA_per_s": 0.01,
+            "requested_duration_s": 200
+          },
+          "model_id": "declared-two-state-population",
+          "object_ids": [],
+          "quantifier": "this_execution"
+        },
+        "ids": [],
+        "at_state_revision": 327
+      },
+      {
+        "op": "withdraw",
+        "scope": {
+          "conditions": [],
+          "domain": {
+            "dt_s": 0.001,
+            "initial_population": 0,
+            "k_AB_per_s": 0.04,
+            "k_BA_per_s": 0.01,
+            "requested_duration_s": 200
+          },
+          "model_id": "declared-two-state-population",
+          "object_ids": [],
+          "quantifier": "this_execution"
+        },
+        "ids": []
+      },
+      {
+        "op": "withdraw",
+        "scope": {
+          "conditions": [],
+          "domain": {
+            "dt_s": 0.001,
+            "initial_population": 0,
+            "k_AB_per_s": 0.04,
+            "k_BA_per_s": 0.01,
+            "requested_duration_s": 200
+          },
+          "model_id": "declared-two-state-population",
+          "object_ids": [],
+          "quantifier": "this_execution"
+        },
+        "ids": [
+          "evidence:controlled-gate"
+        ],
+        "at_state_revision": 326
+      },
+      {
+        "op": "replay",
+        "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf"
+      }
+    ]
+  },
+  "receipts": {
+    "contract_version": "1.0",
+    "ok": true,
+    "result": {
+      "schema_version": "2.0",
+      "status": "verified",
+      "snapshot_id": "snapshot:b3ba78011e81ec6541c9b042",
+      "read_set": {},
+      "findings": [],
+      "gaps": [],
+      "receipts": [
+        {
+          "query": {
+            "op": "withdraw",
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "ids": [],
+            "at_state_revision": 326
+          },
+          "answer": {
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "nodes": {
+              "evidence:controlled-gate": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:26340416f736ddb1f0c4726b": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:7aa276b99acd7796edca2d78": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:b5113317d54e2e56cfc004c6": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "premise:historical-H0": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              }
+            },
+            "conditional_assumptions": [
+              "premise:historical-H0"
+            ],
+            "semantics": "signed least fixed points; explicit assumptions remain conditional; conflicts block unconditional use"
+          },
+          "passed": true
+        },
+        {
+          "query": {
+            "op": "withdraw",
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "ids": [
+              "premise:historical-H0"
+            ],
+            "at_state_revision": 326
+          },
+          "answer": {
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "nodes": {
+              "evidence:controlled-gate": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:26340416f736ddb1f0c4726b": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:7aa276b99acd7796edca2d78": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:b5113317d54e2e56cfc004c6": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "premise:historical-H0": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": true
+              }
+            },
+            "conditional_assumptions": [],
+            "semantics": "signed least fixed points; explicit assumptions remain conditional; conflicts block unconditional use"
+          },
+          "passed": true
+        },
+        {
+          "query": {
+            "op": "withdraw",
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "ids": [],
+            "at_state_revision": 327
+          },
+          "answer": {
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "nodes": {
+              "evidence:controlled-gate": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:26340416f736ddb1f0c4726b": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:7aa276b99acd7796edca2d78": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:b5113317d54e2e56cfc004c6": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "premise:historical-H0": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              }
+            },
+            "conditional_assumptions": [],
+            "semantics": "signed least fixed points; explicit assumptions remain conditional; conflicts block unconditional use"
+          },
+          "passed": true
+        },
+        {
+          "query": {
+            "op": "withdraw",
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "ids": []
+          },
+          "answer": {
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "nodes": {
+              "evidence:controlled-gate": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "finding:scientific-argument": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:26340416f736ddb1f0c4726b": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:7aa276b99acd7796edca2d78": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:b5113317d54e2e56cfc004c6": {
+                "status": "negative",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": true,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "premise:historical-H0": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              }
+            },
+            "conditional_assumptions": [],
+            "semantics": "signed least fixed points; explicit assumptions remain conditional; conflicts block unconditional use"
+          },
+          "passed": true
+        },
+        {
+          "query": {
+            "op": "withdraw",
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "ids": [
+              "evidence:controlled-gate"
+            ],
+            "at_state_revision": 326
+          },
+          "answer": {
+            "scope": {
+              "conditions": [],
+              "domain": {
+                "dt_s": 0.001,
+                "initial_population": 0,
+                "k_AB_per_s": 0.04,
+                "k_BA_per_s": 0.01,
+                "requested_duration_s": 200
+              },
+              "model_id": "declared-two-state-population",
+              "object_ids": [],
+              "quantifier": "this_execution"
+            },
+            "nodes": {
+              "evidence:controlled-gate": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": true
+              },
+              "hypothesis:26340416f736ddb1f0c4726b": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:7aa276b99acd7796edca2d78": {
+                "status": "neither",
+                "usable_positive": false,
+                "positive_supported": false,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "hypothesis:b5113317d54e2e56cfc004c6": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              },
+              "premise:historical-H0": {
+                "status": "positive",
+                "usable_positive": true,
+                "positive_supported": true,
+                "negative_supported": false,
+                "blocked_paths": [],
+                "revoked": false
+              }
+            },
+            "conditional_assumptions": [
+              "premise:historical-H0"
+            ],
+            "semantics": "signed least fixed points; explicit assumptions remain conditional; conflicts block unconditional use"
+          },
+          "passed": true
+        },
+        {
+          "query": {
+            "op": "replay",
+            "id": "execution:dfb9a30b1b4040619aaa2f6230fa4caf"
+          },
+          "answer": {
+            "returncode": 0,
+            "termination": "exited",
+            "predicates": [
+              true,
+              true
+            ],
+            "all_passed": true,
+            "script_sha256": "f319ebfba07b310d6ca16b56d7bb6afc58d2b6c64e7b5730e80877a770efeaa3",
+            "stdout_sha256": "a293aa21453eaca1b6e571c109de02865a57a83fc3e7830cbeadd0324d106f48"
+          },
+          "passed": true
+        }
+      ],
+      "capabilities": {
+        "offline_query": true,
+        "original_project_required": false
+      },
+      "verification": {
+        "ok": true,
+        "files": 47,
+        "authenticity": "integrity only; no digital signature"
+      },
+      "all_passed": true,
+      "boundary": "Query/replay verification is not a blank Agent understanding assessment"
+    }
+  },
+  "wrong_scope_query": {
+    "queries": [
+      {
+        "op": "withdraw",
+        "scope": {
+          "conditions": [],
+          "domain": {
+            "dt_s": 0.001,
+            "initial_population": 0,
+            "k_AB_per_s": 0.04,
+            "k_BA_per_s": 0.01,
+            "requested_duration_s": 200
+          },
+          "model_id": "nonexistent-scope",
+          "object_ids": [],
+          "quantifier": "this_execution"
+        },
+        "ids": [
+          "premise:historical-H0"
+        ]
+      }
+    ]
+  },
+  "wrong_scope_result": {
+    "contract_version": "1.0",
+    "ok": false,
+    "error": {
+      "code": "invalid_contract",
+      "message": "No scientific graph in the requested scope",
+      "details": {}
+    }
+  },
+  "gate_results": {
+    "nonempty_before_after": "pass",
+    "independent_conclusion_survives": "pass",
+    "alternative_withdrawal_changes_actual_dependents": "pass",
+    "withdrawal_distinguished_from_negative_support": "pass",
+    "historical_checkpoint_replay": "pass",
+    "missing_scoped_graph_fails": "pass",
+    "public_probe_replay": "pass"
+  },
+  "limits": [
+    "Finite declared synthetic scope only; no new blind assessment.",
+    "Read-only portable projections tested; live workspace mutation was outside allowed scope and was not directly tested.",
+    "Historical project execution remains conditional; controlled probe findings must not be read as authentication of original runs.",
+    "C1 loses support rather than automatically becoming negative; there is no negative C1 adjudication relation.",
+    "Actual premise record disables conditional acceptance, hence current revoked=false; counterfactual withdrawal sets revoked=true. These different representations share loss of support, not identical metadata."
+  ]
+}

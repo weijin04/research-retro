@@ -1,0 +1,10 @@
+{
+  "accepted_wheel_sha256": "19e30457bff33326f387f3bc2df72a8c0950d61511bb1d9fcb42ee347cb41054",
+  "final_wheel_sha256": "9a1ed0fe83c124364078800c63147a2413f9caf8d2f24f99eda7bb8b267033cc",
+  "changed_members": [
+    "research_harness/resources/AGENT.md",
+    "research_retro-2.0.0.dist-info/RECORD"
+  ],
+  "runtime_code_and_schemas_identical": true,
+  "change": "Agent manual heading punctuation only; existing verified behavior unchanged"
+}

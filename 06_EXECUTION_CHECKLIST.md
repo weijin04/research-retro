@@ -1,6 +1,6 @@
 # 6. 详细执行清单
 
-共 51 项任务。此文件由 backlog.json 生成；任务变更先更新 JSON，再重新生成。
+共 56 项任务。此文件由 backlog.json 生成；任务变更先更新 JSON，再重新生成。
 
 版本完成要求该版本所有任务及其依赖都有真实产物；单个退出任务不能豁免其他必要工作。
 
@@ -521,6 +521,78 @@ Jev：不使用；无模型调用。
 验收：最终构件与实测构件哈希一致。；范围与未验证宿主明确。
 Jev：不使用；无模型调用。
 完成证据：releases/standalone-1.0.0/release.json；README.md；CURRENT_STATE.md。
+
+## RETRO2：Research Retro 2.0 确定性恢复与调查产品
+
+### [x] RETRO2-01 统一语义与兼容导入
+
+状态：done。
+目标：扩展版本存储、字节定位和五类交换实体，保持 1.0 接口。
+依赖：SCU-04。负责角色：产品实现与验收。
+
+具体工作：
+1. 扩展版本存储、字节定位和五类交换实体，保持 1.0 接口。
+
+交付：src/research_harness/realization/；src/research_harness/handoff/portable.py。
+验收：结构与语义验证；无静默资格提升；迁移 dry-run 与独立目标工作区
+Jev：不调用模型。
+完成证据：releases/standalone-2.0.0/REPORT.md；releases/standalone-2.0.0/acceptance.json；tests/test_retro2.py。
+
+### [x] RETRO2-02 确定性恢复
+
+状态：done。
+目标：冻结来源和 Git DAG，恢复参数链、候选执行与未知边界。
+依赖：RETRO2-01。负责角色：产品实现与验收。
+
+具体工作：
+1. 冻结来源和 Git DAG，恢复参数链、候选执行与未知边界。
+
+交付：src/research_harness/recovery/。
+验收：有效步数与算子恢复；两次历史尝试和未绑定替代；复制、缓存和撤回前提诊断
+Jev：不调用模型。
+完成证据：releases/standalone-2.0.0/REPORT.md；releases/standalone-2.0.0/acceptance.json；tests/test_retro2.py。
+
+### [x] RETRO2-03 实现契约与判别探针
+
+状态：done。
+目标：从调查问题发放可复算探针，区分实际执行与科学判据。
+依赖：RETRO2-02。负责角色：产品实现与验收。
+
+具体工作：
+1. 从调查问题发放可复算探针，区分实际执行与科学判据。
+
+交付：src/research_harness/investigation.py；src/research_harness/runner/。
+验收：四格真实干预；离散公式独立比较；可达性与完整时域分开
+Jev：不调用模型。
+完成证据：releases/standalone-2.0.0/REPORT.md；releases/standalone-2.0.0/acceptance.json；tests/test_retro2.py。
+
+### [x] RETRO2-04 调查协议与权限
+
+状态：done。
+目标：实现证据首读、封存揭示、版本提交、限定收口及依赖影响。
+依赖：RETRO2-03。负责角色：产品实现与验收。
+
+具体工作：
+1. 实现证据首读、封存揭示、版本提交、限定收口及依赖影响。
+
+交付：src/research_harness/retro2.py；src/research_harness/diagnosis/。
+验收：过期相关提交拒绝；无关更新带回执 rebase；contained 和 cooperative 明确区分
+Jev：不调用模型。
+完成证据：releases/standalone-2.0.0/REPORT.md；releases/standalone-2.0.0/acceptance.json；tests/test_retro2.py。
+
+### [x] RETRO2-05 交接和发布
+
+状态：done。
+目标：安装产品、运行公开生命周期、完成冷交接并发布 GitHub。
+依赖：RETRO2-04。负责角色：产品实现与验收。
+
+具体工作：
+1. 安装产品、运行公开生命周期、完成冷交接并发布 GitHub。
+
+交付：checks/retro2_acceptance.py；releases/standalone-2.0.0/。
+验收：离线隔离安装；便携查询与关键重放；空白上下文交接；wheel、回执、文档、标签同步
+Jev：不调用模型。
+完成证据：releases/standalone-2.0.0/REPORT.md；releases/standalone-2.0.0/acceptance.json；tests/test_retro2.py；releases/standalone-2.0.0/cold-agent-review.md；releases/standalone-2.0.0/cold-agent-recheck.md。
 
 ## F1：整体框架 MVP
 

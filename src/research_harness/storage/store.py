@@ -113,6 +113,38 @@ class Store:
             raise StoreError("corrupt blob: " + digest)
         return content
 
+    def put_stream(self, stream, length, chunk_size=1048576):
+        """Hash every byte while copying bounded chunks; never hash a sample as a file."""
+        fingerprint = hashlib.sha256()
+        fd, temporary = tempfile.mkstemp(dir=self.blobs, prefix=".pending-")
+        copied = 0
+        try:
+            with os.fdopen(fd, "wb") as output:
+                while copied < length:
+                    chunk = stream.read(min(chunk_size, length - copied))
+                    if not chunk:
+                        break
+                    output.write(chunk)
+                    fingerprint.update(chunk)
+                    copied += len(chunk)
+                output.flush()
+                os.fsync(output.fileno())
+            if copied != length:
+                raise StoreError("source changed or truncated during streaming capture")
+            sha = fingerprint.hexdigest()
+            target = self._blob_path(sha)
+            if not target.exists():
+                os.replace(temporary, target)
+                directory = os.open(self.blobs, os.O_DIRECTORY)
+                try:
+                    os.fsync(directory)
+                finally:
+                    os.close(directory)
+            return sha
+        finally:
+            if os.path.exists(temporary):
+                os.unlink(temporary)
+
     @staticmethod
     def _record(row):
         return {"id": row["id"], "kind": row["kind"], "revision": row["revision"], "data": json.loads(row["data"])}
