@@ -1,6 +1,6 @@
 {
   "plan_version": "1.0",
-  "status": "in_progress",
+  "status": "paused_after_R2_release",
   "implementation_root_suggested": "/home/sun07ao/框架",
   "phase_order": [
     "R0",
@@ -1615,6 +1615,19 @@
         "R2-14"
       ],
       "scope_effect": "Product ordering preserved. Historical data and synthetic/live/replay receipts remain distinct."
+    },
+    {
+      "reason": "User requested stopping at the complete usable reconstruction milestone. Freeze R2; preserve unverified F1 drafts on a separate branch without release completion claims.",
+      "task_ids": [
+        "F1-01",
+        "F1-03",
+        "F1-04",
+        "F1-05",
+        "F1-06"
+      ],
+      "scope_effect": "R2 release remains complete in its declared scope. F1/E1 continuation paused; no F1 task promoted to done."
     }
-  ]
+  ],
+  "pause_source": "2026-09-20 user: if reconstruction is fully usable, temporarily close here",
+  "checkpoint": "F1_CHECKPOINT.md"
 }
