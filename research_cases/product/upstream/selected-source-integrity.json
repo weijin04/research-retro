@@ -1,0 +1,486 @@
+{
+  "files": 96,
+  "all_unchanged": true,
+  "checks": [
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v154_new_input_generalization_and_domain_adjudication/normalize_esipur_spacegroup.py",
+      "sha256": "f3d90f5f7617f30653ada20559c85370539a029c42b5a0586484e847557d6263",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/scorer.py",
+      "sha256": "7472854bed3d8d44f50fca3f019917b4580c2db91942b1039dd8536d876fcb45",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py",
+      "sha256": "70aa3c9c927362904cb4d53da61c7a33b133b2fdad94537081c2d80383a99a41",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/diagnose_basins.py",
+      "sha256": "227604cd9f0a5ffdb886df8fc89c1ff14c7dc0855b63d73f4d98a6a053183906",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v106_thermal_ensemble_passability/stageB_md/driver.sh",
+      "sha256": "e34814f86a46a53377f3d352fe18fdc08f0fece7a13d307bbb0f836133db5b7e",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r1a/scorer.py",
+      "sha256": "c67622cd1a33a6569f19858756f3e5c0c80ed7faa69edce89f1035b2d69868be",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_reus_cross_initialization/analyze.py",
+      "sha256": "858882b332a5d3870bc8f0d2b2448065e6dfb6cfeb6535a5bf0093554f3cff3a",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/run_batch.sh",
+      "sha256": "f3ce25236ee6309cc24724919c7bba9056f31bb7df68bf6870a0fd8840490d84",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v34_adsorption_transport_identifiability/audit.py",
+      "sha256": "1484be3075bb9ffd529a8bac194ed3509b618384ed5d100b127df00ccaab288e",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/scorer.py",
+      "sha256": "1ceefaf2d4c3e9e096c08f0220b0d8d9eda65eccedd2c2daf59b35a16ef46a9d",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py",
+      "sha256": "7a72b5ed778dd56519427dae4cdd4eca04c392dd135a217b4926bfacf61ef5d7",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+      "sha256": "50a3432e5059be60e6231a230509441ddfdcc6d90f1a32fb71b297ee9a9fbb90",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v30_lowcost_feature_eligibility_audit/audit_reuse.py",
+      "sha256": "c511163bf59d994dae7a54f7ae2544280f2640edd283e8a6315c2456f731e1d0",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/md/build_loaded.py",
+      "sha256": "b747d7f1ddd894136b98453cada22965a376bda6bcded2e84ea3f9a8eff9ae5a",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/analyze.py",
+      "sha256": "3626e3402718fa9a98e73d4b2303ab7862e821579aa7948084dd9cff5264cc7d",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+      "sha256": "7c74105f87fd67e818432f7e791b5bc8fbcc871d04e48d9ea0d74101b3d5169c",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v161_finite_inventory_thermo_kinetic_router/test_v161.py",
+      "sha256": "21db84e8836b0ab18a11618131d2fbe3822091be372b62277f4481fd17c1dc59",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+      "sha256": "7edf98c923ef267910996d1b0d51bae0ca24d9b722128f847064aa12e6ef9a15",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_transverse_string_10A/compare.py",
+      "sha256": "e4e28f331e09a7cd66cb992fa2fae854523672bbc96e6918e7c92a797bdccf4e",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_dft_hkust_functional_scout/analyze.py",
+      "sha256": "7f7abca12e3de16e8d348ba1f0dfc739659774d14b8b2d21c53a7bbe93abc94d",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_condition_frontier/analyze.py",
+      "sha256": "ce2c3de0f19f3039469eca22a8d4fbccbe48bb866cd505aa1c50417f2be0f6dc",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_dft_hkust_backend_smoke/build_inputs.py",
+      "sha256": "82bdb64c9346aa34fb49a91b78c85130bd2702558b0727af0d75d89b1e45b405",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v133_sprcr_feasibility/run_experiment.py",
+      "sha256": "b1e1ae1d670ccf755faafd6af7c47611aeeb75430526972d8bb83546a598db46",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/scripts/run_flexible_propagator_smoke.py",
+      "sha256": "d78a13841f79ec3a4d5d89bf6f75de30dc176172a3db1c88bcd138bcd5676486",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v52_coupled_endpoint_opening/merge.py",
+      "sha256": "f0cef525900226eebebe4fbe39286d2d1f6961e1dec5311d3361c172840fd42f",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v162_final_closed_performance_audit/test_v162_final.py",
+      "sha256": "c88c5db295d370321dd40f66df04287fcc42b7fd57259d2f565cc59aa46f832f",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v90_transferable_diffusion_data_gate/audit.py",
+      "sha256": "8b36a8d782cc575fb2706f69b26b26725b51ab18fa94f5ef0ff66451d4641438",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v102_external_transport_gate/build_huang_forcefield.py",
+      "sha256": "1030c93ae81d03d81b9f0169dc33feb245096a61347cbdc9810c3535092e120f",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v100_factorized_transport_gate/run_gate.py",
+      "sha256": "1457a548f785c8e0589295e5b3010e554606431860dc11ae8eb8dfa50f56fc37",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/passability.py",
+      "sha256": "8397c00647456833e4e81b640d5bdb613533e4a55df8225b20f9e0e05e10814c",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v122_transport_head/stage0a_tst_network.py",
+      "sha256": "c9cb147ab461fd68b044e7d34f383c10d0e281e6b7582c31e582c51767202101",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v18_causal_funnel/replay_v12.py",
+      "sha256": "4c7960eea77108bf005b319b85823052a3783880a943ebe248c3c442a553ebe3",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v77_source_sink_input_closure/INPUT_CLOSURE.tsv",
+      "sha256": "dfdc2128c051fb9bdc1c58c5b3a010c5b0384bedccb5bc513d2bb867a6179778",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/metrics.json",
+      "sha256": "1fbe802466e6a64d1d54c9b0ae5fd37399868d86e6da9fb94f72b2988ea90a73",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v154_new_input_generalization_and_domain_adjudication/IN_ATC_RESULTS.json",
+      "sha256": "ee9611536d67369aeaa3f24473f1d273d98c9e62a28891a5d5b22ae1b73d7900",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/contract.json",
+      "sha256": "f237bbeaf646f602aefd34bf571ea35c676b4abe06540d81fa1a9cf3f1bdb647",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v87_fmof_bonded_topology_gate/result.json",
+      "sha256": "2131c017e6f42ac5132720bf3ff895f26509a372bba21e3386b76e3ab74956e1",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/snap300ps/195K_window.csv",
+      "sha256": "36b7c7799aa89c7629159ace1b86cfdb46107b473f1999ddb091e62e47885a5a",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/structure_map_audit.tsv",
+      "sha256": "16144daf7395cb8112adc3317ea9fc9bb29c88d30192afa8ff10427629204b3c",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r1a/predictions.csv",
+      "sha256": "f25386192928a2d2829e9c774bda18b016272a11efbae18fe7f070203457a7db",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v106_thermal_ensemble_passability/STAGE_A_RESULTS.tsv",
+      "sha256": "621cde4018bf3cdd13b5441f2326dfe5eb98cc17d0971fde148936a17fbce237",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/mfm-520/base/gcmc/C098/seed101/metrics.json",
+      "sha256": "e39e9e19e0db97639d2ffe467dd52e7f451320ce3d22c079b960401be8dcbde9",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_reus_cross_initialization/topologies/Xe/guest_B_host_H1_r1/topology_audit.json",
+      "sha256": "b63ae4574534ea2c53452fa0d25b1c77f02c93f76ade04816cea1310ddb519f7",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/predictions.csv",
+      "sha256": "ca727a660ba8f8206c868716f2ae9778ccd39e3ebc30390bf56b44a69c4e7644",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v34_adsorption_transport_identifiability/result.json",
+      "sha256": "f951f111b8ca734ac8fb055f6ac3b46d9638ac7a7c8e27ce8754410c7cdeaf5a",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/snap300ps/298K_window.csv",
+      "sha256": "b84f41af946c08819162af43b4d66e59ada90ccf62cff41ff83d069ade794e22",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v56_observation_frontier/decision.json",
+      "sha256": "f42051da526ffce257f1024eedc139a2a9f4c83340d226b79bfdb5b6fd9bb9c8",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r1a/metrics.json",
+      "sha256": "f19e2005eb7ce070a341bc145507581119426e49a170c8de16ddecd2fd0f002c",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/staging/cells/MIP203_SUC_298K_BASE_C002_seed202/manifest.json",
+      "sha256": "fded71258dfe5ef485ab0c5d2459dfe2f389beed18376a20dcc4b94b0aaf5ed8",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/mfm-520/base/kinetic_scan/shard5/run/scan_checkpoint.csv",
+      "sha256": "d4138f60ea833dc811b1bb54cde8008174bbe22a5aaada4357315c5c7ca5c576",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v30_lowcost_feature_eligibility_audit/current_structure_hashes.tsv",
+      "sha256": "10bf8d02f2bcda0ee6de95b5f2b680995a028f24cec0e4de8a683aae44ee4266",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/predictions.csv",
+      "sha256": "f980812b8d5cf6ac8f5a75e6361421f8e60a9d893b173ade0ec6540802125de9",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/topologies/Xe/w02_seed_524287/topology_audit.json",
+      "sha256": "cc364939e1fd1d9433e192c4db11de17681293f1b24907b8d26bd3042b46505a",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-kr-partial.csv",
+      "sha256": "6f246f9c48401c6f58a151251b524405ff3270484e0b42706654bf2d2f8b77f8",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v161_finite_inventory_thermo_kinetic_router/VALIDATION.json",
+      "sha256": "6e36fbea34084fd50e9c2c3a3eff021393639956ad30f815259e59499fd37a0d",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/utsa-74a/base/gcmc/C026/seed101/input_manifest.json",
+      "sha256": "ce79fc93a3f828bf56b6039b6372d990fe243aa726e48c24de2ac853e40b42aa",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/A1_full_bundle_selfcheck_log.tsv",
+      "sha256": "7070792d757f126f9344bbe7377235d7f4ed27ad4cf0c0e2d908212913cca992",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/metrics.json",
+      "sha256": "4a0aba7813e20073d21c77d1318e8d59269547604387f5136b7d0ff94988084c",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v155_cu_ain_condition_closure_and_frozen_xe_prediction/STATUS.json",
+      "sha256": "9660cf27f11804b740b61c414692add49fe8770577631ea75861dbd021fbe334",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-conidab-final/298K_rotor.csv",
+      "sha256": "5f74f2086be2609d1f88c06d56fc00abb07dc409028c35db8698225af2002742",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_shared_states_path_pilot/run/topology_audit.json",
+      "sha256": "222bd7f86cb25b8a528755d5b9464754332a70479520894bf690b33a4ab4adfa",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/cu-ain/base/gcmc/C026/seed101/input_manifest.json",
+      "sha256": "e265ae345baec480119cb3ebbe638d89d7e30894b2e11dc8d3655980f9d72755",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_transverse_string_10A/path_cv_bundle/greathouse_Xe/expected.tsv",
+      "sha256": "0b3345358d6cf31a6fbfcaf418f90e157879ac48a91c346432943246028fd201",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-gf-300ps.json",
+      "sha256": "850a5d0361b25ee7aadd05072b7aaa09f30a6ab16d9560c8281c9969c7a16f44",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round1-summary.md",
+      "sha256": "7f8ebdd132a754db1c198217e766e4877f39a3897352605e7003e6228c891a76",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v77_source_sink_input_closure/RESULTS.md",
+      "sha256": "92b8c6104f4eaa81ddb0f26f00018abd719eafe33ef5a2df674bae42b992ec27",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r2/SPEC.md",
+      "sha256": "c4e0777a3310ae17bc52bd7841f56209a3e33810174b1b64ef3c97bd8dbb80ac",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify-mn-dcbp.md",
+      "sha256": "5c1a83a40612b6ad5104dfa9465cf2967ca9d6ef4be922b665f00fb75a2f04c5",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v154_new_input_generalization_and_domain_adjudication/IN_ATC_LOCAL_RECORD_FREEZE.md",
+      "sha256": "9cdfc7d37e120bdce017aef00589b35ab27bf77e5569f277edebeac085aa1d10",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/codex-brief.md",
+      "sha256": "0453d6a074273b8ba308f8de34fb6452a2143b0b50c16c70d235fe3ac594ca74",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify3-fmofco.md",
+      "sha256": "d58f845ca6460f6e439e62bbe81e73e86621b08f2c6d11bffff758ed70bd5d23",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v87_fmof_bonded_topology_gate/RESULTS.md",
+      "sha256": "538f0011487494f14e5aaa676725e60241bc4b090aeec7c5e15101d6b6f4d817",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/window-geometry-audit.md",
+      "sha256": "9c87ade79c497b4e1a3c7c8b254b623977b1abb5e503e465430d6f1c8f8c8596",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify-hkust45.md",
+      "sha256": "793d6d40d78b170b073ea5a881a0b44e59d785ac465d646e89cd86ef8e2a09ef",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/RESULTS.md",
+      "sha256": "23e95ac19a50ea46a50832ccdeb9da276c72a5b8f8578412fbceb5b72a66347f",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r1a/README.md",
+      "sha256": "7de2cced59cb775523cfb878fcdfb2b705041c60bdbddfaf8f03782b7a9e7927",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+      "sha256": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v106_thermal_ensemble_passability/STAGE_C_SBMOF2_SUMMARY.md",
+      "sha256": "aefbcae75ab71f96b4129ae1b393b5b2b326389f402b7bd4d891efb0845c90f7",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/mil-160-prep/diagnosis.md",
+      "sha256": "a84083e05f5a90df195fbc68a997035d28787522a06a96a3171e199e16862292",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/estimand-wellposedness.md",
+      "sha256": "94c1503e8d725e37249a58412940d1cd91ca969cc7f9496801251f2973bc6914",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_reus_cross_initialization/PLAN.md",
+      "sha256": "0ece0ce9559c51b4bd03399520f626c05d11ad7477a588d8e36d23a6aee2ce47",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/codex-brief-run2.md",
+      "sha256": "e98da0251206aea431b10b6dd7eeab45f9ff67e1b668a58eeb5bb6563e366c3b",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify-calf20mw.md",
+      "sha256": "fc159b6c51c688d29edc89ff266fa2df427efd837ff7b11b1f39a22a08fbcd03",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v34_adsorption_transport_identifiability/PLAN.md",
+      "sha256": "31d6599208baa4d7fb63d3f258e6855fdfd08cd59727755928e9663c2d6acdeb",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/structure-identity.md",
+      "sha256": "90aa22370b2cff4ed58f810b9dd626e0b32f678b20555707d1538cf7ff88cf3b",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify-zju-crofour.md",
+      "sha256": "d6c06b0f61c2b6c8871baf147f41efbc53672b4a3a70185332e64e6324ed4161",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v56_observation_frontier/RESULTS.md",
+      "sha256": "e3b2a51a80fad14838ac8f861037ceb44ac49d3da307ab6ffa256ff0a7493ead",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r1a/SPEC.md",
+      "sha256": "ab418b31daca5d9aebbadd0062cc96486ccdfebf3d9e6739c3f8dfc64111aac9",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/dossier-kr1.md",
+      "sha256": "436368e33aa8c10c12c6bf2ee719ec0266a4673124cb8432d7dea995b07e1fa7",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/RESULTS.md",
+      "sha256": "38be4b3b99b15242c506cf81be020fd0ef27b322d294b2c50a6660244513bf6a",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md",
+      "sha256": "994b8b40ab6b0721859b2122a9e74752a00960361578bf0ae19754ae953b7a7e",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify4-clinoptilolite.md",
+      "sha256": "9875c55d0d05115b27f0ed116e16b82033f7a7c05c32bc2fca2be29a24e13f05",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v30_lowcost_feature_eligibility_audit/PLAN.md",
+      "sha256": "2e2736f65307f6ccce13aa4747e8ae089e641757bf98bd931f725688de5a8736",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/production-launch.md",
+      "sha256": "f1147c5f2472714264b8afd74bcbc6a66ef715a722c905deb1bcb9ca21862607",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md",
+      "sha256": "f1ff05d7881753798513d29164b44ce8d59b3967a992fe90c806c17981d075b7",
+      "unchanged": true
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/RESULTS.md",
+      "sha256": "7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9",
+      "unchanged": true
+    }
+  ]
+}

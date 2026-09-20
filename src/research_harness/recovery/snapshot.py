@@ -72,8 +72,11 @@ def freeze(unit):
     files, gaps = {}, []
     root = Path(unit.manifest["sources"][0]["root"])
     for source in scan["sources"]:
+        source_root = Path(next(s["root"] for s in unit.manifest["sources"] if s["id"] == source["source_id"]))
         for row in source["assets"]:
-            path = str(Path(row["path"]).relative_to(root))
+            path = str(Path(row["path"]).relative_to(source_root))
+            if source_root != root:
+                path = "@" + source["source_id"] + "/" + path
             if row["state"] == "captured":
                 files[path] = {"id": row["artifact_id"], "revision": row["artifact_revision"], "sha256": row["sha256"]}
             elif row["state"] != "not_in_scope":

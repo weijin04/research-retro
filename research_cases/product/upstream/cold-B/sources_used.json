@@ -1,0 +1,68 @@
+[
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_finite_t_smoke/result.json",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/8ec3c1665079edd6dd461ebaea09e9722bb6bbc9eff66b3633ea0a12d746e84a",
+    "sha256": "8ec3c1665079edd6dd461ebaea09e9722bb6bbc9eff66b3633ea0a12d746e84a",
+    "identity_scope": "whole_file",
+    "byte_range": [
+      0,
+      7879
+    ],
+    "original_size_bytes": 7879
+  },
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_finite_t_smoke/RESULTS.md",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/d40d75828702e0d862ccab19c159a052f19fa51cbd1b4343da1a1a8919c3dd79",
+    "sha256": "d40d75828702e0d862ccab19c159a052f19fa51cbd1b4343da1a1a8919c3dd79",
+    "identity_scope": "whole_file",
+    "byte_range": [
+      0,
+      1996
+    ],
+    "original_size_bytes": 1996
+  },
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/RESULTS.md",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9",
+    "sha256": "7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9",
+    "identity_scope": "whole_file",
+    "byte_range": [
+      0,
+      2061
+    ],
+    "original_size_bytes": 2061
+  },
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/analyze.py",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48",
+    "sha256": "8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48",
+    "identity_scope": "captured_segment",
+    "byte_range": [
+      0,
+      7000
+    ],
+    "original_size_bytes": 8224
+  },
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_reus_cross_initialization/PLAN.md",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/0ece0ce9559c51b4bd03399520f626c05d11ad7477a588d8e36d23a6aee2ce47",
+    "sha256": "0ece0ce9559c51b4bd03399520f626c05d11ad7477a588d8e36d23a6aee2ce47",
+    "identity_scope": "whole_file",
+    "byte_range": [
+      0,
+      2469
+    ],
+    "original_size_bytes": 2469
+  },
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-B/materials/cxekr_loop/r5/feasibility-note.md",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/520ca4aa9fc1a8d05fb91008a34a954692061089553535b1fc3db7dfff47d969",
+    "sha256": "520ca4aa9fc1a8d05fb91008a34a954692061089553535b1fc3db7dfff47d969",
+    "identity_scope": "whole_file",
+    "byte_range": [
+      0,
+      9532
+    ],
+    "original_size_bytes": 9532
+  }
+]

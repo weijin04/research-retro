@@ -21,7 +21,14 @@ def outside_engine(path):
 
 
 def workspace_path(value=None):
-    return outside_engine(value or os.environ.get("RETRO_WORKSPACE") or Path.cwd() / ".retro")
+    # Existing 1.x/2.x state remains discoverable; new work stays outside originals.
+    legacy = Path.cwd() / ".retro"
+    default = legacy if (legacy / CONFIG).is_file() else external_workspace(Path.cwd())
+    return outside_engine(value or os.environ.get("RETRO_WORKSPACE") or default)
+
+
+def external_workspace(project):
+    return project.parent / (project.name + ".retro")
 
 
 def owned(workspace, path):
@@ -37,7 +44,7 @@ def initialize(project, workspace=None, project_id=None, capture_max_bytes=None,
     project = Path(project).resolve(strict=True)
     if not project.is_dir():
         raise HarnessError("invalid_config", "Project must be a directory")
-    workspace = workspace_path(workspace or project / ".retro")
+    workspace = workspace_path(workspace or external_workspace(project))
     if workspace == project or project.is_relative_to(workspace):
         raise HarnessError("invalid_config", "Workspace cannot contain or equal the source project")
     if (workspace / CONFIG).exists():
@@ -53,6 +60,8 @@ def initialize(project, workspace=None, project_id=None, capture_max_bytes=None,
         if capture_text is not None and capture_text != manifest["scan"]["capture_text"]:
             raise HarnessError("version_conflict", "Scan mode differs from existing workspace")
         return workspace, manifest
+    if workspace.is_relative_to(project):
+        raise HarnessError("invalid_config", "New investigations need a separate workspace outside the source project")
     if workspace.exists() and any(workspace.iterdir()):
         raise HarnessError("invalid_config", "Initialization requires an empty workspace")
     config = {
@@ -79,8 +88,8 @@ def load(workspace):
     data = json.loads(path.read_text(encoding="utf-8"))
     if data.get("config_version") != 1 or not isinstance(data.get("project_id"), str) or not data["project_id"].strip():
         raise HarnessError("invalid_config", "Expected config_version=1 and a nonempty project_id")
-    if data.get("policy_revision") != 1 or data.get("output_root") != ".":
-        raise HarnessError("invalid_config", "Use a separate workspace; policy_revision=1 and output_root='.' are required")
+    if type(data.get("policy_revision")) is not int or data["policy_revision"] < 1 or data.get("output_root") != ".":
+        raise HarnessError("invalid_config", "Use a separate workspace; a positive policy_revision and output_root='.' are required")
     if not isinstance(data.get("sources"), list) or not data["sources"]:
         raise HarnessError("invalid_config", "At least one explicit source is required")
     ids = set()

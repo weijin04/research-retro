@@ -4,12 +4,28 @@ import csv
 import io
 import json
 import os
+import re
 import stat
 import subprocess
 import zipfile
 from collections import Counter
 from pathlib import Path
 from research_harness.common import HarnessError, canonical, digest, stable_id, now, upsert
+
+
+def asset_signals(path, tail=b""):
+    """Format/exit hints for independent discovery, never scientific verdicts."""
+    suffix = Path(path).suffix.casefold()
+    signals = []
+    if suffix in {".npy", ".npz", ".h5", ".hdf5", ".parquet"}:
+        signals.append("data_container")
+    if suffix in {".csv", ".tsv", ".json", ".jsonl"}:
+        signals.append("structured_data")
+    if suffix in {".out", ".log"}:
+        signals.append("log_text")
+    if re.search(rb"MPI_Abort|abnormal termination|error termination|segmentation fault|out of memory|walltime exceeded|\"(?:exit_code|returncode)\"\s*:\s*-?[1-9][0-9]*", tail, re.I):
+        signals.append("abnormal_exit_hint")
+    return signals
 
 
 class Ingestor:
@@ -78,7 +94,10 @@ class Ingestor:
     def capture(self, path, *, max_bytes=None, segment=None):
         source, actual = self.allowed(path)
         cap = source.get("snapshot_max_bytes", 33554432) if max_bytes is None else max_bytes
-        identifier = stable_id("artifact", [self.manifest["project_id"], str(Path(path).absolute())])
+        identity = [self.manifest["project_id"], str(Path(path).absolute())]
+        if segment is not None:
+            identity.append(list(segment))
+        identifier = stable_id("artifact", identity)
         # O_NOFOLLOW denies a symlink swapped in after resolution. fstat pins the opened inode.
         fd = self._open_pinned(actual)
         try:
@@ -93,6 +112,8 @@ class Ingestor:
             os.lseek(fd, start, os.SEEK_SET)
             with os.fdopen(fd, "rb", closefd=False) as f:
                 fingerprint = self.store.put_stream(f, end - start)
+                f.seek(max(start, end - 16384))
+                signals = asset_signals(path, f.read(16384))
             after = os.fstat(fd)
             # Repeat root validation to reject changed ancestors and pathname replacements.
             _, actual_after = self.allowed(path)
@@ -111,6 +132,7 @@ class Ingestor:
                 "sha256": fingerprint, "blob_refs": [fingerprint], "byte_range": [start, end],
                 "identity_scope": "captured_segment" if segment else "whole_file", "read_state": "read",
                 "source_before": self._stat(before), "source_after": self._stat(after), "captured_at": now(),
+                "discovery_signals": signals,
                 "egress": source.get("egress", "denied"), "parser_version": None, "is_original": False,
                 "provenance": "independent byte copy; no hardlink or symlink snapshot"}
         changes = [{"id": identifier, "kind": "artifact", "data": data}]
@@ -241,12 +263,14 @@ class Ingestor:
                     _, actual = self.allowed(p)
                     info = actual.stat()
                     row.update(self._stat(info))
+                    row["discovery_signals"] = asset_signals(p)
                     row["resolved_path"] = str(actual)
                     if not stat.S_ISREG(info.st_mode):
                         row.update(state="unsupported_format", reason="not a regular file")
                     elif str(p) in snapshots:
                         a = snapshots[str(p)]["data"]
                         row.update(state="read", artifact_id=snapshots[str(p)]["id"], sha256=a["sha256"],
+                                   discovery_signals=sorted(set(row["discovery_signals"] + a.get("discovery_signals", []))),
                                    qualification="captured version; live content not rehashed by metadata scan")
                         if any(row[k] != a["source_after"][k] for k in ("size", "mtime_ns", "ctime_ns", "inode", "device")):
                             row.update(state="source_changed", reason="metadata change; refresh snapshot required")

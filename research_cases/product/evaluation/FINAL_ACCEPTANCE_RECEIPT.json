@@ -1,0 +1,48 @@
+{
+  "completed_utc": "2026-09-20T18:03:04.591879+00:00",
+  "overall": "bounded_real_case_end_to_end_acceptance_supported",
+  "six_checks": {
+    "research_understanding": "pass",
+    "historical_discovery": "useful_partial_not_exhaustive",
+    "actual_reasoning_and_checks": "pass",
+    "mainline_and_sources": "pass_after_documented_software_repack",
+    "revision_and_history": "pass",
+    "cold_takeover": "pass_for_bounded_tasks"
+  },
+  "reference": "FINAL_INDEPENDENT_CHECKS.json",
+  "initial_evaluations_preserved": [
+    "DIRECT_FIRST_EVALUATION.md",
+    "RETRO_PLUS_FIRST_EVALUATION.json",
+    "RETRO_MINUS_FIRST_EVALUATION.json",
+    "COLD_A_FIRST_EVALUATION.md"
+  ],
+  "revealed_repair": "cold_A_center_frac_wording_only_numerics_unchanged",
+  "B_evidence_type": "real_later_author_interpretation_and_corrections_no_new_run_data",
+  "B_node_changes": {
+    "unchanged": 18,
+    "updated": 1,
+    "new": 3,
+    "removed": 0,
+    "old_route_revisions_retained": [
+      1,
+      2,
+      3
+    ]
+  },
+  "B_manifest_files_verified": 100,
+  "cold_B_input_files_verified": 7,
+  "cold_B_replay": "identical_except_timing",
+  "revision_numeric_replay": "identical",
+  "jev_incremental_benefit": "not_demonstrated",
+  "comparison_design": "single_purposefully_selected_case_nonrandom_unequal_work_coverage_and_budget",
+  "prohibited_inferences": [
+    "complete_history",
+    "general_unseen_project_success",
+    "causal_jev_benefit",
+    "time_speedup",
+    "physical_mechanism_certification",
+    "uninterrupted_initial_runs",
+    "runtime_isolation_proof"
+  ],
+  "additional_science_required_for_this_acceptance": false
+}

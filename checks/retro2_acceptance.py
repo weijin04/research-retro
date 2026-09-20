@@ -184,7 +184,9 @@ runpy.run_path('/work/driver.py',run_name='__main__')
             put([assumption])
         task = h.call("task", action="next", scope=scope["id"], obligation=identifier)["result"]
         packet = h.cli("task", "packet", task["id"])["result"]
-        h.check("evidence_view_hides_narrative_" + str(index), all(m["role"] == "evidence" for m in packet["materials"]))
+        h.check("definitions_available_but_narrative_hidden_" + str(index),
+                all(m["role"] in {"evidence", "definition"} for m in packet["materials"]) and
+                any(m["role"] == "definition" for m in packet["materials"]))
         if index == 0:
             h.cli("task", "reveal", task["id"], expected=3)
         h.call("task", action="seal", id=task["id"], document={"hypotheses": ["Parameter limit changes sampled time", "Rate truncation changes the operator", "Narrative overstates identifiable execution provenance"], "analysis": {"basis": "frozen source bindings and separately executed intervention matrix", "matrix": matrix}})

@@ -1,0 +1,11 @@
+{
+  "verdict": "fresh_B_reader_completed_requested_readiness_inventory",
+  "sources": "Six captured package sources, all SHA256 matched; validation report whole, analyzer7000/8224byte segment correctly disclosed.",
+  "verified": "Read original s-only RESULTS and analyzer gate conjunction; arithmetic20runs/8edges/ESSdeficit15.5–48/43*2.5=107.5fs and conditional800ps=3.2million0.25fssteps consistent.",
+  "not_verified": "No raw overlap/ESS/COLVAR replay; check.py hardcodes report numbers and computes summary arithmetic, accurately labeled. No long directory outputs captured; no running/completed/failed status inferred.",
+  "progress": "Recovered already executed s-only validation (overlap passes, ESS/stationarity and one original max-displacement gate fail) and named once-only long repair; next is recover its identity/protocol/results, not rerun basic pilot.",
+  "interpretation": "B Spine asked whether later data already existed. Reader finding them fulfills that task, not evidence B denied their existence.",
+  "remaining": "Report/CIF/path-CV boundary identity8A-smoke versus10A-validation not yet unified; long status unknown; no PMF/material or performance validation.",
+  "package_state": "r275 preserved; later host record update pending separate narrow check",
+  "jev": "No new Jev and no causal benefit inferred"
+}

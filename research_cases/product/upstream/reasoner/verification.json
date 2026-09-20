@@ -1,0 +1,146 @@
+{
+  "r1": {
+    "n": 23,
+    "recall": [
+      0,
+      9
+    ],
+    "false_kr": [
+      0,
+      13
+    ],
+    "abstain": 23
+  },
+  "r2": {
+    "n": 23,
+    "recall": [
+      0,
+      9
+    ],
+    "false_kr": [
+      2,
+      13
+    ],
+    "abstain": 18
+  },
+  "basis": {
+    "breakthrough_finite_time": {
+      "n": 14,
+      "recall": [
+        0,
+        5
+      ],
+      "false_kr": [
+        0,
+        8
+      ],
+      "abstain": 12
+    },
+    "equilibrium_iast": {
+      "n": 7,
+      "recall": [
+        0,
+        2
+      ],
+      "false_kr": [
+        2,
+        5
+      ],
+      "abstain": 4
+    },
+    "membrane_diffusion": {
+      "n": 2,
+      "recall": [
+        0,
+        2
+      ],
+      "false_kr": [
+        0,
+        0
+      ],
+      "abstain": 2
+    }
+  },
+  "K1_excluded": {
+    "n": 13,
+    "recall": [
+      0,
+      3
+    ],
+    "false_kr": [
+      2,
+      10
+    ],
+    "abstain": 8
+  },
+  "hkust_graph": {
+    "global_min": 0.0333747,
+    "percolation_threshold": 3.9208,
+    "cycle_witness": {
+      "edge": "w0026",
+      "residual": [
+        1,
+        -1,
+        -1
+      ]
+    },
+    "next_higher_threshold": 3.94477,
+    "winds_at_next_higher": false
+  },
+  "r3": {
+    "gf": {
+      "n": 1981,
+      "Kr_crossings": 0,
+      "Xe_crossings": 0,
+      "q50": 0.952484,
+      "raw_q50": -0.084785,
+      "q95": 1.144416,
+      "max": 1.292875,
+      "framewise_offset_range": [
+        1.037267,
+        1.0372690000000002
+      ]
+    },
+    "kr": {
+      "n": 1981,
+      "Kr_crossings": 0,
+      "Xe_crossings": 0,
+      "q50": 0.61138,
+      "raw_q50": -0.425889,
+      "q95": 0.921725,
+      "max": 1.166821,
+      "framewise_offset_range": [
+        1.037267,
+        1.0372690000000002
+      ]
+    },
+    "xe": {
+      "n": 1981,
+      "Kr_crossings": 0,
+      "Xe_crossings": 0,
+      "q50": 0.734386,
+      "raw_q50": -0.302882,
+      "q95": 1.061875,
+      "max": 1.266643,
+      "framewise_offset_range": [
+        1.037267,
+        1.0372690000000002
+      ]
+    }
+  },
+  "loaded_q50_changes_A": {
+    "kr": -0.34110399999999996,
+    "xe": -0.21809800000000001
+  },
+  "calf_r4_inherits_r3_q95": {
+    "r4": 1.1444164551189724,
+    "r3_csv": 1.144416,
+    "static_only": "false"
+  },
+  "limits": [
+    "No MD simulation or scorer rerun; independent postprocessing only.",
+    "Zero stored-frame crossings are not zero continuous-time crossing rate or independent Bernoulli trials.",
+    "Graph certificate verifies one representative failure, not all networks.",
+    "Ground-truth labels inherited from saved table, not independently verified against papers."
+  ]
+}

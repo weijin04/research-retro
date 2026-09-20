@@ -1,0 +1,201 @@
+{
+  "reads": [
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/predictions.csv",
+      "range": "packet exact candidate quote",
+      "purpose": "Bind pre-existing host question to original text; already read in A, not printed again to model",
+      "bytes_read_by_host": 0,
+      "mode": "programmatic_quote_selection",
+      "bytes_selected_for_jev": 462
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-gf-final.json",
+      "range": "packet exact candidate quote",
+      "purpose": "Bind pre-existing host question to original text; already read in A, not printed again to model",
+      "bytes_read_by_host": 0,
+      "mode": "programmatic_quote_selection",
+      "bytes_selected_for_jev": 27
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+      "range": "packet exact candidate quote",
+      "purpose": "Bind pre-existing host question to original text; already read in A, not printed again to model",
+      "bytes_read_by_host": 0,
+      "mode": "programmatic_quote_selection",
+      "bytes_selected_for_jev": 38
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+      "range": "packet exact candidate quote",
+      "purpose": "Bind pre-existing host question to original text; already read in A, not printed again to model",
+      "bytes_read_by_host": 0,
+      "mode": "programmatic_quote_selection",
+      "bytes_selected_for_jev": 60
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-B/materials/cxekr_loop/r5/feasibility-note.md",
+      "range": "whole",
+      "purpose": "Read B original only after completed impact; determine actual scientific/action implications",
+      "bytes_read_by_host": 9532,
+      "sha256_whole": "520ca4aa9fc1a8d05fb91008a34a954692061089553535b1fc3db7dfff47d969",
+      "after_impact_batch": "batch-a2b6e49273da492db498418347a289e4"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v105_magnitude_arbitration/RESULTS.md",
+      "range": "whole",
+      "purpose": "Check B claimed prior information boundary and magnitude adjudication",
+      "bytes_read_by_host": 5552,
+      "sha256_whole": "1eb8acbda14040e020d377a8e288d29bce9a6d9ad4bf20fe60c0f76a8c306148"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v33_finite_t_path_survival_falsifier/RESULTS.md",
+      "range": "whole",
+      "purpose": "Check tested cheap thermal alternative and its actual limits",
+      "bytes_read_by_host": 2658,
+      "sha256_whole": "a76a9664846444308a36c55e570f3caa3aa005db6b7bae79955e09324d22f8ee"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_finite_t_smoke/RESULTS.md",
+      "range": "whole",
+      "purpose": "Check claimed existing biased-sampling feasibility and stage boundary",
+      "bytes_read_by_host": 1995,
+      "sha256_whole": "d40d75828702e0d862ccab19c159a052f19fa51cbd1b4343da1a1a8919c3dd79"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v33_finite_t_path_survival_falsifier/path_survival.json",
+      "range": "whole",
+      "purpose": "Find per-frame underlying results to verify failed-frame sensitivity and stop",
+      "sha256_whole": "43448abba2b4a3f7ce8de6914914cbf1229bdc2e0af8040e972f6d3e88bb068e",
+      "host_view": "truncated; head/tail visible, whole read only by helper process",
+      "bytes_attempted_to_host": 47330,
+      "bytes_read_by_host": "unknown_truncated"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_finite_t_smoke/result.json",
+      "range": "whole",
+      "purpose": "Inspect original smoke gates, material identity and unfinished Stage1 evidence",
+      "bytes_read_by_host": 7878,
+      "sha256_whole": "8ec3c1665079edd6dd461ebaea09e9722bb6bbc9eff66b3633ea0a12d746e84a"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/screen.py",
+      "range": [
+        1,
+        65
+      ],
+      "purpose": "Verify Lambda is sourced from W_winding rather than B_kjmol",
+      "bytes_read_by_host": 2904,
+      "sha256_whole": "89af678e701f5b524ca87c4309f8ae27aa3ca9ccbae89e2f60c4c79aff9c5530"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/rules.py",
+      "range": [
+        1,
+        180
+      ],
+      "purpose": "Verify frozen 35 kJ/mol threshold compares Lambda quantities",
+      "bytes_read_by_host": 8795,
+      "sha256_whole": "ba0ddcc22ec26269aa1c58b48333e9f2466e2d42191957a13f6badd7450d8978"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/scans.py",
+      "range": [
+        1,
+        70
+      ],
+      "purpose": "Verify physical definition of barrier_kjmol decomposition",
+      "bytes_read_by_host": 2505,
+      "sha256_whole": "03ef05ad5b8ffc3f821ded3bf5d12d8a29a850b86608cb6339a2907cc69da8e3"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/lammps_scan.py",
+      "range": [
+        1060,
+        1085
+      ],
+      "purpose": "Verify hard-clearance target defining opened host energy",
+      "bytes_read_by_host": 1513,
+      "sha256_whole": "f1ef7f793e1912992ac39ab07f64cd7d5a6168c85d573446a185a97b3a9b8f0d"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/lammps_scan.py",
+      "range": [
+        1140,
+        1170
+      ],
+      "purpose": "Verify host deformation energy and interaction decomposition",
+      "bytes_read_by_host": 1810,
+      "sha256_whole": "f1ef7f793e1912992ac39ab07f64cd7d5a6168c85d573446a185a97b3a9b8f0d"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/screen.py",
+      "range": [
+        237,
+        243
+      ],
+      "purpose": "Trace actual winding-to-band function call",
+      "bytes_read_by_host": 302
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/screen.py",
+      "range": [
+        246,
+        252
+      ],
+      "purpose": "Trace actual winding-to-band function call",
+      "bytes_read_by_host": 211
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/screen.py",
+      "range": [
+        425,
+        431
+      ],
+      "purpose": "Trace actual winding-to-band function call",
+      "bytes_read_by_host": 256
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/screen.py",
+      "range": [
+        427,
+        433
+      ],
+      "purpose": "Trace actual winding-to-band function call",
+      "bytes_read_by_host": 377
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v33_finite_t_path_survival_falsifier/PLAN.md",
+      "range": "whole",
+      "purpose": "Check preregistered missing-frame decision sensitivity",
+      "bytes_read_by_host": 3871,
+      "sha256_whole": "0a60c72050f41b72b5f8bb206dd82be0c69cf63538bf46d07fb656cc4ea38fde"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v33_finite_t_path_survival_falsifier/path_survival.json",
+      "range": "whole",
+      "mode": "programmatic_recompute",
+      "purpose": "Recount tail row crossings and worst-case failed-frame rescue",
+      "program_input_bytes": 47331,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "43448abba2b4a3f7ce8de6914914cbf1229bdc2e0af8040e972f6d3e88bb068e"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_finite_t_smoke/result.json",
+      "range": "whole",
+      "mode": "programmatic_recompute",
+      "purpose": "Verify numerical duration, stage boundary, material and breadth of saved smoke receipts",
+      "program_input_bytes": 7879,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "8ec3c1665079edd6dd461ebaea09e9722bb6bbc9eff66b3633ea0a12d746e84a"
+    }
+  ],
+  "token_count": "unknown",
+  "new_B_body_read_before_impact": false,
+  "first_failures": [
+    "Initial followup queue display was not filtered by batch and was truncated; corrected by receipt ID filtering before assessment.",
+    "path_survival.json full text output exceeded 5000-token limit; mark host view partial, then parse rows computationally."
+  ],
+  "unique_scientific_files": 15,
+  "known_host_bytes": 50159,
+  "high_cost_reading_total": "unknown_exact_due_to_truncated_path_survival_view; known_host_bytes is lower bound; token_count unknown"
+}

@@ -1,0 +1,50 @@
+{
+  "unit_tests": {
+    "passed": true,
+    "count": 117,
+    "log": "unit-tests.log",
+    "sha256": "e94a06ad9f0843970bc00bbbcab0edf19bfa2c2723cb2c9e4f8217e5a5934da5"
+  },
+  "installed": {
+    "legacy": {
+      "install-result.json": {
+        "passed": true,
+        "assertions": 4,
+        "receipt": "var/retro3/final-legacy/install-result.json",
+        "sha256": "8674ee1b2aaccd60177106f6dbbce3b96b68c4a8cf8d99f85f4ae74a93a8d009"
+      },
+      "workflow-result.json": {
+        "passed": true,
+        "assertions": 37,
+        "receipt": "var/retro3/final-legacy/workflow-result.json",
+        "sha256": "a3299de211938c88c66ef3b05472d03fec1f32f0232fe6c57ca720e6e0b63160"
+      }
+    },
+    "retro2": {
+      "retro2-result.json": {
+        "passed": true,
+        "assertions": 48,
+        "receipt": "var/retro3/final-retro2/retro2-result.json",
+        "sha256": "39a0a6321a4305328230f3c6a65b01cf07114e41d3b3dd826cdd4b21468a58f9"
+      }
+    },
+    "retro3": {
+      "install-result.json": {
+        "passed": true,
+        "assertions": 4,
+        "receipt": "var/retro3/final-retro3/install-result.json",
+        "sha256": "8674ee1b2aaccd60177106f6dbbce3b96b68c4a8cf8d99f85f4ae74a93a8d009"
+      },
+      "workflow-result.json": {
+        "passed": true,
+        "assertions": 20,
+        "receipt": "var/retro3/final-retro3/workflow-result.json",
+        "sha256": "250b16660b1d5fcb2a2c00e87755a293b8db001918ee787f6150ac835186088f"
+      }
+    }
+  },
+  "wheel_sha256": "92a7b5a78affdcb973bed7767d8b11986ee220bcc9fd85091a53d14ef8e1d29d",
+  "skill_validation": "passed",
+  "reader_validation": "Generated views, source navigation and node --check passed; browser interactions not executed",
+  "scope": "Software behavior only; independent scientific evaluation recorded separately"
+}

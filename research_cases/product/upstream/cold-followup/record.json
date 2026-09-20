@@ -1,0 +1,133 @@
+{
+  "question": "冷接手已完成Stage1盘点后，当前认识和下一动作应如何推进？",
+  "reviewer": "upstream reasoner after independent cold handoff",
+  "analysis": "# 冷接手增量：Stage1盘点已完成\n\nfresh reader完成了r275建议的只读盘点。核对其引用的冻结包原文并逐字节匹配注册源：v13_s_only_validation/RESULTS.md完整2061 bytes，SHA256 7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9；analyze.py仅前7000/8224 bytes，SHA256 8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48。未读取其余代码、COLVAR或long目录。\n\n原报告记录20条完成、8条邻窗overlap均通过（Kr最小0.339、Xe最小0.322，门0.10），但Xe五窗仅一窗ESS达到200，另外四窗152.0–184.5；4/20块稳态失败，一条最大偏离0.544 Å也违反当时0.5 Å门。分析代码明确validated要求integration/coordinate/overlap/ESS/stationarity/R-hat全部成立。20=2×5×2，8=2×(5−1)，ESS不足15.5–48，43帧×2.5fs=107.5fs；这些摘要算术一致，不是原始时序或ESS重新计算。正向overlap不覆盖其他失败。\n\n报告指名一次两新seed、40ps的v13_s_only_validation_long修复，保留ESS、稳态等门，最大伞偏离改为诊断；修复失败后不允许继续加长或改门。本次没有该具名修复结果的可核证据，不能判它已做或未做。分析入口指向10Å path-CV资产，不能把其模型身份与8Å smoke自动合并。\n\n这完成了旧B“先盘点”的任务，并补充后续证据；不是对旧B方法或窄结论的反证。新增一个原报告观察，更新gap:stage1和route:stage1_readiness：从“是否存在邻窗测试”推进为“已有严格失败及具名repair，下一接手只恢复repair收据/完整时序和身份关系”。本轮不执行该下一任务。其他节点与科学结论保持原版本；r275固定包保持只读；无Jev调用、无模拟。\n",
+  "revisions": {
+    "turn:r5_correction": 1,
+    "question:sign": 2,
+    "route:next": 4,
+    "route:r4stop": 1,
+    "route:stage1_readiness": 1,
+    "gap:observable": 1,
+    "gap:stage1": 1,
+    "attempt:r4run1": 1,
+    "claim:boundednegative": 2,
+    "claim:void": 2,
+    "obs:graph": 1,
+    "obs:r3frames": 1,
+    "obs:r4run2": 1,
+    "obs:reuse": 2,
+    "obs:v33_negative": 1,
+    "asset:mip_smoke": 1
+  },
+  "materials": [
+    {
+      "key": "validation_report",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/RESULTS.md",
+      "role": "evidence",
+      "sha256": "7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9"
+    },
+    {
+      "key": "validation_code",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/analyze.py",
+      "role": "definition",
+      "bytes": [
+        0,
+        7000
+      ],
+      "sha256": "8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "obs:s_only_validation",
+      "type": "observation",
+      "title": "冷接手发现：邻窗通过，严格s-only验证仍失败",
+      "statement": "完整原报告记载20条完成、8条邻窗overlap均过；Xe五窗仅一窗ESS≥200，另四窗152.0–184.5，4/20块稳态失败，一条伞偏离0.544 Å也超当时0.5 Å门。因此严格协议未验证，尚无PMF或材料结论。",
+      "status": "observed",
+      "scope": {
+        "source_level": "原报告与分析代码前7000/8224 bytes；未重算COLVAR/ESS",
+        "identity": "分析入口v13_transverse_string_10A/path_cv_result.json；不等同8Åsmoke",
+        "handoff": "冷接手完成盘点后的增量结果"
+      },
+      "rationale": "已核对包内原件哈希并与注册源对应字节匹配。代码validated为六类gate合取；摘要计数与43×2.5fs算术一致。原报告保留一次40ps新seed修复，结果当前未核验。",
+      "sources": [
+        "validation_report",
+        "validation_code"
+      ],
+      "details": {
+        "repair_named": "v13_s_only_validation_long",
+        "repair_execution": "unknown; do not infer done or not done",
+        "repair_constraint": "one iteration, same ESS/stationarity/overlap/R-hat/coordinate gates; max displacement becomes diagnostic",
+        "source_hashes": {
+          "report": "7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9",
+          "code_segment": "8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48"
+        }
+      }
+    },
+    {
+      "id": "gap:stage1",
+      "type": "gap",
+      "title": "未核验的是具名repair，不是邻窗测试是否存在",
+      "statement": "s-only后续已有20条运行和8条邻窗通过，但ESS/块稳态及当时一条integration门失败，尚未构成合格PMF。原报告指名一次两新seed、40ps修复；当前缺少该repair结果与完整时序，不能判已做或未做。",
+      "status": "open",
+      "scope": {
+        "reconstruction": "B历史更正及具名原件",
+        "generalization": "仅当前检查的材料、代理、模型、协议；不外推全项目"
+      },
+      "rationale": "冷接手完成已有产物盘点并由host核对冻结原文。10Å path-CV入口与8Å smoke须先核对身份/边界；并非原smoke缺口被自动解决。",
+      "sources": [
+        "validation_report",
+        "validation_code"
+      ],
+      "requires": [
+        "asset:mip_smoke",
+        "obs:s_only_validation"
+      ]
+    },
+    {
+      "id": "route:stage1_readiness",
+      "type": "route",
+      "title": "盘点已完成：下一接手恢复具名repair证据",
+      "statement": "已完成r275要求的Stage1只读盘点：找到s-only严格验证失败及具名一次repair。后续应恢复v13_s_only_validation_long的协议、运行收据与时序并核对模型身份，再判断是否满足未放宽的ESS/稳态等门；不要重开初级overlap pilot。",
+      "status": "open",
+      "scope": {
+        "reconstruction": "B历史更正及具名原件",
+        "generalization": "仅当前检查的材料、代理、模型、协议；不外推全项目"
+      },
+      "rationale": "这是旧待办完成后的增量推进，不是对旧B判断的反证。高overlap和R-hat通过仍不能替代ESS及块稳态。没有repair结果只表示当前未核验，不等于未运行。",
+      "sources": [
+        "validation_report",
+        "validation_code"
+      ],
+      "requires": [
+        "obs:v33_negative",
+        "asset:mip_smoke",
+        "gap:stage1",
+        "route:r4stop",
+        "obs:s_only_validation"
+      ],
+      "links": [
+        "route:next",
+        "gap:observable",
+        "turn:r5_correction"
+      ],
+      "action": "下一接手只读恢复具名long repair的冻结协议、收据和完整时序，先核对10Å路径/结构/边界身份，再复核ESS与稳态；本轮不访问long目录、不追加采样、不改门。",
+      "details": {
+        "completed_task": "r275 Stage1 existing-product inventory",
+        "completed_by": "fresh reader, independently checked captured originals",
+        "new_simulation_authorized": false,
+        "repair_execution": "unknown from inspected evidence"
+      }
+    }
+  ],
+  "checks": [
+    "reasoner/cold-followup/REPORT.md",
+    "reasoner/cold-followup/read-trace.json",
+    "reasoner/cold-followup/input-hashes.json",
+    "reasoner/cold-followup/summary-check.json",
+    "reasoner/cold-followup/reader-REPORT.md",
+    "reasoner/cold-followup/reader-sources_used.json",
+    "reasoner/cold-followup/reader-check_result.json"
+  ]
+}

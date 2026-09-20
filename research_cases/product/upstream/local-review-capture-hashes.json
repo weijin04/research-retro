@@ -1,0 +1,158 @@
+[
+  {
+    "id": "dsh-c-38",
+    "checks": [
+      {
+        "key": "m18",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m18",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-05",
+    "checks": [
+      {
+        "key": "m73",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m73",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0015",
+    "checks": [
+      {
+        "key": "m11",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m11",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0030",
+    "checks": [
+      {
+        "key": "m30",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m30",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-16",
+    "checks": [
+      {
+        "key": "m91",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m10",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0024",
+    "checks": [
+      {
+        "key": "m18",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m21",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-24",
+    "checks": [
+      {
+        "key": "m90",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m80",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0004",
+    "checks": [
+      {
+        "key": "m12",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m16",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-34",
+    "checks": [
+      {
+        "key": "m4",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m95",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-b-16",
+    "checks": [
+      {
+        "key": "m33",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m47",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-08",
+    "checks": [
+      {
+        "key": "m77",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m77",
+        "bytes_match_hash": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0023",
+    "checks": [
+      {
+        "key": "m3",
+        "bytes_match_hash": true
+      },
+      {
+        "key": "m3",
+        "bytes_match_hash": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "completed_utc": "2026-09-20T18:46:14.821222+00:00",
+  "verdict": "bounded_upstream_candidate_to_host_reconstruction_chain_demonstrated",
+  "bundle": "upstream-judgment.retro/exports/reasoner-r225",
+  "actual_bundle_state_revision": 227,
+  "scientific_nodes": 11,
+  "integrity_and_replay": "UPSTREAM_VERIFICATION.json",
+  "information_flow": {
+    "candidate_generation": "dsh DeepSeek-V41-Flash 30+20+40 candidates from 96 bounded captures; A worker first failed then retry succeeded",
+    "judge_receipts": 90,
+    "judge_timestamp_range": [
+      "2026-09-20T18:29:21.875911+00:00",
+      "2026-09-20T18:32:51.460563+00:00"
+    ],
+    "first_scientific_node_timestamp": "2026-09-20T18:40:55.185765+00:00",
+    "judge_precedes_first_scientific_node": true,
+    "reasoner_queue_scope": "first 15",
+    "selected_ids": [
+      "dsh-c-14",
+      "dsh-c-15",
+      "dsh-c-07"
+    ],
+    "first_original_reads": [
+      "r4/round4-scoring-summary.md",
+      "gt-reforge/round3-summary.md",
+      "r4/codex-brief-run2.md",
+      "r4/codex-brief.md"
+    ],
+    "first_read_evidence_boundary": "read-trace is host-maintained ordered receipt without per-read timestamps or independent access enforcement; selection-to-read mapping is supported, exclusive access sequence is not proven."
+  },
+  "read_counts": {
+    "unique_scientific_originals": 17,
+    "unique_model_text_sources": 15,
+    "model_text_read_entries": 16,
+    "model_original_text_bytes_including_rereads": 79450,
+    "program_input_bytes_including_rereads": 810572,
+    "exact_tokens": "unknown",
+    "excludes": "queue/protocol/navigation/context overhead and upstream worker/Jev input bytes; not total cost"
+  },
+  "candidate_vs_host": {
+    "candidate_seeded": [
+      "run1 input defect and VOID",
+      "run2 registered stop",
+      "CALF loaded-proxy negative result and broad author mechanism claim"
+    ],
+    "host_verified": [
+      "HKUST independent winding certificate and upper adjacent threshold failure",
+      "CSV 2/13 denominator and conditional groups",
+      "5943 saved-frame proxy negative result and loaded q50 differences"
+    ],
+    "host_added_beyond_first15": [
+      "CALF R4 row4 reuses R3 dynamic guest-free q95 and is not independent static evidence",
+      "observable/sampling narrowing of guest-induced-opening exclusion",
+      "specific inexpensive CALF geometry/passage followup and two new unsent local questions"
+    ]
+  },
+  "local_judgment_handling": {
+    "c14": "core confirmed by actual check, not by confidence",
+    "c15": "stale not interpreted as permission to discard continuing stop constraint",
+    "c07": "counters bounded to sampled proxy; broad mechanism exclusion rejected"
+  },
+  "limitations": [
+    "Not 43k-file project reconstruction; only R3/R4 local inquiry.",
+    "No zero-knowledge novelty claim beyond delivered first15.",
+    "No complete transcript or enforced exclusive read audit.",
+    "No raw-coordinate dynamics reanalysis, label verification or full network audit.",
+    "No matched candidate-only/no-Jev control, randomization or equal scope budget; no causal speed or quality gain.",
+    "Old three-arm and Luna pretrial excluded.",
+    "Post-hoc local-review findings and forthcoming prompt/truncation repair do not retroactively improve original 90 relations.",
+    "Two generated followup local questions are prepared only, not submitted/closed."
+  ],
+  "failures_preserved": [
+    "initial dsh A profile startup failure and retry",
+    "initial reasoner queue-shape error/truncation and bounded reread",
+    "initial claim source lists history-only; later source-binding repair with scientific conclusions retained"
+  ],
+  "allowed_claim": "The separate cheap candidate/Jev queue preceded host scientific construction and supported a small completed original-evidence investigation with calibrated recorded results and a usable limited Spine.",
+  "unsupported_claim": "Jev caused improved science or lower total cost; global discovery/recall/full project completion."
+}

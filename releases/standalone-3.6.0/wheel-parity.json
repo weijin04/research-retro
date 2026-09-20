@@ -1,0 +1,207 @@
+{
+  "wheel_sha256": "dddcb9a5dcc21675d18445713be14f1f8d25d11e21f5d62414a3a0b638c18359",
+  "matched_files": 50,
+  "files": [
+    {
+      "path": "research_harness/__init__.py",
+      "sha256": "f94d872c4623a77d8f374e8b4fbde557fc99b9789eb201d6a4ba4cba95a45d85"
+    },
+    {
+      "path": "research_harness/agent_tools.py",
+      "sha256": "65f082d379977e43274d70e66ba5eaf917a3296c94af179951489553dcaf30dd"
+    },
+    {
+      "path": "research_harness/cli.py",
+      "sha256": "0163b4e545e5a78a648760377d8d8406c13dd3dba9b0fd176a47d8d5440e1204"
+    },
+    {
+      "path": "research_harness/common.py",
+      "sha256": "e64d9144101c29984975fcea2f5ccb466af423bf8a87155cec13037ead11befb"
+    },
+    {
+      "path": "research_harness/config.py",
+      "sha256": "f8e339ca462804c51cee27bfa49559f824ee3cc7a920678899cdc7236d25f291"
+    },
+    {
+      "path": "research_harness/discovery.py",
+      "sha256": "6a56cc76061ce2b99e817c0609493060681fb55b155b700b5ddfc5d73979e062"
+    },
+    {
+      "path": "research_harness/investigation.py",
+      "sha256": "cb0b85c6903aaf72dab502cef583ca2aa34c4de4ca1ab55bd438ae540171b8d4"
+    },
+    {
+      "path": "research_harness/retro2.py",
+      "sha256": "d81ebda12aa781af7f9cb290e7b1ef6d8d03cb5d7bccae6445e75593351d02e6"
+    },
+    {
+      "path": "research_harness/semantic.py",
+      "sha256": "21a5c96218cc244df574801a889acdda7beb67cb6f340a9ee7a51cb465f2a31c"
+    },
+    {
+      "path": "research_harness/triage.py",
+      "sha256": "006be1cdf7dbda9a9d13bb42fb947446b30dbec8c4796e4192ee297c987349db"
+    },
+    {
+      "path": "research_harness/unit.py",
+      "sha256": "1638e769d98c4089b654c75506e6fabc6139dde98976552b0930ae8208ad21d8"
+    },
+    {
+      "path": "research_harness/workflow.py",
+      "sha256": "67909759aa51d3680b6588d458af463720d128e6ccb0f006c7029eb0fd41d9f0"
+    },
+    {
+      "path": "research_harness/context/__init__.py",
+      "sha256": "13085a83f51b309c40ed404033b92e2ab8c492994367a662e090314c4ed324aa"
+    },
+    {
+      "path": "research_harness/contracts/__init__.py",
+      "sha256": "6c07d31e038e2f2acff6e9bee63bb73ed6666ade212c371a10a395ad130969d9"
+    },
+    {
+      "path": "research_harness/diagnosis/__init__.py",
+      "sha256": "3519bd48abd03a4e006105c304f7440bc3e42025ad141345839ff677be76ca1b"
+    },
+    {
+      "path": "research_harness/diagnosis/scoped.py",
+      "sha256": "d7feaa59a66311906641a6a835cd713682d662cf2a32dfb67ca43f5d5824f8da"
+    },
+    {
+      "path": "research_harness/diagnosis/support.py",
+      "sha256": "9800875892569c7eb01d7287c6b3ae5bdedeb84a5accc3d8980b51145be812bb"
+    },
+    {
+      "path": "research_harness/governance/__init__.py",
+      "sha256": "9c9da208314d267c5a8c1c490a3c7c215607301d41e486d461115d678f04f435"
+    },
+    {
+      "path": "research_harness/governance/patches.py",
+      "sha256": "9cb47d61261d268ad3c9fb24975589866c121df6ec60f2e541bac8e55c0ff133"
+    },
+    {
+      "path": "research_harness/handoff/__init__.py",
+      "sha256": "f31eb57a4daffcaa5157e1afab4b6d79d3c9f7305a80e993801dc9240abd9512"
+    },
+    {
+      "path": "research_harness/handoff/portable.py",
+      "sha256": "bb4ae8ba455e5f1e394c3811363bc74df41f274c1c50f7567342c6678d9fed45"
+    },
+    {
+      "path": "research_harness/ingest/__init__.py",
+      "sha256": "185e8b936aa5c487f8057fe831851d24a0411bff7ba930763419367ffd65ce69"
+    },
+    {
+      "path": "research_harness/ingest/service.py",
+      "sha256": "e5260c9e21140db177a030d4081d7fadb929aef0f21374919c1af87348a82fa6"
+    },
+    {
+      "path": "research_harness/parsers/__init__.py",
+      "sha256": "bb0971d2e8eba5079e11331a5c24c27251ba488d7de22a67c85210e2c0cb6e5f"
+    },
+    {
+      "path": "research_harness/parsers/basic.py",
+      "sha256": "0831483d6630e34bdb3d9043f191716d2f9c0139a07c74ce08c3867d9425cd76"
+    },
+    {
+      "path": "research_harness/realization/__init__.py",
+      "sha256": "dfd23733374fdcfd7ca42ebff1079aa74d6ad793ed094e368385a4774b840d98"
+    },
+    {
+      "path": "research_harness/realization/contracts.py",
+      "sha256": "f11041cd46f3a5455a2a5aad46a1cbf2782fda58f448c7f9fe744eefbc7b3fc4"
+    },
+    {
+      "path": "research_harness/reconstruction/__init__.py",
+      "sha256": "127a02211775df77d6de57a0fa5c59b96b1c93ce1b9690e56e015f2859cdbc28"
+    },
+    {
+      "path": "research_harness/reconstruction/bundle.py",
+      "sha256": "344bbfdb99d90e6b29d91d7069582d487951ab7c3158b403937bbcdf080adbb4"
+    },
+    {
+      "path": "research_harness/reconstruction/identity.py",
+      "sha256": "ab07dcc69d437e62c16730d27aed66e4229753a11c45d61a22b055eeaabb2818"
+    },
+    {
+      "path": "research_harness/reconstruction/provenance.py",
+      "sha256": "bd8096663b50756ab5edbc3bad50c6a493b519419a49fdea909f85d5258167e9"
+    },
+    {
+      "path": "research_harness/reconstruction/workbench.py",
+      "sha256": "281de5a29cf4356cdf53345bd10d69c8927140dad29424eee663ab5fab5cf616"
+    },
+    {
+      "path": "research_harness/recovery/__init__.py",
+      "sha256": "53a8c987285bc36893dc512ae80d1fd7ea5d9ce35e783c25a5e50ee0bf20a050"
+    },
+    {
+      "path": "research_harness/recovery/engine.py",
+      "sha256": "83e883c691a163b2fc05e6bc2e5e8bab54c10e78eadecf086e355998453d4e0d"
+    },
+    {
+      "path": "research_harness/recovery/snapshot.py",
+      "sha256": "c1ebc8fc33d716b6e7b1b791e6547a4021416421df2125c6771649d098bf5f4d"
+    },
+    {
+      "path": "research_harness/recovery/static.py",
+      "sha256": "328f21373072dfc9b6bf8997380fea77c58b5e5c4c617424056354ba634b52b2"
+    },
+    {
+      "path": "research_harness/resources/AGENT.md",
+      "sha256": "7d831e08b2f63860a827c1acca6f0efe26d6ffa5b0dba57787d613ec5cc6d56e"
+    },
+    {
+      "path": "research_harness/resources/__init__.py",
+      "sha256": "079ff5f02af6ff69c0cfa6595f61268de2ea89ead41712280870f08a99804eed"
+    },
+    {
+      "path": "research_harness/resources/contract.schema.json",
+      "sha256": "72596a56dcf516f96fee6fdf5a1c4b03ffd45f3c9c71d71ab422987883dfde0a"
+    },
+    {
+      "path": "research_harness/resources/retro2.schema.json",
+      "sha256": "cfa074d782c58a1de8e2e1450fd15ac79d3052e109293afe815d57051d5f2c77"
+    },
+    {
+      "path": "research_harness/resources/tools.json",
+      "sha256": "1c1b5bfc675643c8704d23f8b7edb18aaa99ce84d838d17f7bc425e92387c661"
+    },
+    {
+      "path": "research_harness/resources/research-retro/SKILL.md",
+      "sha256": "191ef43a444204d012fe06c2a82bea7192829fa4985a8b27ed1b0b9128a461c6"
+    },
+    {
+      "path": "research_harness/resources/research-retro/references/protocol.md",
+      "sha256": "49bcbeeb293532d2f7a20f39d5e67b20734d7d5cf5b009c011b6ff8e3c7efc91"
+    },
+    {
+      "path": "research_harness/runner/__init__.py",
+      "sha256": "733b46653ba31757b829fd43aab4e70a9a1961c800ea02ebe0ffe6af34e757fc"
+    },
+    {
+      "path": "research_harness/runner/contained.py",
+      "sha256": "6926dfacbfe5814068cad2394c186ee584415a922212a85b7a22e0ea078ef7b1"
+    },
+    {
+      "path": "research_harness/storage/__init__.py",
+      "sha256": "f608da5492deb65e30e21af157c6c1399b1a4d38301caf5aa2b2c370a1d0a636"
+    },
+    {
+      "path": "research_harness/storage/store.py",
+      "sha256": "925b1a608fd1b075fa2b540396cd295ab0c598f84aa90375f7ba0708a22d06a6"
+    },
+    {
+      "path": "research_harness/views/__init__.py",
+      "sha256": "f9c3036726c5b1f6ac2b5b5136d5a74ed431f3b3f9b4496a48df607921786382"
+    },
+    {
+      "path": "research_harness/views/report.py",
+      "sha256": "0c0fe2c75379d73b8fdd56ca4f6f0bec9b8d85230767a8597521cc639cc14416"
+    },
+    {
+      "path": "research_harness/views/spine.py",
+      "sha256": "2109c1362c0b6b4c224122d038af3e1e3627921ca20c965eb8d4da81f47b82c3"
+    }
+  ],
+  "status": "packaged product matches source"
+}

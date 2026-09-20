@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "spine",
+    "--input",
+    "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/reasoner/cold-followup/spine.json"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 0.24053259199718013
+}

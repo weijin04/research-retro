@@ -253,7 +253,9 @@ def outer(args):
     output.mkdir(parents=True, exist_ok=True)
     sandbox = Path(tempfile.mkdtemp(prefix="research-retro-isolated-"))
     shutil.copytree(Path(args.wheelhouse).resolve(), sandbox / "wheels")
-    shutil.copy2(__file__, sandbox / "acceptance.py")
+    shutil.copy2(getattr(args, "driver", None) or __file__, sandbox / "acceptance.py")
+    if getattr(args, "driver", None):
+        shutil.copy2(__file__, sandbox / "standalone_acceptance.py")
     wheel = next((sandbox / "wheels").glob("research_retro-*.whl"))
     with zipfile.ZipFile(wheel) as package:
         names = package.namelist()

@@ -1,6 +1,6 @@
 {
   "plan_version": "1.0",
-  "status": "retro_2_release_complete_F1_E1_remain_paused",
+  "status": "reconstruction_product_delivered_harness_deferred",
   "implementation_root_suggested": ".",
   "phase_order": [
     "R0",
@@ -8,6 +8,9 @@
     "R2",
     "SCU",
     "RETRO2",
+    "RETRO3",
+    "RETRO35",
+    "PRODUCT",
     "F1",
     "E1"
   ],
@@ -45,6 +48,24 @@
       "name": "Research Retro 2.0 确定性恢复与调查产品",
       "release": true,
       "exit_task": "RETRO2-05"
+    },
+    {
+      "id": "RETRO3",
+      "name": "Research Retro 3.0 宿主工作流与独立产品交付",
+      "release": true,
+      "exit_task": "RETRO3-05"
+    },
+    {
+      "id": "RETRO35",
+      "name": "Research Retro 3.5 语义一致性、真实Jev与未关联发现",
+      "release": true,
+      "exit_task": "RETRO35-01"
+    },
+    {
+      "id": "PRODUCT",
+      "name": "陌生研究者可使用的完整复盘产品闭环",
+      "release": true,
+      "exit_task": "PRODUCT-01"
     },
     {
       "id": "F1",
@@ -1854,6 +1875,234 @@
         "releases/standalone-2.0.0/cold-agent-review.md",
         "releases/standalone-2.0.0/cold-agent-recheck.md"
       ]
+    },
+    {
+      "id": "RETRO3-01",
+      "phase": "RETRO3",
+      "title": "宿主主持的完整工作方法",
+      "status": "done",
+      "depends_on": [
+        "RETRO2-05"
+      ],
+      "objective": "发现问题、恢复尝试、论证、对象修订与残余材料检查成为随包方法，而非临场拼装。",
+      "actions": [
+        "发现问题、恢复尝试、论证、对象修订与残余材料检查成为随包方法，而非临场拼装。"
+      ],
+      "deliverables": [
+        "src/research_harness/resources/research-retro/"
+      ],
+      "acceptance": [
+        "宿主协议与完整请求示例可随 wheel 获取",
+        "真实项目试用发现与限制有独立记录"
+      ],
+      "owner_role": "独立产品实现与验收",
+      "jev_use": "无模型调用；可选宿主侧判断未宣称收益",
+      "completion_evidence": [
+        "releases/standalone-3.0.0/REPORT.md",
+        "releases/standalone-3.0.0/acceptance.json",
+        "releases/standalone-3.0.0/EVALUATION.md"
+      ]
+    },
+    {
+      "id": "RETRO3-02",
+      "phase": "RETRO3",
+      "title": "问题上下文与可修订科学状态",
+      "status": "done",
+      "depends_on": [
+        "RETRO3-01"
+      ],
+      "objective": "复用 Store、locator 和支持投影，分离事实条件与历史解释，允许科学表示与范围改变。",
+      "actions": [
+        "复用 Store、locator 和支持投影，分离事实条件与历史解释，允许科学表示与范围改变。"
+      ],
+      "deliverables": [
+        "src/research_harness/workflow.py",
+        "src/research_harness/investigation.py"
+      ],
+      "acceptance": [
+        "精确选材与早期定义",
+        "范围与对象修订保留历史",
+        "来源片段和完整文件可区分"
+      ],
+      "owner_role": "独立产品实现与验收",
+      "jev_use": "无模型调用；可选宿主侧判断未宣称收益",
+      "completion_evidence": [
+        "releases/standalone-3.0.0/REPORT.md",
+        "releases/standalone-3.0.0/acceptance.json",
+        "releases/standalone-3.0.0/EVALUATION.md"
+      ]
+    },
+    {
+      "id": "RETRO3-03",
+      "phase": "RETRO3",
+      "title": "整体纠错、阅读与便携交接",
+      "status": "done",
+      "depends_on": [
+        "RETRO3-02"
+      ],
+      "objective": "更新显式影响、保留独立支持，统一生成主线、当前状态与原件导航；宿主处理语义遗漏。",
+      "actions": [
+        "更新显式影响、保留独立支持，统一生成主线、当前状态与原件导航；宿主处理语义遗漏。"
+      ],
+      "deliverables": [
+        "src/research_harness/workflow.py",
+        "src/research_harness/unit.py"
+      ],
+      "acceptance": [
+        "AND/OR 和冲突行为",
+        "新材料与旧上下文失效",
+        "原项目不可用时便携包仍可查询原件",
+        "主线避免原始 JSON 淹没"
+      ],
+      "owner_role": "独立产品实现与验收",
+      "jev_use": "无模型调用；可选宿主侧判断未宣称收益",
+      "completion_evidence": [
+        "releases/standalone-3.0.0/REPORT.md",
+        "releases/standalone-3.0.0/acceptance.json",
+        "releases/standalone-3.0.0/EVALUATION.md"
+      ]
+    },
+    {
+      "id": "RETRO3-04",
+      "phase": "RETRO3",
+      "title": "统一产品入口与独立发行",
+      "status": "done",
+      "depends_on": [
+        "RETRO3-03"
+      ],
+      "objective": "一条 start 命令建立或续接独立 workspace，提供宿主方法与入口，保留旧接口。",
+      "actions": [
+        "一条 start 命令建立或续接独立 workspace，提供宿主方法与入口，保留旧接口。"
+      ],
+      "deliverables": [
+        "src/research_harness/cli.py",
+        "src/research_harness/agent_tools.py",
+        "README.md"
+      ],
+      "acceptance": [
+        "新状态拒绝原项目内部路径",
+        "续接不改既有目标或科学状态",
+        "不依赖开发仓库或个人配置"
+      ],
+      "owner_role": "独立产品实现与验收",
+      "jev_use": "无模型调用；可选宿主侧判断未宣称收益",
+      "completion_evidence": [
+        "releases/standalone-3.0.0/REPORT.md",
+        "releases/standalone-3.0.0/acceptance.json",
+        "releases/standalone-3.0.0/EVALUATION.md"
+      ]
+    },
+    {
+      "id": "RETRO3-05",
+      "phase": "RETRO3",
+      "title": "集中产品验证与交付",
+      "status": "done",
+      "depends_on": [
+        "RETRO3-04"
+      ],
+      "objective": "完成最终安装包回归、兼容、隔离生命周期和可核验发行产物；科学评价不夸大。",
+      "actions": [
+        "完成最终安装包回归、兼容、隔离生命周期和可核验发行产物；科学评价不夸大。"
+      ],
+      "deliverables": [
+        "checks/retro3_acceptance.py",
+        "research_cases/retro3/",
+        "releases/standalone-3.0.0/"
+      ],
+      "acceptance": [
+        "117 项回归通过",
+        "旧版 4+37、2.0 48、新版 4+20 通过",
+        "初次失败、修复和对照分别保留",
+        "不把软件交付冒充通用科学成熟性证明"
+      ],
+      "owner_role": "独立产品实现与验收",
+      "jev_use": "无模型调用；可选宿主侧判断未宣称收益",
+      "completion_evidence": [
+        "releases/standalone-3.0.0/REPORT.md",
+        "releases/standalone-3.0.0/acceptance.json",
+        "releases/standalone-3.0.0/EVALUATION.md"
+      ]
+    },
+    {
+      "id": "RETRO35-01",
+      "phase": "RETRO35",
+      "title": "修复三项真实模块缺陷并完成一次r655验收",
+      "status": "done",
+      "objective": "字段级语义待审传播、工作流真实Jev窄判断、独立未关联资产队列进入全部上下文。",
+      "depends_on": [
+        "RETRO3-05"
+      ],
+      "owner_role": "Codex development host",
+      "actions": [
+        "修改projection和修订/发布工作流的字段一致性约束。",
+        "接入TypeSafe真实API并保存请求、判别和状态回写。",
+        "建立不受query过滤的未关联队列，启动与上下文强制曝光。",
+        "完成所有代码后统一执行软件检查与一次真实r655修复验收。"
+      ],
+      "deliverables": [
+        "src/research_harness/semantic.py",
+        "src/research_harness/workflow.py",
+        "research_cases/retro35/accept_r655.py",
+        "var/retro35/changes.diff",
+        "var/retro35/acceptance/result.json"
+      ],
+      "acceptance": [
+        "矛盾r655在修平前持续needs_review=true",
+        "真实Jev调用数大于零且判别回执落入状态",
+        "无指定branch的独立候选进入复盘上下文"
+      ],
+      "jev_use": "两项窄任务：前提失效与行动清理；实际API调用，不复用合成结果。",
+      "completion_evidence": [
+        "research_cases/retro35/ACCEPTANCE.md",
+        "var/retro35/acceptance/result.json",
+        "var/retro35/acceptance/acceptance.jsonl",
+        "var/retro35/affected-checks-delivery.log"
+      ],
+      "completion_note": "模块三项修复及r655目标条件完成；验收有中断续跑，未满足一次无中断执行，原始失败完整保留。"
+    },
+    {
+      "id": "PRODUCT-01",
+      "phase": "PRODUCT",
+      "title": "交付上游局部判断驱动的独立科研复盘产品",
+      "status": "done",
+      "objective": "将现有来源与版本内核变成陌生用户能实际使用的科研复盘产品，而非继续增加科学门禁。",
+      "depends_on": [
+        "RETRO35-01"
+      ],
+      "owner_role": "development host with independent user/evaluator agents",
+      "actions": [
+        "读取3.0/3.5实现、真实失败与Pro规划，保留历史证据。",
+        "实现直接记录、独立发现、Scientific Spine、详细地图与可携原件/核查。",
+        "按用户纠偏实现程序选材→便宜worker候选→Jev原位关系→强宿主调查，实际使用dsh v4.1flash。",
+        "完成候选前置真实重建、强reasoner新关系回流、新材料影响判断、修订及两次新Agent后续任务。",
+        "保留误判、首次使用失败、揭示后修复与成本边界，完成隔离安装和兼容交付。",
+        "按最终产品优先要求停止新增案例，整合start --worker与单命令discover，输出可读简报并自动续批。"
+      ],
+      "deliverables": [
+        "src/research_harness/triage.py",
+        "src/research_harness/workflow.py",
+        "src/research_harness/views/spine.py",
+        "src/research_harness/resources/research-retro/",
+        "research_cases/product/REPORT.md",
+        "releases/standalone-3.6.0/"
+      ],
+      "acceptance": [
+        "陌生材料经用户入口得到原件可追溯的主线和地图。",
+        "发现最新叙事未正确表达的历史问题并完成实际核查。",
+        "冷Agent据此完成后续任务；新证据更新相关理解和行动并保留独立结果。",
+        "产品可独立安装，核心无本地项目特调。",
+        "实际低成本模型和Jev在首个科学节点形成前工作；强宿主从候选回原件完成核查且能推翻或收窄局部判断。"
+      ],
+      "jev_use": "上游批量support/scope/genealogy/impact/route/action局部判断；90初始+2回流+7修订前请求，另3次揭示后重问。无概率真值门槛，不自动改科学状态。",
+      "completion_evidence": [
+        "README.md",
+        "src/research_harness/discovery.py",
+        "src/research_harness/resources/research-retro/SKILL.md",
+        "releases/standalone-3.6.0/REPORT.md",
+        "releases/standalone-3.6.0/acceptance.json",
+        "research_cases/product/REPORT.md"
+      ],
+      "completion_note": "通用产品及完整工作流已交付；已知误判/缺件保留为使用边界，不追加benchmark，不宣称总体科学收益或成本优势。"
     }
   ],
   "change_log": [
@@ -1920,8 +2169,26 @@
         "SCU-04"
       ],
       "scope_effect": "F1/E1 remain paused. Existing real scientific sources and historical R2 stores are untouched."
+    },
+    {
+      "reason": "Deliver standalone host-led Research Retro 3.0. User refocused work from expanding scientific case reconstruction to product completion.",
+      "task_ids": [
+        "RETRO3-01",
+        "RETRO3-02",
+        "RETRO3-03",
+        "RETRO3-04",
+        "RETRO3-05"
+      ],
+      "scope_effect": "Separate workspaces only; larger Harness deferred. Software checks pass; general scientific reconstruction reliability and Jev benefit remain unproven."
     }
   ],
-  "pause_source": "2026-09-20 user: if reconstruction is fully usable, temporarily close here",
-  "checkpoint": "F1_CHECKPOINT.md"
+  "pause_source": "2026-09-20 user: deliver standalone Research Retro; larger scientific Harness deferred; all investigation outputs separate from source projects",
+  "checkpoint": "F1_CHECKPOINT.md",
+  "evaluation_boundaries": [
+    "Single purposefully selected research history; not exhaustive or cross-domain success.",
+    "Earlier three-arm host-led comparison and new upstream trial are different evidence; no causal accuracy or speed/cost gain established.",
+    "Real dsh DeepSeek-V41-Flash and Jev requests precede strong synthesis; local errors and substantial headless worker overhead remain visible.",
+    "Fresh handoff tasks and new-evidence revisions completed with original checks; no OS-enforced scientific blindness or complete strong-model token meter.",
+    "Linux CPython 3.14.4 installed tests; other strong Agent hosts have shell/JSON compatibility, not empirical acceptance."
+  ]
 }

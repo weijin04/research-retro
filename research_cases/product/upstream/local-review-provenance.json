@@ -1,0 +1,302 @@
+[
+  {
+    "id": "dsh-c-38",
+    "receipt_sha256": "777a38230dcfe51316b5412b70d4610f6944ca16b8ca77390992235c43ca8038",
+    "attention": 0.355,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+        "source_sha256": "7edf98c923ef267910996d1b0d51bae0ca24d9b722128f847064aa12e6ef9a15",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 754,
+        "full_chars": 8091,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+        "source_sha256": "7edf98c923ef267910996d1b0d51bae0ca24d9b722128f847064aa12e6ef9a15",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 706,
+        "full_chars": 8091,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-05",
+    "receipt_sha256": "48b61733a4fc6bd883825dc7e6ee72f803cbd206ec355b906c4990e38c57e546",
+    "attention": 0.1,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/window-geometry-audit.md",
+        "source_sha256": "9c87ade79c497b4e1a3c7c8b254b623977b1abb5e503e465430d6f1c8f8c8596",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1248,
+        "full_chars": 3681,
+        "partial_flag": false
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/window-geometry-audit.md",
+        "source_sha256": "9c87ade79c497b4e1a3c7c8b254b623977b1abb5e503e465430d6f1c8f8c8596",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1046,
+        "full_chars": 3681,
+        "partial_flag": false
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0015",
+    "receipt_sha256": "f62f6fefee0f5dbb37221011736be6ce0f97ce5da2478aa4065888fd7041efd8",
+    "attention": 0.06,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py",
+        "source_sha256": "7a72b5ed778dd56519427dae4cdd4eca04c392dd135a217b4926bfacf61ef5d7",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1297,
+        "full_chars": 11729,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py",
+        "source_sha256": "7a72b5ed778dd56519427dae4cdd4eca04c392dd135a217b4926bfacf61ef5d7",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1278,
+        "full_chars": 11729,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0030",
+    "receipt_sha256": "95ea830a6eada5bb91700d417771defac98423c9aeca882ab09eb43f9247ceb5",
+    "attention": 0.145,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/passability.py",
+        "source_sha256": "8397c00647456833e4e81b640d5bdb613533e4a55df8225b20f9e0e05e10814c",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1244,
+        "full_chars": 7792,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/passability.py",
+        "source_sha256": "8397c00647456833e4e81b640d5bdb613533e4a55df8225b20f9e0e05e10814c",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1310,
+        "full_chars": 7792,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-16",
+    "receipt_sha256": "a693e7622c7698f2fe5c0933cd4e269f66f688bface04229dd2540a81bfd6d30",
+    "attention": 0.565,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md",
+        "source_sha256": "994b8b40ab6b0721859b2122a9e74752a00960361578bf0ae19754ae953b7a7e",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1237,
+        "full_chars": 4201,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/scorer.py",
+        "source_sha256": "1ceefaf2d4c3e9e096c08f0220b0d8d9eda65eccedd2c2daf59b35a16ef46a9d",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 691,
+        "full_chars": 28200,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0024",
+    "receipt_sha256": "5e8582831acb88725e6e8d39854ed75fb8b884017ac6b8960a6bc93f673d2ebc",
+    "attention": 0.82,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+        "source_sha256": "7edf98c923ef267910996d1b0d51bae0ca24d9b722128f847064aa12e6ef9a15",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1263,
+        "full_chars": 8091,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_condition_frontier/analyze.py",
+        "source_sha256": "ce2c3de0f19f3039469eca22a8d4fbccbe48bb866cd505aa1c50417f2be0f6dc",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 685,
+        "full_chars": 9436,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-24",
+    "receipt_sha256": "3e77169af1139167f07e4027c86d02dea744d6e07a07897fbaa6ba312ba19d15",
+    "attention": 0.27,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/RESULTS.md",
+        "source_sha256": "38be4b3b99b15242c506cf81be020fd0ef27b322d294b2c50a6660244513bf6a",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1275,
+        "full_chars": 7760,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/estimand-wellposedness.md",
+        "source_sha256": "94c1503e8d725e37249a58412940d1cd91ca969cc7f9496801251f2973bc6914",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1220,
+        "full_chars": 4137,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0004",
+    "receipt_sha256": "2e7d936decb6694fde1d5c5140d7d731a2a4a3e4b74b0618d806a76dd13d11b1",
+    "attention": 0.89,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+        "source_sha256": "50a3432e5059be60e6231a230509441ddfdcc6d90f1a32fb71b297ee9a9fbb90",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1278,
+        "full_chars": 33104,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+        "source_sha256": "7c74105f87fd67e818432f7e791b5bc8fbcc871d04e48d9ea0d74101b3d5169c",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1269,
+        "full_chars": 16873,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-34",
+    "receipt_sha256": "22b3a4e7c55787db968822b6e6b0149ef4b8858090f252359b3b2cdbe5e82487",
+    "attention": 0.95,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/diagnose_basins.py",
+        "source_sha256": "227604cd9f0a5ffdb886df8fc89c1ff14c7dc0855b63d73f4d98a6a053183906",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 934,
+        "full_chars": 6368,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md",
+        "source_sha256": "f1ff05d7881753798513d29164b44ce8d59b3967a992fe90c806c17981d075b7",
+        "quote_exact_substring": true,
+        "context_exact_substring": false,
+        "context_chars": 661,
+        "full_chars": 5031,
+        "partial_flag": true
+      }
+    ]
+  },
+  {
+    "id": "dsh-b-16",
+    "receipt_sha256": "c61cf199c04382ff1bab693b6bd528ebc09e5da8f9e5b13b084eff353714ec31",
+    "attention": 0.215,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v77_source_sink_input_closure/INPUT_CLOSURE.tsv",
+        "source_sha256": "dfdc2128c051fb9bdc1c58c5b3a010c5b0384bedccb5bc513d2bb867a6179778",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 768,
+        "full_chars": 1780,
+        "partial_flag": false
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v56_observation_frontier/decision.json",
+        "source_sha256": "f42051da526ffce257f1024eedc139a2a9f4c83340d226b79bfdb5b6fd9bb9c8",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1291,
+        "full_chars": 3536,
+        "partial_flag": false
+      }
+    ]
+  },
+  {
+    "id": "dsh-c-08",
+    "receipt_sha256": "e362a80f3a5a0994dd99f48b5b8fff93c9cf780823ffecfa9b674c94cc62a1e9",
+    "attention": 0.045,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+        "source_sha256": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1222,
+        "full_chars": 2160,
+        "partial_flag": false
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+        "source_sha256": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1218,
+        "full_chars": 2160,
+        "partial_flag": false
+      }
+    ]
+  },
+  {
+    "id": "dsh-a-0023",
+    "receipt_sha256": "92c0a55168a3e7f6477997677a8a5844f829236f43382cdb15c2e6ad9a799c4e",
+    "attention": 0.05,
+    "input_checks": [
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py",
+        "source_sha256": "70aa3c9c927362904cb4d53da61c7a33b133b2fdad94537081c2d80383a99a41",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1239,
+        "full_chars": 15886,
+        "partial_flag": true
+      },
+      {
+        "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py",
+        "source_sha256": "70aa3c9c927362904cb4d53da61c7a33b133b2fdad94537081c2d80383a99a41",
+        "quote_exact_substring": true,
+        "context_exact_substring": true,
+        "context_chars": 1244,
+        "full_chars": 15886,
+        "partial_flag": true
+      }
+    ]
+  }
+]

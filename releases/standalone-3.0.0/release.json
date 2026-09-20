@@ -1,0 +1,32 @@
+{
+  "product": "Research Retro",
+  "version": "3.0.0",
+  "created_at": "2026-09-20T15:16:08.673103+00:00",
+  "base_commit": "f68fa02",
+  "git_release": "working-tree delivery; no new commit, tag or remote publication",
+  "software_delivery": "complete",
+  "scientific_generalization": "not established",
+  "entry": "retro start PROJECT --workspace SEPARATE_DIRECTORY",
+  "larger_harness": "deferred by user",
+  "model_calls_in_distribution": false,
+  "source_projects_modified": false,
+  "platform_verified": "Linux x86_64 CPython 3.14",
+  "files": {
+    "EVALUATION.md": "bebf9fd07a00fc006d8abc3ce3f71e652c2e4c22ebfaebc8fd95c0200c812c4b",
+    "REPORT.md": "9b6efb61941a2f24c26903353f37dae2b5c79a91735f3350da9f60ace7a74f74",
+    "acceptance.json": "0c852eea6a92f61311d4fb2ea23f3556c0c3f650279c145805730a4886cfad79",
+    "evaluation.json": "780fa304d40cf936a181d6e634cbae52b9c8130109a015a3e3f4623b434c1251",
+    "example-handoff.tar.gz": "d1c799f40e64f0ca03b1f05ad209b595027d812f9ed63c49a8ef979b7bdbb462",
+    "receipt-index.json": "bdb79d91a08cda5576e430e693167b249e9fc5a18ab048e1c7a78d13c39ddb5c",
+    "receipts.tar.gz": "62ff70bbbeb908f049d274ce078e93e29c4204b5f9c2a286ea7e2a0fa4a2c71a",
+    "research_retro-3.0.0-py3-none-any.whl": "92a7b5a78affdcb973bed7767d8b11986ee220bcc9fd85091a53d14ef8e1d29d",
+    "unit-tests.log": "e94a06ad9f0843970bc00bbbcab0edf19bfa2c2723cb2c9e4f8217e5a5934da5",
+    "wheel-parity.json": "9fdd1cccd9a38ae40b28502fad7b2c364093d10eeb545bafd8af9696c1f374dd",
+    "wheelhouse-linux-cp314.tar.gz": "2486cc96b1303d3e21f9d8d7b7dcaf34974d5b23110ddb333288314088e0152a"
+  },
+  "external_development_workspaces": [
+    "/home/sun07ao/retro-workspaces/grephene-retro3",
+    "/home/sun07ao/retro-workspaces/diffusion-retro3"
+  ],
+  "evidence_boundary": "Development cases remain scoped drafts. Consult EVALUATION.md; software counts do not measure scientific accuracy."
+}

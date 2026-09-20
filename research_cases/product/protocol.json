@@ -1,0 +1,17 @@
+{
+  "purpose": "Real user reconstruction, ordinary tools comparison, optional Jev ablation, cold handoff and real later-evidence revision",
+  "source_root": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials",
+  "user_task": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/TASK.md",
+  "source_selection": "independent curator; complete selected document stages plus pinned full Git tracked tree; not a clock-atomic snapshot",
+  "arms": [
+    "direct_comparison",
+    "retro_without_jev",
+    "reconstruction_user"
+  ],
+  "model": "same inherited host model and effort; no per-arm override",
+  "blinding": "fresh agent conversations, product/source/goal only; reference and sibling outputs withheld by instruction, not an OS namespace",
+  "cost_boundary": "same goal and source access; no equal tool-call/token cutoff; concurrency and staggered starts preclude clean timing speedup inference",
+  "reference": "independently sealed before reviewing products; held by acceptance_curator",
+  "contamination": "development host receives progress findings but does not send scientific hints to the reconstructing agents",
+  "saved_at": "2026-09-20T17:37:23.606157+00:00"
+}

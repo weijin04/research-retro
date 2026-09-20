@@ -1,0 +1,93 @@
+{
+  "scope": "local frozen evaluation evidence; hashes identify bytes, not digital authorship",
+  "entries": [
+    {
+      "role": "initial_direct_report",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/direct-comparison/README.md",
+      "bytes": 3304,
+      "sha256": "90f81f3694c16bfaa25a3bfc44661aca0e6d64c985be2861d453ee86aad79b96"
+    },
+    {
+      "role": "initial_plus_bundle",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/exports/42dd414f1c1a4986add9b3fab374e4af/manifest.json",
+      "bytes": 10640,
+      "sha256": "c062e53062ee29b0e89b0e431fd24a1db080e2bf1b3f8f27fcd84ffcf81a2e0c"
+    },
+    {
+      "role": "initial_minus_bundle",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/exports/3eadd49801344a3e98533b364c7c7a49/manifest.json",
+      "bytes": 12464,
+      "sha256": "826683331a0ca34a86702476d2a4cf0ecb10f0792107b85fbee0140d4eb58fba"
+    },
+    {
+      "role": "software_only_repacked_A",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/exports/product-repacked-A/manifest.json",
+      "bytes": 10640,
+      "sha256": "7b70628b2ee448b549d9661f3d0ed5d730f4eecb10e2659b23ce4b25d245d8ec"
+    },
+    {
+      "role": "later_evidence_revised_B",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/exports/revision-B-20260921/manifest.json",
+      "bytes": 14440,
+      "sha256": "eabe4655a2581fe643e88debc4fcc4eb7322c3199a98d6e8723611f2c5da8faa"
+    },
+    {
+      "role": "cold_A_first_receipt",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cold-handoff-A/DELIVERY_RECEIPT.json",
+      "bytes": 861,
+      "sha256": "eeadd9b8f2132ad5a9d2e9a9f0fe3940e1e4408febdae7ddb96a52a6be1143a4"
+    },
+    {
+      "role": "cold_A_revealed_repair",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cold-handoff-A/revealed-correction/CORRECTION_RECEIPT.json",
+      "bytes": 969,
+      "sha256": "cca8de1dfe9642a852373ecda8118ed5e36fde7c810e43ddae3caa58e53017f6"
+    },
+    {
+      "role": "cold_B_report",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cold-handoff-B/REPORT.md",
+      "bytes": 4170,
+      "sha256": "24d149b3672660246986df450722809109b91956105ca4b58e1143fc29f116e6"
+    },
+    {
+      "role": "cold_B_inputs",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cold-handoff-B/provenance.json",
+      "bytes": 5922,
+      "sha256": "dacb3e30dbf2e4c872730765bcc706d4fcd2ac5dcd84aa7becc1d15b92cad7a0"
+    },
+    {
+      "role": "revision_report",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/revision/REVISION_REPORT.md",
+      "bytes": 1166,
+      "sha256": "9bd3d42c27368959fc55e5d927d7d213f48e1bcc9b42c0a7bee615f39508ce74"
+    },
+    {
+      "role": "explicit_jev_raw_receipt",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/jev/semantic-d4bbc1d3a1684553a0742b61e1d9ae5a.json",
+      "bytes": 2616,
+      "sha256": "c1ff2d83ad37a2aa1741d8dfbc4a4d639f817073c726009ab5bcbe7a3764b2f6"
+    }
+  ],
+  "case_scripts": [
+    {
+      "path": "checks/cold_a.py",
+      "sha256": "6f6810ca549d00451fe8635f4668f437cc201d6d5ed97a6d8fd9d5097beb61a9"
+    },
+    {
+      "path": "checks/cold_b.py",
+      "sha256": "05843c4e723c9f41d83f2c471ba7edde6ab16ea1dc394dbe296467543589ba9a"
+    },
+    {
+      "path": "checks/direct.py",
+      "sha256": "684f8cc5c265a3cb4c1985322777f43dc9fa6aa57cea6283659f1b6c4fd17942"
+    },
+    {
+      "path": "checks/reconstruction.py",
+      "sha256": "8a516fbb497d8ec5dc1edb0d221af4f904b840b9bf305f92582c7d7d06a4cb77"
+    },
+    {
+      "path": "checks/revision.py",
+      "sha256": "c267167cd61509ed92128ad7a36fc1507d4cca208d7fb55c34eda43920d6cb5b"
+    }
+  ]
+}

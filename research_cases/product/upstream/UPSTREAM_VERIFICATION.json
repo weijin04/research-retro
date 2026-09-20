@@ -1,0 +1,77 @@
+{
+  "replay_exit": 0,
+  "replay_equal": true,
+  "script_adjustment": "Only root S path relocated; all computations unchanged. Own scratch read-trace changes do not change author trace.",
+  "bundle_files": 136,
+  "manifest_failures": [],
+  "trace_original_hash_failures": [],
+  "unique_sources": 17,
+  "host_bytes": 79450,
+  "program_bytes": 810572,
+  "host_entries": 16,
+  "program_entries": 10,
+  "top15_ids": [
+    "dsh-c-14",
+    "dsh-c-15",
+    "dsh-c-07",
+    "dsh-c-03",
+    "dsh-a-0005",
+    "dsh-c-34",
+    "dsh-c-06",
+    "dsh-c-04",
+    "dsh-a-0009",
+    "dsh-a-0001",
+    "dsh-a-0011",
+    "dsh-a-0002",
+    "dsh-c-37",
+    "dsh-a-0004",
+    "dsh-c-31"
+  ],
+  "state_revision": 227,
+  "nodes": [
+    [
+      "question:sign",
+      1
+    ],
+    [
+      "route:next",
+      2
+    ],
+    [
+      "route:r4stop",
+      1
+    ],
+    [
+      "gap:observable",
+      1
+    ],
+    [
+      "attempt:r4run1",
+      1
+    ],
+    [
+      "claim:boundednegative",
+      2
+    ],
+    [
+      "claim:void",
+      2
+    ],
+    [
+      "obs:graph",
+      1
+    ],
+    [
+      "obs:r3frames",
+      1
+    ],
+    [
+      "obs:r4run2",
+      1
+    ],
+    [
+      "obs:reuse",
+      1
+    ]
+  ]
+}

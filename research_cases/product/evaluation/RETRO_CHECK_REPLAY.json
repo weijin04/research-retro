@@ -1,0 +1,12 @@
+{
+  "plus": {
+    "exit_code": 0,
+    "equal_to_saved_except_timestamp": true,
+    "stderr": ""
+  },
+  "minus": {
+    "exit_code": 0,
+    "equal_to_saved_except_timestamp": true,
+    "stderr": ""
+  }
+}

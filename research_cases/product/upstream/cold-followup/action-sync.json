@@ -1,0 +1,163 @@
+{
+  "question": "同步冷接手完成后的次级行动文字",
+  "reviewer": "upstream reasoner final handoff consistency check",
+  "analysis": "Final SPINE read found route:next still said to perform the now-completed Stage1 inventory. Change only this secondary action text to the named long-repair evidence recovery; preserve science and priority. No long directory accessed.",
+  "materials": [
+    {
+      "key": "spec",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/SPEC.md",
+      "role": "definition"
+    },
+    {
+      "key": "method3",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+      "role": "definition",
+      "start": 1,
+      "end": 145
+    },
+    {
+      "key": "B",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-B/materials/cxekr_loop/r5/feasibility-note.md",
+      "role": "history"
+    },
+    {
+      "key": "v105",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v105_magnitude_arbitration/RESULTS.md",
+      "role": "history"
+    },
+    {
+      "key": "v33result",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v33_finite_t_path_survival_falsifier/RESULTS.md",
+      "role": "history"
+    },
+    {
+      "key": "v33plan",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v33_finite_t_path_survival_falsifier/PLAN.md",
+      "role": "definition"
+    },
+    {
+      "key": "v33rows",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v33_finite_t_path_survival_falsifier/path_survival.json",
+      "role": "evidence"
+    },
+    {
+      "key": "smokereport",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_finite_t_smoke/RESULTS.md",
+      "role": "history"
+    },
+    {
+      "key": "smoke",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_finite_t_smoke/result.json",
+      "role": "evidence"
+    },
+    {
+      "key": "rules",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/rules.py",
+      "role": "definition",
+      "start": 1,
+      "end": 180
+    },
+    {
+      "key": "screen",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/causal_ops/screen_module/screen.py",
+      "role": "definition",
+      "start": 237,
+      "end": 252
+    },
+    {
+      "key": "scans",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/scans.py",
+      "role": "definition",
+      "start": 1,
+      "end": 70
+    },
+    {
+      "key": "target",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/lammps_scan.py",
+      "role": "definition",
+      "start": 1060,
+      "end": 1085
+    },
+    {
+      "key": "deformation",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/lammps_scan.py",
+      "role": "definition",
+      "start": 1140,
+      "end": 1170
+    },
+    {
+      "key": "pred2",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/predictions.csv",
+      "role": "evidence"
+    },
+    {
+      "key": "scorer",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/scorer.py",
+      "role": "evidence",
+      "start": 1,
+      "end": 280
+    },
+    {
+      "key": "gfjson",
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-gf-final.json",
+      "role": "evidence"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "route:next",
+      "type": "route",
+      "title": "CALF校准核查：保留，但降为定界任务",
+      "statement": "CALF centroid+offset与真实瞬时贯通路径的对应仍未验证；小量既有帧核查仍有价值，但发现既有v33负知识和MIP含客体path-CV资产后，不再把它列为项目级默认首要路线。",
+      "status": "paused",
+      "scope": {
+        "reconstruction": "仅R3 CALF与R4两次已存打分；未恢复全项目",
+        "truth_labels": "继承历史23行标签，未重核原论文"
+      },
+      "rationale": "v33已测MIP主体热快照周期净空，不能代替CALF校准验证，但削弱把更广泛快照几何当作新主路线的机会价值。先盘点已有Stage1准备度；不因Jev affected否定原数值。",
+      "requires": [
+        "gap:observable",
+        "obs:reuse",
+        "claim:boundednegative",
+        "route:r4stop"
+      ],
+      "action": "仅当需要判定CALF既有负结果的解释边界时，回到保存帧做同帧代理/真实孔限比较；Stage1盘点已完成，当前下一任务为恢复具名long repair证据，不新增轨迹。",
+      "details": {
+        "priority_change": "从默认第一步降为条件性的解释审计",
+        "not_refuted": "CALF校准缺口仍open，未被MIP材料结果关闭",
+        "local_feedback": "两条A followup已实际提交；derived与insufficient未改变A科学结论",
+        "cost_boundary": "不续跑MD或恢复R4打分"
+      },
+      "sources": [
+        "method3",
+        "spec",
+        "B",
+        "v33rows",
+        "smoke"
+      ]
+    }
+  ],
+  "revisions": {
+    "turn:r5_correction": 1,
+    "question:sign": 2,
+    "route:next": 4,
+    "route:r4stop": 1,
+    "route:stage1_readiness": 2,
+    "gap:observable": 1,
+    "gap:stage1": 2,
+    "attempt:r4run1": 1,
+    "claim:boundednegative": 2,
+    "claim:void": 2,
+    "obs:graph": 1,
+    "obs:r3frames": 1,
+    "obs:r4run2": 1,
+    "obs:reuse": 2,
+    "obs:s_only_validation": 1,
+    "obs:v33_negative": 1,
+    "asset:mip_smoke": 1
+  },
+  "checks": [
+    "reasoner/cold-followup/REPORT.md",
+    "reasoner/cold-followup/input-hashes.json"
+  ]
+}

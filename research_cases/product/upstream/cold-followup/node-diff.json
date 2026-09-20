@@ -1,0 +1,36 @@
+{
+  "changed": [
+    {
+      "id": "route:stage1_readiness",
+      "before_revision": 1,
+      "after_revision": 2
+    },
+    {
+      "id": "gap:stage1",
+      "before_revision": 1,
+      "after_revision": 2
+    }
+  ],
+  "retained_identical": [
+    "turn:r5_correction",
+    "question:sign",
+    "route:next",
+    "route:r4stop",
+    "gap:observable",
+    "attempt:r4run1",
+    "claim:boundednegative",
+    "claim:void",
+    "obs:graph",
+    "obs:r3frames",
+    "obs:r4run2",
+    "obs:reuse",
+    "obs:v33_negative",
+    "asset:mip_smoke"
+  ],
+  "added": [
+    "obs:s_only_validation"
+  ],
+  "jev_calls_this_turn": 0,
+  "long_accessed": false,
+  "frozen_r275_manifest_unchanged": true
+}

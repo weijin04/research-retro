@@ -1,0 +1,67 @@
+{
+  "manifest_files": 167,
+  "manifest_failures": [],
+  "verify_B_equal": true,
+  "trace_hash_failures": [],
+  "unchanged": [
+    "route:r4stop",
+    "gap:observable",
+    "attempt:r4run1",
+    "claim:boundednegative",
+    "claim:void",
+    "obs:graph",
+    "obs:r3frames",
+    "obs:r4run2"
+  ],
+  "changed": [
+    "question:sign",
+    "route:next",
+    "obs:reuse"
+  ],
+  "added": [
+    "asset:mip_smoke",
+    "gap:stage1",
+    "obs:v33_negative",
+    "route:stage1_readiness",
+    "turn:r5_correction"
+  ],
+  "removed": [],
+  "initial_B_reuse_details": {
+    "candidate_boundary": "前15项未正确表达，余75项未检查",
+    "discovery": {
+      "finding": "R3校准代理直接成为R4 CALF输入",
+      "importance": "避免重复计数证据并传播观测量不确定性",
+      "next_check": "对这一派生关系发回局部genealogy问题；先检查动态观测量"
+    }
+  },
+  "final_B_reuse_details": {
+    "candidate_boundary": "前15项未正确表达，余75项未检查",
+    "discovery": {
+      "finding": "R3校准代理直接成为R4 CALF输入",
+      "importance": "避免重复计数证据并传播观测量不确定性",
+      "next_check": "谱系局部判断已实际完成，无需重复发问；CALF观测量审计参见route:next，当前优先级参见route:stage1_readiness。"
+    },
+    "followup_completed": {
+      "receipt": "semantic:5ba5350c286841248be50ff8726f8e9c",
+      "result": "derived 0.96; does not replace original value/path/hash check",
+      "scientific_statement_changed": false
+    }
+  },
+  "history": {
+    "question:sign": [
+      1,
+      2
+    ],
+    "route:next": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "obs:reuse": [
+      1,
+      2
+    ]
+  },
+  "evaluator_recovery": "Initial receipt extractor assumed discovery at data top level, raised KeyError; corrected to data.details. Scientific replay succeeded before this metadata parser failure."
+}

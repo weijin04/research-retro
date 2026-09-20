@@ -1,0 +1,121 @@
+{
+  "captured_at_utc": "2026-09-20T18:33:31.803106+00:00",
+  "source": "persisted actual dsh session events, excludes session-title requests",
+  "sessions": [
+    {
+      "session": "session-175b3efb-503e-42e3-9cbb-17bff2ce5253",
+      "cwd": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/triage/worker-59f909ac40a5428f85baa29cc7ba65d8",
+      "source": "/home/sun07ao/.dsh/sessions/--home-sun07ao-retro-workspaces-retro-product-evaluation-upstream-judgment.retro-triage-worker-59f909ac40a5428f85baa29cc7ba65d8--/session-175b3efb-503e-42e3-9cbb-17bff2ce5253/session.v3.jsonl.zstd",
+      "sha256": "cbf2956e8c77e17daaec42ff578d31c8ccddd5e09acddb9f819f156d43c5012d",
+      "models": [
+        [
+          "model",
+          "deepseek-flash"
+        ],
+        [
+          "provider",
+          "deepseek-official"
+        ],
+        [
+          "reasoningEffort",
+          "high"
+        ]
+      ],
+      "assistant_steps": 23,
+      "usage_sums": {
+        "outputTokens": 46271,
+        "totalTokens": 2217554,
+        "reasoningTokens": 24794,
+        "cacheReadTokens": 2072832,
+        "inputTokens": 98451
+      },
+      "tools": {
+        "read": 6,
+        "bash": 8,
+        "write": 1,
+        "edit": 7
+      },
+      "turn_ends": [
+        {
+          "kind": "completed"
+        }
+      ]
+    },
+    {
+      "session": "session-6531fb5b-37fe-4069-bc97-da3e87acc016",
+      "cwd": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/triage/worker-ebad8f385fef40a6a8d7bb08f7bf8132",
+      "source": "/home/sun07ao/.dsh/sessions/--home-sun07ao-retro-workspaces-retro-product-evaluation-upstream-judgment.retro-triage-worker-ebad8f385fef40a6a8d7bb08f7bf8132--/session-6531fb5b-37fe-4069-bc97-da3e87acc016/session.v3.jsonl.zstd",
+      "sha256": "f6efcaeee9d2bf514ee3d84f3af1bbd84bcbcc3ca0348ff2fe6d6e8172e6e26b",
+      "models": [
+        [
+          "model",
+          "deepseek-flash"
+        ],
+        [
+          "provider",
+          "deepseek-official"
+        ],
+        [
+          "reasoningEffort",
+          "high"
+        ]
+      ],
+      "assistant_steps": 37,
+      "usage_sums": {
+        "outputTokens": 48819,
+        "totalTokens": 3216527,
+        "reasoningTokens": 25474,
+        "cacheReadTokens": 3063168,
+        "inputTokens": 104540
+      },
+      "tools": {
+        "read": 24,
+        "bash": 11,
+        "write": 1
+      },
+      "turn_ends": [
+        {
+          "kind": "completed"
+        }
+      ]
+    },
+    {
+      "session": "session-f2a90fd0-deb1-4acf-8f4c-e446a06c9160",
+      "cwd": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/triage/worker-d3401229ce9f455c88cdb9006e20ccfa",
+      "source": "/home/sun07ao/.dsh/sessions/--home-sun07ao-retro-workspaces-retro-product-evaluation-upstream-judgment.retro-triage-worker-d3401229ce9f455c88cdb9006e20ccfa--/session-f2a90fd0-deb1-4acf-8f4c-e446a06c9160/session.v3.jsonl.zstd",
+      "sha256": "43d09d2cfa9d061b6bc3f9e7f7ca8dff5a4c0b9baee3ffbc5d4bf2e6cebea247",
+      "models": [
+        [
+          "model",
+          "deepseek-flash"
+        ],
+        [
+          "provider",
+          "deepseek-official"
+        ],
+        [
+          "reasoningEffort",
+          "high"
+        ]
+      ],
+      "assistant_steps": 17,
+      "usage_sums": {
+        "outputTokens": 36511,
+        "totalTokens": 1418793,
+        "reasoningTokens": 18409,
+        "cacheReadTokens": 1276288,
+        "inputTokens": 105994
+      },
+      "tools": {
+        "read": 5,
+        "bash": 11
+      },
+      "turn_ends": [
+        {
+          "kind": "completed"
+        }
+      ]
+    }
+  ],
+  "usage_boundary": "Raw adapter fields are summed separately. Cache tokens are separate in this adapter; no price or cross-model savings inferred."
+}

@@ -1,0 +1,32 @@
+{
+  "wheel_sha256": "dddcb9a5dcc21675d18445713be14f1f8d25d11e21f5d62414a3a0b638c18359",
+  "unit_tests": 144,
+  "installed": {
+    "legacy/install-result.json": {
+      "passed": true,
+      "assertions": 4,
+      "receipt": "var/retro-product/product-final-installed-legacy/install-result.json"
+    },
+    "legacy/workflow-result.json": {
+      "passed": true,
+      "assertions": 37,
+      "receipt": "var/retro-product/product-final-installed-legacy/workflow-result.json"
+    },
+    "retro2/retro2-result.json": {
+      "passed": true,
+      "assertions": 48,
+      "receipt": "var/retro-product/product-final-installed-retro2/retro2-result.json"
+    },
+    "product/install-result.json": {
+      "passed": true,
+      "assertions": 4,
+      "receipt": "var/retro-product/product-final-installed-product/install-result.json"
+    },
+    "product/workflow-result.json": {
+      "passed": true,
+      "assertions": 30,
+      "receipt": "var/retro-product/product-final-installed-product/workflow-result.json"
+    }
+  },
+  "scope": "software checks only; product completion is the usable reconstruction workflow"
+}

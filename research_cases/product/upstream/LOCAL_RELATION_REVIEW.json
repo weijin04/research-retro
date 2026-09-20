@@ -1,0 +1,323 @@
+{
+  "completed_utc": "2026-09-20T18:37:45.236222+00:00",
+  "scope": "bounded local relation review only; not upstream-reasoner evaluation",
+  "sample_rule": {
+    "queue_sha256": "f14f98fb43f97ae28afc3a267754dd781395fa56cbbea33eaa683f1a72925cfc",
+    "rule": "First two by SHA256(seed NUL id) in each of support/scope/genealogy/impact/action; then two remaining lowest attention (hash tie-break).",
+    "seed": "local-relation-review-v1"
+  },
+  "sample_size": 12,
+  "interpretation": "Confidence is not truth or calibrated probability; no scalar accuracy benchmark is inferred from purposeful stratification.",
+  "provenance": "local-review-provenance.json and local-review-capture-hashes.json",
+  "reviews": [
+    {
+      "id": "dsh-c-38",
+      "kind": "support",
+      "queue_attention": 0.355,
+      "jev_answer": {
+        "choice": "compatible",
+        "confidence": 0.21,
+        "probabilities": {
+          "compatible": 0.37,
+          "counters": 0.04,
+          "direct": 0.31,
+          "insufficient": 0.28,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "assessment": "reasonable_but_low_information",
+      "bounded_preferred_relation": "compatible",
+      "reason": "Only the same script header is supplied as evidence and target. Compatible appropriately avoids certifying actual computation. Full script does load existing inputs, but the local excerpt does not execute or validate C3/A1.",
+      "candidate_or_context_gap": "next_check jumps to consistency with R4, a different rule/estimand; must match object and conditions before comparing.",
+      "receipt": "semantic:84353656ba1a481784f72734ea986464",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py"
+      ]
+    },
+    {
+      "id": "dsh-c-05",
+      "kind": "support",
+      "queue_attention": 0.1,
+      "jev_answer": {
+        "choice": "direct",
+        "confidence": 0.75,
+        "probabilities": {
+          "compatible": 0.18,
+          "counters": 0.0,
+          "direct": 0.8,
+          "insufficient": 0.02,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "assessment": "overstated_support",
+      "bounded_preferred_relation": "compatible_or_insufficient",
+      "reason": "Jev direct elevates one audit report repeating its conclusion into direct support under a prompt that explicitly disallows that. Both excerpts come from the same author text, not independent raw ASE/Zeo outputs.",
+      "candidate_or_context_gap": "Rigid hard-sphere radii only constrain that observable; full report admits center approximation and missing SI. No global E1 exclusion or proof of real inability to enter.",
+      "receipt": "semantic:a6b42c4a7be94b30b74fe8f82781419e",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/window-geometry-audit.md",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/window-geometry-audit.md"
+      ]
+    },
+    {
+      "id": "dsh-a-0015",
+      "kind": "scope",
+      "queue_attention": 0.06,
+      "jev_answer": {
+        "choice": "compatible",
+        "confidence": 0.85,
+        "probabilities": {
+          "compatible": 0.9,
+          "incompatible": 0.01,
+          "insufficient": 0.09
+        },
+        "type": "choice"
+      },
+      "assessment": "reasonable_narrow_dimension",
+      "bounded_preferred_relation": "compatible",
+      "reason": "Code explicitly names the record override, so record-identity compatibility is supported.",
+      "candidate_or_context_gap": "Must retain conjunction network_sign==Kr; title R4/v144 merges distinct experiments. Scope relation does not establish that the branch actually fired or validate performance.",
+      "receipt": "semantic:bf4ae466d011402d90f681bdacce0c61",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py"
+      ]
+    },
+    {
+      "id": "dsh-a-0030",
+      "kind": "scope",
+      "queue_attention": 0.145,
+      "jev_answer": {
+        "choice": "compatible",
+        "confidence": 0.64,
+        "probabilities": {
+          "compatible": 0.75,
+          "incompatible": 0.02,
+          "insufficient": 0.23
+        },
+        "type": "choice"
+      },
+      "assessment": "reasonable_but_low_information",
+      "bounded_preferred_relation": "compatible",
+      "reason": "The two snippets repeat the same declared limitations; matching stated conditions is correct.",
+      "candidate_or_context_gap": "No caller/calibration evidence shows actual diffusivity inputs match conditions. This is agreement with a code contract, not a checked application.",
+      "receipt": "semantic:25da969a81094545b7830f518f5008bf",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/passability.py",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/passability.py"
+      ]
+    },
+    {
+      "id": "dsh-c-16",
+      "kind": "genealogy",
+      "queue_attention": 0.565,
+      "jev_answer": {
+        "choice": "independent",
+        "confidence": 0.41,
+        "probabilities": {
+          "derived": 0.34,
+          "independent": 0.55,
+          "insufficient": 0.1,
+          "unrelated": 0.01
+        },
+        "type": "choice"
+      },
+      "assessment": "incorrect_independence",
+      "bounded_preferred_relation": "derived_or_insufficient_not_independent",
+      "reason": "Summary explicitly describes rerunning scorer and matching identical output hashes. Same pipeline recomputation is not independent provenance for the scientific outcome. Exact target-version binding would still need original run receipt.",
+      "candidate_or_context_gap": "Full preserved scorer uses min(radii); run1 CSV hash f980812b... matches reported prefix. Independent code review may diagnose a defect but does not make repeated prediction evidence independent.",
+      "receipt": "semantic:63955b6113e74e4baf202b1cfde6c7ed",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/scorer.py"
+      ]
+    },
+    {
+      "id": "dsh-a-0024",
+      "kind": "genealogy",
+      "queue_attention": 0.82,
+      "jev_answer": {
+        "choice": "derived",
+        "confidence": 0.53,
+        "probabilities": {
+          "derived": 0.64,
+          "independent": 0.1,
+          "insufficient": 0.26,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "assessment": "reasonable_with_output_binding_gap",
+      "bounded_preferred_relation": "derived",
+      "reason": "Snippet explicitly loads v13 frontier result.json; full code confirms load and /36 conversion. A source relationship is supported.",
+      "candidate_or_context_gap": "Target excerpt is analyze.py, not result bytes or manifest binding analyzer version to output. Do not infer full numerical correctness or independent evidence; next_check remains warranted.",
+      "receipt": "semantic:10b2f2a9293b440995e4ed0ed7bd1498",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_condition_frontier/analyze.py"
+      ]
+    },
+    {
+      "id": "dsh-c-24",
+      "kind": "impact",
+      "queue_attention": 0.27,
+      "jev_answer": {
+        "choice": "unaffected",
+        "confidence": 0.56,
+        "probabilities": {
+          "affected": 0.12,
+          "insufficient": 0.18,
+          "unaffected": 0.7
+        },
+        "type": "choice"
+      },
+      "assessment": "defensible_no_direct_impact_but_target_unestablished",
+      "bounded_preferred_relation": "unaffected_or_insufficient",
+      "reason": "A four-record fixed-bed development comparison does not establish or refute the separate loop contract claim. Unaffected is defensible narrowly; insufficient would express missing bridge.",
+      "candidate_or_context_gap": "Candidate title not basis-conditioned misreads a deliberately fixed-basis subset. Irreducible error floor is not proved by same material names with differing samples/conditions. Contract text is not supplied.",
+      "receipt": "semantic:d4d4129be50e4d15bdf30a6870bce654",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/RESULTS.md",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/estimand-wellposedness.md"
+      ]
+    },
+    {
+      "id": "dsh-a-0004",
+      "kind": "impact",
+      "queue_attention": 0.89,
+      "jev_answer": {
+        "choice": "affected",
+        "confidence": 0.66,
+        "probabilities": {
+          "affected": 0.78,
+          "insufficient": 0.13,
+          "unaffected": 0.09
+        },
+        "type": "choice"
+      },
+      "assessment": "reasonable_actionable_overlap",
+      "bounded_preferred_relation": "affected",
+      "reason": "CoNi doc explicitly imports the same static offset method and its caveat; that can affect interpretation of its window probabilities.",
+      "candidate_or_context_gap": "Transfer of caveat is real, not new independent measurement. Need raw/calibrated records and operator validity; no conclusion about actual opening follows.",
+      "receipt": "semantic:f2f701289f1143c8a71024cb1a50c837",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py"
+      ]
+    },
+    {
+      "id": "dsh-c-34",
+      "kind": "action",
+      "queue_attention": 0.95,
+      "jev_answer": {
+        "choice": "stale",
+        "confidence": 0.85,
+        "probabilities": {
+          "insufficient": 0.02,
+          "stale": 0.9,
+          "useful": 0.08
+        },
+        "type": "choice"
+      },
+      "assessment": "malformed_action_target_and_overconfident_staleness",
+      "bounded_preferred_relation": "insufficient_for_action",
+      "reason": "Target is a historical result statement, not an action. Evidence is the preregistered diagnostic, while later completion appears only inside target source. Stale cannot safely label next_check obsolete.",
+      "candidate_or_context_gap": "Full basin-diagnosis verdict is INCONCL, not a confirmed artifact explanation. Target context ends with UTF-8 replacement character after byte truncation. Verifying final JSON remains distinct from rerunning MD.",
+      "receipt": "semantic:2a09a992cffc4465b80800aff615ecbe",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/diagnose_basins.py",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md"
+      ]
+    },
+    {
+      "id": "dsh-b-16",
+      "kind": "action",
+      "queue_attention": 0.215,
+      "jev_answer": {
+        "choice": "useful",
+        "confidence": 0.65,
+        "probabilities": {
+          "insufficient": 0.13,
+          "stale": 0.1,
+          "useful": 0.77
+        },
+        "type": "choice"
+      },
+      "assessment": "useful_investigation_but_candidate_conflates_plan_and_record",
+      "bounded_preferred_relation": "useful_as_gap_audit_not_as_completed_record",
+      "reason": "Question about whether a second independent anchor exists is useful given closure gap.",
+      "candidate_or_context_gap": "v56 rank-1 object is next_observation_priority, a requested future observation, not acquired data. Title says would fill and next_check asks whether record adds material, risking promotion of a plan to evidence. Cannot establish anchor fulfillment from these snippets.",
+      "receipt": "semantic:2e20bf22639c4999a2dcdb0d37b422d2",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v77_source_sink_input_closure/INPUT_CLOSURE.tsv",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v56_observation_frontier/decision.json"
+      ]
+    },
+    {
+      "id": "dsh-c-08",
+      "kind": "scope",
+      "queue_attention": 0.045,
+      "jev_answer": {
+        "choice": "compatible",
+        "confidence": 0.9,
+        "probabilities": {
+          "compatible": 0.93,
+          "incompatible": 0.01,
+          "insufficient": 0.06
+        },
+        "type": "choice"
+      },
+      "assessment": "reasonable_narrow_scope_low_information",
+      "bounded_preferred_relation": "compatible",
+      "reason": "A 1 ns observation interval and unresolved slower timescale are compatible as declared sampling scope.",
+      "candidate_or_context_gap": "Cannot literally prove a rare event cannot occur in 1 ns; cannot characterize its rate here. Same report supplies both sides; this does not verify all mechanisms or tell whether other runs exist.",
+      "receipt": "semantic:def336a0eeed4e8e8e1d30aa502dd17f",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md"
+      ]
+    },
+    {
+      "id": "dsh-a-0023",
+      "kind": "scope",
+      "queue_attention": 0.05,
+      "jev_answer": {
+        "choice": "compatible",
+        "confidence": 0.88,
+        "probabilities": {
+          "compatible": 0.92,
+          "incompatible": 0.01,
+          "insufficient": 0.07
+        },
+        "type": "choice"
+      },
+      "assessment": "reasonable_narrow_scope_low_information",
+      "bounded_preferred_relation": "compatible",
+      "reason": "Code declares three pressure grid points and loops over them; local pressure compatibility is supported. Full function enforces point count/quality gates.",
+      "candidate_or_context_gap": "Outside this calibration grid having no anchor in this generated set is not no experimental anchor anywhere. Same-source correspondence is low-information, and output eligibility counts remain unread.",
+      "receipt": "semantic:9682fe7b52684a44bfdc5b28815d88bf",
+      "source_paths": [
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py",
+        "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py"
+      ]
+    }
+  ],
+  "observations": [
+    "All selected captured byte-range hashes match A originals. One semantic context is not exact UTF8 substring because a partial capture ends with replacement character (dsh-c-34).",
+    "partial=false denotes full material capture, not full context shown to Jev: many local contexts still omit the rest of the file.",
+    "Four scope items are often same-source self-agreement; useful contract checks but weak independent-discovery evidence.",
+    "A genealogy independence error and a report-to-direct-support promotion show why host verification cannot be replaced by queue confidence.",
+    "Worker-side target kind and plan-versus-observation errors can determine the meaning of otherwise plausible Jev labels."
+  ],
+  "unread_or_not_verified": [
+    "No full 90-item review or recall/false-negative measurement.",
+    "No recomputation of physical radii, trajectory analysis, calibration outputs, frontier totals or branch runtime results.",
+    "No inspection or feedback to running upstream_reasoner.",
+    "No general data independence audit beyond chosen examples.",
+    "No speed/quality gain attributable to this chain yet; downstream actual read set and completed checks are separate pending evidence."
+  ],
+  "stage_boundary": "Formal dsh-generated candidates -> Jev local relationships -> strong host investigation stage only. Earlier three-arm host-led pretrial and Luna pretrial are excluded from benefit claims."
+}

@@ -15,11 +15,17 @@ def load_input(path):
 
 
 def main(argv=None):
-    parser = argparse.ArgumentParser(prog="retro", description="Standalone evidence-bounded research retrospective. Start: retro init PROJECT")
+    parser = argparse.ArgumentParser(prog="retro", description="Standalone scientific reconstruction. Start: retro start PROJECT")
     parser.add_argument("--version", action="version", version=__version__)
-    parser.add_argument("--workspace", "-w", help="Explicit workspace; then RETRO_WORKSPACE; then CWD/.retro")
+    parser.add_argument("--workspace", "-w", help="Explicit workspace; then RETRO_WORKSPACE; then sibling CWD_NAME.retro (existing CWD/.retro remains readable)")
     sub = parser.add_subparsers(dest="command", required=True)
-    start = sub.add_parser("init", help="Initialize PROJECT/.retro or an explicit independent workspace")
+    launch = sub.add_parser("start", help="Start or resume reconstruction with an external workspace and ready-to-use host workflow")
+    launch.add_argument("project")
+    launch.add_argument("--workspace", "-w", default=argparse.SUPPRESS)
+    launch.add_argument("--goal", help="Researcher's reconstruction outcome; keep the existing goal when resuming")
+    launch.add_argument("--jev", action="store_true", help="Authorize explicitly selected local Jev judgments; requires TYPESAFE_API_KEY")
+    launch.add_argument("--worker", help="Discovery worker: dsh, or an executable command accepting JSON stdin/stdout; saved for this workspace")
+    start = sub.add_parser("init", help="Initialize sibling PROJECT_NAME.retro or an explicit separate workspace")
     start.add_argument("project")
     start.add_argument("--workspace", "-w", default=argparse.SUPPRESS)
     start.add_argument("--project-id")
@@ -27,6 +33,8 @@ def main(argv=None):
     start.add_argument("--scan-max-entries", type=int, help="Census entry limit (default 250000)")
     start.add_argument("--exclude", dest="excludes", action="append", help="Additional excluded path component; repeatable")
     start.add_argument("--metadata-only", dest="capture_text", action="store_false", default=None)
+    addition = sub.add_parser("add-source", help="Register another read-only evidence directory in this workspace")
+    addition.add_argument("path")
     sub.add_parser("scan", help="Enumerate assets; capture bounded text; retain gaps")
     read = sub.add_parser("read", help="Read a pinned original by artifact ID or project-relative path")
     read.add_argument("reference")
@@ -60,6 +68,7 @@ def main(argv=None):
     export.add_argument("--closure", help="Frozen 2.0 ReconstructionPackage ID")
     inspect = sub.add_parser("inspect", help="Verify/read a frozen bundle without original project")
     inspect.add_argument("bundle")
+    inspect.add_argument("--full", action="store_true", help="Include complete historical state; default prints a compact verification and entry")
     state = sub.add_parser("state", help="Inspect authoritative state and version history")
     state.add_argument("action", choices=["status", "get", "history", "events", "verify", "provenance"], nargs="?", default="status")
     state.add_argument("id", nargs="?")
@@ -67,6 +76,8 @@ def main(argv=None):
     call.add_argument("--input", default="-", help="JSON file or - for stdin")
     sub.add_parser("tools", help="Print versioned function definitions; no project required")
     sub.add_parser("agent", help="Print Agent manual; no project required")
+    skill = sub.add_parser("skill", help="Print or copy the packaged host reconstruction skill; no project required")
+    skill.add_argument("--destination", help="New skill directory selected by the user; existing files are not overwritten")
     sub.add_parser("snapshot", help="Freeze source census, immutable bytes and bounded Git DAG")
     recover = sub.add_parser("recover", help="Recover conditional parameter/execution identities without running originals")
     recover.add_argument("--snapshot", default="latest")
@@ -118,6 +129,46 @@ def main(argv=None):
     migrate.add_argument("source")
     migrate.add_argument("--destination")
     migrate.add_argument("--apply", action="store_true")
+    workflow = sub.add_parser("workflow", help="Host-led scientific reconstruction, discovery, revision and publication")
+    workflows = workflow.add_subparsers(dest="action", required=True)
+    begin = workflows.add_parser("start")
+    begin.add_argument("--goal", required=True)
+    begin.add_argument("--jev", action="store_true")
+    discovery = workflows.add_parser("discover")
+    discovery.add_argument("--query", default="")
+    discovery.add_argument("--limit", type=int, default=24)
+    discovery.add_argument("--offset", type=int, default=0)
+    for action in ("context", "apply", "assess", "scope", "semantic-review", "record", "spine", "judge"):
+        command = workflows.add_parser(action)
+        command.add_argument("--input", required=True)
+    for action in ("packet", "seal", "reveal", "show", "impact"):
+        command = workflows.add_parser(action)
+        command.add_argument("id")
+        if action == "seal":
+            command.add_argument("--input", required=True)
+        if action == "impact":
+            command.add_argument("--query", default="")
+            command.add_argument("--limit", type=int, default=30)
+    view = workflows.add_parser("view")
+    view.add_argument("--expect", type=int)
+    for action in ("status", "refresh", "publish", "guide"):
+        workflows.add_parser(action)
+    for name, help_text in (("record", "Save a completed investigation with original sources and revisions"),
+                            ("spine", "Select a short scientific reading order from current nodes"),
+                            ("judge", "Ask Jev explicit local typed questions; advisory, opt-in")):
+        command = sub.add_parser(name, help=help_text)
+        command.add_argument("--input", required=True)
+    discover = sub.add_parser("discover", help="Generate the next scientific candidate brief with a configured worker, or survey material families")
+    discover.add_argument("--query", default="")
+    discover.add_argument("--limit", type=int, default=12)
+    discover.add_argument("--offset", type=int, help="Explicit material offset; otherwise continue the last discovery pass")
+    discover.add_argument("--worker", help="Use dsh or a JSON stdin/stdout worker command for this batch")
+    discover.add_argument("--question", help="Scientific discovery question; defaults to the project goal")
+    discover.add_argument("--overview", action="store_true", help="Only show material families and existing candidates; no model calls")
+    triage = sub.add_parser("triage", help="Cheap candidate generation and upstream Jev relation judgments")
+    triage.add_argument("action", choices=["prepare", "generate", "judge", "impact", "queue"])
+    triage.add_argument("--input")
+    triage.add_argument("--limit", type=int, default=20)
     args = parser.parse_args(argv)
     try:
         data = vars(args).copy()
@@ -125,14 +176,28 @@ def main(argv=None):
         if command == "agent":
             print(files("research_harness.resources").joinpath("AGENT.md").read_text())
             return 0
+        if command == "skill":
+            root = files("research_harness.resources").joinpath("research-retro")
+            if not data.get("destination"):
+                print(root.joinpath("SKILL.md").read_text())
+            else:
+                destination = Path(data["destination"])
+                if destination.exists() and any(destination.iterdir()):
+                    raise HarnessError("invalid_arguments", "Choose an empty skill destination")
+                destination.mkdir(parents=True, exist_ok=True)
+                (destination / "references").mkdir(exist_ok=True)
+                for name in ("SKILL.md", "references/protocol.md"):
+                    (destination / name).write_text(root.joinpath(name).read_text(), encoding="utf-8")
+                print(json.dumps({"ok": True, "skill": str(destination.resolve())}))
+            return 0
         if command == "tools":
             envelope = {"contract_version": CONTRACT_VERSION, "ok": True, "result": definitions()}
         elif command == "call":
             envelope = invoke(load_input(data["input"]))
         else:
-            if command not in ("init", "inspect", "verify-handoff", "migrate"):
+            if command not in ("start", "init", "inspect", "verify-handoff", "migrate"):
                 data["workspace"] = str(workspace_path(workspace))
-            elif command == "init" and workspace:
+            elif command in ("start", "init") and workspace:
                 data["workspace"] = workspace
             if command == "reconstruct":
                 data["document"] = load_input(data.pop("input"))
@@ -145,7 +210,7 @@ def main(argv=None):
                 data["result"] = load_input(data.pop("input"))
             elif command == "audit" and data["action"] == "open":
                 data["scope"] = json.loads(data["scope"])
-            elif command in {"records", "task", "probe"} and data.get("input"):
+            elif command in {"records", "record", "spine", "judge", "triage", "task", "probe", "workflow"} and data.get("input"):
                 key = "result" if command == "task" and data["action"] == "submit" else "document"
                 data[key] = load_input(data.pop("input"))
             elif command == "verify-handoff":
@@ -153,6 +218,8 @@ def main(argv=None):
             elif command == "support":
                 data["scope"] = json.loads(data["scope"])
             data = {key: value for key, value in data.items() if value is not None}
+            if command == "workflow":
+                data["action"] = data["action"].replace("-", "_")
             envelope = invoke({"name": "retro_" + command.replace("-", "_"), "arguments": data})
     except (HarnessError, ValueError, OSError) as error:
         envelope = {"contract_version": CONTRACT_VERSION, "ok": False, "error": {"code": getattr(error, "code", "invalid_arguments"), "message": str(error), "details": getattr(error, "details", {})}}

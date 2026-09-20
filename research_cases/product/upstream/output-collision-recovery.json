@@ -1,0 +1,12 @@
+[
+  {
+    "name": "legacy",
+    "restored_from_untouched_previous_sandbox": "/tmp/research-retro-isolated-0cjvetwd",
+    "new_colliding_receipts_retained_at": "var/retro-product/judgment-evaluation/output-name-collision-legacy"
+  },
+  {
+    "name": "product",
+    "restored_from_untouched_previous_sandbox": "/tmp/research-retro-isolated-taxr84fs",
+    "new_colliding_receipts_retained_at": "var/retro-product/judgment-evaluation/output-name-collision-product"
+  }
+]

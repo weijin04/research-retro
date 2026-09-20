@@ -1,0 +1,13 @@
+{
+  "runs_expected": 20,
+  "adjacent_edges_expected": 8,
+  "overlap_min_margin": 0.222,
+  "Xe_ESS_shortfalls": [
+    15.5,
+    48.0
+  ],
+  "tail_duration_fs": 107.5,
+  "raw_ESS_or_overlap_recomputed": false,
+  "long_result_status": "not_verified_in_this_handoff; execution_unknown",
+  "long_directory_accessed": false
+}

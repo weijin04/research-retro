@@ -1,0 +1,2712 @@
+{
+  "contract_version": "1.0",
+  "ok": true,
+  "result": {
+    "workspace": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro",
+    "project_id": "materials",
+    "entry": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/START_HERE.md",
+    "resumed": true,
+    "state": {
+      "state_revision": 192,
+      "nodes": 0,
+      "jev_calls": 90,
+      "jev_successful_calls": 90,
+      "types": {},
+      "needs_review": [],
+      "coverage_risks": [],
+      "open_questions": [],
+      "publication": {
+        "status": "draft",
+        "blockers": [
+          "coverage, residual discovery and cold handoff not yet assessed"
+        ]
+      },
+      "next": "Review sources and unresolved issues; an empty declared queue is not proof of whole-project coverage."
+    },
+    "discovery": {
+      "census": [
+        {
+          "source_id": "project",
+          "denominator": 43596,
+          "enumeration_complete": true,
+          "errors": []
+        }
+      ],
+      "strata": {
+        "cxekr": {
+          "files": 42666,
+          "unlinked": 42666
+        },
+        "cxekr_loop": {
+          "files": 897,
+          "unlinked": 897
+        },
+        "gt-reforge": {
+          "files": 33,
+          "unlinked": 33
+        }
+      },
+      "judgment_queue": {
+        "total": 90,
+        "pending": 90,
+        "items": [
+          {
+            "receipt": "semantic:53099f451e284591a29a6ea687903673",
+            "id": "dsh-c-14",
+            "kind": "impact",
+            "title": "R4 run-1 was void because the brief's fallback took the global minimum over non-percolating sub-Angstrom edges",
+            "target": {
+              "material": "m70",
+              "quote": "otherwise the minimum over all windows",
+              "text": "The invalid fallback instruction in the run-1 brief"
+            },
+            "why_proposed": "The defect originates in the brief text, so the void run must be attributed to the input convention rather than to the frozen rule.",
+            "next_check": "Read run1/scorer.py (m10) and its predictions to confirm the void run is preserved and never cited as rule performance.",
+            "answer": {
+              "choice": "affected",
+              "confidence": 1.0,
+              "probabilities": {
+                "affected": 1.0,
+                "insufficient": 0.0,
+                "unaffected": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:5084b470e37a586c120bd58a",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m91",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md",
+                "revision": 1,
+                "sha256": "95adb598ab1afa2edf3cff869bce9bafc1e305c0798c1f6c3553373e187bab34"
+              },
+              {
+                "artifact": "artifact:6419a2337b6ad2c8ad493592",
+                "bytes": [
+                  0,
+                  5612
+                ],
+                "key": "m70",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/codex-brief.md",
+                "revision": 1,
+                "sha256": "0453d6a074273b8ba308f8de34fb6452a2143b0b50c16c70d235fe3ac594ca74"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 1.0,
+            "request_hash": "504efbfd2e76e4ff4f239187a5b6b5f6f6ba320e20c73bf98ee1656f0bdfa322",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:ec178f6d7c044510acd6946737056beb",
+            "id": "dsh-c-15",
+            "kind": "action",
+            "title": "R4 pre-registered stop rule forbids a third input-side patch if branch C recurs",
+            "target": {
+              "material": "m91",
+              "quote": "run-2 若仍触发分支 C（弃权率 >0.5），则**不再修输入管线**",
+              "text": "Run-2 did recur branch C, so the static-geometry route was to be stopped rather than patched again"
+            },
+            "why_proposed": "The pre-registered stop rule is the safeguard that distinguishes a bug fix from iterating the input until the score looks acceptable.",
+            "next_check": "Verify no third r_eff patch was applied and that the 5/23-prediction run-2 outputs are the final route evidence.",
+            "answer": {
+              "choice": "stale",
+              "confidence": 0.96,
+              "probabilities": {
+                "insufficient": 0.0,
+                "stale": 0.97,
+                "useful": 0.03
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:1a4c23770b4284e31f41ad22",
+                "bytes": [
+                  0,
+                  4998
+                ],
+                "key": "m82",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/codex-brief-run2.md",
+                "revision": 1,
+                "sha256": "e98da0251206aea431b10b6dd7eeab45f9ff67e1b668a58eeb5bb6563e366c3b"
+              },
+              {
+                "artifact": "artifact:5084b470e37a586c120bd58a",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m91",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md",
+                "revision": 1,
+                "sha256": "95adb598ab1afa2edf3cff869bce9bafc1e305c0798c1f6c3553373e187bab34"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.985,
+            "request_hash": "43e7229d5921f3a71b2bd3804a411b4f94c0741d89617fcfc1ad5e1af0920039",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:01620037be0d4f4faf19c8b1b9c545bc",
+            "id": "dsh-c-07",
+            "kind": "support",
+            "title": "Guest-induced opening on CALF-20M-w is falsified: loaded windows are narrower",
+            "target": {
+              "text": "Open question: does loading a guest widen the CALF-20M-w bottleneck enough to pass Kr?"
+            },
+            "why_proposed": "A negative result on guest-induced opening removes one remediation path for the rigid-geometry failure and should not be re-tested as if open.",
+            "next_check": "Read the analysis-gf/kr/xe JSON and confirm the loaded-window q50 shift; then check whether any other opening mechanism remains in the R3 plan.",
+            "answer": {
+              "choice": "counters",
+              "confidence": 0.95,
+              "probabilities": {
+                "compatible": 0.0,
+                "counters": 0.96,
+                "direct": 0.04,
+                "insufficient": 0.0,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:8e5b9f0869148cc39ced5ce4",
+                "bytes": [
+                  0,
+                  3618
+                ],
+                "key": "m77",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+                "revision": 1,
+                "sha256": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.98,
+            "request_hash": "427a08522938afdebcd8344523241ad7ad0c5308e0d63cdb85c8b1245675d4d9",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:9131bb39252146f9a261a1c82bfd8413",
+            "id": "dsh-c-03",
+            "kind": "genealogy",
+            "title": "Round-1 summary hash is a derivative pointer to the R1-A scorer output",
+            "target": {
+              "material": "m76",
+              "quote": "f25386192928a2d2829e9c774bda18b016272a11efbae18fe7f070203457a7db",
+              "text": "The full predictions.csv hash of the deterministic R1-A run"
+            },
+            "why_proposed": "The round-1 summary abbreviates a hash whose full value appears in the R1-A README, so the summary is downstream of that run record.",
+            "next_check": "Confirm the hash against any preserved predictions.csv and check that m6 scorer reproduces it.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.91,
+              "probabilities": {
+                "derived": 0.94,
+                "independent": 0.04,
+                "insufficient": 0.02,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:5692ac20434b2821c8d96379",
+                "bytes": [
+                  0,
+                  2241
+                ],
+                "key": "m65",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round1-summary.md",
+                "revision": 1,
+                "sha256": "7f8ebdd132a754db1c198217e766e4877f39a3897352605e7003e6228c891a76"
+              },
+              {
+                "artifact": "artifact:2bb89e1d61ae89cad265ad40",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m76",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r1a/README.md",
+                "revision": 1,
+                "sha256": "571ac60df24ca7b8d8458ae0685e41901b4814e0144fadd8d714a3c767c80059"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.97,
+            "request_hash": "95d182035b87b4b12d6db8e73ac52ce30bd852f96aabeed0e82f56efa02398a5",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:a2583e597e0a485494100cff19e4f4fd",
+            "id": "dsh-a-0005",
+            "kind": "scope",
+            "title": "CoNi-DAB has no periodic-path equivalent; channel A uses a global minimum over 42 windows",
+            "target": {
+              "material": "m12",
+              "quote": "explicitly labeled NOT a verified percolation path (a single",
+              "text": "Is the CoNi-DAB r_bottleneck(t), defined as the minimum over all 42 windows, comparable to CALF-20M-w's r_mainwindow(t), which is restricted to the Zeo++-selected periodic path? A single window's radius does not certify a connected pathway."
+            },
+            "why_proposed": "m12 documents this as a gap and keeps r_narrowest_static(t) as a diagnostic only; using a global per-frame minimum can select a different window on different frames and does not establish percolation, so cross-material P_Kr/P_Xe comparison has a topology-scope caveat.",
+            "next_check": "read the original /home/sun07ao/cxekr_loop/r3/analyze_conidab.py r_bottleneck implementation and the CoNi-DAB network.json to see whether any connected path exists among the 42 windows.",
+            "answer": {
+              "choice": "incompatible",
+              "confidence": 0.88,
+              "probabilities": {
+                "compatible": 0.04,
+                "incompatible": 0.92,
+                "insufficient": 0.04
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:35cc6c5ba7c28ecbcb033526",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m12",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+                "revision": 1,
+                "sha256": "3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4"
+              },
+              {
+                "artifact": "artifact:35cc6c5ba7c28ecbcb033526",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m12",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+                "revision": 1,
+                "sha256": "3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.96,
+            "request_hash": "51b4232c6ed091173efecf46fb15afd20c6cb74215d44753f816f51f1ea06bea",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:2a09a992cffc4465b80800aff615ecbe",
+            "id": "dsh-c-34",
+            "kind": "action",
+            "title": "R3b 0.26 ns inverse rotor signal was pre-registered to be adjudicated artifact versus real",
+            "target": {
+              "material": "m95",
+              "quote": "在 1 ns 上",
+              "text": "The 1 ns R3b rerun made the inverse signal disappear, consistent with the pre-registered artifact or inconclusive branch"
+            },
+            "why_proposed": "The frozen basin criterion written before the final analysis determines how the disappearing signal should be classified, guarding against post-hoc rescue.",
+            "next_check": "Read diagnose_basins.py output and the R3b analysis JSON to confirm the basin-distribution explanation for the 0.26 ns result.",
+            "answer": {
+              "choice": "stale",
+              "confidence": 0.85,
+              "probabilities": {
+                "insufficient": 0.02,
+                "stale": 0.9,
+                "useful": 0.08
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:68c732bee973bdc5e5223383",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m4",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/diagnose_basins.py",
+                "revision": 1,
+                "sha256": "a971e762d52ddccab2882864ceeb2e8afdd75baabcf93abc19758f941b690c2f"
+              },
+              {
+                "artifact": "artifact:ca55784d24a152f178a7691a",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m95",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md",
+                "revision": 1,
+                "sha256": "3c9423a0f8f4efd44dac5d5aeb3cea03d5bd13a0b63c0b172deae90378fd2a45"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.95,
+            "request_hash": "4e166da6886fc561fabb2e645f540188f490544f43a03125afffbbd93985a2ae",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:241fd66b138f42a7977eb8bb0298b6b3",
+            "id": "dsh-c-06",
+            "kind": "genealogy",
+            "title": "PROGRESS-REPORT round-3 update reproduces the R3 zero-opening frame count",
+            "target": {
+              "material": "m77",
+              "quote": "1 ns × 3 系综 = 5943 帧，**零次开窗事件**",
+              "text": "The underlying R3 round-3 summary reports the same 5943 frames with zero opening events"
+            },
+            "why_proposed": "The identical frame count and zero-event result show the progress report is a derived summary of the R3 round-3 record.",
+            "next_check": "Diff m95 against m77 for any changed numbers (max radius, q50) and against the analysis CSVs.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.83,
+              "probabilities": {
+                "derived": 0.87,
+                "independent": 0.04,
+                "insufficient": 0.09,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:ca55784d24a152f178a7691a",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m95",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md",
+                "revision": 1,
+                "sha256": "3c9423a0f8f4efd44dac5d5aeb3cea03d5bd13a0b63c0b172deae90378fd2a45"
+              },
+              {
+                "artifact": "artifact:8e5b9f0869148cc39ced5ce4",
+                "bytes": [
+                  0,
+                  3618
+                ],
+                "key": "m77",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+                "revision": 1,
+                "sha256": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.935,
+            "request_hash": "72bdcad76e4123a69ac08689d64cf4a06f93d090dd70fc037b6b1b6a064c4e93",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:8b416999e7254fcc8fa27fcf74943488",
+            "id": "dsh-c-04",
+            "kind": "action",
+            "title": "R2's only falsifiable positive prediction: CALF-20M-w should trigger Kr if E1 rigid exclusion is true",
+            "target": {
+              "material": "m95",
+              "quote": "CALF-20M-w@195K 未触发 Kr——按预注册分支判\"部分成功\"，E1 刚性假设被削弱",
+              "text": "R2 blind-test outcome: CALF-20M-w did not trigger Kr, weakening the E1 rigid hypothesis"
+            },
+            "why_proposed": "The pre-registered positive prediction and its actual outcome together decide the E1 status, independent of later reinterpretation.",
+            "next_check": "Read /home/sun07ao/cxekr_loop/funnel_runs/calf-20m-w-195k descriptors/predictions to verify the non-trigger and the Λ values behind it.",
+            "answer": {
+              "choice": "stale",
+              "confidence": 0.8,
+              "probabilities": {
+                "insufficient": 0.03,
+                "stale": 0.87,
+                "useful": 0.1
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:061660453dbccdeb8b3eca99",
+                "bytes": [
+                  0,
+                  1891
+                ],
+                "key": "m67",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r2/SPEC.md",
+                "revision": 1,
+                "sha256": "c4e0777a3310ae17bc52bd7841f56209a3e33810174b1b64ef3c97bd8dbb80ac"
+              },
+              {
+                "artifact": "artifact:ca55784d24a152f178a7691a",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m95",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md",
+                "revision": 1,
+                "sha256": "3c9423a0f8f4efd44dac5d5aeb3cea03d5bd13a0b63c0b172deae90378fd2a45"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.935,
+            "request_hash": "bf7688ae80dc654422f83e2d084fa227e83153c7ebc82b26461552686f615c80",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:928750eb308847e39f69e3ff0fd7b991",
+            "id": "dsh-a-0009",
+            "kind": "genealogy",
+            "title": "m4's within-basin deviation definition traces to analyze_conidab.py L430",
+            "target": {
+              "material": "m12",
+              "quote": "crossing a boundary at an odd multiple of 60 deg",
+              "text": "analyze_conidab.py's basin_index and 60-degree event-boundary definition is the possible source of m4's within-basin deviation formula, and m4's 120-degree convention is a correction of a folding mistake made while deriving from it."
+            },
+            "why_proposed": "m4 documents that its period=120.0 comes from analyze_conidab.py L430 (basin centers at 120k, 60-degree odd multiples are boundaries) and that a 60-degree folding error was caught in a 2026-08-03 smoke test; this is a direct derivative relation.",
+            "next_check": "read the original /home/sun07ao/cxekr_loop/r3/analyze_conidab.py around L430 to verify the basin_index formula and that the 120-degree convention is implemented.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.79,
+              "probabilities": {
+                "derived": 0.85,
+                "independent": 0.09,
+                "insufficient": 0.06,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:68c732bee973bdc5e5223383",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m4",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/diagnose_basins.py",
+                "revision": 1,
+                "sha256": "a971e762d52ddccab2882864ceeb2e8afdd75baabcf93abc19758f941b690c2f"
+              },
+              {
+                "artifact": "artifact:35cc6c5ba7c28ecbcb033526",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m12",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+                "revision": 1,
+                "sha256": "3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.925,
+            "request_hash": "a2ff98c5915d06b7732511313527fe8fdd3a78163262608188fc96d92f252f4e",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:8811bed1d1a447258e5ec2d4ac796d29",
+            "id": "dsh-a-0001",
+            "kind": "genealogy",
+            "title": "R3b basin-artifact diagnostic (m4) is derived from analyze_conidab.py rotor CSV (m12)",
+            "target": {
+              "material": "m12",
+              "quote": "DABCO rotor azimuthal angle theta(t)",
+              "text": "analyze_conidab.py is the possible upstream source that emits the per-frame t_ps/theta_rotor_deg/theta_unwrapped_deg/basin_index CSV consumed by diagnose_basins.py; its basin and event definitions control the downstream artifact test."
+            },
+            "why_proposed": "m4 states its only input is a CSV already produced by analyze_conidab.py and that it does not recompute trajectories or modify that script, so the derived diagnostic is a re-analysis of m12's output rather than an independent measurement. The packet marks both as partial texts.",
+            "next_check": "read the original /home/sun07ao/cxekr_loop/r3/analyze_conidab.py (rotor CSV writer and the basin_index definition) to confirm what m4 consumes.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.73,
+              "probabilities": {
+                "derived": 0.8,
+                "independent": 0.13,
+                "insufficient": 0.07,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:68c732bee973bdc5e5223383",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m4",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/diagnose_basins.py",
+                "revision": 1,
+                "sha256": "a971e762d52ddccab2882864ceeb2e8afdd75baabcf93abc19758f941b690c2f"
+              },
+              {
+                "artifact": "artifact:35cc6c5ba7c28ecbcb033526",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m12",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+                "revision": 1,
+                "sha256": "3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.9,
+            "request_hash": "a5dbe0c291ec6999b8a13ae817b4097c5d7c884478d4b5ed9f6faf9a63237533",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:5b21588980234e60868334be48de5d4a",
+            "id": "dsh-a-0011",
+            "kind": "scope",
+            "title": "The MIP-203-Suc barrier evidence is a single-path CI-NEB energy, not a diffusivity",
+            "target": {
+              "material": "m9",
+              "quote": "\"published_barriers_kjmol\": BARRIERS,",
+              "text": "Is the Kr/Xe kinetic ratio derived from single-path barriers adequate to overrule an adsorption direction, given that no measured diffusion coefficient or recrossing correction enters the audit?"
+            },
+            "why_proposed": "m9 multiplies an adsorption ratio by exp(delta barrier / RT) with fixed published barriers {Kr:12.8, Xe:21.0} and lists the missing prefactor/loading/recrossing terms as limitations, bounding what the sign verdict can mean.",
+            "next_check": "read the original kr_tree ledger gold_standard_detail.md to find the CI-NEB provenance and whether more than one path was computed.",
+            "answer": {
+              "choice": "incompatible",
+              "confidence": 0.69,
+              "probabilities": {
+                "compatible": 0.11,
+                "incompatible": 0.79,
+                "insufficient": 0.1
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:8657e6b3c063abfaa29f04df",
+                "bytes": [
+                  0,
+                  5265
+                ],
+                "key": "m9",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v34_adsorption_transport_identifiability/audit.py",
+                "revision": 1,
+                "sha256": "1484be3075bb9ffd529a8bac194ed3509b618384ed5d100b127df00ccaab288e"
+              },
+              {
+                "artifact": "artifact:8657e6b3c063abfaa29f04df",
+                "bytes": [
+                  0,
+                  5265
+                ],
+                "key": "m9",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v34_adsorption_transport_identifiability/audit.py",
+                "revision": 1,
+                "sha256": "1484be3075bb9ffd529a8bac194ed3509b618384ed5d100b127df00ccaab288e"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.895,
+            "request_hash": "869d0c37dff3878c23583cf8336c844d03f446b329028c3ef32532281909bc3c",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:a7b7b713424d4186bab81c6cb50cd0af",
+            "id": "dsh-a-0002",
+            "kind": "genealogy",
+            "title": "CoNi-DAB dual-channel analysis (m12) is built on analyze_window.py (m16)",
+            "target": {
+              "material": "m16",
+              "quote": "R3: per-frame window bottleneck free-radius analysis.",
+              "text": "analyze_window.py is the possible source of the channel-A free-radius machinery (vdW table, minimum-image window centroid, per-window calibration) reused by analyze_conidab.py."
+            },
+            "why_proposed": "m12 explicitly imports analyze_window.py and only extends the vdW radius dict at runtime for Co/Ni; the shared calibrate/centroid code is therefore common ancestry, not an independent implementation.",
+            "next_check": "read the original /home/sun07ao/cxekr_loop/r3/analyze_window.py (compute_calibration_offsets and the calibration caveat section) to enumerate exactly what m12 inherits.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.71,
+              "probabilities": {
+                "derived": 0.79,
+                "independent": 0.16,
+                "insufficient": 0.05,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:35cc6c5ba7c28ecbcb033526",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m12",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+                "revision": 1,
+                "sha256": "3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4"
+              },
+              {
+                "artifact": "artifact:7ead0595fde3c8f86cd714d5",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m16",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+                "revision": 1,
+                "sha256": "2bae803b93bfb896053a3ca36ea2a1a1570f39a64497d322c6e6ddbfa9b9917b"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.895,
+            "request_hash": "442afa69e3ead263281ed18874648f61dcacd3b5e0320c6f01075af0e9584922",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:b3b7c0ba38e14775b60811c6e37437b5",
+            "id": "dsh-c-37",
+            "kind": "action",
+            "title": "v161 truth-free predictions require a unanimous frozen network gate",
+            "target": {
+              "material": "m17",
+              "quote": "assert all(row[\"new_certificate\"] == \"no-clear\" for row in payload[\"predictions\"])",
+              "text": "Only one of six predictions qualifies for a route, leaving the other materials with no-clear certificates"
+            },
+            "why_proposed": "The unanimity gate is the mechanism that prevents a single conflicting kinetic margin from routing a material.",
+            "next_check": "Read TRUTH_FREE_PREDICTIONS.json and build_truth_free_predictions.py to audit the single qualified route and the five no-clear outcomes.",
+            "answer": {
+              "choice": "stale",
+              "confidence": 0.7,
+              "probabilities": {
+                "insufficient": 0.03,
+                "stale": 0.79,
+                "useful": 0.18
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:9f77ca0976ad67e0d81a2d92",
+                "bytes": [
+                  0,
+                  2201
+                ],
+                "key": "m17",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v161_finite_inventory_thermo_kinetic_router/test_v161.py",
+                "revision": 1,
+                "sha256": "21db84e8836b0ab18a11618131d2fbe3822091be372b62277f4481fd17c1dc59"
+              },
+              {
+                "artifact": "artifact:9f77ca0976ad67e0d81a2d92",
+                "bytes": [
+                  0,
+                  2201
+                ],
+                "key": "m17",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v161_finite_inventory_thermo_kinetic_router/test_v161.py",
+                "revision": 1,
+                "sha256": "21db84e8836b0ab18a11618131d2fbe3822091be372b62277f4481fd17c1dc59"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.895,
+            "request_hash": "a48cbed67dd8a1dbd1392a3d9c2ed74a2de5f9216655429472642f27f123d2b5",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:f2f701289f1143c8a71024cb1a50c837",
+            "id": "dsh-a-0004",
+            "kind": "impact",
+            "title": "CoNi-DAB channel A inherits the same unvalidated free-radius calibration as CALF-20M-w",
+            "target": {
+              "material": "m16",
+              "quote": "offset[w] = free_radius_A(w, from network.json, Zeo++ vertex, static)",
+              "text": "The CoNi-DAB channel-A P_Kr/P_Xe inherits the centroid-versus-Zeo++ additive offset, now with runtime-added Co and Ni radii, so the R3b window-radius numbers carry the same unvalidated definitional correction."
+            },
+            "why_proposed": "m12 says it reuses aw.compute_calibration_offsets against the same reference CIF and inherits the CALIBRATION CAVEAT unchanged; the only delta is a runtime Co/Ni radius extension, which changes the raw radius but not the offset logic.",
+            "next_check": "read the CoNi-DAB result JSON produced by original /home/sun07ao/cxekr_loop/r3/analyze_conidab.py and compare raw versus calibrated r_bottleneck series.",
+            "answer": {
+              "choice": "affected",
+              "confidence": 0.66,
+              "probabilities": {
+                "affected": 0.78,
+                "insufficient": 0.13,
+                "unaffected": 0.09
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:35cc6c5ba7c28ecbcb033526",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m12",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+                "revision": 1,
+                "sha256": "3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4"
+              },
+              {
+                "artifact": "artifact:7ead0595fde3c8f86cd714d5",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m16",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+                "revision": 1,
+                "sha256": "2bae803b93bfb896053a3ca36ea2a1a1570f39a64497d322c6e6ddbfa9b9917b"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.89,
+            "request_hash": "efc440e8a0142e35c4bb9d0100f7967c906595304e74cdb8c5f36725bf322ef8",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:65540df890fc4753b237a81602538b27",
+            "id": "dsh-c-31",
+            "kind": "genealogy",
+            "title": "CALF-20M-w loading count in production-launch derives from Tian2026 saturation capacities",
+            "target": {
+              "material": "m14",
+              "quote": "n_Kr/cell = (39.17/22414) * 765.9 = 1.34   -> round to n = 1",
+              "text": "The underlying build_loaded.py derivation of the n=1 guest count from the literature saturation capacities"
+            },
+            "why_proposed": "The n=1 guest count used to build the loaded MD systems is a derived quantity whose source is the literature saturation table.",
+            "next_check": "Check m14's STP conversion and molar mass against m94 and confirm the shared 195 K / 5 bar condition tuple.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.67,
+              "probabilities": {
+                "derived": 0.76,
+                "independent": 0.11,
+                "insufficient": 0.13,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:a1c1d7e9d4f93759d8ced116",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m94",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/production-launch.md",
+                "revision": 1,
+                "sha256": "6714645d90b63da829b8eb3d74ff299f0eb166d0db023ff12a70179c06732662"
+              },
+              {
+                "artifact": "artifact:acf5af654fced9c0e1d4736f",
+                "bytes": [
+                  0,
+                  5011
+                ],
+                "key": "m14",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/md/build_loaded.py",
+                "revision": 1,
+                "sha256": "b747d7f1ddd894136b98453cada22965a376bda6bcded2e84ea3f9a8eff9ae5a"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.88,
+            "request_hash": "c08d7797404645a678d64d314836e036fa110135f80b772128ceeb85d20e7e70",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:231e89cd8fc34006b362c71a0315bbfe",
+            "id": "dsh-c-19",
+            "kind": "genealogy",
+            "title": "v106 Stage C derives its MD ensemble protocol from the Stage B driver",
+            "target": {
+              "material": "m5",
+              "quote": "run_one sbmof2 \\",
+              "text": "The Stage B driver that launched the flex_md_snapshots runs for SBMOF-2 and CALF-20-base"
+            },
+            "why_proposed": "The Stage C analysis is explicitly built on snapshots produced by the manifest protocol implemented in the Stage B driver.",
+            "next_check": "Check driver.log and the Stage B manifests to confirm the snapshot numbering and supercell match the Stage C analysis.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.67,
+              "probabilities": {
+                "derived": 0.75,
+                "independent": 0.2,
+                "insufficient": 0.05,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:37822587bbec17af7d92f6f5",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m78",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v106_thermal_ensemble_passability/STAGE_C_SBMOF2_SUMMARY.md",
+                "revision": 1,
+                "sha256": "44bf6c3e9ce844da8937970a50fcf63dba03914c619e401f04f787dfe7c23210"
+              },
+              {
+                "artifact": "artifact:49c3b701eae15ca5d28101f7",
+                "bytes": [
+                  0,
+                  1506
+                ],
+                "key": "m5",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v106_thermal_ensemble_passability/stageB_md/driver.sh",
+                "revision": 1,
+                "sha256": "e34814f86a46a53377f3d352fe18fdc08f0fece7a13d307bbb0f836133db5b7e"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.875,
+            "request_hash": "8be55a1210ee350065942b41cde573e6345a1ebed6e9eb32b21ea104c18d7bb2",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:373cc809947642919aeb1c4214bc13ab",
+            "id": "dsh-a-0025",
+            "kind": "impact",
+            "title": "v13_reus_cross_initialization and v13_s_only_validation share one frozen path-CV model",
+            "target": {
+              "material": "m19",
+              "quote": "SOURCE_10A = OUT / \"result.json\"",
+              "text": "Both the cross-initialization analysis and the s-only validation read the same v13_transverse_string_10A path_cv_result.json, so their prospective validations are not independent of the 10 A transverse-string model they both project onto."
+            },
+            "why_proposed": "m7 and m15 each declare the identical PATH_CV artifact path, and m19 is the comparison script operating in that same v13_transverse_string_10A directory; a systematic error in that model propagates to both downstream validations.",
+            "next_check": "read the original v13_transverse_string_10A/path_cv_result.json and v13_transverse_string_pilot/result_full.json to confirm the shared reference positions and selected lambda.",
+            "answer": {
+              "choice": "affected",
+              "confidence": 0.59,
+              "probabilities": {
+                "affected": 0.73,
+                "insufficient": 0.1,
+                "unaffected": 0.17
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:08f8db3ac99c691ab7a543ab",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m7",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_reus_cross_initialization/analyze.py",
+                "revision": 1,
+                "sha256": "493e647cfabcda0ddc34591a290b1301e32e1a45ff55b10105cc15ada08416b6"
+              },
+              {
+                "artifact": "artifact:aa7b2c738ac64aeaf0f1b2f4",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m15",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/analyze.py",
+                "revision": 1,
+                "sha256": "8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48"
+              },
+              {
+                "artifact": "artifact:dc011e50b35d34bb309cb249",
+                "bytes": [
+                  0,
+                  4717
+                ],
+                "key": "m19",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_transverse_string_10A/compare.py",
+                "revision": 1,
+                "sha256": "e4e28f331e09a7cd66cb992fa2fae854523672bbc96e6918e7c92a797bdccf4e"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.865,
+            "request_hash": "a7f1105d020196f09cca70530496442dc5f819f7e4ce973be60ad8cea295d521",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:10b2f2a9293b440995e4ed0ed7bd1498",
+            "id": "dsh-a-0024",
+            "kind": "genealogy",
+            "title": "v119 cheap falsifiers consume the v13 mixture frontier result as an input",
+            "target": {
+              "material": "m21",
+              "quote": "Aggregate the pressure/composition finite-loading frontier.",
+              "text": "The v13 mixture condition frontier aggregation is the possible source of the CALF-20-base 50/50 100 kPa per-uc loadings used in the v119 working-capacity and van't Hoff falsifiers."
+            },
+            "why_proposed": "m18 loads result.json from v13_mixture_condition_frontier and divides total molecules by the 36-cell supercell, while m21 is the script that aggregates that frontier; the falsifier therefore inherits m21's cell/combination handling.",
+            "next_check": "read the original v13_mixture_condition_frontier/result.json to confirm the per-cell totals and which materials/combos are covered.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.53,
+              "probabilities": {
+                "derived": 0.64,
+                "independent": 0.1,
+                "insufficient": 0.26,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:568335cb51c29bb162f27c38",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m18",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+                "revision": 1,
+                "sha256": "32d30adc482bebb39a5f5b4c54789029c54eb7023628b772f16d1ead3a61ead1"
+              },
+              {
+                "artifact": "artifact:379f7f2ad795db18cd15b120",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m21",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_condition_frontier/analyze.py",
+                "revision": 1,
+                "sha256": "b2a647cbd6dd7b68650a167b5e9bec50556bf34ed6ad94b96d6f7a77373c328b"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.82,
+            "request_hash": "84c83e6258e56468584371e085c6f63844b5880d2061fd7aec14c29d5a1b31e9",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:7e838a026bd14e138034cae8175308a2",
+            "id": "dsh-c-21",
+            "kind": "action",
+            "title": "v77 hard stop requires MIP-203-Suc and FMOF-Cu to be ordered in opposite directions before library expansion",
+            "target": {
+              "material": "m75",
+              "quote": "the cached rigid Henry ratio was 0.00241",
+              "text": "v35 calibration observed a FMOF-Cu sign reversal with temperature and a cached rigid Henry ratio far on the Xe side"
+            },
+            "why_proposed": "The hard-stop criterion needs a condition-matched ordering test, and the FMOF-Cu temperature-reversal data are the closest existing material-specific anchor.",
+            "next_check": "Check whether the MIP-vs-FMOF-Cu opposite ordering was ever demonstrated under matched conditions by reading v35 RESULTS and the v36 follow-up.",
+            "answer": {
+              "choice": "stale",
+              "confidence": 0.42,
+              "probabilities": {
+                "insufficient": 0.14,
+                "stale": 0.62,
+                "useful": 0.24
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:9fa5bf2b6c8f3be31f6f42ce",
+                "bytes": [
+                  0,
+                  4272
+                ],
+                "key": "m66",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v77_source_sink_input_closure/RESULTS.md",
+                "revision": 1,
+                "sha256": "92b8c6104f4eaa81ddb0f26f00018abd719eafe33ef5a2df674bae42b992ec27"
+              },
+              {
+                "artifact": "artifact:78f7169a900af7cb0c464af4",
+                "bytes": [
+                  0,
+                  2794
+                ],
+                "key": "m75",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/RESULTS.md",
+                "revision": 1,
+                "sha256": "23e95ac19a50ea46a50832ccdeb9da276c72a5b8f8578412fbceb5b72a66347f"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.81,
+            "request_hash": "7addab8adadd2f6f74f7ba66bd974fd6ab4400f2e8bac39ffd205438447f16c1",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:188edc9b97e54d4fae53caf15b2c61c6",
+            "id": "dsh-a-0014",
+            "kind": "genealogy",
+            "title": "The 1.818/2.05 A probe radii are half the Huang-2023 Kr/Xe LJ sigma values",
+            "target": {
+              "material": "m28",
+              "quote": "\"Kr\": (166.4, 3.636, \"Huang SI Table S3\"),",
+              "text": "The frozen Kr/Xe LJ sigma values published in Huang SI Table S3 (Kr 3.636 A, Xe 4.10 A) are the possible source of the half-sigma probe radii used by the TST accessibility gate, and of the same 1.818/2.05 A thresholds in the R4 scorer and analyze_window.py."
+            },
+            "why_proposed": "m31 states its probe radii are half the frozen LJ sigma from forcefields/models.yaml and gives 3.636/2 and 4.100/2; m28 audits the Huang-2023 contract rows and lists exactly Kr 3.636 and Xe 4.10 from Huang SI Table S3, so the numeric ancestry is explicit.",
+            "next_check": "read the original forcefields/models.yaml lines 14-15 and Huang 2023 SI Table S3 to confirm the shared sigma values and whether the same table feeds the LAMMPS scan.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.45,
+              "probabilities": {
+                "derived": 0.59,
+                "independent": 0.17,
+                "insufficient": 0.24,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:e410224955232f7acdeef84a",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m31",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v122_transport_head/stage0a_tst_network.py",
+                "revision": 1,
+                "sha256": "b42a3c6931240c1cc70cc942a99467b78930571b67933a31a214c1cea9ead553"
+              },
+              {
+                "artifact": "artifact:71bf801f9db1d17a5745964d",
+                "bytes": [
+                  0,
+                  4939
+                ],
+                "key": "m28",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v102_external_transport_gate/build_huang_forcefield.py",
+                "revision": 1,
+                "sha256": "1030c93ae81d03d81b9f0169dc33feb245096a61347cbdc9810c3535092e120f"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.795,
+            "request_hash": "678c4ca5fe199f13a8ef4fc4079c41c3e6e94367bf9f6e646f310ff6f0027018",
+            "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+          },
+          {
+            "receipt": "semantic:c2272af7172948e7a048343d8cc0746c",
+            "id": "dsh-c-27",
+            "kind": "action",
+            "title": "In-ATC primary-source dossier recommends dropping the strong Kr-positive label",
+            "target": {
+              "material": "m69",
+              "quote": "strict_CIF_to_sign_performance_eligible = false",
+              "text": "V154 nevertheless freezes an In-ATC empirical equilibrium-direction record while marking strict CIF-to-sign eligibility false"
+            },
+            "why_proposed": "A dropped-source label and an active frozen challenge record coexist, which is an unresolved bookkeeping/route conflict rather than a settled fact.",
+            "next_check": "Read GROUND_TRUTH.tsv and QUANTITATIVE_TRUTH.tsv rows for In-ATC alongside the V154 workbook freeze to decide whether provenance can be closed.",
+            "answer": {
+              "choice": "stale",
+              "confidence": 0.37,
+              "probabilities": {
+                "insufficient": 0.07,
+                "stale": 0.58,
+                "useful": 0.35
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:acf9bf285fa318e75a830ce4",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m89",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/dossier-kr1.md",
+                "revision": 1,
+                "sha256": "d771a0976ce504baf3a942ef7b61649ac0406e0046d3039763a06b6d71063507"
+              },
+              {
+                "artifact": "artifact:a0d103808a98dc96ec8416f6",
+                "bytes": [
+                  0,
+                  3079
+                ],
+                "key": "m69",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v154_new_input_generalization_and_domain_adjudication/IN_ATC_LOCAL_RECORD_FREEZE.md",
+                "revision": 1,
+                "sha256": "9cdfc7d37e120bdce017aef00589b35ab27bf77e5569f277edebeac085aa1d10"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.79,
+            "request_hash": "6b552150803f567026e8922b5c86790caa647c13b29dd293b3e84b3e6d5fac7c",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:607fdd4bb91442c592ea195c68e528c5",
+            "id": "dsh-c-32",
+            "kind": "genealogy",
+            "title": "v35 RESULTS cohort metrics derive from the v35 audit script",
+            "target": {
+              "material": "m3",
+              "quote": "\"\"\"Build a source-consistent experimental equilibrium-sign calibration set.\"\"\"",
+              "text": "The v35 audit script that builds the source-consistent calibration set and computes the cohorts"
+            },
+            "why_proposed": "Every cohort number in the RESULTS table is produced by the audit script, so the script is the authoritative source for the head-calibration claim.",
+            "next_check": "Rerun or read m3 to confirm the FMOF-Cu 253 K sign error and the 27-record strict cohort.",
+            "answer": {
+              "choice": "derived",
+              "confidence": 0.4,
+              "probabilities": {
+                "derived": 0.55,
+                "independent": 0.3,
+                "insufficient": 0.15,
+                "unrelated": 0.0
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:78f7169a900af7cb0c464af4",
+                "bytes": [
+                  0,
+                  2794
+                ],
+                "key": "m75",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/RESULTS.md",
+                "revision": 1,
+                "sha256": "23e95ac19a50ea46a50832ccdeb9da276c72a5b8f8578412fbceb5b72a66347f"
+              },
+              {
+                "artifact": "artifact:644971004f42f12495e14734",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m3",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py",
+                "revision": 1,
+                "sha256": "d45d492781e0cd16b53ca30f1fd0925011e56d8a77142db8d9b6b3e04f26ce33"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.775,
+            "request_hash": "b7b320d48f537b80bf7263190b732de464400a7f9a2509001ecce39105631b5a",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:6320fc2ba7e0408483933cb447467818",
+            "id": "dsh-b-03",
+            "kind": "impact",
+            "title": "The frozen contract FPR ceiling (<=0.2) is met exactly at 0.2 in the earlier r4 metrics via the equilibrium_iast branch, and is met at 0.0 in run1 only because fold K1 becomes all-abstain",
+            "target": {
+              "material": "m36",
+              "quote": "false kr-ordering rate on xe_priority controls <= 0.2",
+              "text": "Question: does the run1 improvement in maximum_false_kr_rate follow from the frozen rule or only from the changed geometry selection collapsing K1 equilibrium_iast predictions to abstain?"
+            },
+            "why_proposed": "m36 makes FPR<=0.2 a pass/fail contract, m34 reports the K1-branch rate at exactly 0.2 with 2/5 false kr, and m58 reports 0.0 with 5/5 abstain in the same K1 equilibrium_iast branch; the numerator change is a behavior change, not necessarily a better rule.",
+            "next_check": "Read the K1 equilibrium_iast row predictions in m34 and m58 (or the underlying prediction CSVs) and recompute false_kr_rate with abstain counted as non-false-positive, as m36 specifies.",
+            "answer": {
+              "choice": "affected",
+              "confidence": 0.25,
+              "probabilities": {
+                "affected": 0.5,
+                "insufficient": 0.48,
+                "unaffected": 0.02
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:ac3c65daf7e39830354f1f08",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m34",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/metrics.json",
+                "revision": 1,
+                "sha256": "81690055b3852a2b02b6a2c5388834cbdd6a162c763adf91c792435f56a561c7"
+              },
+              {
+                "artifact": "artifact:ee41974fc687069127ca0355",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m58",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/metrics.json",
+                "revision": 1,
+                "sha256": "ca274b2c8ef739e042686cb52ea6f78bc6ae42004b657768b1cc2f071367fc88"
+              },
+              {
+                "artifact": "artifact:49f2a408f55fd36c0c13282f",
+                "bytes": [
+                  0,
+                  1881
+                ],
+                "key": "m36",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/contract.json",
+                "revision": 1,
+                "sha256": "f237bbeaf646f602aefd34bf571ea35c676b4abe06540d81fa1a9cf3f1bdb647"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.75,
+            "request_hash": "2c60837338e29921c58f46cb936cdd6ad188c57a90417e9250c5baeec8d05a83",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          },
+          {
+            "receipt": "semantic:0d5dcaa53eb343839ef03a9f4a3f47d4",
+            "id": "dsh-b-08",
+            "kind": "support",
+            "title": "The fmof-cu CIF used by the v87 topology gate is the 400-atom verified replacement, not the superseded 640-atom disorder expansion flagged in the structure map audit",
+            "target": {
+              "material": "m37",
+              "quote": "\"primitive_atoms\": 400",
+              "text": "Question: does the m37 input hash (c68e98171ec23674890ba8130827cd47134a904149406d5c45a839394b7c057f) correspond to the 400-atom verified replacement, so that the m39 known_structure_conflict does not contaminate the gate verdict?"
+            },
+            "why_proposed": "m39 flags fmof_cu as a known_structure_conflict with a 640-atom superseded expansion and a 400-atom verified replacement, and m37 independently reports a 400-atom primitive fmof-cu input; the identity link between the two hashes is not stated in either material.",
+            "next_check": "Hash benchmarks/structures/fmof-cu.cif and compare it to the m39 conflict record and to the 400-atom replacement provenance, then confirm the atom count and PLD 2.1395 A.",
+            "answer": {
+              "choice": "insufficient",
+              "confidence": 0.32,
+              "probabilities": {
+                "compatible": 0.09,
+                "counters": 0.44,
+                "direct": 0.01,
+                "insufficient": 0.45,
+                "unrelated": 0.01
+              },
+              "type": "choice"
+            },
+            "status": "ok",
+            "error": null,
+            "sources": [
+              {
+                "artifact": "artifact:f0d20705cb43228397ff2d95",
+                "bytes": [
+                  0,
+                  7000
+                ],
+                "key": "m39",
+                "partial": true,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/structure_map_audit.tsv",
+                "revision": 1,
+                "sha256": "8b9e09efe31c2620a37193f41a8668bd8bfb0d6fdd9c2f3e12273fff93aade87"
+              },
+              {
+                "artifact": "artifact:7789374f2f3435d425bc5a37",
+                "bytes": [
+                  0,
+                  2215
+                ],
+                "key": "m37",
+                "partial": false,
+                "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v87_fmof_bonded_topology_gate/result.json",
+                "revision": 1,
+                "sha256": "2131c017e6f42ac5132720bf3ff895f26509a372bba21e3386b76e3ab74956e1"
+              }
+            ],
+            "stale_inputs": [],
+            "investigated": false,
+            "attention": 0.715,
+            "request_hash": "d884ca8b35467e00d1c4f2a299b49291dcb64e9f460236d3056f19c2e158f717",
+            "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+          }
+        ],
+        "target_groups": [
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v154_new_input_generalization_and_domain_adjudication/IN_ATC_RESULTS.json@79454909750e143b50e6b7c5168e2ed407c9d64ffea4e50767f134d2bf0786d4",
+            "relations": [
+              "semantic:023dc55311fd4d5bb34e25f976c19638",
+              "semantic:c30918e10389487795700f0c811ffeb1"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v56_observation_frontier/decision.json@f42051da526ffce257f1024eedc139a2a9f4c83340d226b79bfdb5b6fd9bb9c8",
+            "relations": [
+              "semantic:0c7f882619d8473bb483f88df5a9ec70",
+              "semantic:2e20bf22639c4999a2dcdb0d37b422d2",
+              "semantic:31008b5ebd604c1bb5399e70ca957ef9"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r2/SPEC.md@c4e0777a3310ae17bc52bd7841f56209a3e33810174b1b64ef3c97bd8dbb80ac",
+            "relations": [
+              "semantic:0eefb66bd8d04923bb1792d0450a3efb",
+              "semantic:b09deee5996c484ebe45806fbd019a01"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/predictions.csv@c66504d72df6d66c3a685c3cd3fc17c65735d7c204af3ff2a9c94cb3ad0a6d5b",
+            "relations": [
+              "semantic:122e334d1b1747f5aae9b68f58598f2d",
+              "semantic:187a6cebcb9e426488b4c0f5ab7c666a",
+              "semantic:431da3ec2b844b56b4cc775e143189b9",
+              "semantic:92ad8c43aec348a3b5d413455ff970ea",
+              "semantic:93356301ed1044018e4e85ed40197ad3"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/contract.json@f237bbeaf646f602aefd34bf571ea35c676b4abe06540d81fa1a9cf3f1bdb647",
+            "relations": [
+              "semantic:17a8a4026ed0473c998898626a6c6199",
+              "semantic:6320fc2ba7e0408483933cb447467818",
+              "semantic:91ada842042045d7a6c4e80875d579e8",
+              "semantic:e084161c4e04422981019d57f9666293"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md@011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8",
+            "relations": [
+              "semantic:241fd66b138f42a7977eb8bb0298b6b3",
+              "semantic:def336a0eeed4e8e8e1d30aa502dd17f"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md@3c9423a0f8f4efd44dac5d5aeb3cea03d5bd13a0b63c0b172deae90378fd2a45",
+            "relations": [
+              "semantic:2a09a992cffc4465b80800aff615ecbe",
+              "semantic:8b416999e7254fcc8fa27fcf74943488"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py@625e0a5d68a00303070484e57a067a02b1455e886cda3fcb780af7ff50124f71",
+            "relations": [
+              "semantic:2b91115136314748948f63a9addcb379",
+              "semantic:67c12783464047428139249360368453",
+              "semantic:bf4ae466d011402d90f681bdacce0c61"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v154_new_input_generalization_and_domain_adjudication/IN_ATC_LOCAL_RECORD_FREEZE.md@9cdfc7d37e120bdce017aef00589b35ab27bf77e5569f277edebeac085aa1d10",
+            "relations": [
+              "semantic:3b8f4a0ab3004b4a9de7d78f718a10f1",
+              "semantic:c2272af7172948e7a048343d8cc0746c"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/estimand-wellposedness.md@6cc911efd57d1c736e06c818fb4bb4519421c79f7a622e6224d7bbf9b24f5d22",
+            "relations": [
+              "semantic:40511f8b61774925bae3297cd7bd2ea3",
+              "semantic:c25a021fbae348f8a55e59de826f97fc",
+              "semantic:d4d4129be50e4d15bdf30a6870bce654",
+              "semantic:f4503ae830db4e989052d4e21c92dd51"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py@3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4",
+            "relations": [
+              "semantic:44a58ccbb7f248a18c961a2bbda633e7",
+              "semantic:8811bed1d1a447258e5ec2d4ac796d29",
+              "semantic:928750eb308847e39f69e3ff0fd7b991",
+              "semantic:9899fda25a94470d984e0b5e201d2a1e",
+              "semantic:a2583e597e0a485494100cff19e4f4fd"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v18_causal_funnel/replay_v12.py@f02ab94946b69c4ec9abf985602ec315d6342aa7c97e6e2471e84c05a3108e91",
+            "relations": [
+              "semantic:507ac656c3a94f1bb987c07e23b2d2e4",
+              "semantic:cd70f1945dfb4724a61875da421744ca"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v34_adsorption_transport_identifiability/audit.py@1484be3075bb9ffd529a8bac194ed3509b618384ed5d100b127df00ccaab288e",
+            "relations": [
+              "semantic:58e8374fa43547f9a7fc98bfa90f3444",
+              "semantic:5b21588980234e60868334be48de5d4a"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/md/build_loaded.py@b747d7f1ddd894136b98453cada22965a376bda6bcded2e84ea3f9a8eff9ae5a",
+            "relations": [
+              "semantic:5df76d9be1254c02bb16aa87b03d7242",
+              "semantic:65540df890fc4753b237a81602538b27",
+              "semantic:8ba9419ebd324775adb0915b3124cb93"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py@d45d492781e0cd16b53ca30f1fd0925011e56d8a77142db8d9b6b3e04f26ce33",
+            "relations": [
+              "semantic:607fdd4bb91442c592ea195c68e528c5",
+              "semantic:9682fe7b52684a44bfdc5b28815d88bf"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/scorer.py@1e2b702bd91a6eb68c454d09b8a4ac73355b6f9a18c3348806549042a0ea0bfc",
+            "relations": [
+              "semantic:63955b6113e74e4baf202b1cfde6c7ed",
+              "semantic:9148472c97414c6f8e6b232721ecd9d2"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md@95adb598ab1afa2edf3cff869bce9bafc1e305c0798c1f6c3553373e187bab34",
+            "relations": [
+              "semantic:7763c5178f4640c58565a410e2ab3142",
+              "semantic:a7fdb8ad032d475e90ded31db7baff75",
+              "semantic:ec178f6d7c044510acd6946737056beb"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r1a/README.md@571ac60df24ca7b8d8458ae0685e41901b4814e0144fadd8d714a3c767c80059",
+            "relations": [
+              "semantic:9131bb39252146f9a261a1c82bfd8413",
+              "semantic:c6891fbbeaa64f02ad9b66d2093bde44"
+            ]
+          },
+          {
+            "target": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py@2bae803b93bfb896053a3ca36ea2a1a1570f39a64497d322c6e6ddbfa9b9917b",
+            "relations": [
+              "semantic:a7b7b713424d4186bab81c6cb50cd0af",
+              "semantic:ccae95a912744f5d8d8337b8427218a6",
+              "semantic:f2f701289f1143c8a71024cb1a50c837",
+              "semantic:fede5231e0704cf7a1a195c423314a3d"
+            ]
+          }
+        ],
+        "ordering": "Uninvestigated relations first, then contradiction/impact/derivation signals and distribution spread. No acceptance threshold; all items retained.",
+        "authority": "Candidate relations for strong-host investigation; neither an evidence vote nor scientific truth."
+      },
+      "families": [
+        {
+          "directory": "cxekr",
+          "source_id": "project",
+          "files": 12,
+          "unlinked": 12,
+          "formats": {
+            "(none)": 3,
+            ".md": 7,
+            ".yml": 1,
+            ".toml": 1
+          },
+          "examples": [
+            "cxekr/.gitignore",
+            "cxekr/00_CONTEXT_KR_XE_CAUSAL_OPERATORS.md",
+            "cxekr/01_RESEARCH_FRAMEWORK_AND_EXERCISE_CHAIN.md",
+            "cxekr/LICENSE",
+            "cxekr/PROJECT_CONTEXT.md",
+            "cxekr/README.md"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/abstain_gap_audit",
+          "source_id": "project",
+          "files": 7,
+          "unlinked": 7,
+          "formats": {
+            "(none)": 1,
+            ".md": 6
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/abstain_gap_audit/.gitignore",
+            "cxekr/artifacts/analysis/abstain_gap_audit/AUDIT.md",
+            "cxekr/artifacts/analysis/abstain_gap_audit/KINETIC_RERUN_LAUNCH.md",
+            "cxekr/artifacts/analysis/abstain_gap_audit/KR04_DIAGNOSIS.md",
+            "cxekr/artifacts/analysis/abstain_gap_audit/SCAN_CONTRACT_VERSION_AUDIT.md",
+            "cxekr/artifacts/analysis/abstain_gap_audit/XE01_PATH_CHECK.md"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull",
+          "source_id": "project",
+          "files": 1,
+          "unlinked": 1,
+          "formats": {
+            "(none)": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/.gitignore"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/logs",
+          "source_id": "project",
+          "files": 4,
+          "unlinked": 4,
+          "formats": {
+            ".out": 1,
+            ".status": 1,
+            ".stderr": 1,
+            ".stdout": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/logs/nohup.out",
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/logs/run.status",
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/logs/run.stderr",
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/logs/run.stdout"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/output",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".json": 1,
+            ".csv": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/output/rank.json",
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr01_rescan_pull/output/scans.csv"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/abstain_gap_audit/kr04_rescan_pull/output",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".json": 1,
+            ".csv": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr04_rescan_pull/output/rank.json",
+            "cxekr/artifacts/analysis/abstain_gap_audit/kr04_rescan_pull/output/scans.csv"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/abstain_gap_audit/sources",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".pdf": 2
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/abstain_gap_audit/sources/10.1016_j.seppur.2021.119132_LibGen.pdf",
+            "cxekr/artifacts/analysis/abstain_gap_audit/sources/Zhu2021_Efficient.pdf"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/abstain_gap_audit/xe01_periodic_path_scratch",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".json": 1,
+            ".py": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/abstain_gap_audit/xe01_periodic_path_scratch/results.json",
+            "cxekr/artifacts/analysis/abstain_gap_audit/xe01_periodic_path_scratch/run_check.py"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/corpus_feature_matrix",
+          "source_id": "project",
+          "files": 4,
+          "unlinked": 4,
+          "formats": {
+            ".md": 2,
+            ".py": 1,
+            ".tsv": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/corpus_feature_matrix/GAPS.md",
+            "cxekr/artifacts/analysis/corpus_feature_matrix/PROVENANCE.md",
+            "cxekr/artifacts/analysis/corpus_feature_matrix/build_matrix.py",
+            "cxekr/artifacts/analysis/corpus_feature_matrix/matrix.tsv"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/iast_vs_breakthrough_corpus",
+          "source_id": "project",
+          "files": 3,
+          "unlinked": 3,
+          "formats": {
+            ".tsv": 2,
+            ".md": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/iast_vs_breakthrough_corpus/CORPUS.tsv",
+            "cxekr/artifacts/analysis/iast_vs_breakthrough_corpus/NEW_SIGN_LABELS.tsv",
+            "cxekr/artifacts/analysis/iast_vs_breakthrough_corpus/NOTES.md"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/new_label_structures",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".md": 1,
+            ".tsv": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/new_label_structures/READINESS.md",
+            "cxekr/artifacts/analysis/new_label_structures/structure_manifest.tsv"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/new_label_structures/cifs",
+          "source_id": "project",
+          "files": 1,
+          "unlinked": 1,
+          "formats": {
+            ".cif": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/new_label_structures/cifs/MIL-160_2219217.cif"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/new_label_structures/reports",
+          "source_id": "project",
+          "files": 1,
+          "unlinked": 1,
+          "formats": {
+            ".json": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/new_label_structures/reports/MIL-160_2219217.sanitize.json"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/p01_si",
+          "source_id": "project",
+          "files": 1,
+          "unlinked": 1,
+          "formats": {
+            ".pdf": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/p01_si/41467_2025_67537_MOESM1_ESM.pdf"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/paired_acquisition",
+          "source_id": "project",
+          "files": 1,
+          "unlinked": 1,
+          "formats": {
+            ".md": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/paired_acquisition/A1_A2_EXTRACTION.md"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/paired_acquisition/A2_fulltext",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".docx": 1,
+            ".pdf": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/paired_acquisition/A2_fulltext/cej_2025_170325_SI.docx",
+            "cxekr/artifacts/analysis/paired_acquisition/A2_fulltext/cej_2025_170325_main.pdf"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_absolute_passability_calibration",
+          "source_id": "project",
+          "files": 13,
+          "unlinked": 13,
+          "formats": {
+            ".md": 3,
+            ".tsv": 6,
+            ".py": 2,
+            ".json": 2
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_absolute_passability_calibration/PLAN.md",
+            "cxekr/artifacts/analysis/v13_absolute_passability_calibration/RESULTS.md",
+            "cxekr/artifacts/analysis/v13_absolute_passability_calibration/ROUNDING_SENSITIVITY_PLAN.md",
+            "cxekr/artifacts/analysis/v13_absolute_passability_calibration/diffusivity_controls.tsv",
+            "cxekr/artifacts/analysis/v13_absolute_passability_calibration/extract_and_analyze.py",
+            "cxekr/artifacts/analysis/v13_absolute_passability_calibration/loso_barrier_only.tsv"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_adsorption_physical_calibration",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".md": 1,
+            ".json": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_adsorption_physical_calibration/RESULTS.md",
+            "cxekr/artifacts/analysis/v13_adsorption_physical_calibration/experimental_targets.json"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_adsorption_physical_calibration/sources",
+          "source_id": "project",
+          "files": 2,
+          "unlinked": 2,
+          "formats": {
+            ".pdf": 2
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_adsorption_physical_calibration/sources/CALF-20_D2RA02768B_main.pdf",
+            "cxekr/artifacts/analysis/v13_adsorption_physical_calibration/sources/SBMOF-1_ncomms11831_ESI.pdf"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_author_simulation_anchor",
+          "source_id": "project",
+          "files": 3,
+          "unlinked": 3,
+          "formats": {
+            ".md": 1,
+            ".py": 1,
+            ".json": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_author_simulation_anchor/PLAN.md",
+            "cxekr/artifacts/analysis/v13_author_simulation_anchor/audit.py",
+            "cxekr/artifacts/analysis/v13_author_simulation_anchor/result.json"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_closed_pore_negative_audit",
+          "source_id": "project",
+          "files": 5,
+          "unlinked": 5,
+          "formats": {
+            ".md": 2,
+            ".py": 1,
+            ".json": 2
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_closed_pore_negative_audit/PLAN.md",
+            "cxekr/artifacts/analysis/v13_closed_pore_negative_audit/RESULTS.md",
+            "cxekr/artifacts/analysis/v13_closed_pore_negative_audit/audit.py",
+            "cxekr/artifacts/analysis/v13_closed_pore_negative_audit/fmof-cu_network.json",
+            "cxekr/artifacts/analysis/v13_closed_pore_negative_audit/result.json"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_conidab_symmetry_audit",
+          "source_id": "project",
+          "files": 5,
+          "unlinked": 5,
+          "formats": {
+            ".md": 2,
+            ".py": 1,
+            ".log": 1,
+            ".json": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/PLAN.md",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/RESULTS.md",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/audit.py",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/rebuild.console.log",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/result.json"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_structures",
+          "source_id": "project",
+          "files": 9,
+          "unlinked": 9,
+          "formats": {
+            ".cif": 9
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_structures/coni-dab-theta-000.cif",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_structures/coni-dab-theta-015.cif",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_structures/coni-dab-theta-030.cif",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_structures/coni-dab-theta-045.cif",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_structures/coni-dab-theta-060.cif",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_structures/coni-dab-theta-075.cif"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        },
+        {
+          "directory": "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_topologies_uff/coni-dab-theta-000",
+          "source_id": "project",
+          "files": 3,
+          "unlinked": 3,
+          "formats": {
+            ".coni-dab-theta-000": 2,
+            ".json": 1
+          },
+          "examples": [
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_topologies_uff/coni-dab-theta-000/data.coni-dab-theta-000",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_topologies_uff/coni-dab-theta-000/in.coni-dab-theta-000",
+            "cxekr/artifacts/analysis/v13_conidab_symmetry_audit/work/angle_topologies_uff/coni-dab-theta-000/topology_audit.json"
+          ],
+          "modified_ns_range": [
+            1784775320000000000,
+            1784775320000000000
+          ]
+        }
+      ],
+      "family_count": 7676,
+      "next_family_offset": 24,
+      "scientific_candidates": [],
+      "candidates": [
+        {
+          "path": "cxekr/artifacts/experiment/v13_overlap_pilot_10A/topologies/Kr/w02_seed_131071/source.cif",
+          "state": "pending_read",
+          "size": 14378,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_overlap_pilot_10A/topologies/Kr/w02_seed_131071/source.cif"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/calf-20m-w-195k/base/gcmc/C098/seed101/metrics.json",
+          "state": "pending_read",
+          "size": 1692,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/calf-20m-w-195k/base/gcmc/C098/seed101/metrics.json"
+        },
+        {
+          "path": "gt-reforge/dossier-kr2.md",
+          "state": "pending_read",
+          "size": 16550,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/dossier-kr2.md"
+        },
+        {
+          "path": "cxekr/artifacts/experiment/r5_i06_mb01/rerun_remote_pull/cells/IN_ATC_I06_218K_V_XK_0p1bar/seed7654321/simulation.input",
+          "state": "pending_read",
+          "size": 877,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/r5_i06_mb01/rerun_remote_pull/cells/IN_ATC_I06_218K_V_XK_0p1bar/seed7654321/simulation.input"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/mil-160/base/network.json",
+          "state": "pending_read",
+          "size": 377729,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/mil-160/base/network.json"
+        },
+        {
+          "path": "gt-reforge/methods-route-matrix.md",
+          "state": "pending_read",
+          "size": 4340,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/methods-route-matrix.md"
+        },
+        {
+          "path": "cxekr/artifacts/experiment/v82_periodic_sink_pilot/run_mip_kr_10/traj_segs/000010/000000/segment.dump",
+          "state": "pending_read",
+          "size": 571482,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v82_periodic_sink_pilot/run_mip_kr_10/traj_segs/000010/000000/segment.dump"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/utsa-74a/base/gcmc/C098/seed202/force_field.def",
+          "state": "pending_read",
+          "size": 131,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/utsa-74a/base/gcmc/C098/seed202/force_field.def"
+        },
+        {
+          "path": "gt-reforge/verify-hkust45.md",
+          "state": "pending_read",
+          "size": 5548,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify-hkust45.md"
+        },
+        {
+          "path": "cxekr/artifacts/experiment/v19_physics_eligibility_repair/calf20m_195K_5bar_ykr08_censored_rescue/base/widom_rescue/C002/Xe/seed502/metrics.json",
+          "state": "pending_read",
+          "size": 348,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v19_physics_eligibility_repair/calf20m_195K_5bar_ykr08_censored_rescue/base/widom_rescue/C002/Xe/seed502/metrics.json"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/utsa-74a/base/gcmc/C026/seed101/simulation.input",
+          "state": "pending_read",
+          "size": 1293,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/utsa-74a/base/gcmc/C026/seed101/simulation.input"
+        },
+        {
+          "path": "gt-reforge/round3b-summary.md",
+          "state": "pending_read",
+          "size": 6107,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3b-summary.md"
+        },
+        {
+          "path": "cxekr/artifacts/experiment/v13_adsorption_henry_calibration/runs/sbmof-1_T298_C046_Xe_seed101/simulation.input",
+          "state": "pending_read",
+          "size": 671,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_adsorption_henry_calibration/runs/sbmof-1_T298_C046_Xe_seed101/simulation.input"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/calf-20m-w-195k/base/kinetic_scan/shard6/run/scan_checkpoint.csv",
+          "state": "pending_read",
+          "size": 6241,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/calf-20m-w-195k/base/kinetic_scan/shard6/run/scan_checkpoint.csv"
+        },
+        {
+          "path": "gt-reforge/verify-k3k4-gap.md",
+          "state": "pending_read",
+          "size": 12413,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify-k3k4-gap.md"
+        },
+        {
+          "path": "cxekr/artifacts/experiment/v81_westpa_recycling_smoke/run_smoke2/MIP-203-Suc__Kr/traj_segs/000007/000005/segment.dump",
+          "state": "pending_read",
+          "size": 62021,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v81_westpa_recycling_smoke/run_smoke2/MIP-203-Suc__Kr/traj_segs/000007/000005/segment.dump"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/calf-20m-w-195k/base/widom_rescue/C026/Kr/seed502/simulation.input",
+          "state": "pending_read",
+          "size": 674,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/calf-20m-w-195k/base/widom_rescue/C026/Kr/seed502/simulation.input"
+        },
+        {
+          "path": "gt-reforge/dossier-xe3.md",
+          "state": "pending_read",
+          "size": 14265,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/dossier-xe3.md"
+        },
+        {
+          "path": "cxekr/artifacts/experiment/v13_adsorption_henry_heldout_validation/runs/sbmof-2_T298_C070_Kr_seed101/Kr.def",
+          "state": "pending_read",
+          "size": 442,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_adsorption_henry_heldout_validation/runs/sbmof-2_T298_C070_Kr_seed101/Kr.def"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/mfm-520/base/gcmc/C026/seed101/run.log",
+          "state": "pending_read",
+          "size": 60351,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/mfm-520/base/gcmc/C026/seed101/run.log"
+        },
+        {
+          "path": "gt-reforge/verify-csuc750.md",
+          "state": "pending_read",
+          "size": 12488,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/verify-csuc750.md"
+        },
+        {
+          "path": "cxekr/artifacts/experiment/r4_appb_ppm/mip-203-suc/staging/widom/C098/Kr/seed101/Movies/System_0/result_10000.data",
+          "state": "pending_read",
+          "size": 181413,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/r4_appb_ppm/mip-203-suc/staging/widom/C098/Kr/seed101/Movies/System_0/result_10000.data"
+        },
+        {
+          "path": "cxekr_loop/funnel_runs/cu-ain/base/gcmc/C002/seed101/Xe.def",
+          "state": "pending_read",
+          "size": 455,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "cxekr_loop",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/funnel_runs/cu-ain/base/gcmc/C002/seed101/Xe.def"
+        },
+        {
+          "path": "gt-reforge/dossier-xe2.md",
+          "state": "pending_read",
+          "size": 16127,
+          "linked": false,
+          "reason": "metadata only; retained for audit selection",
+          "stratum": "gt-reforge",
+          "source_id": "project",
+          "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/dossier-xe2.md"
+        }
+      ],
+      "unlinked_queue": {
+        "candidates": [
+          {
+            "path": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/sbmof-1_T298_P100000_yKr0.5_C026_seed202/pseudo_atoms.def",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/sbmof-1_T298_P100000_yKr0.5_C026_seed202/pseudo_atoms.def",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 5975,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/sbmof-1_T298_P100000_yKr0.5_C026_seed202"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/calf-20-base_T298_P100000_yKr0.5_C086_seed303/Movies/System_0/result_25000.data",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/calf-20-base_T298_P100000_yKr0.5_C086_seed303/Movies/System_0/result_25000.data",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 114560,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/calf-20-base_T298_P100000_yKr0.5_C086_seed303/Movies/System_0"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/r4_appb_ppm/mip-203-suc/staging/cells/MIP203_SUC_APPB_PPM_298K_C026_100kPa/seed303/AllData/System_0/Component_1.data",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/r4_appb_ppm/mip-203-suc/staging/cells/MIP203_SUC_APPB_PPM_298K_C026_100kPa/seed303/AllData/System_0/Component_1.data",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 34,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/r4_appb_ppm/mip-203-suc/staging/cells/MIP203_SUC_APPB_PPM_298K_C026_100kPa/seed303/AllData/System_0"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_hkust_dft_pair_pilot/runs/hkust-1_T298_DFT_VDW_DF_Xe_seed202/pseudo_atoms.def",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_hkust_dft_pair_pilot/runs/hkust-1_T298_DFT_VDW_DF_Xe_seed202/pseudo_atoms.def",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 5975,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_hkust_dft_pair_pilot/runs/hkust-1_T298_DFT_VDW_DF_Xe_seed202"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v81_westpa_recycling_smoke/run_smoke2/MIP-203-Suc__Kr/traj_segs/000008/000004/segment.dump",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v81_westpa_recycling_smoke/run_smoke2/MIP-203-Suc__Kr/traj_segs/000008/000004/segment.dump",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 62009,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v81_westpa_recycling_smoke/run_smoke2/MIP-203-Suc__Kr/traj_segs/000008/000004"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v102_external_transport_gate/widom/R03/Kr/seed101/FirstBead/Energy.data",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v102_external_transport_gate/widom/R03/Kr/seed101/FirstBead/Energy.data",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 24,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v102_external_transport_gate/widom/R03/Kr/seed101/FirstBead"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v18_causal_funnel/calf20m_195K_5bar_ykr08/base/kinetic_scan/shard0/evidence.json",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v18_causal_funnel/calf20m_195K_5bar_ykr08/base/kinetic_scan/shard0/evidence.json",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 238497,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "structured_data"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "structured_data"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v18_causal_funnel/calf20m_195K_5bar_ykr08/base/kinetic_scan/shard0"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v26_evidence_separability_audit/corrected_pair/mip/scan32/shard26/scans.csv",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v26_evidence_separability_audit/corrected_pair/mip/scan32/shard26/scans.csv",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 2546,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "structured_data"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "structured_data"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v26_evidence_separability_audit/corrected_pair/mip/scan32/shard26"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_adsorption_henry_calibration/runs/calf-20-base_T298_C010_Xe_seed303/force_field_mixing_rules.def",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_adsorption_henry_calibration/runs/calf-20-base_T298_C010_Xe_seed303/force_field_mixing_rules.def",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 6097,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_adsorption_henry_calibration/runs/calf-20-base_T298_C010_Xe_seed303"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v66_strict_binary_kr_anchor_discovery/zif8_v1_7_replay/base/gcmc/C098/seed303/metrics.json",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v66_strict_binary_kr_anchor_discovery/zif8_v1_7_replay/base/gcmc/C098/seed303/metrics.json",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 1906,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "structured_data"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "structured_data"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v66_strict_binary_kr_anchor_discovery/zif8_v1_7_replay/base/gcmc/C098/seed303"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v102_external_transport_gate/widom/R07/He/seed101/Movies/System_0/result_70000.data",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v102_external_transport_gate/widom/R07/He/seed101/Movies/System_0/result_70000.data",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 171907,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v102_external_transport_gate/widom/R07/He/seed101/Movies/System_0"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/r4_appb_ppm/sbmof-1-unloaded/staging/widom_repair2/C026/Xe/seed303/force_field.def",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/r4_appb_ppm/sbmof-1-unloaded/staging/widom_repair2/C026/Xe/seed303/force_field.def",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 131,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/r4_appb_ppm/sbmof-1-unloaded/staging/widom_repair2/C026/Xe/seed303"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_s_only_validation/runs/Kr/w00_seed_1048573/GUEST",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/runs/Kr/w00_seed_1048573/GUEST",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 726160,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_s_only_validation/runs/Kr/w00_seed_1048573"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/calf-20-base_T298_P100000_yKr0.5_C014_seed202/AllData/System_0/Component_2.data",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/calf-20-base_T298_P100000_yKr0.5_C014_seed202/AllData/System_0/Component_2.data",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 513,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/calf-20-base_T298_P100000_yKr0.5_C014_seed202/AllData/System_0"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/r5_i06_mb01/rerun_staging/cells/IN_ATC_I06_218K_V_KK_5bar/seed1234567/simulation.input",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/r5_i06_mb01/rerun_staging/cells/IN_ATC_I06_218K_V_KK_5bar/seed1234567/simulation.input",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 878,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/r5_i06_mb01/rerun_staging/cells/IN_ATC_I06_218K_V_KK_5bar/seed1234567"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v26_evidence_separability_audit/corrected_pair/ca_sbmof1/scan32/shard5/run/scan_checkpoint_meta.json",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v26_evidence_separability_audit/corrected_pair/ca_sbmof1/scan32/shard5/run/scan_checkpoint_meta.json",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 376,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "structured_data"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "structured_data"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v26_evidence_separability_audit/corrected_pair/ca_sbmof1/scan32/shard5/run"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/sbmof-1_T298_P100000_yKr0.5_C002_seed303/Movies/System_0/result_20000.data",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/sbmof-1_T298_P100000_yKr0.5_C002_seed303/Movies/System_0/result_20000.data",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 235671,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_mixture_framework_ablation/runs/sbmof-1_T298_P100000_yKr0.5_C002_seed303/Movies/System_0"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/r2_sigmaff_batch/mip-203-suc/staging/cells/MIP203_SUC_SIGMAFF_298K_C098_100kPa/seed303/force_field_mixing_rules.def",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/r2_sigmaff_batch/mip-203-suc/staging/cells/MIP203_SUC_SIGMAFF_298K_C098_100kPa/seed303/force_field_mixing_rules.def",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 6095,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/r2_sigmaff_batch/mip-203-suc/staging/cells/MIP203_SUC_SIGMAFF_298K_C098_100kPa/seed303"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v50_movox_budget_falsifier/scan_32x1/shard21/run/scan_evidence_rows.jsonl",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v50_movox_budget_falsifier/scan_32x1/shard21/run/scan_evidence_rows.jsonl",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 37300,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "structured_data"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "structured_data"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v50_movox_budget_falsifier/scan_32x1/shard21/run"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_reus_cross_initialization/partial/Xe_guest_A_host_H2_r1.json",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_reus_cross_initialization/partial/Xe_guest_A_host_H2_r1.json",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 3296,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "structured_data"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "structured_data"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_reus_cross_initialization/partial"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v86_relaxation_source_ablation/PLAN.md",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v86_relaxation_source_ablation/PLAN.md",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 1157,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v86_relaxation_source_ablation"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v13_mixture_condition_frontier/runs/calf-20-base_T298_P10000_yKr0.1_C026_seed202/run.log",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_condition_frontier/runs/calf-20-base_T298_P10000_yKr0.1_C026_seed202/run.log",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 60324,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "log_text"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "log_text"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v13_mixture_condition_frontier/runs/calf-20-base_T298_P10000_yKr0.1_C026_seed202"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v66_strict_binary_kr_anchor_discovery/zif8_full_kinetic_scan_32x1/shard24/run/scan_checkpoint_meta.json",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v66_strict_binary_kr_anchor_discovery/zif8_full_kinetic_scan_32x1/shard24/run/scan_checkpoint_meta.json",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 377,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [
+              "structured_data"
+            ],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references",
+              "structured_data"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v66_strict_binary_kr_anchor_discovery/zif8_full_kinetic_scan_32x1/shard24/run"
+          },
+          {
+            "path": "cxekr/artifacts/experiment/v50_movox_budget_falsifier/scan_16x1/shard11/run/in.source",
+            "uri": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v50_movox_budget_falsifier/scan_16x1/shard11/run/in.source",
+            "source_id": "project",
+            "state": "pending_read",
+            "size": 1466,
+            "claim_references": 0,
+            "linked": false,
+            "signals": [],
+            "reasons": [
+              "unreferenced_by_claim",
+              "zero_references"
+            ],
+            "context_exposures": 0,
+            "stratum": "cxekr/artifacts/experiment/v50_movox_budget_falsifier/scan_16x1/shard11/run"
+          }
+        ],
+        "total": 43595,
+        "offset": 0,
+        "next_offset": 24,
+        "query_independent": true,
+        "policy": "unclaimed assets, interleaved parent directories; used only in discovery",
+        "boundary": "Hints select material for reading; no importance or failure verdict. Only previously captured whole-file identities are deduplicated; equal bytes do not establish the same execution."
+      },
+      "matched": 43596,
+      "offset": 0,
+      "next_offset": 24,
+      "scientific_reading_complete": false,
+      "instruction": "Read related materials together, including history outside the current story. Record a missed question, route, contradiction or connection as an existing node with details.discovery describing the finding and investigation. Families and timestamps are navigation hints, not inferred attempts or scientific dates. Focused contexts contain only what you select."
+    },
+    "semantic_checks": {
+      "jev_calls": 0,
+      "mode": "explicit requests only"
+    },
+    "next": "Give START_HERE.md to your host Agent, or read host/SKILL.md and continue the workflow."
+  }
+}

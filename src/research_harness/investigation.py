@@ -99,7 +99,7 @@ class Investigation:
         snapshot = self.store.get(task["data"]["snapshot_id"])["data"]
         materials = []
         for path, ref in snapshot["files"].items():
-            if reveal or payload["roles"][path] == "evidence":
+            if reveal or payload["roles"][path] in {"evidence", "definition"}:
                 materials.append({"path": path, "role": payload["roles"][path], "ref": ref,
                                   "text": self.store.read_blob(ref["sha256"]).decode(errors="replace"), "untrusted": True})
         return {"task": task, "materials": materials, "result_template": {
@@ -132,7 +132,7 @@ class Investigation:
         if task["data"]["payload"]["phase"] not in {"initial_hypotheses_sealed", "narrative_reveal"}:
             raise HarnessError("permission_denied", "Seal initial hypotheses before controlled narrative/method reveal")
         task["data"]["payload"]["phase"] = "narrative_reveal"
-        save(self.store, task["data"], "reveal model definitions and historical narratives")
+        save(self.store, task["data"], "reveal historical narratives after initial scientific construction")
         return self.packet(identifier, reveal=True)
 
     def submit(self, identifier, result):

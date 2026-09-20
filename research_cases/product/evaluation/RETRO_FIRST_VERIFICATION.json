@@ -1,0 +1,134 @@
+{
+  "plus": {
+    "bundle": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/exports/42dd414f1c1a4986add9b3fab374e4af",
+    "files": 75,
+    "integrity_failures": [],
+    "original_hash_checks": 53,
+    "original_hash_failures": [],
+    "host_captures": [
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/NEXT_INVESTIGATION.md",
+        "record": {
+          "blob": "store/blobs/eb588a46e0dbae92832968f649adc6667bfd7481a0411ddc6cf884a08fcbdb79",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/audit/WORK_LOG.md",
+        "record": {
+          "blob": "store/blobs/5cf4dcf09bd3a116367f879e21b17a56168f68e7f78274e8d5bb891d6c478d01",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/audit/WORK_LOG.md",
+        "record": {
+          "blob": "store/blobs/36dd1da7540eede55c985941cfca92755eaa89e203a06aa9cc376dae6a4e20f9",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/checks/audit.py",
+        "record": {
+          "blob": "store/blobs/8a516fbb497d8ec5dc1edb0d221af4f904b840b9bf305f92582c7d7d06a4cb77",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/checks/result.json",
+        "record": {
+          "blob": "store/blobs/acafe0c16d31c613dfc55e35dc0115f2515d0be8a1bd8c15d31a547287a67d16",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/reconstruction.retro/checks/sapo34.txt",
+        "record": {
+          "blob": "store/blobs/1df2aed6ff18a815326214fba8a2f0d6c89776693d2a6cee84ef3eea744a62e6",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      }
+    ],
+    "state_revision": 94
+  },
+  "minus": {
+    "bundle": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/exports/3eadd49801344a3e98533b364c7c7a49",
+    "files": 87,
+    "integrity_failures": [],
+    "original_hash_checks": 61,
+    "original_hash_failures": [],
+    "host_captures": [
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/WORKLOG.md",
+        "record": {
+          "blob": "store/blobs/bee5a15a3e621a26293ed688b14f1b4a585f10c297eae7850488db0b118aa1bc",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/WORKLOG.md",
+        "record": {
+          "blob": "store/blobs/f4d54d127c76b273fa4dd2dffd0e0c7f9f191c41c7acd04ce8a85cfefa59d149",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/checks/final_recompute.py",
+        "record": {
+          "blob": "store/blobs/4f4e64d91716a81a8a7010fba671cc587b413fb3042dc9a2436de796da8aef3e",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/checks/final_replay_bundle.py",
+        "record": {
+          "blob": "store/blobs/3aad578822f19246a6adca1206b9a426f924c0032fc49cddbf443f9be97083fa",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/checks/final_result.json",
+        "record": {
+          "blob": "store/blobs/3d4020afdda58612874b8903eb4ffe97ac4dc4bc8d7aa7b9aad1443732f5006b",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/checks/recompute.py",
+        "record": {
+          "blob": "store/blobs/02811eba87bd6e6d7698fa56b642676591ff723c63c526def61ca50fa2af8102",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/checks/record-error.json",
+        "record": {
+          "blob": "store/blobs/08a3c7b3d65ffb25abec5458f9541c3ee2b07276ea578339f33bb5aaf9052731",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      },
+      {
+        "source": "/home/sun07ao/retro-workspaces/retro-product-evaluation/retro-without-jev.retro/checks/result.json",
+        "record": {
+          "blob": "store/blobs/1835dac0be314572d9b4fd119c568211aabdfd3e650c020bda534bbe3a190233",
+          "identity_scope": "whole_file",
+          "origin": "host-generated check; not an original scientific source"
+        }
+      }
+    ],
+    "state_revision": 98
+  }
+}

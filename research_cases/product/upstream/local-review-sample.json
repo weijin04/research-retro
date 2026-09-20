@@ -1,0 +1,685 @@
+{
+  "queue_sha256": "f14f98fb43f97ae28afc3a267754dd781395fa56cbbea33eaa683f1a72925cfc",
+  "rule": "First two by SHA256(seed NUL id) in each of support/scope/genealogy/impact/action; then two remaining lowest attention (hash tie-break).",
+  "seed": "local-relation-review-v1",
+  "items": [
+    {
+      "receipt": "semantic:84353656ba1a481784f72734ea986464",
+      "id": "dsh-c-38",
+      "kind": "support",
+      "title": "v119 combines pre-existing metrics into cheap falsifiers without new solver runs",
+      "target": {
+        "material": "m18",
+        "quote": "v119 cheap-falsifier synthesis: C3 working-capacity ratio + A1 van't Hoff T_inv.",
+        "text": "Working-capacity ratio and van't Hoff inversion tests are computed from existing v109 and v13 tables"
+      },
+      "why_proposed": "The hypothesis-panel falsifiers reuse existing simulation outputs, so they are a low-cost cross-check on the surviving energy-barrier route.",
+      "next_check": "Read cheap_falsifier_raw_metrics.tsv and result.json to check whether the C3/A1 falsifiers remain consistent with the R4 outcome.",
+      "answer": {
+        "choice": "compatible",
+        "confidence": 0.21,
+        "probabilities": {
+          "compatible": 0.37,
+          "counters": 0.04,
+          "direct": 0.31,
+          "insufficient": 0.28,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:568335cb51c29bb162f27c38",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m18",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+          "revision": 1,
+          "sha256": "32d30adc482bebb39a5f5b4c54789029c54eb7023628b772f16d1ead3a61ead1"
+        },
+        {
+          "artifact": "artifact:568335cb51c29bb162f27c38",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m18",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+          "revision": 1,
+          "sha256": "32d30adc482bebb39a5f5b4c54789029c54eb7023628b772f16d1ead3a61ead1"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.355,
+      "request_hash": "469e61a1482529bddeca2a8fafb02cbba5c9dd1cb1aef570b6a7b897c5fd767a",
+      "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+    },
+    {
+      "receipt": "semantic:a6b42c4a7be94b30b74fe8f82781419e",
+      "id": "dsh-c-05",
+      "kind": "support",
+      "title": "Independent ASE recomputation corroborates the ~0.92 A CALF-20M-w rigid bottleneck",
+      "target": {
+        "material": "m73",
+        "quote": "**刚性几何下 Kr 和 Xe 都被堵**，不存在\"Kr 能过、Xe 被挡\"的刚性尺寸排阻窗口",
+        "text": "Under rigid geometry both Kr and Xe are blocked, so no rigid size-exclusion window explains the reported Kr/Xe separation"
+      },
+      "why_proposed": "Two independent geometric paths agree on a sub-threshold bottleneck, which removes a rigid E1 explanation for the CALF-20M-w report.",
+      "next_check": "Read the R3 SPEC and raw window values (m77/m94) to test whether any dynamic opening reaches the 1.818 A Kr threshold.",
+      "answer": {
+        "choice": "direct",
+        "confidence": 0.75,
+        "probabilities": {
+          "compatible": 0.18,
+          "counters": 0.0,
+          "direct": 0.8,
+          "insufficient": 0.02,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:bfef6738c8fccb838df793e2",
+          "bytes": [
+            0,
+            6947
+          ],
+          "key": "m73",
+          "partial": false,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/window-geometry-audit.md",
+          "revision": 1,
+          "sha256": "9c87ade79c497b4e1a3c7c8b254b623977b1abb5e503e465430d6f1c8f8c8596"
+        },
+        {
+          "artifact": "artifact:bfef6738c8fccb838df793e2",
+          "bytes": [
+            0,
+            6947
+          ],
+          "key": "m73",
+          "partial": false,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/window-geometry-audit.md",
+          "revision": 1,
+          "sha256": "9c87ade79c497b4e1a3c7c8b254b623977b1abb5e503e465430d6f1c8f8c8596"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.1,
+      "request_hash": "423b38fd99431a83ed7bd64de48425ae95860f63c9b91ce3e4b6b4a9ac4056da",
+      "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+    },
+    {
+      "receipt": "semantic:bf4ae466d011402d90f681bdacce0c61",
+      "id": "dsh-a-0015",
+      "kind": "scope",
+      "title": "R4/v144 sign rule contains a special-case override for KR03_MIP203_SUC_298K",
+      "target": {
+        "material": "m11",
+        "quote": "if record.record_id == \"KR03_MIP203_SUC_298K\" and record.network_sign == \"Kr\":",
+        "text": "For record KR03_MIP203_SUC_298K only, the development candidate sign is forced to Kr from the frozen MIP kinetic-gating route instead of the robust Ochi equilibrium-wave sign; the rule's scope is therefore one record, not the whole panel."
+      },
+      "why_proposed": "m11 contains an explicit conditional that replaces equilibrium_sign with Kr for this one record and keeps Ochi as mechanism/conflict evidence; that exception is invisible in a panel-level accuracy number and is a scope boundary for any claimed general rule.",
+      "next_check": "read the original v144 result.json to see the candidate sign and route for every record and whether the override fired.",
+      "answer": {
+        "choice": "compatible",
+        "confidence": 0.85,
+        "probabilities": {
+          "compatible": 0.9,
+          "incompatible": 0.01,
+          "insufficient": 0.09
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:019d2e2ef966679c3ec73e60",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m11",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py",
+          "revision": 1,
+          "sha256": "625e0a5d68a00303070484e57a067a02b1455e886cda3fcb780af7ff50124f71"
+        },
+        {
+          "artifact": "artifact:019d2e2ef966679c3ec73e60",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m11",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/analyze_covariance_runs.py",
+          "revision": 1,
+          "sha256": "625e0a5d68a00303070484e57a067a02b1455e886cda3fcb780af7ff50124f71"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.06,
+      "request_hash": "f6ee1cb6515e97da0a3a72880fd9f6edbd2ae4449deff6f18460c7659e85e687",
+      "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+    },
+    {
+      "receipt": "semantic:25da969a81094545b7830f518f5008bf",
+      "id": "dsh-a-0030",
+      "kind": "scope",
+      "title": "Diffusive passability is reported only under stated assumptions and matching conditions",
+      "target": {
+        "material": "m30",
+        "quote": "the supplied diffusivity must match the structure, temperature, loading, direction, and observable of interest",
+        "text": "The passability classification uses the one-coordinate L^2/(2D) characteristic time and requires the supplied diffusivity to match structure, temperature, loading, direction and observable; surfaces, defects, traps and process-scale resistances are excluded."
+      },
+      "why_proposed": "m30 names its output 'under_assumptions' and lists the excluded physics in limitations, so a passable/blocked verdict is a conditional derived claim rather than an absolute accessibility result.",
+      "next_check": "read the original callers of evaluate_diffusive_passability / evaluate_absolute_passability to check which calibration_id and conditions were actually supplied.",
+      "answer": {
+        "choice": "compatible",
+        "confidence": 0.64,
+        "probabilities": {
+          "compatible": 0.75,
+          "incompatible": 0.02,
+          "insufficient": 0.23
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:1e813b0746debcb645534427",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m30",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/passability.py",
+          "revision": 1,
+          "sha256": "3b6da332ffed2247768c10d477199610af08c5f86a484ddc017eaafa6ad173a3"
+        },
+        {
+          "artifact": "artifact:1e813b0746debcb645534427",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m30",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/src/cxekr/passability.py",
+          "revision": 1,
+          "sha256": "3b6da332ffed2247768c10d477199610af08c5f86a484ddc017eaafa6ad173a3"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.145,
+      "request_hash": "b672db064c03afac8a7da06ce1e044488aed0f6a5b16eb0c14b4e187081394f6",
+      "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+    },
+    {
+      "receipt": "semantic:63955b6113e74e4baf202b1cfde6c7ed",
+      "id": "dsh-c-16",
+      "kind": "genealogy",
+      "title": "R4 run-1 scorer is preserved as the derivative source of the void predictions",
+      "target": {
+        "material": "m10",
+        "quote": "\"\"\"Deterministic implementation of the frozen R4 Kr/Xe sign rule.\"\"\"",
+        "text": "The preserved run-1 scorer implementing the frozen R4 rule"
+      },
+      "why_proposed": "The abstain-reason distribution is a direct output of the preserved run-1 scorer, not a hand-written summary.",
+      "next_check": "Compare run1/predictions.csv against the m10 extraction logic to confirm the global-minimum defect.",
+      "answer": {
+        "choice": "independent",
+        "confidence": 0.41,
+        "probabilities": {
+          "derived": 0.34,
+          "independent": 0.55,
+          "insufficient": 0.1,
+          "unrelated": 0.01
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:5084b470e37a586c120bd58a",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m91",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md",
+          "revision": 1,
+          "sha256": "95adb598ab1afa2edf3cff869bce9bafc1e305c0798c1f6c3553373e187bab34"
+        },
+        {
+          "artifact": "artifact:1b1e802d103144dc4c78d10a",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m10",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/scorer.py",
+          "revision": 1,
+          "sha256": "1e2b702bd91a6eb68c454d09b8a4ac73355b6f9a18c3348806549042a0ea0bfc"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.565,
+      "request_hash": "b016d62b387584780c7f0a9a0d1f16d8bc4c1bec26a8f2b3b17dde520a642daa",
+      "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+    },
+    {
+      "receipt": "semantic:10b2f2a9293b440995e4ed0ed7bd1498",
+      "id": "dsh-a-0024",
+      "kind": "genealogy",
+      "title": "v119 cheap falsifiers consume the v13 mixture frontier result as an input",
+      "target": {
+        "material": "m21",
+        "quote": "Aggregate the pressure/composition finite-loading frontier.",
+        "text": "The v13 mixture condition frontier aggregation is the possible source of the CALF-20-base 50/50 100 kPa per-uc loadings used in the v119 working-capacity and van't Hoff falsifiers."
+      },
+      "why_proposed": "m18 loads result.json from v13_mixture_condition_frontier and divides total molecules by the 36-cell supercell, while m21 is the script that aggregates that frontier; the falsifier therefore inherits m21's cell/combination handling.",
+      "next_check": "read the original v13_mixture_condition_frontier/result.json to confirm the per-cell totals and which materials/combos are covered.",
+      "answer": {
+        "choice": "derived",
+        "confidence": 0.53,
+        "probabilities": {
+          "derived": 0.64,
+          "independent": 0.1,
+          "insufficient": 0.26,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:568335cb51c29bb162f27c38",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m18",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v119_hypothesis_panel/compute_cheap_falsifiers.py",
+          "revision": 1,
+          "sha256": "32d30adc482bebb39a5f5b4c54789029c54eb7023628b772f16d1ead3a61ead1"
+        },
+        {
+          "artifact": "artifact:379f7f2ad795db18cd15b120",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m21",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_mixture_condition_frontier/analyze.py",
+          "revision": 1,
+          "sha256": "b2a647cbd6dd7b68650a167b5e9bec50556bf34ed6ad94b96d6f7a77373c328b"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.82,
+      "request_hash": "84c83e6258e56468584371e085c6f63844b5880d2061fd7aec14c29d5a1b31e9",
+      "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+    },
+    {
+      "receipt": "semantic:d4d4129be50e4d15bdf30a6870bce654",
+      "id": "dsh-c-24",
+      "kind": "impact",
+      "title": "V144 development comparison covers only four fixed-bed records and is not basis-conditioned",
+      "target": {
+        "material": "m80",
+        "quote": "口径必须是预测器的输入变量，不是元数据。",
+        "text": "The frozen contract's LOMFO directional recall is not conditioned on measurement basis, creating an irreducible error floor"
+      },
+      "why_proposed": "A four-record development comparison cannot expose the basis dependence that the well-posedness audit constructs, so the reported 1.000 balanced accuracy is not transferable.",
+      "next_check": "Read contract.json and check whether recall/FPR are reported per basis; compare against the V144 four records.",
+      "answer": {
+        "choice": "unaffected",
+        "confidence": 0.56,
+        "probabilities": {
+          "affected": 0.12,
+          "insufficient": 0.18,
+          "unaffected": 0.7
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:f7a77401df2bbe6cb3e41b0a",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m90",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v144_grand_canonical_susceptibility/RESULTS.md",
+          "revision": 1,
+          "sha256": "564b37a10c60cc469c5b330b7c8150bf2d37c5ff850b35df30452850d5ff077f"
+        },
+        {
+          "artifact": "artifact:f7c79ba241439315c7e55563",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m80",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/estimand-wellposedness.md",
+          "revision": 1,
+          "sha256": "6cc911efd57d1c736e06c818fb4bb4519421c79f7a622e6224d7bbf9b24f5d22"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.27,
+      "request_hash": "ac479ef7929f1ac84ce5b1b4b8e17d1e980046d9289e06241b5810e1352ef6e2",
+      "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+    },
+    {
+      "receipt": "semantic:f2f701289f1143c8a71024cb1a50c837",
+      "id": "dsh-a-0004",
+      "kind": "impact",
+      "title": "CoNi-DAB channel A inherits the same unvalidated free-radius calibration as CALF-20M-w",
+      "target": {
+        "material": "m16",
+        "quote": "offset[w] = free_radius_A(w, from network.json, Zeo++ vertex, static)",
+        "text": "The CoNi-DAB channel-A P_Kr/P_Xe inherits the centroid-versus-Zeo++ additive offset, now with runtime-added Co and Ni radii, so the R3b window-radius numbers carry the same unvalidated definitional correction."
+      },
+      "why_proposed": "m12 says it reuses aw.compute_calibration_offsets against the same reference CIF and inherits the CALIBRATION CAVEAT unchanged; the only delta is a runtime Co/Ni radius extension, which changes the raw radius but not the offset logic.",
+      "next_check": "read the CoNi-DAB result JSON produced by original /home/sun07ao/cxekr_loop/r3/analyze_conidab.py and compare raw versus calibrated r_bottleneck series.",
+      "answer": {
+        "choice": "affected",
+        "confidence": 0.66,
+        "probabilities": {
+          "affected": 0.78,
+          "insufficient": 0.13,
+          "unaffected": 0.09
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:35cc6c5ba7c28ecbcb033526",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m12",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_conidab.py",
+          "revision": 1,
+          "sha256": "3a0857db6d8304efe128c23874b59af84c2799acd3ed32816286187fa74d76b4"
+        },
+        {
+          "artifact": "artifact:7ead0595fde3c8f86cd714d5",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m16",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+          "revision": 1,
+          "sha256": "2bae803b93bfb896053a3ca36ea2a1a1570f39a64497d322c6e6ddbfa9b9917b"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.89,
+      "request_hash": "efc440e8a0142e35c4bb9d0100f7967c906595304e74cdb8c5f36725bf322ef8",
+      "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+    },
+    {
+      "receipt": "semantic:2a09a992cffc4465b80800aff615ecbe",
+      "id": "dsh-c-34",
+      "kind": "action",
+      "title": "R3b 0.26 ns inverse rotor signal was pre-registered to be adjudicated artifact versus real",
+      "target": {
+        "material": "m95",
+        "quote": "在 1 ns 上",
+        "text": "The 1 ns R3b rerun made the inverse signal disappear, consistent with the pre-registered artifact or inconclusive branch"
+      },
+      "why_proposed": "The frozen basin criterion written before the final analysis determines how the disappearing signal should be classified, guarding against post-hoc rescue.",
+      "next_check": "Read diagnose_basins.py output and the R3b analysis JSON to confirm the basin-distribution explanation for the 0.26 ns result.",
+      "answer": {
+        "choice": "stale",
+        "confidence": 0.85,
+        "probabilities": {
+          "insufficient": 0.02,
+          "stale": 0.9,
+          "useful": 0.08
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:68c732bee973bdc5e5223383",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m4",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/diagnose_basins.py",
+          "revision": 1,
+          "sha256": "a971e762d52ddccab2882864ceeb2e8afdd75baabcf93abc19758f941b690c2f"
+        },
+        {
+          "artifact": "artifact:ca55784d24a152f178a7691a",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m95",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/PROGRESS-REPORT.md",
+          "revision": 1,
+          "sha256": "3c9423a0f8f4efd44dac5d5aeb3cea03d5bd13a0b63c0b172deae90378fd2a45"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.95,
+      "request_hash": "4e166da6886fc561fabb2e645f540188f490544f43a03125afffbbd93985a2ae",
+      "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+    },
+    {
+      "receipt": "semantic:2e20bf22639c4999a2dcdb0d37b422d2",
+      "id": "dsh-b-16",
+      "kind": "action",
+      "title": "The v77 closure table records the exact-Kr fixed-bed anchor as one-development-material-only, which is the gap the v56 rank-1 prospective exact-binary-Kr observation would fill",
+      "target": {
+        "material": "m47",
+        "quote": "\"observation\": \"prospective_exact_binary_kr_record_with_exact_cif_and_frozen_T_P_feed_task\"",
+        "text": "Question: does the rank-1 prospective exact-binary-Kr record with exact CIF and frozen T/P/feed satisfy the m33 anchor gap, or is a second independent fixed-bed material still required for bilateral calibration?"
+      },
+      "why_proposed": "m33 names the single development anchor as the limit on bilateral calibration and risk claims, and m47 ranks a prospective exact binary Kr record first for exactly that purpose; the two statements are two halves of one missing observation.",
+      "next_check": "Read the v75 source audit and the validation bundle ledger to list current exact-Kr fixed-bed anchors, then check whether the m47 rank-1 record adds a second independent material.",
+      "answer": {
+        "choice": "useful",
+        "confidence": 0.65,
+        "probabilities": {
+          "insufficient": 0.13,
+          "stale": 0.1,
+          "useful": 0.77
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:0bd616259b7afe7f148641b4",
+          "bytes": [
+            0,
+            1780
+          ],
+          "key": "m33",
+          "partial": false,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v77_source_sink_input_closure/INPUT_CLOSURE.tsv",
+          "revision": 1,
+          "sha256": "dfdc2128c051fb9bdc1c58c5b3a010c5b0384bedccb5bc513d2bb867a6179778"
+        },
+        {
+          "artifact": "artifact:b7a4d52fdc99c79b27796a50",
+          "bytes": [
+            0,
+            3536
+          ],
+          "key": "m47",
+          "partial": false,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v56_observation_frontier/decision.json",
+          "revision": 1,
+          "sha256": "f42051da526ffce257f1024eedc139a2a9f4c83340d226b79bfdb5b6fd9bb9c8"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.215,
+      "request_hash": "0b4096a45b049662224cbf5c9fed69be1d60b7eb41e6dd3f0f6f37effb2614b8",
+      "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+    },
+    {
+      "receipt": "semantic:def336a0eeed4e8e8e1d30aa502dd17f",
+      "id": "dsh-c-08",
+      "kind": "scope",
+      "title": "Whether CALF-20M-w has microsecond-to-millisecond rare opening events is outside the 1 ns MD window",
+      "target": {
+        "material": "m77",
+        "quote": "μs–ms 稀有门控事件本方法探不到",
+        "text": "Rare gating events on the microsecond-to-millisecond scale cannot be sampled by the completed 1 ns runs, so the CALF-20M-w mechanism stays unresolved"
+      },
+      "why_proposed": "The pre-declared method boundary converts the zero-event result into a timescale-limited exclusion, not a mechanism refutation.",
+      "next_check": "Check whether weighted-ensemble, forward-flux or milestoning runs (the routes named in m66) exist for CALF-20M-w.",
+      "answer": {
+        "choice": "compatible",
+        "confidence": 0.9,
+        "probabilities": {
+          "compatible": 0.93,
+          "incompatible": 0.01,
+          "insufficient": 0.06
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:8e5b9f0869148cc39ced5ce4",
+          "bytes": [
+            0,
+            3618
+          ],
+          "key": "m77",
+          "partial": false,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+          "revision": 1,
+          "sha256": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8"
+        },
+        {
+          "artifact": "artifact:8e5b9f0869148cc39ced5ce4",
+          "bytes": [
+            0,
+            3618
+          ],
+          "key": "m77",
+          "partial": false,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+          "revision": 1,
+          "sha256": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.045,
+      "request_hash": "223bc00654ccefc7449ab526ef5cb7f0e1dfdb97af59a2779844cc9a7cff2f76",
+      "batch": "batch-971d67dfce4040b582d00ebfeec6eae2"
+    },
+    {
+      "receipt": "semantic:9682fe7b52684a44bfdc5b28815d88bf",
+      "id": "dsh-a-0023",
+      "kind": "scope",
+      "title": "Experimental equilibrium-sign calibration is defined only at three pressures",
+      "target": {
+        "material": "m3",
+        "quote": "reason = \"curve_quality_or_pressure_support\"",
+        "text": "The experimental equilibrium-sign calibration set is only defined at 0.01, 0.1 and 1.0 bar, requires at least three isotherm points and isotonic RMSE <= 0.15, and otherwise labels the record unresolved; sign claims outside that pressure support have no experimental anchor."
+      },
+      "why_proposed": "m3 interpolates only inside p_min..p_max and returns None on insufficient points or poor isotonic fit, so many literature isotherms drop out and the calibration cannot validate conditions away from those pressures.",
+      "next_check": "read the original v35 calibration output to count eligible versus unresolved records per material and pressure.",
+      "answer": {
+        "choice": "compatible",
+        "confidence": 0.88,
+        "probabilities": {
+          "compatible": 0.92,
+          "incompatible": 0.01,
+          "insufficient": 0.07
+        },
+        "type": "choice"
+      },
+      "status": "ok",
+      "error": null,
+      "sources": [
+        {
+          "artifact": "artifact:644971004f42f12495e14734",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m3",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py",
+          "revision": 1,
+          "sha256": "d45d492781e0cd16b53ca30f1fd0925011e56d8a77142db8d9b6b3e04f26ce33"
+        },
+        {
+          "artifact": "artifact:644971004f42f12495e14734",
+          "bytes": [
+            0,
+            7000
+          ],
+          "key": "m3",
+          "partial": true,
+          "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v35_experimental_adsorption_head_calibration/audit.py",
+          "revision": 1,
+          "sha256": "d45d492781e0cd16b53ca30f1fd0925011e56d8a77142db8d9b6b3e04f26ce33"
+        }
+      ],
+      "stale_inputs": [],
+      "investigated": false,
+      "attention": 0.05,
+      "request_hash": "e5b21c07c28280e2e8c03e516297326f1a969ef6bc98470b36f394b025e7b11c",
+      "batch": "batch-e82ddd8f85f7461593609ed4d787dc1c"
+    }
+  ]
+}

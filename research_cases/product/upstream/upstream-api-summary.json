@@ -1,0 +1,18 @@
+{
+  "requests": 99,
+  "successful": 99,
+  "models": [
+    "jev-1.13.0"
+  ],
+  "usage": {
+    "input_tokens": 222230,
+    "output_tokens": 4825
+  },
+  "stages": {
+    "before_first_scientific_nodes": 90,
+    "strong_reasoner_followup": 2,
+    "new_evidence_impact_before_revision": 7
+  },
+  "recheck_workspace_requests_separate": 3,
+  "authority": "local signals; never automatic scientific state updates"
+}

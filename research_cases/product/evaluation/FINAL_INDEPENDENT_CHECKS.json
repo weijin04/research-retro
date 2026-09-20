@@ -1,0 +1,75 @@
+{
+  "revision": {
+    "before": 19,
+    "after": 22,
+    "unchanged_data_revision": [
+      "turn:gt",
+      "turn:rediscovery",
+      "turn:stop",
+      "turn:v13",
+      "question:main",
+      "gap:boundaries",
+      "claim:estimand",
+      "claim:geometry",
+      "obs:fmof",
+      "obs:paper",
+      "obs:r1r2",
+      "obs:r3",
+      "obs:r3b",
+      "obs:r4",
+      "obs:v12",
+      "obs:v161",
+      "obs:v163",
+      "asset:handoff"
+    ],
+    "changed": [
+      "route:next"
+    ],
+    "added": [
+      "obs:barrier-semantics",
+      "obs:finite-t-history",
+      "turn:r5"
+    ],
+    "removed": [],
+    "route_history_revisions": [
+      1,
+      2,
+      3
+    ]
+  },
+  "B_manifest": {
+    "files": 100,
+    "failures": []
+  },
+  "cold_B": {
+    "input_hash_failures": [],
+    "replayed_values_equal": true,
+    "recorded_nodes": [
+      {
+        "id": "obs:center-order",
+        "revision": 1,
+        "statement": "静态w0038同一定窗原子集合逆序使中心改变3.6053 Å、半径改变0.9148133 Å；静态校准不认证动态中心。"
+      },
+      {
+        "id": "route:repair-center",
+        "revision": 1,
+        "statement": "暂停新增MD/PMF投入；先显式周期像与连续追踪，验证排列/平移不变性及小位移连续性。"
+      }
+    ],
+    "output_hash_failures": []
+  },
+  "A_revealed_repair": {
+    "original_numerics_preserved": {
+      "audit.py": true,
+      "results.json": true,
+      "permutation_checks.csv": true
+    },
+    "initial_report_preserved": true,
+    "current_explicit_center_frac": true
+  },
+  "revision_check_replay": {
+    "exit": 0,
+    "values_match": true
+  },
+  "evaluator_recovery": "Initial combined verifier assumed initial/audit.py had been duplicated; FileNotFoundError. Corrected to compare current numerical files against preserved initial DELIVERY_RECEIPT hashes. No scientific task or result changed."
+}

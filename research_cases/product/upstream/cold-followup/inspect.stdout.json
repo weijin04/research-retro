@@ -1,0 +1,16 @@
+{
+  "contract_version": "1.0",
+  "ok": true,
+  "result": {
+    "verification": {
+      "ok": true,
+      "files": 174,
+      "authenticity": "integrity only; no digital signature"
+    },
+    "project_id": "materials",
+    "state_revision": 285,
+    "entry": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/current-handoff/START_HERE.md",
+    "records": 251,
+    "next": "Read START_HERE.md and SPINE.md; use --full or handoff.json only when complete historical state is needed."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "verdict": "pass_for_bounded_cold_takeover_with_one_wording_correction",
+  "actual_work": "New permutation-invariance falsifier for archived dynamic window estimator, not just repeating all-min/path finding.",
+  "source_boundary": "Audit code reads five whole-file captured blobs via package SOURCE_INDEX; source hashes verify. Absolute original names are labels only. No live scientific file reads appear in audit code. Full terminal access cannot be independently certified without transcript.",
+  "replay": "Evaluator copied script unchanged to evaluator scratch. Successful; results equal except timestamps and CSV byte-identical; delivery file hashes all match.",
+  "finding": {
+    "comparisons": 2410,
+    "differences_over_1e_6": 1308,
+    "affected_windows": 36,
+    "total_windows": 42,
+    "max_difference_A": 3.896685729592673
+  },
+  "reasoning": "Same atom membership/coordinates plus cyclic change of seed yields distinct MIC-centroid basins. Recalibrating each ordering at static CIF removes static offset explanation but not dynamic ambiguity. This tests a meaningful implementation invariance and appropriately blocks interpreting arbitrary threshold crossings as physical opening.",
+  "limits": "Permutation invariance is required for unordered membership, not proof original ordered list was invalid. Fixed three iterations may be part of method failure; no convergence/alternative-anchor method tested. No physical opening, event probability or material selectivity follows.",
+  "correction": "Network already contains center_frac for every checked window (e.g. w0016 center_frac [0.5,0.01838390702576762,0.9999230885443133]). Report wording that no geometry-center anchor exists is too broad. The tested function does not use the existing center_frac and lacks explicit per-atom image/continuous tracking; next action should validate/reuse that existing reference instead of imply center data absent.",
+  "first_failure": "WORK_LOG records initial H=1.20 assertion rejected by captured H=1.09 before trajectory analysis, then corrected. Preserve as recovered first execution failure, not uninterrupted run. No exact terminal failure transcript supplied.",
+  "product_acceptance": "Independent reader used scientific state from repaired repack of same 19 A nodes, found package originals, completed consequential small work and recorded two new nodes. This supports bounded fresh-reader usability, not general blind scientific benchmark, whole-history completion, runtime isolation, or Jev benefit."
+}

@@ -1,0 +1,28 @@
+{
+  "arm": "direct_comparison",
+  "review": "initial_frozen",
+  "verdict": "useful_research_reconstruction_with_material_history_coverage_gap",
+  "dimensions": {
+    "problem_and_estimand": "pass",
+    "attempt_history": "partial",
+    "current_state_and_uncertainty": "pass",
+    "raw_evidence_checks": "pass",
+    "actionable_next_investigation": "pass",
+    "portable_cold_takeover": "not_tested",
+    "revision_propagation": "not_tested"
+  },
+  "no_scalar_score": "No pre-registered weights; do not present a post-hoc numeric success percentage.",
+  "strengths": [
+    "Distinguishes V baseline from R iterations and material/condition/measurement semantics.",
+    "Independently corrects overall R4 FPR and LOMFO retained-row defect.",
+    "Audits graphs, raw trajectory temperature, covariance logs, literature and opportunity denominators with bounded claims.",
+    "Detects dynamic graph aggregation/calibration concern; proposes a small representation check rather than new simulations."
+  ],
+  "limitations": [
+    "Does not recover specific v33 rejected equilibrium-proxy history or v13 coupled finite-temperature smoke infrastructure and its boundary. v105 appears only in a broad phase label.",
+    "Cannot be called complete historical reconstruction. Whether the proposed small dynamic representation audit duplicates specific older checks remains unresolved.",
+    "Independent evaluator verified all 10 frozen output hashes and 63 numerical input hashes and directly recounted scoring semantics; did not independently rerun every trajectory/covariance reduction or re-read entire literature."
+  ],
+  "reference_correction": "REFERENCE_ERRATUM_001.md",
+  "fairness": "Do not penalize a different warranted next action merely for differing from later author R5 preference. Full-history gaps count only where they affect novelty, route comparison or action selection."
+}

@@ -1,7 +1,7 @@
 [project]
 name = "research-retro"
-version = "2.0.0"
-description = "Standalone evidence-bounded research retrospective capability"
+version = "3.6.0"
+description = "Host-led scientific reconstruction, revision and portable research handoff"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = ["jsonschema>=4.23,<5"]

@@ -1,0 +1,59 @@
+{
+  "contract_version": "1.0",
+  "ok": true,
+  "result": {
+    "receipt": {
+      "transaction_id": "f57e5292-faa0-4805-988e-8e722c19b7d7",
+      "idempotency_key": "workflow:79770988d8fd4a498d15cc654364277c",
+      "revisions": {
+        "context:03493a5409ed4125bfa4218e899d0967": 2,
+        "route:next": 5
+      },
+      "changed_ids": [
+        "context:03493a5409ed4125bfa4218e899d0967",
+        "route:next"
+      ],
+      "policy_revision": 2,
+      "state_revision": 288
+    },
+    "updated": [
+      "route:next"
+    ],
+    "semantic_checks": {
+      "jev_calls": 0,
+      "receipts": [],
+      "mode": "explicit requests only"
+    },
+    "state": {
+      "state_revision": 288,
+      "nodes": 17,
+      "jev_calls": 99,
+      "jev_successful_calls": 99,
+      "types": {
+        "asset": 1,
+        "attempt": 1,
+        "claim": 2,
+        "gap": 2,
+        "observation": 6,
+        "question": 1,
+        "route": 3,
+        "turn": 1
+      },
+      "needs_review": [],
+      "coverage_risks": [],
+      "open_questions": [
+        "gap:observable",
+        "gap:stage1",
+        "question:sign"
+      ],
+      "publication": {
+        "status": "draft",
+        "blockers": [
+          "coverage, residual discovery and cold handoff not yet assessed"
+        ]
+      },
+      "next": "Review sources and unresolved issues; an empty declared queue is not proof of whole-project coverage."
+    },
+    "next": "Inspect changed-node impact, search undeclared narrative dependencies, and review residual material before publishing."
+  }
+}

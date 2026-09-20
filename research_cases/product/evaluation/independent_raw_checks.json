@@ -1,0 +1,15 @@
+{
+  "rows": 23,
+  "prediction_counts": {
+    "abstain": 18,
+    "kr_priority": 2,
+    "xe_priority": 3
+  },
+  "truth_counts": {
+    "kr_priority": 9,
+    "xe_priority": 13,
+    "ambiguous": 1
+  },
+  "kr_true_positive": 0,
+  "kr_false_positive": 2
+}

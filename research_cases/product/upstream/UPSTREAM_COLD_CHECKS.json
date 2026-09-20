@@ -1,0 +1,73 @@
+{
+  "replay_completed": true,
+  "results_identical": true,
+  "frame_csv_identical": true,
+  "input_hash_failures": [],
+  "coordinate_sources": [],
+  "revealed_recheck": [
+    {
+      "id": "dsh-c-34",
+      "answer": {
+        "choice": "stale",
+        "confidence": 0.74,
+        "probabilities": {
+          "insufficient": 0.16,
+          "stale": 0.83,
+          "useful": 0.01
+        },
+        "type": "choice"
+      },
+      "candidate_fields_unchanged": {
+        "kind": true,
+        "title": true,
+        "target": true,
+        "why_proposed": true,
+        "next_check": true
+      }
+    },
+    {
+      "id": "dsh-c-16",
+      "answer": {
+        "choice": "derived",
+        "confidence": 0.7,
+        "probabilities": {
+          "derived": 0.78,
+          "independent": 0.13,
+          "insufficient": 0.09,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "candidate_fields_unchanged": {
+        "kind": true,
+        "title": true,
+        "target": true,
+        "why_proposed": true,
+        "next_check": true
+      }
+    },
+    {
+      "id": "dsh-c-05",
+      "answer": {
+        "choice": "compatible",
+        "confidence": 0.4,
+        "probabilities": {
+          "compatible": 0.52,
+          "counters": 0.0,
+          "direct": 0.47,
+          "insufficient": 0.01,
+          "unrelated": 0.0
+        },
+        "type": "choice"
+      },
+      "candidate_fields_unchanged": {
+        "kind": true,
+        "title": true,
+        "target": true,
+        "why_proposed": true,
+        "next_check": true
+      }
+    }
+  ],
+  "evaluator_recovery": "Verifier initially assumed bare queue.items; actual recheck CLI envelope is result.items. Corrected parser only; no scientific rerun required."
+}

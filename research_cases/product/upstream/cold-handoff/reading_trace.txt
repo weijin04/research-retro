@@ -1,0 +1,10 @@
+1 START_HERE.md
+2 SPINE.md
+3 SOURCE_INDEX.json (structure)
+4 SOURCE_INDEX.json: scoped r3/r4/CALF and coordinate inventory; filenames only for unrelated sources.
+5 RESEARCH_MAP.md: read all displayed R3/R4 scoped nodes; no previous Agent receipts/scripts opened.
+6 Original whole-file r3/analysis-gf-final.csv header, analysis-gf-final.json, analyze_window.py.
+7 Original gt-reforge/round3-summary.md captured content, including temperature caveat.
+8 Installed retro inspect BUNDLE: ok, 136 files, state r227, integrity only (no digital signature).
+9 check_temporal_robustness.py reads only six whole-file gf/kr/xe final CSV+JSON blobs, logs SHA256 in results.json.
+No memory, source directories, engine repository, network or other workspaces read. No simulation submitted.

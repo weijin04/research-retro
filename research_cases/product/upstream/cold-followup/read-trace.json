@@ -1,0 +1,53 @@
+[
+  {
+    "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-revision-reader/REPORT.md",
+    "range": "whole",
+    "sha256": "0e7d041e1c92688052a4f7734530508d26a10cd9195337d7d340721586009876",
+    "purpose": "Read and retain fresh-reader supplied result"
+  },
+  {
+    "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-revision-reader/sources_used.json",
+    "range": "whole",
+    "sha256": "b882c98c23471fee861f33ee53a52e1e7de45e166b65a795163965e358dbf0d7",
+    "purpose": "Read and retain fresh-reader supplied result"
+  },
+  {
+    "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-revision-reader/check_result.json",
+    "range": "whole",
+    "sha256": "c0ea94f119dbc9073afa299e8dd1ad94959bf5e8c9399bd80f4b6becbfb6255b",
+    "purpose": "Read and retain fresh-reader supplied result"
+  },
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/RESULTS.md",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9",
+    "sha256": "7933b0eab1b7117838c8e191c2cb8c337856e3c5410680ad67277b1d9d3e94c9",
+    "identity_scope": "whole_file",
+    "byte_range": [
+      0,
+      2061
+    ],
+    "original_size_bytes": 2061,
+    "range": "whole",
+    "purpose": "Verify exact frozen-package original and bind same bytes from registered original source",
+    "hash_verified": true,
+    "original_segment_matches": true
+  },
+  {
+    "original_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/artifacts/experiment/v13_s_only_validation/analyze.py",
+    "captured_path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/reasoner-B-final/store/blobs/8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48",
+    "sha256": "8ed41349f39b911df137d1145a704a9beb8c437c3ad6f9e5ace462bd70fcdd48",
+    "identity_scope": "captured_segment",
+    "byte_range": [
+      0,
+      7000
+    ],
+    "original_size_bytes": 8224,
+    "range": [
+      0,
+      7000
+    ],
+    "purpose": "Verify exact frozen-package original and bind same bytes from registered original source",
+    "hash_verified": true,
+    "original_segment_matches": true
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "before_nodes": 11,
+  "after_nodes": 16,
+  "retained_identical": [
+    {
+      "id": "attempt:r4run1",
+      "revision": 1
+    },
+    {
+      "id": "claim:boundednegative",
+      "revision": 2
+    },
+    {
+      "id": "claim:void",
+      "revision": 2
+    },
+    {
+      "id": "gap:observable",
+      "revision": 1
+    },
+    {
+      "id": "obs:graph",
+      "revision": 1
+    },
+    {
+      "id": "obs:r3frames",
+      "revision": 1
+    },
+    {
+      "id": "obs:r4run2",
+      "revision": 1
+    },
+    {
+      "id": "obs:reuse",
+      "revision": 1
+    },
+    {
+      "id": "route:r4stop",
+      "revision": 1
+    }
+  ],
+  "changed": [
+    {
+      "id": "question:sign",
+      "old_revision": 1,
+      "new_revision": 2,
+      "old_statement": "研究的是材料/相态与工况、测量口径共同限定的Kr/Xe偏好方向。本次只恢复R3动力学负结果如何进入R4几何判据及其止损。",
+      "new_statement": "研究的是材料/相态与工况、测量口径共同限定的Kr/Xe偏好方向。已恢复R3→R4局部失败链，并沿R5更正追到v33快照负结果与MIP既有path-CV smoke；尚无合格PMF或新材料预测验证。",
+      "old_action": null,
+      "new_action": null
+    },
+    {
+      "id": "route:next",
+      "old_revision": 2,
+      "new_revision": 3,
+      "old_statement": "优先用既有CALF少量代表帧比较centroid+offset、重新优化自由半径和周期贯通路径。该检查能区分真实局部闭窗与代理/路径失真，比继续调R4或立刻续跑MD更有信息量。",
+      "new_statement": "CALF centroid+offset与真实瞬时贯通路径的对应仍未验证；小量既有帧核查仍有价值，但发现既有v33负知识和MIP含客体path-CV资产后，不再把它列为项目级默认首要路线。",
+      "old_action": "先在保存轨迹中选择gf/Kr/Xe中位附近及上尾帧，以同一vdW表重建自由半径和非零平移路径，报告每帧与代理差；本次未执行，也未启动模拟。",
+      "new_action": "仅当需要判定CALF既有负结果的解释边界时，回到保存帧做同帧代理/真实孔限比较；当前先做具名MIP Stage1准备度盘点，不新增轨迹。"
+    }
+  ],
+  "added": [
+    {
+      "id": "asset:mip_smoke",
+      "revision": 1
+    },
+    {
+      "id": "gap:stage1",
+      "revision": 1
+    },
+    {
+      "id": "obs:v33_negative",
+      "revision": 1
+    },
+    {
+      "id": "route:stage1_readiness",
+      "revision": 1
+    },
+    {
+      "id": "turn:r5_correction",
+      "revision": 1
+    }
+  ],
+  "removed": [],
+  "frozen_A_manifest_sha256": "2912cbeb45d4478565caeab244dba20f4b67f736aa7b2873840139a7e991f22d",
+  "matches_A_export_receipt": true
+}

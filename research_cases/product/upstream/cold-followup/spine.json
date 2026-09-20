@@ -1,0 +1,35 @@
+{
+  "sections": [
+    {
+      "title": "当前问题与恢复边界",
+      "nodes": [
+        "question:sign"
+      ]
+    },
+    {
+      "title": "已确认的失败与不该丢失的边界",
+      "nodes": [
+        "claim:void",
+        "obs:r4run2",
+        "claim:boundednegative",
+        "obs:reuse"
+      ]
+    },
+    {
+      "title": "新材料揭示的旧转折和可复用资产",
+      "nodes": [
+        "turn:r5_correction",
+        "obs:v33_negative",
+        "asset:mip_smoke"
+      ]
+    },
+    {
+      "title": "冷接手完成盘点，下一步已推进",
+      "nodes": [
+        "obs:s_only_validation",
+        "route:stage1_readiness",
+        "route:next"
+      ]
+    }
+  ]
+}

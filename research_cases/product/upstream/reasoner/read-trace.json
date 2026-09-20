@@ -1,0 +1,216 @@
+{
+  "reads": [
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/round4-scoring-summary.md",
+      "range": "whole",
+      "purpose": "Determine run1 invalidation versus run2 stopping evidence",
+      "bytes_read_by_host": 7690,
+      "sha256_whole": "994b8b40ab6b0721859b2122a9e74752a00960361578bf0ae19754ae953b7a7e"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/gt-reforge/round3-summary.md",
+      "range": "whole",
+      "purpose": "Check exact scope of claimed guest-opening falsification and locate primary outputs",
+      "bytes_read_by_host": 3617,
+      "sha256_whole": "011cfd866484067ae9742438281ac07255847aacf9cae2d3953aa9561fda32f8"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/codex-brief-run2.md",
+      "range": "whole",
+      "purpose": "Check frozen correction and no-third-patch stopping conditions",
+      "bytes_read_by_host": 4997,
+      "sha256_whole": "e98da0251206aea431b10b6dd7eeab45f9ff67e1b668a58eeb5bb6563e366c3b"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/codex-brief.md",
+      "range": "whole",
+      "purpose": "Check original fallback instruction",
+      "bytes_read_by_host": 5611,
+      "sha256_whole": "0453d6a074273b8ba308f8de34fb6452a2143b0b50c16c70d235fe3ac594ca74"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-gf-final.json",
+      "range": "whole",
+      "purpose": "Inspect original calibrated and raw statistics",
+      "bytes_read_by_host": 2661,
+      "sha256_whole": "4e204220cd646cc23e176752012f7708acc2c4973e45864de460b39fbd19a3f0"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-kr-final.json",
+      "range": "whole",
+      "purpose": "Inspect original guest-loaded statistics",
+      "bytes_read_by_host": 2664,
+      "sha256_whole": "9d9ff8d5ac530a0fbc4d12d5eaafda3f6d6249448e373bf61c32547b121f4b71"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-xe-final.json",
+      "range": "whole",
+      "purpose": "Inspect original guest-loaded statistics",
+      "bytes_read_by_host": 2662,
+      "sha256_whole": "0621fcc0af1e337b8a030480310b06000ba77f6632ae060a5911968faa35739b"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analyze_window.py",
+      "range": [
+        1,
+        145
+      ],
+      "purpose": "Check observable calibration transfer and path selection limitations",
+      "bytes_read_by_host": 7883,
+      "sha256_whole": "7c74105f87fd67e818432f7e791b5bc8fbcc871d04e48d9ea0d74101b3d5169c"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/scorer.py",
+      "range": [
+        1,
+        280
+      ],
+      "purpose": "Inspect extraction logic and locate decision functions",
+      "bytes_read_by_host": 8174,
+      "sha256_whole": "7472854bed3d8d44f50fca3f019917b4580c2db91942b1039dd8536d876fcb45"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/predictions.csv",
+      "range": "whole",
+      "purpose": "Read complete row-level outcomes and estimand labels",
+      "bytes_read_by_host": 8045,
+      "sha256_whole": "ca727a660ba8f8206c868716f2ae9778ccd39e3ebc30390bf56b44a69c4e7644"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/README-run2.md",
+      "range": "whole",
+      "purpose": "Locate sanity gate and extraction implementation provenance",
+      "bytes_read_by_host": 6602,
+      "sha256_whole": "545cc50d8563e04db5399a53e3ed0d9a37dea0417ac7b452d253082246d726c5"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-gf-final.csv",
+      "range": [
+        1,
+        3
+      ],
+      "purpose": "Inspect columns for independent quantile and event reconstruction",
+      "bytes_read_by_host": 366,
+      "sha256_whole": "08cd6b0fb3e1167f79e7958a029e9ec9b58b003725ab550c598b170c863a0c8a"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/validation/networks/hkust-1.json",
+      "range": [
+        1,
+        100
+      ],
+      "purpose": "Inspect periodic edge schema before independent winding check",
+      "bytes_read_by_host": 1485,
+      "sha256_whole": "d07e16639d3e46cf54b6098296f52ab390d1c00a4ebf876811d19484a6ad9ed1"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/predictions.csv",
+      "range": "whole",
+      "purpose": "Verify preserved void run outcomes and HKUST global minimum",
+      "bytes_read_by_host": 8134,
+      "sha256_whole": "f980812b8d5cf6ac8f5a75e6361421f8e60a9d893b173ade0ec6540802125de9"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/SPEC.md",
+      "range": "whole",
+      "purpose": "Read original rule domain and stop conditions, including equilibrium versus finite-time",
+      "bytes_read_by_host": 8428,
+      "sha256_whole": "dc6f42963ce18e837d42e53b39baa9762f13fee291129aab1423b4305cb44656"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/validation/networks/hkust-1.json",
+      "range": "JSON windows[0]",
+      "purpose": "Read periodic edge schema",
+      "bytes_read_by_host": 431,
+      "program_input_bytes": 91132
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/predictions.csv",
+      "range": "whole",
+      "purpose": "Independently count scoring numerators and denominators",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 8046,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "ca727a660ba8f8206c868716f2ae9778ccd39e3ebc30390bf56b44a69c4e7644"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r4/run1/predictions.csv",
+      "range": "whole",
+      "purpose": "Verify preserved void row count",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 8135,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "f980812b8d5cf6ac8f5a75e6361421f8e60a9d893b173ade0ec6540802125de9"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr/validation/networks/hkust-1.json",
+      "range": "whole",
+      "purpose": "Independent BFS integer-offset winding certificate, unlike original union-find",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 91132,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "d07e16639d3e46cf54b6098296f52ab390d1c00a4ebf876811d19484a6ad9ed1"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-gf-final.csv",
+      "range": "whole",
+      "purpose": "Recompute post-10ps calibrated/raw medians and crossing counts from frame CSV",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 200523,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "08cd6b0fb3e1167f79e7958a029e9ec9b58b003725ab550c598b170c863a0c8a"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-gf-final.json",
+      "range": "whole",
+      "purpose": "Compare independent CSV statistics to full-precision stored outputs",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 2661,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "4e204220cd646cc23e176752012f7708acc2c4973e45864de460b39fbd19a3f0"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-kr-final.csv",
+      "range": "whole",
+      "purpose": "Recompute post-10ps calibrated/raw medians and crossing counts from frame CSV",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 202049,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "11bf68d69a27697b834d2acb8fed09b7f469b2a5ca261e96a4e331e5cb6a2dff"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-kr-final.json",
+      "range": "whole",
+      "purpose": "Compare independent CSV statistics to full-precision stored outputs",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 2664,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "9d9ff8d5ac530a0fbc4d12d5eaafda3f6d6249448e373bf61c32547b121f4b71"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-xe-final.csv",
+      "range": "whole",
+      "purpose": "Recompute post-10ps calibrated/raw medians and crossing counts from frame CSV",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 201568,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "29840d94b28c3cb5362dc6f64e4334bd7b6813017c92ce0a1d6b1810645af976"
+    },
+    {
+      "path": "/home/sun07ao/retro-workspaces/retro-product-evaluation/cxekr-loop-20260921-A/materials/cxekr_loop/r3/analysis-xe-final.json",
+      "range": "whole",
+      "purpose": "Compare independent CSV statistics to full-precision stored outputs",
+      "mode": "programmatic_recompute",
+      "program_input_bytes": 2662,
+      "bytes_read_by_host": 0,
+      "sha256_whole": "0621fcc0af1e337b8a030480310b06000ba77f6632ae060a5911968faa35739b"
+    }
+  ],
+  "token_count": "unknown",
+  "first_failures": [
+    "Initial reader queue command treated dictionary as list fallback, included target_groups and was truncated; corrected to items[:15]. No scientific original read lost."
+  ],
+  "scientific_original_unique_files": 17,
+  "high_cost_original_text_bytes": 79450,
+  "programmatic_input_bytes_including_rereads": 810572
+}

@@ -1,0 +1,24 @@
+{
+  "review": "initial_frozen",
+  "problem_and_estimand": "pass",
+  "current_state_and_uncertainty": "pass",
+  "actual_reasoning": "pass",
+  "actionable_mainline": "pass",
+  "history_coverage": "partial_but_useful",
+  "cold_takeover": "pending",
+  "revision": "pending",
+  "arm": "retro_without_jev",
+  "bundle": "3eadd49801344a3e98533b364c7c7a49",
+  "distinct_strengths": [
+    "Thirteen static graph row reductions and R1/R4 counts independently reproduced.",
+    "Recovers v13 hidden-state REUS failure and remaining instrumentation boundary.",
+    "R2 formal rule versus funnel output and exposure carefully distinguished.",
+    "Shortest useful spine and clear reasoning from aggregation counterexample."
+  ],
+  "limits": [
+    "No primary PDF or trajectory/covariance raw checks.",
+    "Calls 2/10 worst fold but does not explicitly expose retained-versus-held-out scoring defect; narrower than plus/direct finding.",
+    "No CoNi trajectories captured in frozen package; chosen recoverability task can diagnose missing data but cannot complete frame analysis from bundle alone.",
+    "v33/v105 specific lineage absent; not complete history."
+  ]
+}

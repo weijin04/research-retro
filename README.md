@@ -1,59 +1,144 @@
-# Research Retro 2.0
+# Research Retro
 
-A local research reconstruction product for a controlling researcher or Agent.
-Retro freezes source bytes and Git history, recovers conditional parameters and
-execution candidates, manages investigations, runs isolated probes, and delivers
-a portable `ReconstructionPackage`. The core makes no model calls or network calls.
+Turn an existing, long-running research project into an understandable scientific
+state: its questions, objects, attempts, route history, reliable results, revised
+interpretations and useful next work, with links back to original material.
 
-## Install
+Cheap workers in your host propose source-backed candidates; Jev judges repeated
+local relations before a strong Agent investigates their scientific meaning. Retro
+keeps the evidence, history, state and handoff. The original project stays where it
+is, read-only; new outputs live in a separate workspace. Worker and Jev services
+are optional; the same product also supports direct host investigation.
 
-Python **3.11+ on POSIX**. Install into your own environment:
+## Install and start
+
+Python 3.11+ on POSIX. Install the supplied wheel in its own environment:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install /path/to/research_retro-2.0.0-py3-none-any.whl
-.venv/bin/retro init /path/to/research-project
-.venv/bin/retro -w /path/to/research-project/.retro snapshot
-.venv/bin/retro -w /path/to/research-project/.retro recover --snapshot latest
+python3 -m venv retro-env
+retro-env/bin/python -m pip install /path/to/research_retro-3.6.0-py3-none-any.whl
+retro-env/bin/retro start /path/to/project --workspace /path/to/project.retro
 ```
 
-From source: `uv sync`, then `uv run retro ...`. `rh` is the same CLI. No global
-installation or provider credentials are needed. The release includes an offline
-Linux CPython 3.14 wheelhouse; ordinary pip resolves dependencies for other supported
-Python environments. Linux `bwrap` and `/usr/bin/python3` are required only for the
-optional contained runner. `retro -w WORKSPACE capabilities` checks availability.
+Give the generated **START_HERE.md** to your research Agent with your actual goal.
+It contains the source/workspace paths and the complete installed host workflow.
+You do not need to create an ontology or arrange a set of investigation obligations.
+Repeat `start` to resume; omit `--goal` to retain the existing goal. The default
+workspace is the sibling `PROJECT_NAME.retro`.
 
-## Use the product
+To use an already configured cheap worker, select it once:
 
-The 2.0 workflow is **snapshot → recover → investigate → probe → close → export**.
-All state lives in the selected workspace, defaulting to `PROJECT/.retro`.
-Scientific source files are read-only. Recovery executes no project code.
+```sh
+retro start /path/to/project --workspace /path/to/project.retro --worker dsh --jev
+```
 
-| Task | Command |
-|---|---|
-| Freeze bytes, asset gaps and bounded Git DAG | `retro -w W snapshot` |
-| Recover conditional values and historical producer alternatives | `retro -w W recover --snapshot ID` |
-| Inspect a finding's original bytes and rule | `retro -w W explain FINDING` |
-| Define scope, goals, obligations and material roles | `retro -w W task scope --input scope.json` |
-| Start a version-bound evidence-first investigation | `retro -w W task next --scope SCOPE` |
-| Read, seal initial hypotheses, then reveal narratives/methods | `retro -w W task packet ID`, `task seal ID --input initial.json`, `task reveal ID` |
-| Freeze a discriminating probe | `retro -w W probe plan OBLIGATION --input probe.json` |
-| Execute and separately check preregistered predicates | `retro -w W probe run SPEC --isolation required`, `probe evaluate RECEIPT` |
-| Submit completed scoped review | `retro -w W task submit TASK --input result.json` |
-| Check comparability / signed support / dependency impact | `contrast A B --observable ID`, `support --scope JSON`, `impact ID` |
-| Freeze completion and export | `retro -w W close --scope SCOPE`, `export --closure CLOSURE` |
-| Query and replay without originals | `retro verify-handoff PACKAGE --query-set queries.json` |
+The Agent can then run `retro -w /path/to/project.retro discover`. It prepares the
+next material batch, generates candidates, asks authorized local Jev questions and
+writes **discovery/latest.md**. Repeating the command continues the pass. The dsh
+adapter uses your configured model (v4.1flash in the development setup); any JSON
+stdin/stdout worker command can be supplied instead. Omitting `--jev` keeps worker
+candidates unjudged and usable. `discover --overview` is a quiet material survey.
 
-[Agent manual](AGENT.md) contains exact request formats and the result template.
-[Function definitions](tools.json) use the same dispatcher as shell commands.
-[2.0 record schema](contracts/retro2.schema.json) is packaged in the wheel; `records
---input FILE` imports typed entities with explicit revisions. The 1.0
-`scan/read/reconstruct/audit/correct/export/inspect/state` workflow remains available.
+From this checkout, use `uv run retro start ...`. For an offline installation, unpack
+the supplied wheelhouse and add `--no-index --find-links /path/to/wheelhouse` to pip.
+The bundled offline dependencies are for the tested Linux/CPython platform; the
+product wheel itself is pure Python. This repository is not required after install.
 
-`closed-resolved` means all required obligations of the frozen scope have supported
-answers. `closed-qualified` retains explicit conditions or demonstrated
-non-identifiability. `open-blocked` retains missing work, material or capability.
-Completion always refers to the frozen scope, question, rules and obligations.
+The same commands work through shell access in Codex, Claude Code, Pi, OpenCode or
+another strong host. `retro tools` exposes JSON functions, `retro call` invokes them,
+and `retro skill --destination NEW_DIRECTORY` copies the packaged host skill.
+No particular host SDK or model harness is required. Actual host/platform tests are
+reported in [CURRENT_STATE.md](CURRENT_STATE.md); interface compatibility is not a
+claim that every host has been tested.
+
+## What the researcher receives
+
+- **SPINE.md** and **index.html**: a short account of the scientific questions,
+  important route changes, current understanding, dead/paused work and next entry.
+- **RESEARCH_MAP.md**: full scoped statements, reasoning and connections; the browser
+  can search all nodes without expanding them into the short spine.
+- **HANDOFF.md**, **SOURCE_INDEX.json**, **NAVIGATION.md** and captured originals:
+  practical entry, precise source navigation, retained checks and revision history.
+- **SCIENTIFIC_STATE.json**: the same current understanding for another Agent.
+
+`retro -w WORKSPACE workflow publish` updates `current/` and keeps a frozen
+publication. `retro -w WORKSPACE export` produces an offline bundle whose
+START_HERE.md is the recipient's entrance. `retro inspect BUNDLE` verifies all hashes.
+An exported bundle is historical; later revisions belong in the active workspace.
+
+## The working loop
+
+The host first surveys material families and history, then follows scientific
+questions with its own tools. Discovery and focused reasoning use separate contexts.
+Cheap workers propose source-backed local relations from bounded material packets;
+Jev judges support, scope and possible derivation before the strong host forms its
+mainline. The resulting relation queue guides deeper original checks and representation
+changes. An unexplained old result should become a scientific question, route or
+missing connection.
+
+```sh
+retro -w WORKSPACE discover
+retro -w WORKSPACE record --input WORKSPACE/investigation.json
+retro -w WORKSPACE spine --input WORKSPACE/spine.json
+retro -w WORKSPACE workflow publish
+```
+
+`retro skill` explains the method; generated `host/references/protocol.md` includes
+complete input examples. `discover --question "What might the current understanding miss?"`
+starts a new discovery pass. The lower-level `triage` commands support explicit
+material selection and custom host workers; `triage impact` finds possible effects of new
+evidence before revision. Jev requests require explicit workspace authorization.
+`record` saves a completed investigation in one operation:
+selected original spans, scientific nodes, reasoning, support and optional check
+scripts/results. The host can revise questions, split objects and change routes.
+The existing node types suffice; details can express domain-specific distinctions.
+
+For difficult disputed claims, optional `context/seal/reveal/apply` preserves an
+initial interpretation before revealing historical prose. It is not required for
+ordinary recording. Source hashes, inspected revisions and declared AND/OR support
+are still checked; they do not substitute for the host's scientific reasoning.
+
+For a newly supplied evidence directory, use `retro -w WORKSPACE add-source /path/to/evidence` without editing the original project.
+
+When evidence changes, use `workflow refresh` and `workflow impact ID`, investigate
+what actually changed, then record revised interpretations/routes/actions together.
+Only the affected records change; independent results and prior versions remain.
+The short spine reads current node content. A stale dependent's previous advice is
+withheld there while its complete record stays in the detailed map and history.
+
+A fresh Agent should perform an actual next task from the handoff. `workflow assess`
+records that work, coverage and limits; draft states can still be published and used.
+A reconstructed project can retain open scientific questions.
+
+## Optional Jev
+
+Add `--jev` to `start` to authorize explicitly selected local state/questions to
+TypeSafe, using `TYPESAFE_API_KEY`. Use `triage judge` for candidate batches before
+scientific synthesis and `triage impact` before revision. `retro -w W judge --input
+judgment.json` also accepts custom relevance, identity, scope, support or action judgments.
+The host chooses typed Noul/Choice/Score questions; independent questions can share
+one request. See the packaged examples and [TypeSafe API](https://docs.typesafe.ai/api).
+
+Requests, raw answers, model, token usage, timing and failures are retained. Calls
+are explicit: configured discovery and triage judge/impact send their selected state;
+record, refresh, resume and publish do not. Model advice
+neither changes scientific state nor supplies a probability gate. Offline work is
+fully usable. Historical 3.5 field-only authorization stays narrow until explicitly
+extended; its premise/action questions remain available as `workflow semantic-review`.
+
+## Existing recovery and audit tools
+
+The 2.0 **snapshot → recover → investigate → probe → close → export** lifecycle
+remains available. It supplies conditional historical execution recovery,
+comparison, isolated discriminating probes and signed support. The 1.0
+`scan/read/reconstruct/audit/correct/export/inspect/state` interface also remains.
+
+[Agent manual](AGENT.md) contains the full contract;
+[function definitions](tools.json) use the same dispatcher as shell commands.
+The [2.0 record schema](contracts/retro2.schema.json) is packaged with the tools.
+A 2.0 `closed-resolved`, `closed-qualified` or `open-blocked` result concerns its
+frozen declared obligations; whole-project scientific discovery belongs to the
+host reconstruction workflow above.
 
 ## What recovery establishes
 
@@ -106,22 +191,26 @@ missing execution information stays unknown. Existing 1.0 workspaces remain usab
 
 ## Delivery and verification
 
-See [current state](CURRENT_STATE.md) and the [2.0 release report](releases/standalone-2.0.0/REPORT.md).
-The architecture source is retained under [research_retro_architecture](research_retro_architecture/README.md).
-The shipped implementation is `src/research_harness/`; development cases and test
-code are excluded from the wheel. Historical releases remain available by tag.
+[CURRENT_STATE.md](CURRENT_STATE.md) records the installed acceptance, actual
+reconstruction, first failures, subsequent repairs, cold handoff and revision checks.
+Historical 3.0/3.5 evidence remains under releases/ and research_cases/; it is not
+silently reinterpreted as an unseen-project benchmark or Jev benefit.
 
 ```sh
 uv run python -m unittest discover -s tests -v
 uv build --wheel
 uv run python checks/standalone_acceptance.py --wheelhouse PATH --output NEW_PATH
 uv run python checks/retro2_acceptance.py --wheelhouse PATH --output NEW_PATH
+uv run python checks/retro3_acceptance.py --wheelhouse PATH --output NEW_PATH
 ```
 
-The installed acceptance runs without developer home, source checkout or network,
-with the installed package mounted read-only. The synthetic case includes a
-parameter cap, a changed operator, branch histories, copied results, a stale cache
-and a withdrawn premise. Four actual isolated interventions are compared with an
-independent discrete formula, followed by portable queries and replay. This measures
-the declared product behaviors; it is not a benchmark of arbitrary scientific truth
-recovery or a real-project blind evaluation.
+The installed acceptance uses a fresh offline namespace without developer home or
+source checkout, and a read-only installation. Development isolation tools are not
+runtime requirements. The public core contains no local-project adapters; historical
+cases and scientific parsers remain outside the wheel.
+
+`retro inspect BUNDLE` returns compact verification and the reading entry. `--full`
+returns complete state; legacy JSON `retro_inspect` clients retain that full default,
+so use `full:false` in new function calls. A source/check filename may have multiple
+captures. Resolve the blob bound to the relevant node and revision; host-check
+entries in SOURCE_INDEX record `used_by` and capture time. Do not select by array order.

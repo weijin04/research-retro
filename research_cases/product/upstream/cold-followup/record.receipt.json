@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "record",
+    "--input",
+    "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/reasoner/cold-followup/record.json"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 0.3534522610134445
+}

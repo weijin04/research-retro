@@ -1,0 +1,15 @@
+{
+  "contract_version": "1.0",
+  "ok": true,
+  "result": {
+    "directory": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/publications/r288-host-judgment-v1",
+    "current": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/current/index.html",
+    "state_revision": 288,
+    "completion": {
+      "status": "draft",
+      "blockers": [
+        "coverage, residual discovery and cold handoff not yet assessed"
+      ]
+    }
+  }
+}

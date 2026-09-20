@@ -1,0 +1,64 @@
+{
+  "contract_version": "1.0",
+  "ok": true,
+  "result": {
+    "receipt": {
+      "transaction_id": "89a541a3-50bd-46ae-a06f-2f4eaf059c2b",
+      "idempotency_key": "workflow:8740a6eeb9ec41edaccbb899f3585c77",
+      "revisions": {
+        "context:e0d7e5eb9242430aabf837f5058e10ce": 2,
+        "gap:stage1": 2,
+        "obs:s_only_validation": 1,
+        "route:stage1_readiness": 2
+      },
+      "changed_ids": [
+        "context:e0d7e5eb9242430aabf837f5058e10ce",
+        "gap:stage1",
+        "obs:s_only_validation",
+        "route:stage1_readiness"
+      ],
+      "policy_revision": 2,
+      "state_revision": 280
+    },
+    "updated": [
+      "gap:stage1",
+      "route:stage1_readiness"
+    ],
+    "semantic_checks": {
+      "jev_calls": 0,
+      "receipts": [],
+      "mode": "explicit requests only"
+    },
+    "state": {
+      "state_revision": 280,
+      "nodes": 17,
+      "jev_calls": 99,
+      "jev_successful_calls": 99,
+      "types": {
+        "asset": 1,
+        "attempt": 1,
+        "claim": 2,
+        "gap": 2,
+        "observation": 6,
+        "question": 1,
+        "route": 3,
+        "turn": 1
+      },
+      "needs_review": [],
+      "coverage_risks": [],
+      "open_questions": [
+        "gap:observable",
+        "gap:stage1",
+        "question:sign"
+      ],
+      "publication": {
+        "status": "draft",
+        "blockers": [
+          "coverage, residual discovery and cold handoff not yet assessed"
+        ]
+      },
+      "next": "Review sources and unresolved issues; an empty declared queue is not proof of whole-project coverage."
+    },
+    "next": "Inspect changed-node impact, search undeclared narrative dependencies, and review residual material before publishing."
+  }
+}

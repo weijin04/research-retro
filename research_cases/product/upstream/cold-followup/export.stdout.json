@@ -1,0 +1,15 @@
+{
+  "contract_version": "1.0",
+  "ok": true,
+  "result": {
+    "bundle": "/home/sun07ao/retro-workspaces/retro-product-evaluation/upstream-judgment.retro/exports/current-handoff",
+    "state_revision": 285,
+    "manifest_sha256": "aefddca59273fa5817a1c1b4360240e6c9490bbe6a928a8e63954d3efaf425ed",
+    "verification": {
+      "ok": true,
+      "files": 174,
+      "authenticity": "integrity only; no digital signature"
+    },
+    "record_count": 251
+  }
+}

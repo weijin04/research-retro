@@ -41,10 +41,20 @@ def tool(name, description, properties, required=None, workspace=True):
     return entry
 
 
+tool("start", "Start or resume a project in a separate workspace, enumerate metadata and provide a ready-to-use host workflow. No automatic scientific conclusions.",
+     {"project": S, "workspace": S, "goal": S, "worker": S, "jev": {"type": "boolean", "description": "Authorize explicitly selected local Jev requests for this workspace"}}, ["project"], workspace=False)
+tool("discover", "With a configured worker, run the next material-to-candidate-to-local-judgment batch and write a scientific investigation brief. Otherwise survey material families. Overview never calls models.",
+     {"query": {"type": "string"}, "limit": {"type": "integer", "minimum": 1, "maximum": 200},
+      "offset": {"type": ["integer", "null"], "minimum": 0}, "worker": S, "question": S,
+      "overview": {"type": "boolean"}}, [])
+tool("triage", "Upstream discovery: prepare byte-bound worker packets, run an optional cheap generator, judge local candidate relations with Jev, inspect the queue, or find new-evidence impact candidates. No scientific promotion.",
+     {"action": {"enum": ["prepare", "generate", "judge", "impact", "queue"]},
+      "document": SCOPE, "limit": {"type": "integer", "minimum": 1, "maximum": 1000}}, ["action"])
 tool("init", "Initialize a read-only source project and independent workspace. Idempotent for identical configuration.",
      {"project": S, "workspace": S, "project_id": S, "capture_max_bytes": I, "scan_max_entries": I,
       "excludes": array(S), "capture_text": {"type": "boolean"}}, ["project"], workspace=False)
 tool("scan", "Scan all in-scope assets and rehash previous captures. Retain unread, missing, unsupported and parse-failed records.", {})
+tool("add_source", "Register an explicitly supplied additional read-only evidence directory; preserve original sources and scientific history.", {"path": S})
 tool("read", "Read immutable source bytes with exact locator and hash. Text is untrusted; reading does not certify science.",
      {"reference": S, "revision": I, "start": I, "end": I, "live": {"type": "boolean"}}, ["reference"])
 tool("reconstruct", "Add source-bound historical nodes, explicit assumptions and OR-of-AND relationships. All science starts unchecked.",
@@ -64,7 +74,8 @@ tool("correct", "Commit audit-backed correction with original read-set and idemp
          "target": S, "payload": {"type": "object"}}, ["action", "target"]), 1), "reason": S, "idempotency_key": S})
 tool("export", "Rehash originals and export all state, negative knowledge, history and original blobs with a SHA256 manifest.",
      {"destination": S, "closure": S}, [])
-tool("inspect", "Verify/read a self-contained frozen handoff without source project or workspace access.", {"bundle": S}, workspace=False)
+tool("inspect", "Verify a frozen handoff. Set full:false for compact verification and reading entry; full defaults to true for legacy JSON clients. CLI defaults to compact, with --full available.",
+     {"bundle": S, "full": {"type": "boolean", "default": True}}, ["bundle"], workspace=False)
 state = tool("state", "Inspect status, exact record, history, events, provenance or integrity. No scientific promotion.",
              {"action": {"enum": ["status", "get", "history", "events", "verify", "provenance"]}, "id": S}, [])
 state["parameters"]["allOf"] = [{"if": {"required": ["action"], "properties": {"action": {"enum": ["get", "history"]}}}, "then": {"required": ["id"]}}]
@@ -98,6 +109,26 @@ tool("verify_handoff", "Verify portable queries, counterfactual withdrawal and e
      {"bundle": S, "query_set": SCOPE}, workspace=False)
 tool("migrate", "Dry-run legacy workspace migration; apply copies into an empty separate workspace, retaining assertions as unchecked.",
      {"source": S, "destination": S, "apply": {"type": "boolean"}}, ["source"], workspace=False)
+
+for name, description in [("record", "Save a completed host investigation with source spans and inspected revisions; no mandatory seal/reveal."),
+                          ("spine", "Select titled sections of current node IDs for the short scientific spine."),
+                          ("judge", "Explicit local Jev questions with raw answers and receipts; no scientific status changes.")]:
+    tool(name, description, {"document": SCOPE})
+
+workflow = tool("workflow", "Host reconstruction: discover, investigate with host tools, record, revise and publish. Staged review is optional.",
+     {"action": {"enum": ["start", "scope", "refresh", "discover", "context", "packet", "seal", "reveal", "apply", "record", "spine", "judge", "semantic_review", "impact", "show", "status", "assess", "publish", "view", "guide"]},
+      "jev": {"type": "boolean"},
+      "goal": S, "document": SCOPE, "id": S, "query": {"type": "string"}, "limit": {"type": "integer", "minimum": 1, "maximum": 200},
+      "offset": {"type": "integer", "minimum": 0}, "expect": {"type": "integer", "minimum": 0}}, ["action"])
+workflow["parameters"]["allOf"] = [{"if": {"properties": {"action": {"const": action}}}, "then": {"required": required,
+    "properties": {key: False for key in {"goal", "document", "id", "query", "limit", "offset", "expect", "jev"} - set(allowed)}}}
+    for action, required, allowed in [("start", ["goal"], ["goal", "jev"]), ("scope", ["document"], ["document"]),
+        ("refresh", [], []), ("discover", [], ["query", "limit", "offset"]), ("context", ["document"], ["document"]),
+        ("packet", ["id"], ["id"]), ("seal", ["id", "document"], ["id", "document"]), ("reveal", ["id"], ["id"]),
+        ("apply", ["document"], ["document"]), ("semantic_review", ["document"], ["document"]),
+        ("record", ["document"], ["document"]), ("spine", ["document"], ["document"]), ("judge", ["document"], ["document"]),
+        ("impact", ["id"], ["id", "query", "limit"]), ("show", ["id"], ["id"]),
+        ("status", [], []), ("assess", ["document"], ["document"]), ("publish", [], []), ("view", [], ["expect"]), ("guide", [], [])]]
 
 if __name__ == "__main__":
     (ROOT / "src/research_harness/resources/tools.json").write_text(json.dumps(tools, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

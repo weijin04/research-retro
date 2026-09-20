@@ -1,0 +1,53 @@
+{
+  "contract_version": "1.0",
+  "ok": true,
+  "result": {
+    "receipt": {
+      "transaction_id": "4df58983-c629-4a72-894b-2a42fe03eb81",
+      "idempotency_key": "workflow:25c8a5409ac2459d917e13e7743b3eb1",
+      "revisions": {
+        "workflow:project": 6
+      },
+      "changed_ids": [
+        "workflow:project"
+      ],
+      "policy_revision": 2,
+      "state_revision": 281
+    },
+    "spine": {
+      "sections": [
+        {
+          "title": "当前问题与恢复边界",
+          "nodes": [
+            "question:sign"
+          ]
+        },
+        {
+          "title": "已确认的失败与不该丢失的边界",
+          "nodes": [
+            "claim:void",
+            "obs:r4run2",
+            "claim:boundednegative",
+            "obs:reuse"
+          ]
+        },
+        {
+          "title": "新材料揭示的旧转折和可复用资产",
+          "nodes": [
+            "turn:r5_correction",
+            "obs:v33_negative",
+            "asset:mip_smoke"
+          ]
+        },
+        {
+          "title": "冷接手完成盘点，下一步已推进",
+          "nodes": [
+            "obs:s_only_validation",
+            "route:stage1_readiness",
+            "route:next"
+          ]
+        }
+      ]
+    }
+  }
+}

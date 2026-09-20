@@ -1,0 +1,41 @@
+[
+  {
+    "file": "artifacts/experiment/v105_magnitude_arbitration/RESULTS.md",
+    "hits": [
+      "`REGISTER_RIGID_HOST_MAGNITUDE_AS_ANTI_INFORMATIVE`",
+      "rigid-limit artifact whose size is unbounded and material-dependent"
+    ]
+  },
+  {
+    "file": "artifacts/experiment/v105_magnitude_arbitration/decision.json",
+    "hits": [
+      "    \"rigid_host_barrier_magnitude\": \"registered_anti_informative_cross_material\","
+    ]
+  },
+  {
+    "file": "artifacts/experiment/v33_finite_t_path_survival_falsifier/RESULTS.md",
+    "hits": [
+      "`STOP_DO_NOT_ROUTE`",
+      "observable therefore measures ordinary host openness, not the rare coupled"
+    ]
+  },
+  {
+    "file": "artifacts/experiment/v33_finite_t_path_survival_falsifier/result.json",
+    "hits": [
+      "  \"decision\": \"STOP_DO_NOT_ROUTE\","
+    ]
+  },
+  {
+    "file": "artifacts/experiment/v13_finite_t_smoke/RESULTS.md",
+    "hits": [
+      "This is an integration smoke, not an equilibrium calculation. The 1 ps",
+      "call. Stage 1 must measure overlap, autocorrelation, block drift and tube"
+    ]
+  },
+  {
+    "file": "artifacts/experiment/v13_finite_t_smoke/result.json",
+    "hits": [
+      "    \"1 ps production is only an integration smoke and cannot establish stationarity\","
+    ]
+  }
+]

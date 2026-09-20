@@ -1,0 +1,66 @@
+{
+  "product": "Research Retro",
+  "version": "3.6.0",
+  "frozen_at_utc": "2026-09-20T19:16:48.344435+00:00",
+  "status": "standalone_reconstruction_product_delivered",
+  "wheel_sha256": "dddcb9a5dcc21675d18445713be14f1f8d25d11e21f5d62414a3a0b638c18359",
+  "source_state": "uncommitted workspace; preserves pre-existing work; no tag or remote release",
+  "source_parity": "wheel-parity.json",
+  "installed_entry": "/home/sun07ao/retro-workspaces/retro-product-evaluation/product-release-env/bin/retro",
+  "tested_environment": "Linux x86_64 CPython 3.14.4",
+  "declared_runtime": "Python >=3.11, POSIX; other combinations not empirically tested",
+  "offline_wheelhouse": "ordinary Linux x86_64 CPython 3.14",
+  "host_interfaces": "shell and JSON functions; host SDK not required",
+  "software_acceptance": "acceptance.json",
+  "product_entry_change": "start --worker; discover composes preparation, worker generation, authorized local judgments and a readable brief, and continues material batches",
+  "real_usage_evidence": "../../research_cases/product/REPORT.md",
+  "limits": [
+    "scientific state remains scoped and revisable; not full-history certification",
+    "local model judgments may be wrong; no probability truth gate",
+    "no established cross-domain, cross-host or aggregate accuracy/cost advantage",
+    "DSH headless is optional; existing model settings are used",
+    "case work stopped at user request; finished outputs preserved without further evaluation"
+  ],
+  "artifacts": {
+    "INSTALL.md": {
+      "bytes": 5311,
+      "sha256": "312e2426d395cf213b67e834e3c482725e722acee9fc24e531515d65c81b4730"
+    },
+    "REPORT.md": {
+      "bytes": 3448,
+      "sha256": "1f40c245223d1aacd29895e13da1fb130375ab4738910e91ffafa18b0033e149"
+    },
+    "acceptance.json": {
+      "bytes": 1113,
+      "sha256": "457f49e4063e7143e46359f263215e68af0a5989e26ed0d24b21448401c53d31"
+    },
+    "example-handoff.tar.gz": {
+      "bytes": 50693,
+      "sha256": "f2a015d064e6e0a72549eba265ecc1767cbd20e11962f0f1f35861efbc2d030a"
+    },
+    "receipt-index.json": {
+      "bytes": 21560,
+      "sha256": "0f2c1404f97954bfa76f70bf927bc7fefaa64b9b1335a8efdb208f841fa39066"
+    },
+    "receipts.tar.gz": {
+      "bytes": 3552519,
+      "sha256": "7b9d3c3f85becc9dd3d5a1ce9a3922dbede907616d03edf82b900f20ae87a964"
+    },
+    "research_retro-3.6.0-py3-none-any.whl": {
+      "bytes": 157120,
+      "sha256": "dddcb9a5dcc21675d18445713be14f1f8d25d11e21f5d62414a3a0b638c18359"
+    },
+    "unit-tests.log": {
+      "bytes": 21483,
+      "sha256": "87ba13214d3b17deb01db38c8b2803ff9c8c7164f6f8bfcc5f999af03191d01f"
+    },
+    "wheel-parity.json": {
+      "bytes": 7670,
+      "sha256": "c8175ee1a154f157583eba19d8bcc76f44e03e235630c7c21808a0104df2653c"
+    },
+    "wheelhouse-linux-cp314.tar.gz": {
+      "bytes": 2469645,
+      "sha256": "d100ba662dfb712cd4bcc3f3aa8b4fd132beed0ab10233cc3a4c016ddb2cbf1b"
+    }
+  }
+}

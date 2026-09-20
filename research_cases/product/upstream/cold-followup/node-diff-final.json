@@ -1,0 +1,42 @@
+{
+  "changed": [
+    {
+      "id": "route:next",
+      "from": 4,
+      "to": 5,
+      "statement_changed": false
+    },
+    {
+      "id": "route:stage1_readiness",
+      "from": 1,
+      "to": 2,
+      "statement_changed": true
+    },
+    {
+      "id": "gap:stage1",
+      "from": 1,
+      "to": 2,
+      "statement_changed": true
+    }
+  ],
+  "retained_identical": [
+    "turn:r5_correction",
+    "question:sign",
+    "route:r4stop",
+    "gap:observable",
+    "attempt:r4run1",
+    "claim:boundednegative",
+    "claim:void",
+    "obs:graph",
+    "obs:r3frames",
+    "obs:r4run2",
+    "obs:reuse",
+    "obs:v33_negative",
+    "asset:mip_smoke"
+  ],
+  "added": [
+    "obs:s_only_validation"
+  ],
+  "frozen_r275_unchanged": true,
+  "final_revision": 292
+}

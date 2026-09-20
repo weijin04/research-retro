@@ -1,0 +1,122 @@
+[
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_results/cells/MIL160_XE_KR_298K_C002_100kPa/seed404/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_results/cells/MIL160_XE_KR_298K_C002_100kPa/seed505/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_results/cells/MIL160_XE_KR_298K_C026_100kPa/seed404/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_results/cells/MIL160_XE_KR_298K_C026_100kPa/seed505/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_staging/cells/MIL160_XE_KR_298K_C002_100kPa/seed404/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_staging/cells/MIL160_XE_KR_298K_C002_100kPa/seed505/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_staging/cells/MIL160_XE_KR_298K_C026_100kPa/seed404/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v132_frontier_screening_loop/throughput_n10_staging/cells/MIL160_XE_KR_298K_C026_100kPa/seed505/framework.cif",
+    "target": "../../../framework.cif"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Kr/force_field_mixing_rules.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/force_field_mixing_rules.def"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Kr/framework.cif",
+    "target": "/home/sun07ao/cxekr/validation/kr4_xe6_bundle_20260716/structures/sbmof-1/sbmof-1_unloaded_KAXQIL_clean.cif"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Kr/input.param",
+    "target": "/home/sun07ao/cxekr/artifacts/experiment/v44_markov_solution_diffusion_value_gate/input_Kr.param"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Kr/pseudo_atoms.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/pseudo_atoms.def"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Xe/force_field_mixing_rules.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/force_field_mixing_rules.def"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Xe/framework.cif",
+    "target": "/home/sun07ao/cxekr/validation/kr4_xe6_bundle_20260716/structures/sbmof-1/sbmof-1_unloaded_KAXQIL_clean.cif"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Xe/input.param",
+    "target": "/home/sun07ao/cxekr/artifacts/experiment/v44_markov_solution_diffusion_value_gate/input_Xe.param"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/ca_sbmof1/Xe/pseudo_atoms.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/pseudo_atoms.def"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Kr/force_field_mixing_rules.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/force_field_mixing_rules.def"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Kr/framework.cif",
+    "target": "/home/sun07ao/cxekr/validation/kr4_xe6_bundle_20260716/structures/mip-203-suc/mip-203-suc.cif"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Kr/input.param",
+    "target": "/home/sun07ao/cxekr/artifacts/experiment/v44_markov_solution_diffusion_value_gate/input_Kr.param"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Kr/pseudo_atoms.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/pseudo_atoms.def"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Xe/force_field_mixing_rules.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/force_field_mixing_rules.def"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Xe/framework.cif",
+    "target": "/home/sun07ao/cxekr/validation/kr4_xe6_bundle_20260716/structures/mip-203-suc/mip-203-suc.cif"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Xe/input.param",
+    "target": "/home/sun07ao/cxekr/artifacts/experiment/v44_markov_solution_diffusion_value_gate/input_Xe.param"
+  },
+  {
+    "path": "artifacts/experiment/v44_markov_solution_diffusion_value_gate/coarse/mip/Xe/pseudo_atoms.def",
+    "target": "/home/sun07ao/kr/paths/router/widom_matrix_v3/stage/share/raspa/forcefield/WMV3_C098/pseudo_atoms.def"
+  },
+  {
+    "path": "artifacts/experiment/v57_soft_kr_activation_holdout/reference_holdout/cif/S002.cif",
+    "target": "/home/sun07ao/xekr/rep/MOFSimplify/CoRE2019/GIWNUV_clean.cif"
+  },
+  {
+    "path": "artifacts/experiment/v57_soft_kr_activation_holdout/reference_holdout/cif/S004.cif",
+    "target": "/home/sun07ao/xekr/rep/MOFSimplify/CoRE2019/QUKYOL_clean.cif"
+  },
+  {
+    "path": "artifacts/experiment/v57_soft_kr_activation_holdout/reference_holdout/cif/S006.cif",
+    "target": "/home/sun07ao/xekr/CIF/raw/\u5408\u96c6/CoREMOF 2019-mofdb-version-dc8a0295db/QAPQAA_charged.cif"
+  },
+  {
+    "path": "causal_ops/r2_kr06t3/sbmof1_recheck/snap_0000.cif",
+    "target": "/home/sun07ao/cxekr/validation/kr4_xe6_bundle_20260716/structures/sbmof-1/sbmof-1_unloaded_KAXQIL_clean.cif"
+  },
+  {
+    "path": "causal_ops/r2_kr06t3/smoke_rigid/snap_0000.cif",
+    "target": "/home/sun07ao/kr/paths/B/pipeline/assets/MIP-203-Suc__clean.cif"
+  },
+  {
+    "path": "discussions",
+    "target": "/home/sun07ao/literature/discussions/cxekr"
+  }
+]

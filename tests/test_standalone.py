@@ -38,15 +38,18 @@ class StandaloneTests(unittest.TestCase):
             {"id": "c", "kind": "claim", "text": "all hit", "scope": {"sample": "two"}, "supports": [["e"]]}]})
         return observed
 
-    def test_default_workspace_is_in_target_and_not_source_intake(self):
+    def test_new_workspace_is_separate_and_not_source_intake(self):
         result = init(self.project)
-        workspace = self.project / ".retro"
+        workspace = self.project.parent / (self.project.name + ".retro")
         self.assertEqual(result["workspace"], str(workspace))
         unit = Unit(workspace)
         rows = unit.scan()["sources"][0]["assets"]
         self.assertEqual([row["path"] for row in rows if row["state"] == "captured"], [str(self.source)])
         self.assertFalse(any("state.sqlite3" in row["path"] for row in rows))
         self.assertEqual(self.source.read_text(), "n,hit\n1,0\n2,1\n")
+        self.assertFalse((self.project / ".retro").exists())
+        with self.assertRaises(HarnessError):
+            init(self.project, self.project / "nested-retro")
 
     def test_no_workspace_or_source_authority_silently_selected(self):
         result = invoke({"name": "retro_scan", "arguments": {}})

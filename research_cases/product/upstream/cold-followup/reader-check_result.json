@@ -1,0 +1,63 @@
+{
+  "smoke_summary_recheck": [
+    {
+      "gas": "Kr",
+      "seed": 131071,
+      "observation_ps": 1.0,
+      "frame_stride_duration_ps": 1.0,
+      "temperature_relative_error_recomputed": 0.03896677852348995,
+      "reported_summary_gates_pass": true,
+      "target": 2.538542261353701
+    },
+    {
+      "gas": "Kr",
+      "seed": 524287,
+      "observation_ps": 1.0,
+      "frame_stride_duration_ps": 1.0,
+      "temperature_relative_error_recomputed": 0.02574265100671136,
+      "reported_summary_gates_pass": true,
+      "target": 2.538542261353701
+    },
+    {
+      "gas": "Xe",
+      "seed": 131071,
+      "observation_ps": 1.0,
+      "frame_stride_duration_ps": 1.0,
+      "temperature_relative_error_recomputed": 0.04215951342281876,
+      "reported_summary_gates_pass": true,
+      "target": 2.562688149549735
+    },
+    {
+      "gas": "Xe",
+      "seed": 524287,
+      "observation_ps": 1.0,
+      "frame_stride_duration_ps": 1.0,
+      "temperature_relative_error_recomputed": 0.016586954697986434,
+      "reported_summary_gates_pass": true,
+      "target": 2.562688149549735
+    }
+  ],
+  "limitation": "Summary-level recomputation, not raw COLVAR verification. Four 1ps records do not establish independent samples or stationarity.",
+  "later_validation_original_report": {
+    "runs": 20,
+    "gases": 2,
+    "windows_per_gas": 5,
+    "replicas": 2,
+    "adjacent_edges_expected": 8,
+    "overlap_min_Kr": 0.339,
+    "overlap_min_Xe": 0.322,
+    "overlap_threshold": 0.1,
+    "minimum_overlap_margin": 0.222,
+    "Xe_ESS_failed_windows": 4,
+    "Xe_ESS_shortfall_range": [
+      15.5,
+      48.0
+    ],
+    "failed_stationarity_runs": 4,
+    "reported_umbrella_tail_duration_fs": 107.5,
+    "strict_validation": false
+  },
+  "raw_validation_recomputed": false,
+  "long_repair_named_sources_in_index": [],
+  "candidate_continuation": "Recover named v13_s_only_validation_long result, frozen protocol and full trajectories first; assess unchanged ESS/stationarity gates before considering any new overlap pilot."
+}

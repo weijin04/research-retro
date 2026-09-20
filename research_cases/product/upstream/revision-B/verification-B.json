@@ -1,0 +1,68 @@
+{
+  "v33": {
+    "ensemble_a": {
+      "tail_rows": 20,
+      "completed": 19,
+      "failed_indices": [
+        10
+      ],
+      "median": 1.1626,
+      "max": 1.28349,
+      "Kr_pass": 0,
+      "Xe_pass": 0,
+      "worst_case_if_all_failed_pass": {
+        "pass_count": 1,
+        "positive_blocks": 1,
+        "total_blocks": 4
+      }
+    },
+    "ensemble_b": {
+      "tail_rows": 20,
+      "completed": 20,
+      "failed_indices": [],
+      "median": 1.47344,
+      "max": 1.59055,
+      "Kr_pass": 0,
+      "Xe_pass": 0,
+      "worst_case_if_all_failed_pass": {
+        "pass_count": 0,
+        "positive_blocks": 0,
+        "total_blocks": 4
+      }
+    }
+  },
+  "smoke": {
+    "material": "mip-203-suc",
+    "runs": 4,
+    "all_runs_passed": true,
+    "observation_ps": 1.0,
+    "gas_seeds": [
+      [
+        "Kr",
+        131071
+      ],
+      [
+        "Kr",
+        524287
+      ],
+      [
+        "Xe",
+        131071
+      ],
+      [
+        "Xe",
+        524287
+      ]
+    ],
+    "pmf_eligible": false,
+    "overlap_pilot_eligible": true,
+    "rate_eligible": false,
+    "max_host_shift": 1.1846655931603682
+  },
+  "limits": [
+    "Recomputed v33 stored per-frame results, not rerun Zeo++ or MD.",
+    "Smoke receipt consistency check only; raw COLVAR not reread or independently reproduced.",
+    "MIP-203-Suc historical evidence does not validate the CALF dynamic centroid calibration.",
+    "One technical failure cannot restore block-repeated support, but does not prove absence of rare physical passage."
+  ]
+}

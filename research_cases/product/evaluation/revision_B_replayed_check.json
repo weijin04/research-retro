@@ -1,0 +1,97 @@
+{
+  "barrier_materials": [
+    "alcdc",
+    "calf-20-base",
+    "coni-dab",
+    "hkust-1",
+    "in-atc",
+    "mip-203-suc",
+    "sbmof-1",
+    "sbmof-2"
+  ],
+  "smoke_material": "mip-203-suc",
+  "runs": [
+    {
+      "gas": "Kr",
+      "seed": 131071,
+      "fields": [
+        "time",
+        "path_s",
+        "path_z2",
+        "path_bias.bias",
+        "tube_wall.bias"
+      ],
+      "rows": 400,
+      "reported_sd": 0.08789778117943323,
+      "columns_sd": {
+        "time": 289.0357532670771,
+        "path_s": 0.08789778117943321,
+        "path_z2": 0.06912818526241708,
+        "path_bias.bias": 0.9180159205784767,
+        "tube_wall.bias": 0.0
+      }
+    },
+    {
+      "gas": "Kr",
+      "seed": 524287,
+      "fields": [
+        "time",
+        "path_s",
+        "path_z2",
+        "path_bias.bias",
+        "tube_wall.bias"
+      ],
+      "rows": 400,
+      "reported_sd": 0.16966646172353672,
+      "columns_sd": {
+        "time": 289.0357532670771,
+        "path_s": 0.16966646172353675,
+        "path_z2": 0.04967194990916562,
+        "path_bias.bias": 2.1539755915349392,
+        "tube_wall.bias": 0.0
+      }
+    },
+    {
+      "gas": "Xe",
+      "seed": 131071,
+      "fields": [
+        "time",
+        "path_s",
+        "path_z2",
+        "path_bias.bias",
+        "tube_wall.bias"
+      ],
+      "rows": 400,
+      "reported_sd": 0.12012865593534831,
+      "columns_sd": {
+        "time": 289.0357532670771,
+        "path_s": 0.12012865593534831,
+        "path_z2": 0.04935435688020154,
+        "path_bias.bias": 2.2105008746845254,
+        "tube_wall.bias": 0.0
+      }
+    },
+    {
+      "gas": "Xe",
+      "seed": 524287,
+      "fields": [
+        "time",
+        "path_s",
+        "path_z2",
+        "path_bias.bias",
+        "tube_wall.bias"
+      ],
+      "rows": 400,
+      "reported_sd": 0.10437027905940437,
+      "columns_sd": {
+        "time": 289.0357532670771,
+        "path_s": 0.10437027905940437,
+        "path_z2": 0.03271653738175561,
+        "path_bias.bias": 1.3958746346037274,
+        "tube_wall.bias": 0.0
+      }
+    }
+  ],
+  "opening_fraction_kr": 0.9394213837618959,
+  "delta_opening_fraction": 0.9839725016215954
+}

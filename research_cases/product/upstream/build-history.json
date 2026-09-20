@@ -1,0 +1,26 @@
+{
+  "candidate-3": {
+    "sha256": "ae39389f7de6d9ae42f461c2760846d8ac584d26bd0e61a36b6d5545776e851e",
+    "bytes": 141980
+  },
+  "candidate-4": {
+    "sha256": "2a84011c8729a308506186d916a3046bfa14289866c55a4f1fac40fd52862465",
+    "bytes": 152039
+  },
+  "candidate-5": {
+    "sha256": "0ea256847c8c3a9cf8f0e2554c3c1d1922e0ee250b5b03b30da560df4c1b8f45",
+    "bytes": 152895
+  },
+  "candidate-6": {
+    "sha256": "69974c2fbbc46bdb3b75b43f3fd60f8671b1820bb2886ab738be67aa9fa6043c",
+    "bytes": 153065
+  },
+  "boundaries": {
+    "candidate-3": "prior host-led evaluation and release checkpoint",
+    "candidate-4": "fresh upstream strong reconstruction runtime",
+    "candidate-5": "followup and B revision runtime; generic local question/context fixes",
+    "candidate-6": "final delivery; only README and host skill input-availability guidance changed from candidate-5; all installed lifecycle checks repeated",
+    "cold_A_runtime": "shared product-upstream-env upgraded from candidate-4 to candidate-5 around cold-A start; per-invocation wheel hash was not captured; do not infer a single exact A cold runtime from version 3.6.0",
+    "cold_B_runtime": "final candidate-6 in separately installed product-release-env"
+  }
+}

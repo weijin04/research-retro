@@ -1,0 +1,52 @@
+{
+  "completed_utc": "2026-09-20T18:57:22.481053+00:00",
+  "verdict": "bounded_upstream_revision_loop_demonstrated_after_preserved_action_repair",
+  "state_revision": 275,
+  "integrity_files": 167,
+  "verification": "UPSTREAM_REVISION_CHECKS.json",
+  "ordering": {
+    "impact_receipts_utc": [
+      "2026-09-20T18:45:53.648890+00:00",
+      "2026-09-20T18:45:55.096466+00:00"
+    ],
+    "first_B_scientific_update_utc": "2026-09-20T18:51:41.436915+00:00",
+    "final_action_repair_utc": "2026-09-20T18:53:50.950165+00:00",
+    "supported": "Impact before scientific revision independently supported by receipt/event times. Read-trace declares first host B body read after impact batch.",
+    "not_proven": "No per-read timestamp/access enforcement; cannot independently certify absence of prior host B reading. Program necessarily read B to prepare impact; claim is host-order only."
+  },
+  "node_diff": {
+    "before": 11,
+    "after": 16,
+    "retained_identical": 8,
+    "changed": 3,
+    "new": 5,
+    "deleted": 0,
+    "statement_changed": 2,
+    "action_metadata_only_changed": [
+      "obs:reuse"
+    ]
+  },
+  "retained": [
+    "R4 stop",
+    "R4 empirical results",
+    "HKUST graph witness",
+    "CALF proxy observations",
+    "bounded negative claim",
+    "observable gap",
+    "shared-evidence scientific statement"
+  ],
+  "changed_action": "Immediate priority changes from CALF coordinate audit to read-only inventory of existing MIP Stage1 readiness; CALF remains conditional boundary investigation. No new simulations authorized.",
+  "B_material_type": "Real later author interpretive note; new verification uses existing A results, no new scientific run evidence.",
+  "numeric_check": "verify_B.py independently replayed in evaluator scratch with input root only relocated; JSON identical. Stored v33 row recount and smoke-receipt consistency only; no Zeo/MD/COLVAR reproduction.",
+  "initial_failure_preserved": "First B publication still showed completed genealogy question as next. Final repair updates obs:reuse discovery action and dependent route revision, without changing scientific statement; original after-view and export remain.",
+  "impact_handling": "affected not used to rewrite every target; insufficient not used to revoke established evidence. Five affected and two insufficient reviewed locally; 8 independent nodes retained unchanged.",
+  "read_scope": "15 scientific paths, 1 B + 10 newly followed A +4 pre-read bindings; known host bytes50159 lower bound, exact reading/tokens unknown due truncation.",
+  "limitations": [
+    "Limited A/B loop, not whole project reconstruction.",
+    "No general evidence that Stage1 inventory is globally optimal or all alternative routes exhausted.",
+    "Prior cold A proved useful alternate CSV work but exposed missing geometry sources; that deficiency remains phase evidence.",
+    "Fresh B reader pending and not inspected.",
+    "No causal Jev gain, no matched cost/quality comparison.",
+    "Old 90 judgments and revealed c34 failure retained."
+  ]
+}

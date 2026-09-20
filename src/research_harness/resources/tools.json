@@ -1,5 +1,119 @@
 [
   {
+    "name": "retro_start",
+    "description": "Start or resume a project in a separate workspace, enumerate metadata and provide a ready-to-use host workflow. No automatic scientific conclusions.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "project": {
+          "type": "string",
+          "minLength": 1
+        },
+        "workspace": {
+          "type": "string",
+          "minLength": 1
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "worker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "jev": {
+          "type": "boolean",
+          "description": "Authorize explicitly selected local Jev requests for this workspace"
+        }
+      },
+      "required": [
+        "project"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_discover",
+    "description": "With a configured worker, run the next material-to-candidate-to-local-judgment batch and write a scientific investigation brief. Otherwise survey material families. Overview never calls models.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "query": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "offset": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "worker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "overview": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "workspace"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_triage",
+    "description": "Upstream discovery: prepare byte-bound worker packets, run an optional cheap generator, judge local candidate relations with Jev, inspect the queue, or find new-evidence impact candidates. No scientific promotion.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "action": {
+          "enum": [
+            "prepare",
+            "generate",
+            "judge",
+            "impact",
+            "queue"
+          ]
+        },
+        "document": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 1000
+        }
+      },
+      "required": [
+        "workspace",
+        "action"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
     "name": "retro_init",
     "description": "Initialize a read-only source project and independent workspace. Idempotent for identical configuration.",
     "parameters": {
@@ -57,6 +171,29 @@
       },
       "required": [
         "workspace"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_add_source",
+    "description": "Register an explicitly supplied additional read-only evidence directory; preserve original sources and scientific history.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "workspace",
+        "path"
       ],
       "additionalProperties": false
     }
@@ -469,8 +606,8 @@
               "obligations"
             ],
             "properties": {
-              "result": false,
-              "script": false
+              "script": false,
+              "result": false
             }
           }
         },
@@ -485,14 +622,14 @@
           "then": {
             "required": [],
             "properties": {
+              "obligations": false,
+              "alternatives": false,
+              "question": false,
+              "targets": false,
               "script": false,
               "scope": false,
-              "question": false,
-              "mode": false,
               "result": false,
-              "targets": false,
-              "obligations": false,
-              "alternatives": false
+              "mode": false
             }
           }
         },
@@ -509,13 +646,13 @@
               "script"
             ],
             "properties": {
-              "scope": false,
-              "question": false,
-              "mode": false,
-              "result": false,
-              "targets": false,
               "obligations": false,
-              "alternatives": false
+              "alternatives": false,
+              "question": false,
+              "targets": false,
+              "scope": false,
+              "result": false,
+              "mode": false
             }
           }
         },
@@ -532,13 +669,13 @@
               "result"
             ],
             "properties": {
+              "obligations": false,
+              "alternatives": false,
+              "question": false,
+              "targets": false,
               "script": false,
               "scope": false,
-              "question": false,
-              "mode": false,
-              "targets": false,
-              "obligations": false,
-              "alternatives": false
+              "mode": false
             }
           }
         }
@@ -642,13 +779,17 @@
   },
   {
     "name": "retro_inspect",
-    "description": "Verify/read a self-contained frozen handoff without source project or workspace access.",
+    "description": "Verify a frozen handoff. Set full:false for compact verification and reading entry; full defaults to true for legacy JSON clients. CLI defaults to compact, with --full available.",
     "parameters": {
       "type": "object",
       "properties": {
         "bundle": {
           "type": "string",
           "minLength": 1
+        },
+        "full": {
+          "type": "boolean",
+          "default": true
         }
       },
       "required": [
@@ -968,12 +1109,12 @@
               "document"
             ],
             "properties": {
-              "script": false,
-              "scope": false,
-              "id": false,
-              "result": false,
+              "view": false,
               "obligation": false,
-              "view": false
+              "script": false,
+              "id": false,
+              "scope": false,
+              "result": false
             }
           }
         },
@@ -990,9 +1131,9 @@
               "scope"
             ],
             "properties": {
-              "result": false,
-              "id": false,
               "script": false,
+              "id": false,
+              "result": false,
               "document": false
             }
           }
@@ -1010,12 +1151,12 @@
               "id"
             ],
             "properties": {
+              "obligation": false,
+              "result": false,
               "script": false,
               "scope": false,
-              "result": false,
-              "document": false,
-              "obligation": false,
-              "view": false
+              "view": false,
+              "document": false
             }
           }
         },
@@ -1033,10 +1174,10 @@
               "document"
             ],
             "properties": {
+              "obligation": false,
+              "result": false,
               "script": false,
               "scope": false,
-              "result": false,
-              "obligation": false,
               "view": false
             }
           }
@@ -1054,12 +1195,12 @@
               "id"
             ],
             "properties": {
+              "obligation": false,
+              "result": false,
               "script": false,
               "scope": false,
-              "result": false,
-              "document": false,
-              "obligation": false,
-              "view": false
+              "view": false,
+              "document": false
             }
           }
         },
@@ -1077,11 +1218,11 @@
               "result"
             ],
             "properties": {
+              "obligation": false,
               "script": false,
               "scope": false,
-              "document": false,
-              "obligation": false,
-              "view": false
+              "view": false,
+              "document": false
             }
           }
         },
@@ -1099,11 +1240,11 @@
               "script"
             ],
             "properties": {
-              "scope": false,
-              "result": false,
-              "document": false,
               "obligation": false,
-              "view": false
+              "result": false,
+              "scope": false,
+              "view": false,
+              "document": false
             }
           }
         }
@@ -1163,8 +1304,8 @@
               "obligation"
             ],
             "properties": {
-              "id": false,
-              "isolation": false
+              "isolation": false,
+              "id": false
             }
           }
         },
@@ -1199,9 +1340,9 @@
               "id"
             ],
             "properties": {
+              "isolation": false,
               "obligation": false,
-              "document": false,
-              "isolation": false
+              "document": false
             }
           }
         }
@@ -1275,6 +1416,598 @@
         "source"
       ],
       "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_record",
+    "description": "Save a completed host investigation with source spans and inspected revisions; no mandatory seal/reveal.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "document": {
+          "type": "object",
+          "minProperties": 1
+        }
+      },
+      "required": [
+        "workspace",
+        "document"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_spine",
+    "description": "Select titled sections of current node IDs for the short scientific spine.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "document": {
+          "type": "object",
+          "minProperties": 1
+        }
+      },
+      "required": [
+        "workspace",
+        "document"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_judge",
+    "description": "Explicit local Jev questions with raw answers and receipts; no scientific status changes.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "document": {
+          "type": "object",
+          "minProperties": 1
+        }
+      },
+      "required": [
+        "workspace",
+        "document"
+      ],
+      "additionalProperties": false
+    }
+  },
+  {
+    "name": "retro_workflow",
+    "description": "Host reconstruction: discover, investigate with host tools, record, revise and publish. Staged review is optional.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "workspace": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Explicit target workspace; never the engine repository"
+        },
+        "action": {
+          "enum": [
+            "start",
+            "scope",
+            "refresh",
+            "discover",
+            "context",
+            "packet",
+            "seal",
+            "reveal",
+            "apply",
+            "record",
+            "spine",
+            "judge",
+            "semantic_review",
+            "impact",
+            "show",
+            "status",
+            "assess",
+            "publish",
+            "view",
+            "guide"
+          ]
+        },
+        "jev": {
+          "type": "boolean"
+        },
+        "goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "document": {
+          "type": "object",
+          "minProperties": 1
+        },
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "query": {
+          "type": "string"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 200
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "expect": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "workspace",
+        "action"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "start"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "goal"
+            ],
+            "properties": {
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "scope"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "refresh"
+              }
+            }
+          },
+          "then": {
+            "required": [],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "discover"
+              }
+            }
+          },
+          "then": {
+            "required": [],
+            "properties": {
+              "jev": false,
+              "expect": false,
+              "id": false,
+              "goal": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "context"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "packet"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "seal"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "id",
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "query": false,
+              "limit": false,
+              "offset": false,
+              "expect": false,
+              "goal": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "reveal"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "apply"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "semantic_review"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "record"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "spine"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "judge"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "impact"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "expect": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "show"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "status"
+              }
+            }
+          },
+          "then": {
+            "required": [],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "assess"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "document"
+            ],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "publish"
+              }
+            }
+          },
+          "then": {
+            "required": [],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "view"
+              }
+            }
+          },
+          "then": {
+            "required": [],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "id": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "guide"
+              }
+            }
+          },
+          "then": {
+            "required": [],
+            "properties": {
+              "jev": false,
+              "goal": false,
+              "query": false,
+              "limit": false,
+              "expect": false,
+              "id": false,
+              "offset": false,
+              "document": false
+            }
+          }
+        }
+      ]
     }
   }
 ]

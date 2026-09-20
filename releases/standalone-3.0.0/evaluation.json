@@ -1,0 +1,72 @@
+{
+  "scores": {
+    "grephene-initial-score": {
+      "score": 1,
+      "max_score": 24,
+      "evaluation": "grephene-initial",
+      "bundle": "/home/sun07ao/retro-workspaces/grephene-retro3/exports/8e1d3aaa4aaf4d3eaf1d3c0877d0dfab",
+      "manifest_sha256": "16f09ddb763a2a6dc7e4801d20443533d6d512a426087777eae0b11685cdeaa3",
+      "state_revision": 98,
+      "blind_status": "reference set frozen before initial bundle; builder had not seen question/answer contents per parent receipt; evaluator unblinded for scoring only",
+      "receipt": "var/retro3-evaluation/private/grephene-initial-score.json",
+      "sha256": "fe69d0b46e2e99e2bb340787fb6f84ba94f23673e2778b52ce3eba64fb292d3e"
+    },
+    "grephene-repair-score": {
+      "score": 24,
+      "max_score": 24,
+      "evaluation": "grephene UNBLINDED repair recheck",
+      "bundle": "/home/sun07ao/retro-workspaces/grephene-retro3/exports/bd35f30257214f3f8c0deb2c7842b9ec",
+      "manifest_sha256": "2d13ccac4a53c9b6e7daeabac28ab2ff1230a80308020246d5252e9067b6fc46",
+      "receipt": "var/retro3-evaluation/private/grephene-repair-score.json",
+      "sha256": "bcdd4ece577423c083c2e0173fe2ef37e493bf92d172d1e5909150f6216578fb"
+    },
+    "diffusion-initial-score": {
+      "score": 15,
+      "max_score": 16,
+      "evaluation": "diffusion-initial",
+      "bundle": "/home/sun07ao/retro-workspaces/diffusion-retro3/exports/34a2ef2c4d404fed9aea3f955a0fdcc2",
+      "manifest_sha256": "28102b066dad40a6148bacd5a6ee56f453b1b6d045d5fdfac2d47899f4baa769",
+      "state_revision": 86,
+      "blind_status": "questions/reference frozen before initial builder export; no question/answer leak before freeze reported",
+      "receipt": "var/retro3-evaluation/private/diffusion-initial-score.json",
+      "sha256": "9cb63f067a47c75c63f896a1c95bbf1edde78982ccc893ca64c687ebd3d412d1"
+    },
+    "diffusion-repair-score": {
+      "score": 16,
+      "max_score": 16,
+      "evaluation": "diffusion-UNBLINDED-repair-recheck",
+      "bundle": "/home/sun07ao/retro-workspaces/diffusion-retro3/exports/55fed8aa18a34ad2acf40e164166c9a0",
+      "manifest_sha256": "a7d7ccb1067f27575bf2169a5f004c09c8fcf1ba6ee499d7bca132a1be030d5b",
+      "state_revision": 118,
+      "blind_status": "UNBLINDED repair after disclosed initial defect; initial score file retained",
+      "receipt": "var/retro3-evaluation/private/diffusion-repair-score.json",
+      "sha256": "b376492fea82f6ab612b0c5b9252832c001eb8d9cd017e0a4594979e5c54cda0"
+    },
+    "comparison-direct-score": {
+      "score": 24,
+      "max_score": 24,
+      "evaluation": "shared-task comparison; evaluator uses frozen references",
+      "receipt": "var/retro3-evaluation/private/comparison-direct-score.json",
+      "sha256": "b987513e696fceccd42059bea8cf417aa80232d4a3de48ad9f72e89005180213"
+    },
+    "comparison-retro2-arm-score": {
+      "score": 24,
+      "max_score": 24,
+      "evaluation": "shared-task comparison; evaluator uses frozen references",
+      "receipt": "var/retro3-evaluation/private/comparison-retro2-arm-score.json",
+      "sha256": "17b3242b9d12f21d67cd6ad2b0fffc5779f3f9b2fbaed6c448fda1133eb87b44"
+    },
+    "comparison-retro3-arm-score": {
+      "score": 23,
+      "max_score": 24,
+      "receipt": "var/retro3-evaluation/private/comparison-retro3-arm-score.json",
+      "sha256": "1b7df3e82fc348c9ccc6877c8f7e6e0012cab62628070c3e3498f2f676830103"
+    }
+  },
+  "initial_failures_retained": true,
+  "repair_is_not_new_blind_evaluation": true,
+  "direct_advantage_not_established": true,
+  "jev_calls": 0,
+  "host_token_usage": "not instrumented",
+  "general_scientific_reliability": "unproven"
+}
